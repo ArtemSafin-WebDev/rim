@@ -1,0 +1,117 @@
+.quality__content {
+    padding-top: 13rem;
+    padding-bottom: 13rem;
+    position: relative;
+}
+
+.quality__heading {
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 5rem;
+    margin-bottom: 7rem;
+    text-align: center;
+}
+
+.quality__slider {
+   
+}
+
+.quality__slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+.quality__slider-controls-btn {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.3rem 3rem;
+    
+    background: #fafafa;
+    border-radius: 3rem;
+    transition: color 0.2s, background-color 0.2s;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-right: 2.2rem;
+    min-height: 4.5rem;
+    min-width: 17.2rem;
+    -webkit-user-drag: none;
+    user-select: none;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:link,
+    &:visited {
+        color: var(--text-color);
+    }
+    &.active {
+        font-weight: 700;
+        background: #5229a1;
+        color: white;
+    }
+    // &::after {
+    //     display: block;
+    //     content: attr(data-text);
+    //     font-weight: bold;
+    //     height: 1px;
+    //     color: transparent;
+    //     overflow: hidden;
+    //     visibility: hidden;
+    // }
+}
+
+.quality__slider-card {
+    display: grid;
+    grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
+    grid-gap: 7rem;
+    align-items: center;
+}
+
+.quality__slider-card-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.quality__slider-card-title {
+    font-weight: 800;
+    font-size: 4.5rem;
+    line-height: 5rem;
+    margin-bottom: 4rem;
+}
+
+.quality__slider-card-text {
+    font-size: 2rem;
+    line-height: 3rem;
+    max-width: 56rem;
+}
+
+.quality__slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+    .swiper-pagination-bullet {
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        border: 2px solid #dadada;
+        margin: 0 1.8rem;
+        transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+        outline: none;
+        background: transparent;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #5229a1;
+        border-color: #5229a1;
+        transform: scale(1.3);
+    }
+}

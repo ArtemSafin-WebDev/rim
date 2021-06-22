@@ -1,0 +1,59 @@
+.regions {
+}
+
+.regions__content {
+    position: relative;
+    padding-top: 11rem;
+    padding-bottom: 12.5rem;
+}
+
+.regions__heading {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 4.1rem;
+    margin-bottom: 5rem;
+}
+
+.regions__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-column-gap: 3.5rem;
+}
+
+.regions__card {
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.regions__ball {
+    position: absolute;
+    left: 16rem;
+    bottom: 100%;
+    margin-bottom: -3.2rem;
+    width: 12rem;
+    height: auto;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.regions__donut {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: -15rem;
+    margin-right: -3rem;
+    pointer-events: none;
+    width: 16.6rem;
+    height: auto;
+    z-index: 20;
+}
+
+.regions__supersmall-ball {
+    position: absolute;
+    pointer-events: none;
+    bottom: 3.2rem;
+    width: 3.3rem;
+    height: auto;
+    right: 28%;
+}

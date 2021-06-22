@@ -1,0 +1,209 @@
+.federal-network {
+    padding-top: 6.4rem;
+    padding-bottom: 26rem;
+}
+
+.federal-network__about {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 12rem) minmax(0, 1fr);
+    grid-template-rows: auto;
+    margin-bottom: 9rem;
+}
+
+.federal-network__about-content {
+    z-index: 10;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    padding: 9rem 0;
+}
+
+.federal-network__about-heading {
+    font-weight: 800;
+    font-size: 4.5rem;
+    line-height: 5rem;
+    margin-bottom: 6rem;
+    max-width: 52rem;
+}
+
+.federal-network__about-text {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 10rem;
+    max-width: 54rem;
+}
+
+.federal-network__about-numbers {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.federal-network__about-numbers-card {
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.federal-network__about-numbers-card-amount {
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: 10.8rem;
+    color: var(--primary-color);
+}
+
+.federal-network__about-numbers-card-text {
+    max-width: 27rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+}
+
+.federal-network__about-image-col {
+    z-index: 5;
+    grid-column: 2 / 4;
+    position: relative;
+    grid-row: 1 / 2;
+}
+
+.federal-network__about-guy {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.federal-network__about-image-wrapper {
+    position: absolute;
+    left: -2.5rem;
+    top: -2.5rem;
+    bottom: -2.5rem;
+    right: -2.5rem;
+}
+
+.federal-network__advantages {
+    margin-bottom: 24rem;
+}
+
+.federal-network__advantages-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 3rem;
+}
+
+.federal-network__advantages-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.federal-network__advantages-card-icon {
+    width: 18rem;
+    height: 18rem;
+    object-fit: contain;
+    flex-shrink: 0;
+    align-self: center;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.federal-network__advantages-card-title {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+}
+
+.federal-network__advantages-card-text {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.federal-network__advantages-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 9rem;
+    justify-content: center;
+}
+
+.federal-network__advantages-btn {
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4rem 3rem;
+    border: 0.3rem solid #ff9400;
+    color: #ff9400;
+    margin-right: 2.2rem;
+    min-width: 27rem;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    &:link,
+    &:visited {
+        color: #ff9400;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--filled {
+        background: linear-gradient(180deg, #ff5129 0%, #ff9400 100%);
+        border: none;
+        padding: 1.8rem 3rem;
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
+}
+
+.federal-network__constructions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    
+}
+
+.federal-network__constructions-image-block {
+    position: relative;
+}
+
+.federal-network__constructions-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.federal-network__constructions-image-wrapper {
+    position: absolute;
+    right: -4.8rem;
+    bottom: -19rem;
+    top: -19rem;
+    left: -19rem;
+}
+
+.federal-network__constructions-title {
+    font-weight: 800;
+    font-size: 4.5rem;
+    line-height: 5rem;
+    margin-bottom: 5rem;
+}
+
+.federal-network__constructions-text {
+    font-size: 2rem;
+    line-height: 3rem;
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+}

@@ -1,0 +1,126 @@
+.page-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    color: white;
+}
+
+.page-header__top-row {
+    background: #000000;
+
+    margin-bottom: 2.3rem;
+
+    .container {
+        display: flex;
+        min-height: 4.3rem;
+        justify-content: flex-end;
+    }
+}
+
+.page-header__top-links {
+    display: flex;
+    align-items: center;
+}
+
+.page-header__top-link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-right: 7rem;
+    &:last-child {
+        margin-right: 0;
+    }
+    svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        fill: var(--primary-color);
+        margin-right: 0.8rem;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}
+
+.page-header__logo {
+    margin-right: auto;
+    flex-shrink: 0;
+}
+
+.page-header__logo-image {
+    width: 8.3rem;
+    height: auto;
+    display: block;
+}
+
+.page-header__nav {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+}
+
+.page-header__nav-link {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    display: inline-flex;
+    align-items: baseline;
+    margin-right: 2.5rem;
+    &:last-child {
+        margin-right: 0;
+    }
+    svg {
+        width: 0.7rem;
+        height: 0.7rem;
+        flex-shrink: 0;
+        margin-left: 0.9rem;
+        fill: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}
+
+.page-header__contact-btn {
+    margin-left: 5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color: var(--primary-color);
+    padding: .8rem 3.3rem;
+    border: .3rem solid var(--primary-color);
+    border-radius: 2rem;
+    flex-shrink: 0;
+    color: var(--primary-color);
+    transition: color .2s, background-color .2s;
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+}
+.page-header__bottom-row {
+    .container {
+        display: flex;
+        align-items: center;
+    }
+  
+}

@@ -1,0 +1,76 @@
+.get-price {
+    background: linear-gradient(308.54deg, #5229a1 15.33%, #000000 99.44%);
+    color: white;
+}
+
+.get-price__content {
+    padding-bottom: 6.5rem;
+    padding-top: 9.5rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.get-price__caesar {
+    width: 57rem;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: -10rem;
+    z-index: -1;
+}
+
+.get-price__text {
+    margin-bottom: 3rem;
+    max-width: 70rem;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 4.1rem;
+}
+
+.get-price__link {
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 6rem;
+    position: relative;
+    border-radius: 10rem;
+    flex-shrink: 0;
+    background: #ff5129;
+    color: white;
+    align-self: center;
+    z-index: 1;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        right: 0.5rem;
+        top: 0;
+        bottom: 1rem;
+        border-radius: 10rem;
+        z-index: -1;
+        background: linear-gradient(180deg, #ff5129 0%, #ff9400 100%);
+    }
+}
+
+
+.get-price__small-ball {
+    position: absolute;
+    left: 6rem;
+    width: 8.5rem;
+    height: auto;
+    bottom: 100%;
+    margin-bottom: -2.7rem;
+    height: auto;
+}
