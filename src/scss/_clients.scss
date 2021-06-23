@@ -5,6 +5,10 @@
     position: relative;
     padding-top: 8.7rem;
     padding-bottom: 18rem;
+
+    @include breakpoint(tablet) {
+        padding-top: 10rem;
+    }
 }
 
 .clients__communication-list {
@@ -180,6 +184,10 @@
 
 .clients__our-clients-block-slider {
     position: relative;
+
+    @include breakpoint(tablet) {
+        padding: 0 8rem;
+    }
 }
 
 .clients__our-clients-card {
@@ -207,20 +215,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
+
+    @include breakpoint(tablet) {
+    }
 
     &.swiper-button-disabled {
         opacity: 0;
         pointer-events: none;
     }
-     &--prev {
+    &--prev {
         right: 100%;
         margin-right: 3rem;
+
+        @include breakpoint(tablet) {
+            left: 0;
+            right: auto;
+            margin: 0;
+        }
     }
 
     &--next {
         left: 100%;
         margin-left: 3rem;
+
+        @include breakpoint(tablet) {
+            left: auto;
+            right: 0;
+            margin: 0;
+        }
     }
 
     svg {
@@ -228,7 +251,7 @@
         height: 1.6rem;
         fill: #b9b9b9;
         display: block;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 
     .no-touch &:not(.swiper-button-disabled):hover,

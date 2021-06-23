@@ -12,6 +12,14 @@
     --primary-color: #ff9400;
     --text-color: black;
     --uni: 'Uni Neue', sans-serif;
+
+    @include breakpoint(tablet) {
+        --content-padding: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+        --content-padding: 2.5rem;
+    }
 }
 
 html {
@@ -20,6 +28,25 @@ html {
     -webkit-text-size-adjust: 100%;
 
     @include noHighlight();
+
+    @include breakpoint(desktop) {
+        font-size: 9px;
+    }
+
+    @include breakpoint(laptop) {
+        font-size: 8px;
+    }
+
+    @include breakpoint(tablet) {
+        font-size: 10px;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 7px;
+    }
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
 }
 
 body {
@@ -145,10 +172,10 @@ img {
     display: block;
 }
 
-img[data-sizes='auto'] {
-    display: block;
-    width: 100%;
-}
+// img[data-sizes='auto'] {
+//     display: block;
+//     width: 100%;
+// }
 
 img.lazyload:not([src]) {
     visibility: hidden;

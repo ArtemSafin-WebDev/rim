@@ -9,6 +9,14 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
+    @include breakpoint(tablet) {
+        padding: 7.5rem 0;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 3.5rem 0;
+    }
 }
 
 .how-much__text {
@@ -19,6 +27,18 @@
     max-width: 73rem;
     position: relative;
     z-index: 20;
+
+    @include breakpoint(tablet) {
+        max-width: 65rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        max-width: none;
+        margin-bottom: 3rem;
+    }
 }
 
 .how-much__link {
@@ -40,6 +60,19 @@
     z-index: 1;
     position: relative;
     z-index: 20;
+
+    @include breakpoint(tablet) {
+        padding: 3rem 3.4rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.9rem 2rem;
+        padding-bottom: 2.2rem;
+        font-weight: 800;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        width: 100%;
+    }
     &:link,
     &:visited {
         color: white;
@@ -55,6 +88,10 @@
         border-radius: 10rem;
         z-index: -1;
         background: linear-gradient(180deg, #ff5129 0%, #ff9400 100%);
+
+        @include breakpoint(mobile) {
+            bottom: .7rem;
+        }
     }
 }
 
@@ -66,4 +103,12 @@
     height: auto;
     z-index: 5;
     pointer-events: none;
+
+    @include breakpoint(tablet) {
+        right: -22rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }

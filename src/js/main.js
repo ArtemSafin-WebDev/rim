@@ -12,6 +12,7 @@ import ourClientsSlider from './ourClientsSlider';
 import qualitySlider from './qualitySlider';
 import actualNewsSlider from './actualNewsSlider';
 import leadersSlider from './leadersSlider';
+import anchorLinks from './anchorLinks';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     qualitySlider();
     actualNewsSlider();
     leadersSlider();
+    anchorLinks();
 });
 
 window.addEventListener('load', function() {

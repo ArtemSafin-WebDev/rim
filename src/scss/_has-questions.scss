@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: 1;
 }
 
 .has-questions__heading {
@@ -21,6 +22,7 @@
     font-size: 3rem;
     line-height: 4rem;
     margin-bottom: 4rem;
+    font-weight: 700;
 }
 
 .has-questions__btn {
@@ -58,6 +60,11 @@
     height: auto;
     right: -8rem;
     bottom: 0;
+    z-index: -1;
+
+    @include breakpoint(tablet) {
+        right: -34rem;
+    }
 }
 
 .has-questions__small-ball {

@@ -5,22 +5,25 @@
 <section class="intro">
 
     <div class="intro__bg">
-        <img src="img/billboard-3840.jpg" srcset="img/billboard-2600.jpg 2600w,
-             img/billboard-3840.jpg 3840w" alt="Фон билборда" class="intro__bg-image">
+        <picture>
+            <source data-srcset="img/billboard-mobile.jpg" media="(max-width: 640px)">
+            <img data-src="img/billboard-3840.jpg" srcset="img/billboard-2600.jpg 2600w,
+             img/billboard-3840.jpg 3840w" alt="" class="intro__bg-image lazyload" data-sizes="auto">
+        </picture>
     </div>
     <div class="container">
         <div class="intro__content">
             <picture>
-                <source srcset="img/shapes/small-ball.webp" type="image/webp">
+                <source data-srcset="img/shapes/small-ball.webp" type="image/webp">
 
-                <img src="img/shapes/small-ball.png" alt="" class="intro__ball">
+                <img data-src="img/shapes/small-ball.png" alt="" class="intro__ball lazyload" data-sizes="auto">
             </picture>
             <h1 class="intro__main-heading">
                 Медиагруппа «РИМ»<br>
                 управляет ___ конструкций<br>
                 в 38 городах России
             </h1>
-            <a href="#" class="intro__scroll-down">
+            <a href="#to-about" class="intro__scroll-down">
                 <svg width="14" height="14" aria-hidden="true" class="icon-down">
                     <use xlink:href="#arrow-down"></use>
                 </svg>
@@ -29,7 +32,7 @@
     </div>
 </section>
 
-<section class="about">
+<section class="about" id="about">
     <div class="container">
         <div class="about__billboards">
             <div class="about__billboards-card">
@@ -97,45 +100,54 @@
             </div>
         </div>
         <div class="about__numbers">
-            <div class="about__numbers-card">
-                <div class="about__numbers-card-key">
-                    <span>
-                        2013
-                    </span>
+            <picture>
+                <source data-srcset="img/shapes/donut.webp" type="image/webp">
+
+                <img data-src="img/shapes/donut.png" alt="" class="about__donut-numbers lazyload" data-sizes="auto">
+            </picture>
+            <div class="about__numbers-cards">
+
+
+                <div class="about__numbers-card">
+                    <div class="about__numbers-card-key">
+                        <span>
+                            2013
+                        </span>
+                    </div>
+                    <div class="about__numbers-card-value">
+                        Работаем 8 лет
+                    </div>
                 </div>
-                <div class="about__numbers-card-value">
-                    Работаем 8 лет
+                <div class="about__numbers-card">
+                    <div class="about__numbers-card-key">
+                        <span>
+                            3
+                        </span>
+                        офиса
+                    </div>
+                    <div class="about__numbers-card-value">
+                        Офисы в Казани, Москве и Перми
+                    </div>
                 </div>
-            </div>
-            <div class="about__numbers-card">
-                <div class="about__numbers-card-key">
-                    <span>
-                        3
-                    </span>
-                    офиса
-                </div>
-                <div class="about__numbers-card-value">
-                    Офисы в Казани, Москве и Перми
-                </div>
-            </div>
-            <div class="about__numbers-card">
-                <div class="about__numbers-card-key">
-                    <span>
-                        151
-                    </span>
-                    сотрудник
-                </div>
-                <div class="about__numbers-card-value">
-                    Офисы в Казани, Москве и Перми
+                <div class="about__numbers-card">
+                    <div class="about__numbers-card-key">
+                        <span>
+                            151
+                        </span>
+                        сотрудник
+                    </div>
+                    <div class="about__numbers-card-value">
+                        Офисы в Казани, Москве и Перми
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="about__companies">
             <picture>
-                <source srcset="img/shapes/donut.webp" type="image/webp">
+                <source data-srcset="img/shapes/donut.webp" type="image/webp">
 
-                <img src="img/shapes/donut.png" alt="" class="about__donut">
+                <img data-src="img/shapes/donut.png" alt="" class="about__donut lazyload" data-sizes="auto">
             </picture>
             <div class="about__companies-cards">
 
@@ -234,7 +246,12 @@
 
 <section class="choose-best">
     <div class="choose-best__bg">
-        <img src="img/choose-best-bg.jpg" alt="" class="choose-best__bg-image">
+
+
+        <picture>
+            <source data-srcset="img/choose-best-mobile-bg.jpg" media="(max-width: 640px)">
+            <img data-src="img/choose-best-bg.jpg" alt="" class="choose-best__bg-image lazyload" data-sizes="auto">
+        </picture>
 
     </div>
     <div class="container">
@@ -311,6 +328,7 @@
                 </div>
             </div>
             <div class="geography__leaders">
+                <img src="img/shapes/blurred-donut.png" alt="" class="geography__blurred-donut">
                 <h3 class="geography__leaders-heading">
                     Мы лидеры во многих городах
                 </h3>
@@ -989,9 +1007,9 @@
     <div class="container">
         <div class="how-much__content">
             <picture>
-                <source srcset="img/shapes/guy-with-money.webp" type="image/webp">
+                <source data-srcset="img/shapes/guy-with-money.webp" type="image/webp">
 
-                <img src="img/shapes/guy-with-money.png" alt="" class="how-much__guy">
+                <img data-src="img/shapes/guy-with-money.png" alt="" class="how-much__guy lazyload" data-sizes="auto">
             </picture>
             <div class="how-much__text">
                 <p>
@@ -1049,8 +1067,9 @@
 
 
                     <picture>
-                        <source srcset="img/shapes/guy-with-flag.webp" type="image/webp">
-                        <img src="img/shapes/guy-with-flag.png" alt="" class="federal-network__about-guy">
+                        <source data-srcset="img/shapes/guy-with-flag.webp" type="image/webp">
+                        <img data-src="img/shapes/guy-with-flag.png" alt="" class="federal-network__about-guy lazyload"
+                            data-sizes="auto">
                     </picture>
                 </div>
             </div>
@@ -1062,9 +1081,10 @@
 
                 <div class="federal-network__advantages-card">
                     <picture>
-                        <source srcset="img/federal-icons/1.webp" type="image/webp">
+                        <source data-srcset="img/federal-icons/1.webp" type="image/webp">
 
-                        <img src="img/federal-icons/1.png" alt="" class="federal-network__advantages-card-icon">
+                        <img data-src="img/federal-icons/1.png" alt=""
+                            class="federal-network__advantages-card-icon lazyload" data-sizes="auto">
                     </picture>
                     <h4 class="federal-network__advantages-card-title">
                         Никаких простоев
@@ -1077,9 +1097,10 @@
                 </div>
                 <div class="federal-network__advantages-card">
                     <picture>
-                        <source srcset="img/federal-icons/2.webp" type="image/webp">
+                        <source data-srcset="img/federal-icons/2.webp" type="image/webp">
 
-                        <img src="img/federal-icons/2.png" alt="" class="federal-network__advantages-card-icon">
+                        <img data-src="img/federal-icons/2.png" alt=""
+                            class="federal-network__advantages-card-icon lazyload" data-sizes="auto">
                     </picture>
                     <h4 class="federal-network__advantages-card-title">
                         Оптимизация расходов
@@ -1092,9 +1113,10 @@
                 </div>
                 <div class="federal-network__advantages-card">
                     <picture>
-                        <source srcset="img/federal-icons/3.webp" type="image/webp">
+                        <source data-srcset="img/federal-icons/3.webp" type="image/webp">
 
-                        <img src="img/federal-icons/3.png" alt="" class="federal-network__advantages-card-icon">
+                        <img data-src="img/federal-icons/3.png" alt=""
+                            class="federal-network__advantages-card-icon lazyload" data-sizes="auto">
                     </picture>
                     <h4 class="federal-network__advantages-card-title">
                         Экономия ФОТ
@@ -1122,8 +1144,9 @@
 
 
                     <picture>
-                        <source srcset="img/construction.webp" type="image/webp">
-                        <img src="img/construction.png" alt="" class="federal-network__constructions-image">
+                        <source data-srcset="img/construction.webp" type="image/webp">
+                        <img data-src="img/construction.png" alt=""
+                            class="federal-network__constructions-image lazyload" data-sizes="auto">
                     </picture>
                 </div>
             </div>
@@ -1177,9 +1200,10 @@
                         </div>
 
                         <picture>
-                            <source srcset="img/work-with-us/1.webp" type="image/webp">
+                            <source data-srcset="img/work-with-us/1.webp" type="image/webp">
 
-                            <img src="img/work-with-us/1.png" alt="" class="work-with-us__card-image" width="330px">
+                            <img data-src="img/work-with-us/1.png" alt="" class="work-with-us__card-image lazyload"
+                                width="330px" data-sizes="auto">
                         </picture>
 
                     </div>
@@ -1189,10 +1213,11 @@
 
 
                         <picture>
-                            <source srcset="img/work-with-us/2.webp" type="image/webp">
+                            <source data-srcset="img/work-with-us/2.webp" type="image/webp">
 
-                            <img src="img/work-with-us/2.png" alt=""
-                                class="work-with-us__card-image work-with-us__card-image--offset-left">
+                            <img data-src="img/work-with-us/2.png" alt=""
+                                class="work-with-us__card-image work-with-us__card-image--offset-left lazyload"
+                                data-sizes="auto">
                         </picture>
 
 
@@ -1227,9 +1252,10 @@
                         </div>
 
                         <picture>
-                            <source srcset="img/work-with-us/3.webp" type="image/webp">
+                            <source data-srcset="img/work-with-us/3.webp" type="image/webp">
 
-                            <img src="img/work-with-us/3.png" alt="" class="work-with-us__card-image" width="350px">
+                            <img data-src="img/work-with-us/3.png" alt="" class="work-with-us__card-image lazyload"
+                                width="350px" data-sizes="auto">
                         </picture>
 
                     </div>
@@ -1239,9 +1265,10 @@
 
 
                         <picture>
-                            <source srcset="img/work-with-us/4.webp" type="image/webp">
+                            <source data-srcset="img/work-with-us/4.webp" type="image/webp">
 
-                            <img src="img/work-with-us/4.png" alt="" class="work-with-us__card-image" width="320px">
+                            <img data-src="img/work-with-us/4.png" alt="" class="work-with-us__card-image lazyload"
+                                width="320px" data-sizes="auto">
                         </picture>
 
                         <div class="work-with-us__card-content work-with-us__card-content--centered">
@@ -1268,14 +1295,15 @@
     <div class="container">
         <div class="get-price__content">
             <picture>
-                <source srcset="img/shapes/caesar.webp" type="image/webp">
+                <source data-srcset="img/shapes/caesar.webp" type="image/webp">
 
-                <img src="img/shapes/caesar.png" alt="" class="get-price__caesar">
+                <img data-src="img/shapes/caesar.png" alt="" class="get-price__caesar lazyload" data-sizes="auto">
             </picture>
             <picture>
-                <source srcset="img/shapes/small-ball.webp" type="image/webp">
+                <source data-srcset="img/shapes/small-ball.webp" type="image/webp">
 
-                <img src="img/shapes/small-ball.png" alt="" class="get-price__small-ball">
+                <img data-src="img/shapes/small-ball.png" alt="" class="get-price__small-ball lazyload"
+                    data-sizes="auto">
             </picture>
             <div class="get-price__text">
                 <p>
@@ -1317,9 +1345,10 @@
                         <div class="swiper-slide">
                             <div class="quality__slider-card">
                                 <picture>
-                                    <source srcset="img/quality/1.webp" type="image/webp">
+                                    <source data-srcset="img/quality/1.webp" type="image/webp">
 
-                                    <img src="img/quality/1.png" alt="" class="quality__slider-card-image">
+                                    <img data-src="img/quality/1.png" alt="" class="quality__slider-card-image lazyload"
+                                        data-sizes="auto">
                                 </picture>
                                 <div class="quality__slider-card-content">
                                     <h4 class="quality__slider-card-title">
@@ -1338,9 +1367,10 @@
                         <div class="swiper-slide">
                             <div class="quality__slider-card">
                                 <picture>
-                                    <source srcset="img/quality/2.webp" type="image/webp">
+                                    <source data-srcset="img/quality/2.webp" type="image/webp">
 
-                                    <img src="img/quality/2.png" alt="" class="quality__slider-card-image">
+                                    <img data-src="img/quality/2.png" alt="" class="quality__slider-card-image lazyload"
+                                        data-sizes="auto">
                                 </picture>
                                 <div class="quality__slider-card-content">
                                     <h4 class="quality__slider-card-title">
@@ -1359,9 +1389,10 @@
                         <div class="swiper-slide">
                             <div class="quality__slider-card">
                                 <picture>
-                                    <source srcset="img/quality/3.webp" type="image/webp">
+                                    <source data-srcset="img/quality/3.webp" type="image/webp">
 
-                                    <img src="img/quality/3.png" alt="" class="quality__slider-card-image">
+                                    <img data-src="img/quality/3.png" alt="" class="quality__slider-card-image lazyload"
+                                        data-sizes="auto">
                                 </picture>
                                 <div class="quality__slider-card-content">
                                     <h4 class="quality__slider-card-title">
@@ -1380,9 +1411,10 @@
                         <div class="swiper-slide">
                             <div class="quality__slider-card">
                                 <picture>
-                                    <source srcset="img/quality/4.webp" type="image/webp">
+                                    <source data-srcset="img/quality/4.webp" type="image/webp">
 
-                                    <img src="img/quality/4.png" alt="" class="quality__slider-card-image">
+                                    <img data-src="img/quality/4.png" alt="" class="quality__slider-card-image lazyload"
+                                        data-sizes="auto">
                                 </picture>
                                 <div class="quality__slider-card-content">
                                     <h4 class="quality__slider-card-title">
@@ -1424,8 +1456,10 @@
                             <div class="actual-news__slider-container">
                                 <a href="#" class="actual-news__slider-card">
                                     <div class="actual-news__slider-card-image-container">
-                                        <img src="img/news/1.jpg" alt="" class="actual-news__slider-card-image-blurred">
-                                        <img src="img/news/1.jpg" alt="" class="actual-news__slider-card-image">
+                                        <img data-src="img/news/1.jpg" alt=""
+                                            class="actual-news__slider-card-image-blurred lazyload">
+                                        <img data-src="img/news/1.jpg" alt=""
+                                            class="actual-news__slider-card-image lazyload">
 
                                     </div>
                                     <h4 class="actual-news__slider-card-title">
@@ -1443,8 +1477,10 @@
                                 </a>
                                 <a href="#" class="actual-news__slider-card">
                                     <div class="actual-news__slider-card-image-container">
-                                        <img src="img/news/2.jpg" alt="" class="actual-news__slider-card-image-blurred">
-                                        <img src="img/news/2.jpg" alt="" class="actual-news__slider-card-image">
+                                        <img data-src="img/news/2.jpg" alt=""
+                                            class="actual-news__slider-card-image-blurred lazyload">
+                                        <img data-src="img/news/2.jpg" alt=""
+                                            class="actual-news__slider-card-image lazyload">
                                     </div>
                                     <h4 class="actual-news__slider-card-title">
                                         Расширилась сеть
@@ -1457,8 +1493,10 @@
                                 </a>
                                 <a href="#" class="actual-news__slider-card">
                                     <div class="actual-news__slider-card-image-container">
-                                        <img src="img/news/3.jpg" alt="" class="actual-news__slider-card-image-blurred">
-                                        <img src="img/news/3.jpg" alt="" class="actual-news__slider-card-image">
+                                        <img data-src="img/news/3.jpg" alt=""
+                                            class="actual-news__slider-card-image-blurred lazyload">
+                                        <img data-src="img/news/3.jpg" alt=""
+                                            class="actual-news__slider-card-image lazyload">
                                     </div>
                                     <h4 class="actual-news__slider-card-title">
                                         Протягиваем руку помощи тем,кому это действительно нужно
@@ -1473,8 +1511,10 @@
                             <div class="actual-news__slider-container">
                                 <a href="#" class="actual-news__slider-card">
                                     <div class="actual-news__slider-card-image-container">
-                                        <img src="img/news/1.jpg" alt="" class="actual-news__slider-card-image-blurred">
-                                        <img src="img/news/1.jpg" alt="" class="actual-news__slider-card-image">
+                                        <img data-src="img/news/1.jpg" alt=""
+                                            class="actual-news__slider-card-image-blurred lazyload">
+                                        <img data-src="img/news/1.jpg" alt=""
+                                            class="actual-news__slider-card-image lazyload">
 
                                     </div>
                                     <h4 class="actual-news__slider-card-title">
@@ -1492,8 +1532,10 @@
                                 </a>
                                 <a href="#" class="actual-news__slider-card">
                                     <div class="actual-news__slider-card-image-container">
-                                        <img src="img/news/2.jpg" alt="" class="actual-news__slider-card-image-blurred">
-                                        <img src="img/news/2.jpg" alt="" class="actual-news__slider-card-image">
+                                        <img data-src="img/news/2.jpg" alt=""
+                                            class="actual-news__slider-card-image-blurred lazyload">
+                                        <img data-src="img/news/2.jpg" alt=""
+                                            class="actual-news__slider-card-image lazyload">
                                     </div>
                                     <h4 class="actual-news__slider-card-title">
                                         Расширилась сеть
@@ -1506,8 +1548,10 @@
                                 </a>
                                 <a href="#" class="actual-news__slider-card">
                                     <div class="actual-news__slider-card-image-container">
-                                        <img src="img/news/3.jpg" alt="" class="actual-news__slider-card-image-blurred">
-                                        <img src="img/news/3.jpg" alt="" class="actual-news__slider-card-image">
+                                        <img data-src="img/news/3.jpg" alt=""
+                                            class="actual-news__slider-card-image-blurred lazyload">
+                                        <img data-src="img/news/3.jpg" alt=""
+                                            class="actual-news__slider-card-image lazyload">
                                     </div>
                                     <h4 class="actual-news__slider-card-title">
                                         Протягиваем руку помощи тем,кому это действительно нужно
@@ -1557,9 +1601,10 @@
                 <li class="clients__communication-list-item">
                     <div class="clients__communication-card">
                         <picture>
-                            <source srcset="img/clients/clients-1.webp" type="image/webp">
+                            <source data-srcset="img/clients/clients-1.webp" type="image/webp">
 
-                            <img src="img/clients/clients-1.png" alt="" class="clients__communication-card-image">
+                            <img data-src="img/clients/clients-1.png" alt=""
+                                class="clients__communication-card-image lazyload" data-sizes="auto">
                         </picture>
                         <h4 class="clients__communication-card-title">
                             Знаем как работать с любыми клиентами
@@ -1577,9 +1622,10 @@
                 <li class="clients__communication-list-item">
                     <div class="clients__communication-card">
                         <picture>
-                            <source srcset="img/clients/clients-2.webp" type="image/webp">
+                            <source data-srcset="img/clients/clients-2.webp" type="image/webp">
 
-                            <img src="img/clients/clients-2.png" alt="" class="clients__communication-card-image">
+                            <img data-src="img/clients/clients-2.png" alt=""
+                                class="clients__communication-card-image lazyload" data-sizes="auto">
                         </picture>
                         <h4 class="clients__communication-card-title">
                             Умеем работать с брендами
@@ -1596,9 +1642,10 @@
                 <li class="clients__communication-list-item">
                     <div class="clients__communication-card">
                         <picture>
-                            <source srcset="img/clients/clients-3.webp" type="image/webp">
+                            <source data-srcset="img/clients/clients-3.webp" type="image/webp">
 
-                            <img src="img/clients/clients-3.png" alt="" class="clients__communication-card-image">
+                            <img data-src="img/clients/clients-3.png" alt=""
+                                class="clients__communication-card-image lazyload" data-sizes="auto">
                         </picture>
                         <h4 class="clients__communication-card-title">
                             Понимаем рекламные агентства
@@ -1831,15 +1878,16 @@
 
 
             <picture>
-                <source srcset="img/shapes/dude.webp" type="image/webp">
+                <source data-srcset="img/shapes/dude.webp" type="image/webp">
 
-                <img src="img/shapes/dude.png" alt="" class="has-questions__image">
+                <img data-src="img/shapes/dude.png" alt="" class="has-questions__image lazyload" data-sizes="auto">
             </picture>
 
             <picture>
-                <source srcset="img/shapes/supersmall-ball.webp" type="image/webp">
+                <source data-srcset="img/shapes/supersmall-ball.webp" type="image/webp">
 
-                <img src="img/shapes/supersmall-ball.png" alt="" class="has-questions__small-ball">
+                <img data-src="img/shapes/supersmall-ball.png" alt="" class="has-questions__small-ball lazyload"
+                    data-sizes="auto">
             </picture>
             <h2 class="has-questions__heading">
                 Есть вопросы?
@@ -1861,9 +1909,10 @@
         <div class="publications__content">
 
             <picture>
-                <source srcset="img/shapes/donut-blurred.webp" type="image/webp">
+                <source data-srcset="img/shapes/donut-blurred.webp" type="image/webp">
 
-                <img src="img/shapes/donut-blurred.png" alt="" class="publications__donut">
+                <img data-src="img/shapes/donut-blurred.png" alt="" class="publications__donut lazyload"
+                    data-sizes="auto">
             </picture>
             <h2 class="publications__heading">
                 СМИ о нас
@@ -1956,107 +2005,129 @@
     <div class="container">
         <div class="regions__content">
             <picture>
-                <source srcset="img/shapes/small-ball.webp" type="image/webp">
+                <source data-srcset="img/shapes/small-ball.webp" type="image/webp">
 
-                <img src="img/shapes/small-ball.png" alt="" class="regions__ball">
+                <img data-src="img/shapes/small-ball.png" alt="" class="regions__ball lazyload" data-sizes="auto">
             </picture>
             <picture>
-                <source srcset="img/shapes/donut.webp" type="image/webp">
+                <source data-srcset="img/shapes/donut.webp" type="image/webp">
 
-                <img src="img/shapes/donut.png" alt="" class="regions__donut">
+                <img data-src="img/shapes/donut.png" alt="" class="regions__donut lazyload" data-sizes="auto">
             </picture>
 
             <picture>
-                <source srcset="img/shapes/supersmall-ball.webp" type="image/webp">
+                <source data-srcset="img/shapes/supersmall-ball.webp" type="image/webp">
 
-                <img src="img/shapes/supersmall-ball.png" alt="" class="regions__supersmall-ball">
+                <img data-src="img/shapes/supersmall-ball.png" alt="" class="regions__supersmall-ball lazyload"
+                    data-sizes="auto">
             </picture>
 
             <h2 class="regions__heading">
                 Регионы присутствия
             </h2>
-            <ul class="regions__list">
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Москва и Московская область
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Волгоградская область
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Тюменская область
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Чувашская Республика
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Республика Татарстан
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Пензенская область
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Челябинская область
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Республика Марий Эл
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Нижегородская область
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Республика Башкортостан
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Удмуртская Республика
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Самарская область
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Пермский край
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Ростовская область
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Свердловская область
-                    </div>
-                </li>
-                <li class="regions__list-item">
-                    <div class="regions__card">
-                        Ульяновская область
-                    </div>
-                </li>
-            </ul>
+            <div class="regions__row">
+                <div class="regions__col">
+                    <ul class="regions__list">
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Москва и Московская область
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Республика Татарстан
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Нижегородская область
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Пермский край
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="regions__col">
+                    <ul class="regions__list">
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Волгоградская область
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Пензенская область
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Республика Башкортостан
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Ростовская область
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="regions__col">
+                    <ul class="regions__list">
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Тюменская область
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Челябинская область
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Удмуртская Республика
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Свердловская область
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="regions__col">
+                    <ul class="regions__list">
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Чувашская Республика
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Республика Марий Эл
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Самарская область
+                            </div>
+                        </li>
+                        <li class="regions__list-item">
+                            <div class="regions__card">
+                                Ульяновская область
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
