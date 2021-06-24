@@ -1,10 +1,18 @@
 .regions {
+    @include breakpoint(mobile) {
+        position: relative;
+    }
 }
 
 .regions__content {
     position: relative;
     padding-top: 11rem;
     padding-bottom: 12.5rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 6rem;
+        padding-bottom: 4.5rem;
+    }
 }
 
 .regions__heading {
@@ -18,6 +26,13 @@
         font-size: 3rem;
         line-height: 4.1rem;
         text-align: center;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+        text-align: left;
     }
 }
 
@@ -35,14 +50,26 @@
         grid-column-gap: 10rem;
         grid-row-gap: 6rem;
     }
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1rem;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.regions__col {
 }
 
 .regions__list {
-    
 }
 
 .regions__list-item {
     margin-bottom: 2rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -51,6 +78,11 @@
 .regions__card {
     font-size: 1.8rem;
     line-height: 1.2;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
 }
 
 .regions__ball {
@@ -66,6 +98,16 @@
     @include breakpoint(tablet) {
         left: 0;
     }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        left: auto;
+        right: 0;
+        top: 0;
+        width: 10rem;
+        height: auto;
+        transform: translateY(-50%);
+    }
 }
 
 .regions__donut {
@@ -78,6 +120,10 @@
     width: 16.6rem;
     height: auto;
     z-index: 20;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .regions__supersmall-ball {

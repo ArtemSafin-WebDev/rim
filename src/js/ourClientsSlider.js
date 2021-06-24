@@ -9,15 +9,19 @@ export default function ourClientsSlider() {
         const container = element.querySelector('.swiper-container');
 
         new Swiper(container, {
-            slidesPerView: 3,
+            slidesPerView: 1,
             speed: 500,
             watchOverflow: true,
             spaceBetween: 100,
+            
             navigation: {
                 nextEl: element.querySelector('.clients__our-clients-block-slider-arrow--next'),
                 prevEl: element.querySelector('.clients__our-clients-block-slider-arrow--prev')
             },
             breakpoints: {
+                641: {
+                    slidesPerView: 3,
+                },
                 1025: {
                     slidesPerView: 4,
                 }

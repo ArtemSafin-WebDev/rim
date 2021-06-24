@@ -3,17 +3,31 @@
     color: white;
     padding-top: 7rem;
     padding-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 5.4rem;
+        padding-bottom: 4rem;
+    }
 }
 
 .page-footer__row {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 2rem;
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: initial;
+    }
 }
 
 .page-footer__col {
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .page-footer__links {
@@ -21,6 +35,10 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0.5rem;
+    }
 }
 
 .page-footer__link {
@@ -33,11 +51,15 @@
 }
 
 .page-footer__copyright {
-   
     font-size: 1.6rem;
     line-height: 2.2rem;
     margin-top: auto;
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        order: 5;
+    }
 }
 
 .page-footer__made-by {
@@ -46,6 +68,10 @@
     color: #9a76e0;
     margin-top: auto;
     margin-bottom: 1rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        order: 6;
+    }
     a {
         color: white;
         &:link,
@@ -58,6 +84,11 @@
 .page-footer__social-list {
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+        order: 7;
+        margin-top: 2rem;
+    }
 }
 
 .page-footer__social-list-item {
@@ -84,5 +115,7 @@
     font-size: 2.4rem;
     line-height: 3rem;
     margin-bottom: 4.5rem;
-    
+    @include breakpoint(mobile) {
+        margin-top: 1.5rem;
+    }
 }

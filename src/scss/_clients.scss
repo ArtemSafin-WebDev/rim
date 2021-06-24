@@ -9,6 +9,11 @@
     @include breakpoint(tablet) {
         padding-top: 10rem;
     }
+
+    @include breakpoint(mobile) {
+        padding-top: 2.3rem;
+        padding-bottom: 6rem;
+    }
 }
 
 .clients__communication-list {
@@ -16,6 +21,12 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2.2rem;
     margin-bottom: 14rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        margin-bottom: 6.5rem;
+        grid-gap: 2rem;
+    }
 }
 
 .clients__communication-list-item {
@@ -39,6 +50,10 @@
     object-fit: contain;
     object-position: center bottom;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .clients__communication-card-title {
@@ -46,20 +61,89 @@
     font-size: 3rem;
     line-height: 1.1;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.7rem;
+        text-align: center;
+    }
 }
 
 .clients__communication-card-text {
     font-size: 2rem;
     line-height: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        text-align: center;
+    }
 }
 
 .clients__reviews {
 }
 
+.clients__reviews-slider {
+    .swiper-container {
+        overflow: visible;
+        margin: 0;
+    }
+}
+
+.clients__reviews-slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+        justify-content: flex-start;
+    }
+
+    .swiper-pagination-bullet {
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        border: 2px solid #dadada;
+        margin: 0 1.8rem;
+        transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+        outline: none;
+        background: transparent;
+        opacity: 1;
+        flex-shrink: 0;
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1rem;
+            margin: 0 0.9rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #5229a1;
+        border-color: #5229a1;
+        transform: scale(1.3);
+
+        @include breakpoint(mobile) {
+            transform: scale(1);
+        }
+    }
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
+}
+
 .clients__reviews-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-gap: 6rem;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 6rem;
+    }
 }
 
 .clients__reviews-card {
@@ -73,6 +157,13 @@
     font-weight: bold;
     font-size: 4.5rem;
     line-height: 6.1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
 }
 
 .clients__reviews-quote {
@@ -84,6 +175,13 @@
     position: relative;
     font-size: 2rem;
     line-height: 2.7rem;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 2rem;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        margin-bottom: 4rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -94,6 +192,10 @@
         border-style: solid;
         border-width: 4.2rem 4.2rem 0 0;
         border-color: #f3faff transparent transparent transparent;
+
+        @include breakpoint(mobile) {
+            border-width: 3.5rem 3.5rem 0 0;
+        }
     }
 }
 
@@ -109,23 +211,33 @@
     margin-right: 5rem;
     position: relative;
 
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background-color: #f3faff;
-        background-image: var(--photo-url);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-left: 1rem;
-        margin-top: 2rem;
-        opacity: 0.8;
-        filter: blur(1.5rem);
+    @include breakpoint(mobile) {
+        width: 7.2rem;
+        height: 7.2rem;
+        margin-right: 2rem;
+    }
+}
+
+.clients__reviews-blurred-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #f3faff;
+    background-image: var(--photo-url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    opacity: 0.8;
+    filter: blur(1.5rem);
+
+    @include breakpoint(mobile) {
+        margin-top: 1.2rem;
+        margin-left: 0.6rem;
     }
 }
 
@@ -147,16 +259,29 @@
 .clients__reviews-author-name {
     font-size: 2.2rem;
     line-height: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
 }
 
 .clients__reviews-author-role {
     font-size: 1.8rem;
     line-height: 2.4rem;
     color: #b9b9b9;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
 }
 
 .clients__our-clients {
     margin-bottom: 15rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 6.5rem;
+    }
 }
 
 .clients__our-clients-heading {
@@ -165,6 +290,13 @@
     line-height: 6.1rem;
     margin-bottom: 6rem;
     text-align: center;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 3rem;
+        margin-bottom: 2.6rem;
+    }
 }
 
 .clients__our-clients-block {
@@ -180,6 +312,12 @@
     line-height: 3.2rem;
     font-weight: 400;
     margin-bottom: 5.5rem;
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 2.7rem;
+        margin-bottom: 1.7rem;
+        text-align: center;
+    }
 }
 
 .clients__our-clients-block-slider {
@@ -187,6 +325,10 @@
 
     @include breakpoint(tablet) {
         padding: 0 8rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0 4rem;
     }
 }
 
@@ -203,6 +345,10 @@
     max-width: 100%;
     object-fit: contain;
     object-position: left center;
+
+    @include breakpoint(mobile) {
+        height: 5rem;
+    }
 }
 
 .clients__our-clients-block-slider-arrow {
@@ -233,6 +379,10 @@
             right: auto;
             margin: 0;
         }
+
+        @include breakpoint(mobile) {
+            margin-right: 0;
+        }
     }
 
     &--next {
@@ -243,6 +393,10 @@
             left: auto;
             right: 0;
             margin: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-left: 0;
         }
     }
 

@@ -92,6 +92,10 @@
     @include breakpoint(tablet) {
         margin-bottom: 8rem;
     }
+
+    @include breakpoint(mobile) {
+        position: relative;
+    }
 }
 
 .about__numbers-cards {

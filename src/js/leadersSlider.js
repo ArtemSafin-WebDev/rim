@@ -1,6 +1,6 @@
-import { Swiper, Navigation, Pagination, EffectFade } from 'swiper';
+import { Swiper, Navigation, Pagination, EffectFade, Controller } from 'swiper';
 
-Swiper.use([Navigation, Pagination, EffectFade]);
+Swiper.use([Navigation, Pagination, EffectFade, Controller]);
 
 export default function leadersSlider() {
     const elements = Array.from(document.querySelectorAll('.js-leaders-slider'));
@@ -49,6 +49,11 @@ export default function leadersSlider() {
         });
 
         mainSlider.init();
+
+        if (window.matchMedia('(max-width: 640px)').matches) {
+            mainSlider.controller.control = navSlider;
+            navSlider.controller.control = mainSlider;
+        }
 
         links.forEach((link, linkIndex) => {
             link.addEventListener('click', event => {

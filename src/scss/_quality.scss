@@ -192,5 +192,9 @@
         background: #5229a1;
         border-color: #5229a1;
         transform: scale(1.3);
+
+        @include breakpoint(mobile) {
+            transform: scale(1);
+        }
     }
 }
