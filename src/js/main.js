@@ -14,6 +14,7 @@ import actualNewsSlider from './actualNewsSlider';
 import leadersSlider from './leadersSlider';
 import anchorLinks from './anchorLinks';
 import clientsReviews from './clientsReviews';
+import menu from './menu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     leadersSlider();
     anchorLinks();
     clientsReviews();
+    menu();
 });
 
 window.addEventListener('load', function() {
