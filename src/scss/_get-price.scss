@@ -94,9 +94,39 @@
         border-radius: 10rem;
         z-index: -1;
         background: linear-gradient(180deg, #ff5129 0%, #ff9400 100%);
-
+        transition: opacity 0.3s;
         @include breakpoint(mobile) {
-            bottom: .7rem;
+            bottom: 0.7rem;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        right: 0.5rem;
+        top: 0;
+        bottom: 1rem;
+        border-radius: 10rem;
+        z-index: -1;
+        background: linear-gradient(to top, #ff5129 0%, #ff9400 100%);
+        transition: opacity 0.3s;
+        opacity: 0;
+        @include breakpoint(mobile) {
+            bottom: 0.7rem;
+        }
+    }
+
+    .no-touch &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    .touch &:active {
+        &::before,
+        &::after {
+            opacity: 0;
         }
     }
 }
