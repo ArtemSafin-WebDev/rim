@@ -4,6 +4,7 @@ Swiper.use([Navigation, Pagination]);
 
 export default function qualitySlider() {
     const elements = Array.from(document.querySelectorAll('.js-quality-slider'));
+    if (document.body.classList.contains('is-admin')) return;
 
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');

@@ -4,6 +4,7 @@ Swiper.use([Navigation, Pagination, EffectFade]);
 
 export default function actualNewsSlider() {
     const elements = Array.from(document.querySelectorAll('.js-actual-news-slider'));
+    if (document.body.classList.contains('is-admin')) return;
 
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');

@@ -4,6 +4,7 @@ Swiper.use([Navigation, Pagination]);
 
 export default function clientsReviews() {
     const elements = Array.from(document.querySelectorAll('.js-clients-reviews'));
+    if (document.body.classList.contains('is-admin')) return;
 
     console.log('Clients reviews', elements)
 

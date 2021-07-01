@@ -4,6 +4,7 @@ Swiper.use([Navigation, Pagination, EffectFade, Controller]);
 
 export default function leadersSlider() {
     const elements = Array.from(document.querySelectorAll('.js-leaders-slider'));
+    if (document.body.classList.contains('is-admin')) return;
 
     elements.forEach(element => {
         const navContainer = element.querySelector('.geography__leaders-slider-nav .swiper-container');
