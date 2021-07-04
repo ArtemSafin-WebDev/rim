@@ -44,7 +44,7 @@ export default function qualitySlider() {
 
                 instance.slideTo(linkIndex);
             });
-            instance.slideTo(linkIndex);
+           
         });
     });
 }
