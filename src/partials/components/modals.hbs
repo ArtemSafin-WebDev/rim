@@ -1,0 +1,52 @@
+<div class="modal js-modal" id="contact-modal">
+    <div class="modal__form-modal">
+        <button class="modal__close js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <div class="modal__form-modal-inner">
+            <h3 class="modal__form-modal-heading">
+                Запрос на сотрудничество
+            </h3>
+            <form action="/" method="POST" class="modal__form-modal-form" data-need-validation>
+                <div class="modal__form-modal-input-row">
+                    <input type="text" name="name" class="modal__form-modal-input" placeholder="Название организации"
+                        required>
+                </div>
+                <div class="modal__form-modal-input-row">
+                    <input type="text" name="person" class="modal__form-modal-input" placeholder="Контактное лицо">
+                </div>
+                <div class="modal__form-modal-input-row">
+                    <input type="email" name="email" class="modal__form-modal-input" placeholder="Электронная почта"
+                        required>
+                </div>
+                <div class="modal__form-modal-input-row">
+                    <input type="tel" name="phone" class="modal__form-modal-input js-phone-input" placeholder="Телефон"
+                        required data-parsley-phone>
+                </div>
+                <div class="modal__form-modal-input-row">
+                    <textarea name="comment" class="modal__form-modal-input" placeholder="Сообщение"></textarea>
+                </div>
+                <button type="submit" class="modal__form-modal-submit">
+                    отправить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal js-modal" id="contact-success">
+    <div class="modal__form-modal">
+        <button class="modal__close js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <div class="modal__form-modal-inner">
+            <h3 class="modal__form-modal-heading">
+                Сообщение успешно отправлено
+            </h3>
+
+        </div>
+    </div>
+</div>

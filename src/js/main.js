@@ -15,6 +15,7 @@ import leadersSlider from './leadersSlider';
 import anchorLinks from './anchorLinks';
 import clientsReviews from './clientsReviews';
 import menu from './menu';
+import modals from './modal';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     anchorLinks();
     clientsReviews();
     menu();
+    modals();
 });
 
 window.addEventListener('load', function() {
