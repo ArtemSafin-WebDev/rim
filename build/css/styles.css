@@ -2151,12 +2151,12 @@ select:-webkit-autofill:focus {
       padding-top: 5.4rem;
       padding-bottom: 4rem; } }
 
-.page-footer__row {
+.page-footer__bottom-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 2rem; }
   @media only screen and (max-width: 640px) {
-    .page-footer__row {
+    .page-footer__bottom-row {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -2178,28 +2178,28 @@ select:-webkit-autofill:focus {
     .page-footer__col {
       display: contents; } }
 
-.page-footer__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+.page-footer__top-row {
   margin-bottom: 4.5rem; }
   @media only screen and (max-width: 640px) {
-    .page-footer__links {
+    .page-footer__top-row {
       margin-bottom: 0.5rem; } }
 
-.page-footer__link {
+.page-footer__nav-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2rem;
+  grid-row-gap: 0.1rem; }
+  @media only screen and (max-width: 640px) {
+    .page-footer__nav-list {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: .3rem; } }
+
+.page-footer__nav-link {
   font-size: 1.6rem;
-  line-height: 3rem;
-  margin-bottom: 0.5rem; }
-  .page-footer__link:last-child {
-    margin-bottom: 0; }
+  line-height: 3rem; }
+  .no-touch .page-footer__nav-link:hover,
+  .touch .page-footer__nav-link:active {
+    color: var(--primary-color); }
 
 .page-footer__copyright {
   font-size: 1.6rem;
@@ -2266,6 +2266,9 @@ select:-webkit-autofill:focus {
   font-size: 2.4rem;
   line-height: 3rem;
   margin-bottom: 4.5rem; }
+  .no-touch .page-footer__phone-link:hover,
+  .touch .page-footer__phone-link:active {
+    color: var(--primary-color); }
   @media only screen and (max-width: 640px) {
     .page-footer__phone-link {
       margin-top: 1.5rem; } }
