@@ -3001,12 +3001,6 @@ select:-webkit-autofill:focus {
     .clients__reviews-slider-pagination {
       display: none; } }
 
-@media only screen and (min-width: 641px) {
-  .clients__reviews-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-gap: 6rem; } }
-
 .clients__reviews-card {
   display: -webkit-box;
   display: -ms-flexbox;

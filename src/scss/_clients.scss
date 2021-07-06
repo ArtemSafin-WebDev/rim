@@ -139,11 +139,11 @@
 }
 
 .clients__reviews-list {
-    @include breakpointMF(small-tablet) {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-gap: 6rem;
-    }
+    // @include breakpointMF(small-tablet) {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, minmax(0, 1fr));
+    //     grid-gap: 6rem;
+    // }
 }
 
 .clients__reviews-card {
