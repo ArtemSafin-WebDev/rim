@@ -15,11 +15,16 @@ export default function clientsReviews() {
             slidesPerView: 1,
             spaceBetween: 40,
             watchOverflow: true,
+            speed: 700,
             autoHeight: true,
             pagination: {
                 el: element.querySelector('.clients__reviews-slider-pagination'),
                 type: 'bullets',
                 clickable: true
+            },
+            navigation: {
+                nextEl: element.querySelector('.clients__our-clients-block-slider-arrow--next'),
+                prevEl: element.querySelector('.clients__our-clients-block-slider-arrow--prev')
             },
             breakpoints: {
                 641: {

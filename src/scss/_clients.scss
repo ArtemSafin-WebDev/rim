@@ -85,9 +85,24 @@
 }
 
 .clients__reviews-slider {
+    position: relative;
+
+    .clients__our-clients-block-slider-arrow {
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
     .swiper-container {
-        overflow: visible;
+        // overflow: visible;
         margin: 0;
+        width: auto;
+        padding: 7rem 2rem;
+        margin: -7rem -2rem;
+        @include breakpoint(mobile) {
+            margin: 0;
+            padding: 0;
+            overflow: visible;
+        }
     }
 }
 

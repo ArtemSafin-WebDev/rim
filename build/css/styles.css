@@ -1508,8 +1508,10 @@ select:-webkit-autofill:focus {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    font-size: 1.6rem;
-    line-height: 1.3; } }
+    font-size: 1.4rem;
+    line-height: 1.3;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem; } }
 
 .page-header__nav-link-dropdown-link {
   margin-bottom: 1rem;
@@ -2945,9 +2947,21 @@ select:-webkit-autofill:focus {
       line-height: 2.1rem;
       text-align: center; } }
 
-.clients__reviews-slider .swiper-container {
-  overflow: visible;
-  margin: 0; }
+.clients__reviews-slider {
+  position: relative; }
+  @media only screen and (max-width: 640px) {
+    .clients__reviews-slider .clients__our-clients-block-slider-arrow {
+      display: none; } }
+  .clients__reviews-slider .swiper-container {
+    margin: 0;
+    width: auto;
+    padding: 7rem 2rem;
+    margin: -7rem -2rem; }
+    @media only screen and (max-width: 640px) {
+      .clients__reviews-slider .swiper-container {
+        margin: 0;
+        padding: 0;
+        overflow: visible; } }
 
 .clients__reviews-slider-pagination {
   display: -webkit-box;

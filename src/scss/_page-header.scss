@@ -244,8 +244,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         line-height: 1.3;
+        
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        
     }
 }
 
