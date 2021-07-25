@@ -18,12 +18,17 @@ export default function leadersSlider() {
 
         const navSlider = new Swiper(navContainer, {
             watchOverflow: true,
-            slidesPerView: 'auto',
+            slidesPerView: 1,
             spaceBetween: 15,
             threshold: 5,
             navigation: {
                 nextEl: element.querySelector('.geography__leaders-slider-nav-arrow--next'),
                 prevEl: element.querySelector('.geography__leaders-slider-nav-arrow--prev')
+            },
+            breakpoints: {
+                641: {
+                    slidesPerView: 5
+                }
             }
         });
 

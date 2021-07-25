@@ -14,6 +14,7 @@ export default function publicationsSlider() {
             spaceBetween: 38,
             slidesPerView: 'auto',
             centeredSlides: true,
+            slideToClickedSlide: true,
             loop: true,
             pagination: {
                 el: element.querySelector('.publications__slider-pagination'),

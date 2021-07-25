@@ -79,6 +79,11 @@
     font-size: 1.8rem;
     line-height: 1.2;
 
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         line-height: 1.2;

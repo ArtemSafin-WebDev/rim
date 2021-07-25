@@ -14,7 +14,7 @@ export default function ourClientsSlider() {
             speed: 500,
             watchOverflow: true,
             spaceBetween: 100,
-            
+            loop: true,
             navigation: {
                 nextEl: element.querySelector('.clients__our-clients-block-slider-arrow--next'),
                 prevEl: element.querySelector('.clients__our-clients-block-slider-arrow--prev')

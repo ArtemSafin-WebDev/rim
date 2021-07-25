@@ -2337,6 +2337,9 @@ select:-webkit-autofill:focus {
 .regions__card {
   font-size: 1.8rem;
   line-height: 1.2; }
+  .no-touch .regions__card:hover,
+  .touch .regions__card:active {
+    color: var(--primary-color); }
   @media only screen and (max-width: 640px) {
     .regions__card {
       font-size: 1.8rem;
@@ -2461,7 +2464,11 @@ select:-webkit-autofill:focus {
           flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  pointer-events: none; }
+  .swiper-slide-active .publications__slider-card,
+  .swiper-slide-duplicate-active .publications__slider-card {
+    pointer-events: initial; }
   @media only screen and (max-width: 640px) {
     .publications__slider-card {
       padding: 2rem;
@@ -3756,7 +3763,7 @@ select:-webkit-autofill:focus {
   grid-gap: 4rem;
   grid-template-columns: minmax(0, 1fr) minmax(0, 36rem);
   grid-column-gap: 10rem;
-  margin-top: 8rem; }
+  margin-top: 4rem; }
   @media only screen and (max-width: 640px) {
     .actual-news__slider-controls {
       display: -webkit-box;

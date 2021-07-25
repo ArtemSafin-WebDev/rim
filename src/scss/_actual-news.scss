@@ -172,7 +172,7 @@
     grid-gap: 4rem;
     grid-template-columns: minmax(0, 1fr) minmax(0, 36rem);
     grid-column-gap: 10rem;
-    margin-top: 8rem;
+    margin-top: 4rem;
 
     @include breakpoint(mobile) {
         display: flex;

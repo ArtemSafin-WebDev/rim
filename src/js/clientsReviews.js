@@ -17,6 +17,7 @@ export default function clientsReviews() {
             watchOverflow: true,
             speed: 700,
             autoHeight: true,
+            loop: true,
             pagination: {
                 el: element.querySelector('.clients__reviews-slider-pagination'),
                 type: 'bullets',
