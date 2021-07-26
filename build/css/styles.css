@@ -4578,8 +4578,7 @@ select:-webkit-autofill:focus {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  max-width: none;
-  pointer-events: none; }
+  max-width: none; }
   @media only screen and (max-width: 1024px) {
     .geography__map-image {
       left: -10rem; } }

@@ -135,7 +135,7 @@
     transform: translateY(-50%);
     max-width: none;
     // z-index: -1;
-    pointer-events: none;
+    // pointer-events: none;
 
     @include breakpoint(tablet) {
         left: -10rem;
