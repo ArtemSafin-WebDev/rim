@@ -2956,9 +2956,13 @@ select:-webkit-autofill:focus {
 
 .clients__reviews-slider {
   position: relative; }
-  @media only screen and (max-width: 640px) {
-    .clients__reviews-slider .clients__our-clients-block-slider-arrow {
-      display: none; } }
+  .clients__reviews-slider .clients__our-clients-block-slider-arrow {
+    -webkit-transform: none;
+            transform: none;
+    top: 30rem; }
+    @media only screen and (max-width: 640px) {
+      .clients__reviews-slider .clients__our-clients-block-slider-arrow {
+        display: none; } }
   .clients__reviews-slider .swiper-container {
     margin: 0;
     width: auto;

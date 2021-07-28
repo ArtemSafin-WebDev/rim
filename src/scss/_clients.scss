@@ -88,6 +88,8 @@
     position: relative;
 
     .clients__our-clients-block-slider-arrow {
+        transform: none;
+        top: 30rem;
         @include breakpoint(mobile) {
             display: none;
         }
