@@ -1162,6 +1162,7 @@ button.swiper-pagination-bullet {
   --max-container-width: 114rem;
   --content-padding: 6rem;
   --primary-color: #ff9400;
+  --primary-color-hover: #ff9e17;
   --text-color: black;
   --uni: "Uni Neue", sans-serif;
 }
@@ -1959,6 +1960,11 @@ select:-webkit-autofill:focus {
     background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   }
+  .intro__bg img,
+.intro__bg video {
+    -o-object-position: 80% 50%;
+       object-position: 80% 50%;
+  }
 }
 
 .intro__content {
@@ -2362,6 +2368,9 @@ select:-webkit-autofill:focus {
 }
 .about__companies-card-more:link, .about__companies-card-more:visited {
   color: var(--primary-color);
+}
+.no-touch .about__companies-card-more:hover, .touch .about__companies-card-more:active {
+  text-decoration: underline;
 }
 
 .about__companies-card-more-arrow {
@@ -4507,8 +4516,8 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (max-width: 640px) {
   .actual-news__slider-card-title {
-    font-size: 1.6rem;
-    line-height: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
   }
 }
 
@@ -4560,7 +4569,7 @@ select:-webkit-autofill:focus {
         -ms-flex-direction: column;
             flex-direction: column;
     grid-gap: initial;
-    margin-top: 2rem;
+    margin-top: 4rem;
     -webkit-box-align: initial;
         -ms-flex-align: initial;
             align-items: initial;
@@ -4599,8 +4608,8 @@ select:-webkit-autofill:focus {
   margin-right: 2.2rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -webkit-transition: border-color 0.2s, color 0.2s;
-  transition: border-color 0.2s, color 0.2s;
+  -webkit-transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -4650,7 +4659,12 @@ select:-webkit-autofill:focus {
 .actual-news__slider-btn:link, .actual-news__slider-btn:visited {
   color: #ff9400;
 }
+.no-touch .actual-news__slider-btn:not(.active):hover, .touch .actual-news__slider-btn:not(.active):active {
+  background-color: #ff9400;
+  color: white;
+}
 .actual-news__slider-btn.active {
+  pointer-events: none;
   color: white;
 }
 .actual-news__slider-btn.active::before {
@@ -4841,7 +4855,7 @@ select:-webkit-autofill:focus {
 .federal-network__about-text {
   font-size: 2rem;
   line-height: 3rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   max-width: 54rem;
 }
 @media only screen and (max-width: 640px) {
@@ -4849,6 +4863,57 @@ select:-webkit-autofill:focus {
     max-width: none;
     font-size: 1.6rem;
     line-height: 2.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.federal-network__join {
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.4rem 3rem;
+  border: 0.3rem solid #ff9400;
+  color: #ff9400;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  min-width: 27rem;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  margin-bottom: 10rem;
+}
+@media only screen and (max-width: 640px) {
+  .federal-network__join {
+    width: 100%;
+    font-weight: 800;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    padding: 1.8rem 2rem;
+    min-width: auto;
+    margin-bottom: 1rem;
+  }
+  .federal-network__join:last-child {
+    margin-bottom: 0;
+  }
+}
+.federal-network__join:link, .federal-network__join:visited {
+  color: #ff9400;
+}
+.no-touch .federal-network__join:hover, .touch .federal-network__join:active {
+  background-color: #ff9400;
+  color: white;
+}
+@media only screen and (max-width: 640px) {
+  .federal-network__join {
     margin-bottom: 3rem;
   }
 }
@@ -5110,6 +5175,9 @@ select:-webkit-autofill:focus {
   min-width: 27rem;
   border-radius: 10rem;
   text-transform: uppercase;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  overflow: hidden;
 }
 @media only screen and (max-width: 640px) {
   .federal-network__advantages-btn {
@@ -5128,6 +5196,10 @@ select:-webkit-autofill:focus {
 .federal-network__advantages-btn:link, .federal-network__advantages-btn:visited {
   color: #ff9400;
 }
+.no-touch .federal-network__advantages-btn:hover, .touch .federal-network__advantages-btn:active {
+  background-color: #ff9400;
+  color: white;
+}
 .federal-network__advantages-btn:last-child {
   margin-right: 0;
 }
@@ -5137,6 +5209,23 @@ select:-webkit-autofill:focus {
   border: none;
   padding: 1.8rem 3rem;
   color: white;
+  position: relative;
+  z-index: 1;
+}
+.federal-network__advantages-btn--filled::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9400), to(#ff5129));
+  background: linear-gradient(180deg, #ff9400 0%, #ff5129 100%);
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 @media only screen and (max-width: 640px) {
   .federal-network__advantages-btn--filled {
@@ -5145,6 +5234,14 @@ select:-webkit-autofill:focus {
 }
 .federal-network__advantages-btn--filled:link, .federal-network__advantages-btn--filled:visited {
   color: white;
+}
+.no-touch .federal-network__advantages-btn--filled:hover {
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff5129), to(#ff9400));
+  background: linear-gradient(180deg, #ff5129 0%, #ff9400 100%);
+}
+.no-touch .federal-network__advantages-btn--filled:hover::after {
+  opacity: 1;
 }
 
 .federal-network__constructions {
@@ -5820,7 +5917,118 @@ select:-webkit-autofill:focus {
   top: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 2rem;
+}
+
+.geography__leaders-slider-card-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.geography__leaders-slider-card-slider .swiper-container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  border-radius: 2.5rem;
+  overflow: hidden !important;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+@media only screen and (max-width: 640px) {
+  .geography__leaders-slider-card-slider .swiper-container {
+    border-radius: 1.5rem;
+  }
+}
+.geography__leaders-slider-card-slider .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.geography__leaders-slider-card-slider .swiper-slide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.geography__leaders-slider-card-slider-card {
+  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.geography__leaders-slider-card-slider-card .geography__leaders-slider-card-image {
+  border-radius: 0;
+}
+
+.geography__leaders-slider-card-slider-arrow {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color 0.2s, opacity 0.2s;
+  transition: background-color 0.2s, opacity 0.2s;
+  background: var(--primary-color);
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  z-index: 80;
+}
+@media only screen and (max-width: 640px) {
+  .geography__leaders-slider-card-slider-arrow {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.geography__leaders-slider-card-slider-arrow--prev {
+  right: 100%;
+  -webkit-transform: translateY(-50%) translateX(50%);
+          transform: translateY(-50%) translateX(50%);
+}
+.geography__leaders-slider-card-slider-arrow--next {
+  left: 100%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+.geography__leaders-slider-card-slider-arrow.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.geography__leaders-slider-card-slider-arrow svg {
+  width: 0.9rem;
+  height: 1.4rem;
+  fill: white;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+.no-touch .geography__leaders-slider-card-slider-arrow:not(.swiper-button-disabled):hover, .touch .geography__leaders-slider-card-slider-arrow:not(.swiper-button-disabled):active {
+  background-color: var(--primary-color-hover);
 }
 
 .geography__leaders-slider-card-image-blurred {
@@ -5835,6 +6043,14 @@ select:-webkit-autofill:focus {
   opacity: 0.6;
   -webkit-filter: blur(2rem);
           filter: blur(2rem);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 @media only screen and (max-width: 1024px) {
   .geography__leaders-slider-card-image-blurred {

@@ -1,4 +1,6 @@
 import { Swiper, Navigation, Pagination, EffectFade, Controller } from 'swiper';
+import { primaryInput } from 'detect-it';
+
 
 Swiper.use([Navigation, Pagination, EffectFade, Controller]);
 
@@ -35,6 +37,7 @@ export default function leadersSlider() {
         const mainSlider = new Swiper(mainContainer, {
             slidesPerView: 1,
             effect: 'fade',
+            allowTouchMove: false,
             fadeEffect: {
                 crossFade: true
             },

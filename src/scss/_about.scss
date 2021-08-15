@@ -257,6 +257,11 @@
     &:visited {
         color: var(--primary-color);
     }
+
+    .no-touch &:hover,
+    .touch &:active {
+        text-decoration: underline;
+    }
 }
 
 .about__companies-card-more-arrow {

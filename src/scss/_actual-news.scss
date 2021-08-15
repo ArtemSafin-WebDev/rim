@@ -136,8 +136,8 @@
     margin-bottom: 2rem;
 
     @include breakpoint(mobile) {
-        font-size: 1.6rem;
-        line-height: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
     }
 }
 
@@ -178,7 +178,7 @@
         display: flex;
         flex-direction: column;
         grid-gap: initial;
-        margin-top: 2rem;
+        margin-top: 4rem;
         align-items: initial;
     }
 }
@@ -188,7 +188,6 @@
     align-items: center;
 
     @include breakpoint(mobile) {
-       
         flex-direction: column;
         align-items: initial;
     }
@@ -200,13 +199,13 @@
     line-height: 2.7rem;
     text-align: center;
     text-transform: uppercase;
-   
+
     border-radius: 4rem;
     padding: 1.6rem 5rem;
     color: #ff9400;
     margin-right: 2.2rem;
     flex-shrink: 0;
-    transition: border-color .2s, color .2s;
+    transition: border-color 0.2s, color 0.2s, background-color .2s;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -218,7 +217,7 @@
         width: 100%;
         height: 100%;
         opacity: 0;
-        transition: opacity .2s;
+        transition: opacity 0.2s;
         background: linear-gradient(180deg, #ff5129 0%, #ff9400 100%);
         z-index: -1;
         pointer-events: none;
@@ -234,7 +233,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        transition: opacity .2s;
+        transition: opacity 0.2s;
     }
 
     @include breakpoint(mobile) {
@@ -254,8 +253,15 @@
         color: #ff9400;
     }
 
+    .no-touch &:not(.active):hover,
+    .touch &:not(.active):active {
+        background-color: #ff9400;
+        color: white;
+    }
+
     &.active {
         // border: transparent;
+        pointer-events: none;
         color: white;
         &::before {
             opacity: 1;
@@ -264,7 +270,7 @@
         &::after {
             opacity: 0;
         }
-       
+
         &:link,
         &:visited {
             color: white;
@@ -334,7 +340,6 @@
     position: relative;
 }
 
-
 .actual-news__slider-arrows-tab,
 .actual-news__slider-tab {
     position: absolute;
@@ -344,13 +349,13 @@
     height: auto;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .4s, visibility 0s linear .4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
     z-index: 5;
 
     &.active {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .4s, visibility .4s;
+        transition: opacity 0.4s, visibility 0.4s;
         z-index: 10;
         position: relative;
     }

@@ -359,7 +359,105 @@
     top: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 2rem;
+}
+
+.geography__leaders-slider-card-slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  
+  
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0;
+        border-radius: 2.5rem;
+        overflow: hidden !important;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+
+        @include breakpoint(mobile) {
+            border-radius: 1.5rem;
+        }
+    }
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .swiper-slide {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.geography__leaders-slider-card-slider-card {
+    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+   
+    
+    .geography__leaders-slider-card-image {
+        border-radius: 0;
+    }
+}
+
+.geography__leaders-slider-card-slider-arrow {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, opacity 0.2s;
+    background: var(--primary-color);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 80;
+
+    @include breakpoint(mobile) {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &--prev {
+        right: 100%;
+        transform: translateY(-50%) translateX(50%);
+    }
+
+    &--next {
+        left: 100%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+    }
+    svg {
+        width: 0.9rem;
+        height: 1.4rem;
+        fill: white;
+        transition: fill 0.2s;
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        background-color: var(--primary-color-hover);
+    }
 }
 
 .geography__leaders-slider-card-image-blurred {
@@ -373,7 +471,10 @@
     right: 3.5rem;
     opacity: 0.6;
     filter: blur(2rem);
-
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
     @include breakpoint(tablet) {
         right: 2rem;
         margin-top: 2rem;

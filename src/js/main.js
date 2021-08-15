@@ -16,6 +16,7 @@ import anchorLinks from './anchorLinks';
 import clientsReviews from './clientsReviews';
 import menu from './menu';
 import modals from './modal';
+import geographyInnerSliders from './geographyLeadersInnerSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     clientsReviews();
     menu();
     modals();
+    geographyInnerSliders();
 });
 
 window.addEventListener('load', function() {

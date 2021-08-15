@@ -33,7 +33,7 @@ export default function actualNewsSlider() {
         tabs.forEach((tab, tabIndex) => {
             const container = tab.querySelector('.swiper-container');
 
-            new Swiper(container, {
+            let options = {
                 slidesPerView: 1,
                 effect: 'fade',
                 fadeEffect: {
@@ -43,7 +43,37 @@ export default function actualNewsSlider() {
                     nextEl: btnTabs[tabIndex].querySelector('.actual-news__slider-arrow--next'),
                     prevEl: btnTabs[tabIndex].querySelector('.actual-news__slider-arrow--prev')
                 }
-            });
+            }
+
+            if (window.matchMedia('(max-width: 640px)').matches) {
+                const sliderCards = Array.from(tab.querySelectorAll('.actual-news__slider-card'));
+                const swiperWrapper = tab.querySelector('.swiper-wrapper');
+
+                swiperWrapper.innerHTML = '';
+
+                sliderCards.forEach(card => {
+                    const swiperSlide = document.createElement('div');
+
+                    swiperSlide.className = 'swiper-slide';
+
+                    swiperSlide.appendChild(card);
+
+                    swiperWrapper.appendChild(swiperSlide)
+                });
+
+                options = {
+                    ...options,
+                    slidesPerColumn: 2,
+                    slidesPerColumnFill: 'row',
+                    spaceBetween: 35,
+                    effect: 'slide',
+                    
+                }
+
+                console.log('new options', options)
+            }
+
+            new Swiper(container, options);
         });
     });
 }
