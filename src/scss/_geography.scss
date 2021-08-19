@@ -139,6 +139,16 @@
     // z-index: -1;
     // pointer-events: none;
 
+    text {
+        pointer-events: none;
+    }
+
+    a:hover {
+        path:nth-child(1) {
+            fill: url(#hover-gradient);
+        }
+    }
+
     @include breakpoint(tablet) {
         left: -10rem;
     }

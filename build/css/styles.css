@@ -5654,6 +5654,12 @@ select:-webkit-autofill:focus {
           transform: translateY(-50%);
   max-width: none;
 }
+.geography__map-image text {
+  pointer-events: none;
+}
+.geography__map-image a:hover path:nth-child(1) {
+  fill: url(#hover-gradient);
+}
 @media only screen and (max-width: 1024px) {
   .geography__map-image {
     left: -10rem;
