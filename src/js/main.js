@@ -14,7 +14,6 @@ import actualNewsSlider from './actualNewsSlider';
 import leadersSlider from './leadersSlider';
 import anchorLinks from './anchorLinks';
 import clientsReviews from './clientsReviews';
-import menu from './menu';
 import modals from './modal';
 import geographyInnerSliders from './geographyLeadersInnerSlider';
 
@@ -34,12 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
     leadersSlider();
     anchorLinks();
     clientsReviews();
-    menu();
+
     modals();
     geographyInnerSliders();
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-    setTimeout(() => document.body.classList.add('animatable'), 300)
-})
+    setTimeout(() => document.body.classList.add('animatable'), 300);
+});
