@@ -7,8 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="format-detection" content="telephone=no">
         <script src="assets/js/ie11CustomProperties.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
         <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/page-header.css" />
+        <link rel="stylesheet" href="css/new-header.css" />
         <title>
             {{ title }}
         </title>
@@ -20,7 +22,7 @@
         </div>
 
         <div class="page-content">
-            {{> header }}
+            {{> new-header }}
             <main class="page-main">
                 {{#block "main"}}
 
@@ -32,8 +34,14 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="js/app.js"></script>
             <script src="assets/js/backend.js"></script>
-            <script src="assets/js/header.js"></script>
+
         </div>
+
+        <script type="module" src="assets/js/new-header.js">
+
+
+
+        </script>
     </body>
 
 </html>
