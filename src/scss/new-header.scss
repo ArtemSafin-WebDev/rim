@@ -50,7 +50,7 @@ body.menu-open {
     display: flex;
     align-items: center;
     padding: calc(10px * var(--scale-factor)) 0;
-    gap: calc(50px * var(--scale-factor));
+    gap: calc(20px * var(--scale-factor));
     position: relative;
 
     @media (max-width: 1400px) {
@@ -60,10 +60,16 @@ body.menu-open {
 
 .new-header__logo {
     flex-shrink: 0;
+    margin-right: calc(30px * var(--scale-factor));
+
+    @media (max-width: 1200px) {
+        margin-right: 0;
+    }
 
     @media (max-width: 900px) {
         position: relative;
         z-index: 120;
+        margin-right: 0;
     }
 }
 
@@ -127,7 +133,7 @@ body.menu-open {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: calc(20px * var(--scale-factor));
+    gap: calc(10px * var(--scale-factor));
 
     @media (max-width: 1200px) {
         gap: calc(10px * var(--scale-factor));
@@ -165,7 +171,7 @@ body.menu-open {
     align-items: center;
     color: #828282;
 
-    font-size: calc(13px * var(--scale-factor));
+    font-size: calc(15px * var(--scale-factor));
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -436,7 +442,7 @@ body.menu-open {
 .new-header__contacts-list {
     display: flex;
     align-items: center;
-    gap: calc(20px * var(--scale-factor));
+    gap: calc(10px * var(--scale-factor));
     flex-wrap: wrap;
     row-gap: calc(10px * var(--scale-factor));
     justify-content: flex-end;
@@ -467,7 +473,7 @@ body.menu-open {
 
 .new-header__contacts-link {
     display: block;
-    font-size: calc(13px * var(--scale-factor));
+    font-size: calc(15px * var(--scale-factor));
     font-style: normal;
     font-weight: 500;
     line-height: normal;
