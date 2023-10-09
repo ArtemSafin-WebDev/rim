@@ -43,7 +43,7 @@ body.menu-open {
     width: 100%;
     z-index: 100;
     --scale-factor: 1;
-    --primary-color: #ff5129;
+    --primary-color: #ff9400;
 }
 
 .new-header__row {
@@ -311,7 +311,7 @@ body.menu-open {
 .new-header__dropdown-submenu-link {
     color: #828282;
 
-    font-size: calc(9px * var(--scale-factor));
+    font-size: calc(11px * var(--scale-factor));
     font-style: normal;
     font-weight: 500;
     line-height: normal;
