@@ -43,7 +43,7 @@ body.menu-open {
     width: 100%;
     z-index: 100;
     --scale-factor: 1;
-    --primary-color: #ff9400;
+    --primary-color: #ff9823;
 }
 
 .new-header__row {
@@ -217,7 +217,7 @@ body.menu-open {
     width: 100%;
     max-width: calc(666px * var(--scale-factor));
     --scale-factor: 1.4;
-    left: 50%;
+    left: 46%;
     transform: translateX(-50%);
 
     @media (max-width: 1100px) {
