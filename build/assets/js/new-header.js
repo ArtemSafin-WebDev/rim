@@ -1,13 +1,17 @@
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
+/*import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';*/
 
 document.addEventListener('DOMContentLoaded', () => {
     const headerSliders = Array.from(document.querySelectorAll('.new-header__dropdown-slider'));
 
     headerSliders.forEach(item => {
         const container = item.querySelector('.swiper');
+        const index = [...container.querySelectorAll('.swiper-slide')]
+            .findIndex(element => element.className.includes('slide-active'));
+
         const swiper = new Swiper(container, {
             slidesPerView: 'auto',
             speed: 600,
+            initialSlide: index,
             pagination: {
                 el: item.querySelector('.new-header__dropdown-pagination'),
                 type: 'bullets',
