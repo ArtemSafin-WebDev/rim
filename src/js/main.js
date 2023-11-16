@@ -19,6 +19,9 @@ import geographyInnerSliders from './geographyLeadersInnerSlider';
 // #NOTE: dev-azat
 import loopTape from "./loopTape";
 import inventoryAnimation from "./inventory";
+import loopClients from "./loopClients";
+import headerAnimation from "./redtagHeader";
+import marketLoopAnimation from "./marketLoop";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -42,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // #NOTE: dev-azat
     loopTape()
     inventoryAnimation()
+    loopClients()
+    headerAnimation()
+    marketLoopAnimation()
 });
 
 window.addEventListener('load', function() {
