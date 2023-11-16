@@ -1,7 +1,5 @@
 import { lockScroll, unlockScroll } from "./scrollBlocker";
 
-
-
 export default function modals() {
     let activeModal = null;
 

@@ -16,6 +16,9 @@ import anchorLinks from './anchorLinks';
 import clientsReviews from './clientsReviews';
 import modals from './modal';
 import geographyInnerSliders from './geographyLeadersInnerSlider';
+// #NOTE: dev-azat
+import loopTape from "./loopTape";
+import inventoryAnimation from "./inventory";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -36,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     modals();
     geographyInnerSliders();
+    // #NOTE: dev-azat
+    loopTape()
+    inventoryAnimation()
 });
 
 window.addEventListener('load', function() {

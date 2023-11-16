@@ -1,4 +1,6 @@
-/*import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';*/
+/*
+испортировать как script type=module
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';*/
 
 document.addEventListener('DOMContentLoaded', () => {
     const headerSliders = Array.from(document.querySelectorAll('.new-header__dropdown-slider'));

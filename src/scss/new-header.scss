@@ -37,13 +37,19 @@ body.menu-open {
 .new-header {
     background-color: #fff;
     color: #1f1f1f;
-    position: fixed;
-    left: 0;
-    top: 0;
     width: 100%;
     z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     --scale-factor: 1;
     --primary-color: #ff9823;
+    transition: .4s ease all;
+}
+
+.page-main {
+    transition: .4s ease all;
 }
 
 .new-header__row {

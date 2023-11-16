@@ -1,0 +1,17 @@
+.redtag-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  object-fit: cover;
+
+  @include breakpoint(large-desktop) {
+    width: 83%;
+  }
+
+  &__link {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+  }
+}

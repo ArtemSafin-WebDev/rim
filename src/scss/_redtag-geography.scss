@@ -1,0 +1,147 @@
+.redtag-geography {
+  width: 100%;
+  background-color: black;
+  position: relative;
+  padding: 20rem 0;
+
+  @include breakpoint(large-desktop) {
+    padding-bottom:  15rem;
+  }
+
+  &__content {
+
+  }
+
+  &__shape {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 104.2rem;
+    height: 104.2rem;
+  }
+
+  &__map-wrapper {
+    position: absolute;
+    top: 20rem;
+    right: 0;
+
+    @include breakpoint(large-desktop) {
+      top: 30rem;
+      transform: translateX(20rem);
+    }
+  }
+
+  &__column {
+    color: white;
+  }
+
+  &__icon {
+    position: absolute;
+    left: -1rem;
+    width: 99.5rem;
+    height: 17rem;
+
+    @include breakpoint(large-desktop) {
+      width: 75rem;
+      height: 15rem;
+    }
+  }
+
+  &__block {
+    position: relative;
+    z-index: 1;
+    padding-top: 5rem;
+
+    @include breakpoint(large-desktop) {
+      padding-top: 4rem;
+    }
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 5.4rem;
+    }
+  }
+
+  &__info {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    margin-top: 11.7rem;
+
+    @include breakpoint(large-desktop) {
+      margin-top: 8rem;
+      row-gap: 2rem;
+    }
+  }
+
+  &__list {
+    position: relative;
+    object-fit: cover;
+  }
+
+  &__list:nth-child(odd) >  &__list-title {
+    color: #F20D30;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    text-shadow: 0px 0px 4px rgba(194, 10, 38, 0.50), 0px 0px 8px rgba(194, 10, 38, 0.50), 0px 0px 16px rgba(194, 10, 38, 0.50), 0px 0px 32px rgba(194, 10, 38, 0.50), 0px 0px 64px rgba(194, 10, 38, 0.50), 0px 0px 128px rgba(194, 10, 38, 0.50);
+    font-style: normal;
+    text-transform: uppercase;
+  }
+
+  &__list-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12rem;
+    font-weight: 800;
+    line-height: .6;
+
+    @include breakpoint(large-desktop) {
+      font-size: 8rem;
+    }
+  }
+
+  &__icon-title {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__list:nth-child(2) >  &__icon-title {
+    @include breakpoint(large-desktop) {
+      width: 50%;
+    }
+  }
+
+  &__list:nth-child(4) >  &__icon-title {
+    @include breakpoint(large-desktop) {
+      width: 60%;
+    }
+  }
+
+
+  &__text {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 31.2px */
+    width: 100%;
+    max-width: 29.6rem;
+    margin-top: 2rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 1.8rem;
+      margin-top: 1.5rem;
+    }
+  }
+}

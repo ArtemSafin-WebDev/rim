@@ -1,0 +1,211 @@
+.redtag-intro {
+  width: 100%;
+  margin-top: 5rem;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20rem;
+    background: linear-gradient(180deg, rgba(1, 1, 1, 0.00) 0%, #010101 100%);
+    z-index: 2;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100vh - 5rem);
+    justify-content: center;
+    padding-top: 5rem;
+
+    @include breakpoint(large-desktop) {
+      padding: 0;
+      padding-top: 7rem;
+
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: -15rem;
+    bottom: 0;
+    width: 100%;
+    max-width: 146.7rem;
+    min-height: calc(100vh - (5rem + 7rem));
+    background-image: url("../img/redtag/intro/background.jpg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    @include breakpoint(large-desktop) {
+      right: -30rem;
+      bottom: 0;
+      min-height: calc(100vh - 5rem);
+    }
+  }
+
+  &__column {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: max-content;
+  }
+
+  &__title-icon {
+    width: 36.5rem;
+    height: 7.8rem;
+    margin-bottom: .9rem;
+    object-fit: cover;
+
+    @include breakpoint(large-desktop) {
+      width: 28rem;
+      height: 5.9rem;
+    }
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 105%;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 47.4rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 5rem;
+    }
+  }
+
+  &__text {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__info-block {
+    display: flex;
+    align-items: center;
+    column-gap: 4.6rem;
+
+    @include breakpoint(large-desktop) {
+      column-gap: 3rem;
+    }
+  }
+
+  &__info-list {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    max-width: 16rem;
+    margin-bottom: 6rem;
+    &:last-child {
+      max-width: 29rem;
+    }
+    padding-left: 1rem;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: .2rem;
+      left: 0;
+      z-index: 4;
+      height: 4.2rem;
+      fill: #C20A26;
+      background-color: #C20A26;
+      filter: drop-shadow(0px 0px 4px rgba(194, 10, 38, 0.50)) drop-shadow(0px 0px 8px rgba(194, 10, 38, 0.50)) drop-shadow(0px 0px 16px rgba(194, 10, 38, 0.50)) drop-shadow(0px 0px 32px rgba(194, 10, 38, 0.50)) drop-shadow(0px 0px 64px rgba(194, 10, 38, 0.50)) drop-shadow(0px 0px 128px rgba(194, 10, 38, 0.50));
+    }
+
+    @include breakpoint(large-desktop) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__info-text {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__button {
+    width: 32rem;
+    height: 8.2rem;
+    border-radius: 16.3rem;
+    background: #C20A26;
+    color: var(--primary-white, #FFF);
+
+    text-align: center;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 2.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+
+    transition: .4s ease all;
+
+    &:hover {
+      background: #C20A26;
+      box-shadow: 0px 0px 4px 0px rgba(194, 10, 38, 0.50), 0px 0px 8px 0px rgba(194, 10, 38, 0.50), 0px 0px 16px 0px rgba(194, 10, 38, 0.50), 0px 0px 32px 0px rgba(194, 10, 38, 0.50), 0px 0px 64px 0px rgba(194, 10, 38, 0.50), 0px 0px 128px 0px rgba(194, 10, 38, 0.50);
+    }
+
+    @include breakpoint(large-desktop) {
+      width: 20rem;
+      height: 5.5rem;
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__arrow-button {
+    display: block;
+    transition: .4s ease opacity;
+    width: 4.8rem;
+    height: 4.8rem;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &__arrow-icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    object-fit: cover;
+
+    @include breakpoint(large-desktop) {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+  }
+}
+
+.container {
+}
