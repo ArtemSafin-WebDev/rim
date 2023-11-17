@@ -247,3 +247,12 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     background-color: transparent;
 }
+
+.red-circle-shape {
+    border-radius: 104.2rem;
+    background: #C20A26;
+    -webkit-filter: blur(500px);
+    -moz-filter: blur(500px);
+    -ms-filter: blur(500px);
+    filter: blur(500px);
+}

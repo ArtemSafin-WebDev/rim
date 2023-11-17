@@ -1,0 +1,20 @@
+.redtag-line {
+  height: 29.4rem;
+  position: relative;
+  z-index: 2;
+  &__tape {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    transform: rotate(-5deg);
+
+    img {
+      width: auto;
+      height: 100%;
+
+      @include breakpoint(large-desktop) {
+
+      }
+    }
+  }
+}

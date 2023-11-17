@@ -67,7 +67,7 @@ gulp.task('handlebars', function() {
 
 gulp.task('styles', function() {
     return gulp
-        .src('src/scss/*.scss')
+        .src(['src/scss/*.scss', 'src/scss/new-redtag/*.scss'])
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass())

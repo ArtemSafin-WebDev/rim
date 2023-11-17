@@ -1,0 +1,320 @@
+.redtag-cases {
+  padding: 10rem 0 0;
+  &__content {
+  }
+
+  &__link {
+    color: #F20D30 !important;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  &__title {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 6rem;
+  }
+
+  &__slider {
+    position: relative;
+    .swiper-slide {
+      transition: 1s ease all;
+    }
+    .swiper-slide.swiper-slide-prev {
+      opacity: .4;
+      filter: blur(8px);
+      transition: 1s ease all;
+      transform: scale(.9);
+    }
+    .swiper-slide.swiper-slide-next {
+      opacity: .4;
+      filter: blur(8px);
+      transition: 1s ease all;
+      transform: scale(.9);
+    }
+  }
+
+  &__slide {
+  }
+
+  &__slide-upper {
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .75fr);
+    column-gap: 2rem;
+  }
+
+  &__column {
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__slide-title {
+    color: #FFF;
+    font-family: "Mont", sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%; /* 48px */
+    width: 100%;
+    max-width: 69.4rem;
+    margin-bottom: 2rem;
+
+
+    @include breakpoint(large-desktop) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__slide-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 3rem;
+  }
+
+  &__slide-list {
+    padding-left: 1rem;
+  }
+
+  &__slide-info-wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -1rem;
+      width: .2rem;
+      height: 100%;
+      background-color: #C20A26;
+    }
+  }
+
+  &__slide-info-title {
+    color: #F20D30;
+    font-family: "Mont", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%; /* 16px */
+    margin-bottom: 1rem;
+  }
+
+  &__slide-info-text {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  &__slide-image {
+    width: 100%;
+    height: auto;
+    max-width: 46.8rem;
+    border-radius: 2rem;
+
+    @include breakpoint(large-desktop) {
+      max-width: 40rem;
+    }
+  }
+
+  &__bottom {
+    margin-top: 4rem;
+  }
+
+  &__bottom-title {
+    color: #F20D30;
+    font-family: "Mont", sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%; /* 32px */
+    margin-bottom: 2rem;
+  }
+
+  &__bottom-info {
+    counter-reset: proccess;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &__bottom-info-list {
+    counter-increment: proccess;
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+
+    @include breakpoint(large-desktop) {
+      column-gap: 1.6rem;
+    }
+  }
+
+  &__bottom-info-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 0px 49px -8px rgba(242,13,48,1);
+    -moz-box-shadow: 0px 0px 49px -8px rgba(242,13,48,1);
+    box-shadow: 0px 0px 49px -8px rgba(242,13,48,1);
+    min-width: 6.4rem;
+    height: 6.4rem;
+    background-color: #F20D30;
+    border-radius: 2rem;
+    &::before {
+      content: '0'counter(proccess)'';
+      display: block;
+
+      color: #FFF;
+      text-align: center;
+      font-family: "Mont", sans-serif;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 100%; /* 24px */
+
+      @include breakpoint(large-desktop) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__bottom-info-text {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+    width: 100%;
+    max-width: 31rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__bottom-slat {
+    margin-top: 3.2rem;
+    width: 100%;
+    background-color: #F20D30;
+    padding: 3rem;
+    border-radius: 2rem;
+
+    @include breakpoint(large-desktop) {
+      padding: 2rem;
+    }
+  }
+
+  &__bottom-slat-title {
+    color: var(--primary-white, #FFF);
+    font-family: "Mont", sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: 0.64px;
+    margin-bottom: 1rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 2.4rem;
+      margin-bottom: .2rem;
+    }
+  }
+
+  &__bottom-slat-text {
+    color: #FFF;
+    font-family:  "DIN Pro", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 2rem;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    right: 0;
+    top: .5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    z-index: 2;
+  }
+
+  &__button-left {
+    cursor: pointer;
+    transition: .4s ease opacity;
+
+    &:hover {
+      opacity: .6;
+    }
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &__button-right {
+    cursor: pointer;
+    transition: .4s ease opacity;
+
+    &:hover {
+      opacity: .6;
+    }
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  .swiper-button-disabled {
+    opacity: .4;
+  }
+
+  &__pagination {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: -10rem;
+    color: white;
+    font-family: 'DIN Pro', sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 31.2px */
+  }
+
+  &__pagination > .swiper-pagination-current {
+    color: #F20D30;
+  }
+
+}
+
+.container {
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}
+
+.red-color {
+  color: #F20D30;
+}

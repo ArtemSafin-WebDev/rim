@@ -1,0 +1,205 @@
+.redtag-tasks {
+  padding: 0 0 25rem;
+  position: relative;
+
+  &__upper {
+    margin-bottom: 3rem;
+  }
+
+  &__link {
+    display: block;
+    color: #F20D30 !important;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 66.9rem;
+  }
+
+  &__main-content {
+    width: 77.5%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    column-gap: 2rem;
+    row-gap: 6rem;
+
+    @include breakpoint(large-desktop) {
+      column-gap: 1.5rem;
+      row-gap: 4rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+
+  &__list-wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -1rem;
+      width: .2rem;
+      height: 100%;
+      background-color: #C20A26;
+    }
+  }
+
+  &__list-title {
+    color: #F20D30;
+    font-family: "Mont", sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%; /* 32px */
+
+    @include breakpoint(large-desktop) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__list-text {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+
+    @include breakpoint(large-desktop) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .block--1 {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+
+  .block--2 {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+  }
+
+  .block--3 {
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+  }
+
+  .block--4 {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+  }
+
+  .block--5 {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+  }
+
+  .block--6 {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+  }
+
+  .block--7 {
+    grid-column: 1 / 1;
+    grid-row: 3 / 3;
+  }
+
+  .block--8 {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+  }
+
+  .block--9 {
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+  }
+
+  &__button {
+    display: flex;
+    width: 32rem;
+    height: 8.2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    background: #F20D30;
+    transition: .4s ease box-shadow;
+
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    margin-top: 6rem;
+
+    &:hover {
+      box-shadow: 0px 0px 4px 0px rgba(242, 13, 48, 0.50), 0px 0px 8px 0px rgba(242, 13, 48, 0.50), 0px 0px 16px 0px rgba(242, 13, 48, 0.50), 0px 0px 32px 0px rgba(242, 13, 48, 0.50), 0px 0px 64px 0px rgba(242, 13, 48, 0.50), 0px 0px 128px 0px rgba(242, 13, 48, 0.50);
+    }
+
+    @include breakpoint(large-desktop) {
+      width: 28rem;
+      height: 6.8rem;
+      font-size: 1.7rem;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    display: flex;
+    bottom: 0;
+  }
+
+  &__bottom-icon {
+    position: absolute;
+    bottom: -16rem;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-width: 100rem;
+    z-index: 0;
+
+    @include breakpoint(large-desktop) {
+      max-width: 70rem;
+      bottom: -11rem;
+    }
+  }
+
+  &__bottom-bg {
+    width: 100%;
+    max-width: 122.5rem;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: -32.5rem;
+    z-index: 1;
+
+    @include breakpoint(large-desktop) {
+      max-width: 97rem;
+      bottom: -28rem;
+    }
+  }
+}

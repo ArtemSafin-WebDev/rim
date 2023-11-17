@@ -16,6 +16,18 @@ import anchorLinks from './anchorLinks';
 import clientsReviews from './clientsReviews';
 import modals from './modal';
 import geographyInnerSliders from './geographyLeadersInnerSlider';
+// #NOTE: dev-azat
+import loopTape from "./loopTape";
+import inventoryAnimation from "./inventory";
+import loopClients from "./loopClients";
+import headerAnimation from "./redtagHeader";
+import marketLoopAnimation from "./marketLoop";
+import redTagTapeLoop from "./redTagTapeLoop";
+import meetPersonSkills from "./meetPersonSkills";
+import redtagCasesSlider from "./redtagCasesSlider";
+import redtagPlaceLoop from "./redtagPLaceLoop";
+import redtagBoardsAnimation from "./redtagBoardsAnimation";
+import redtagIntro from "./redtagIntro";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -36,6 +48,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     modals();
     geographyInnerSliders();
+    // #NOTE: dev-azat
+    loopTape()
+    inventoryAnimation()
+    loopClients()
+    headerAnimation()
+    marketLoopAnimation()
+    redTagTapeLoop()
+    meetPersonSkills()
+    redtagCasesSlider()
+    redtagPlaceLoop()
+    redtagBoardsAnimation()
+    redtagIntro()
 });
 
 window.addEventListener('load', function() {

@@ -21,3 +21,37 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Uni Neue';
+    src: url('../assets/fonts/UniNeueHeavy.woff2') format('woff2'), url('../assets/fonts/UniNeueHeavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('../assets/fonts/dinpro_medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('../assets/fonts/dinpro_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('../assets/fonts/Mont-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+

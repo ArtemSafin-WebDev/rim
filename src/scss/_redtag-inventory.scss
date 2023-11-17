@@ -1,0 +1,187 @@
+.redtag-inventory {
+  padding: 5rem 0 10rem;
+  position: relative;
+
+
+  &__content {
+    position: relative;
+  }
+
+  &__shape {
+    position: absolute;
+    width: 104.2rem;
+    height: 104.2rem;
+    right: -20rem;
+    top: -50rem;
+    background: rgba(194, 10, 38, 0.56);
+  }
+
+  &__column {
+    width: 60%;
+  }
+
+  &__upper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  &__link {
+    color: #F20D30 !important;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+  }
+
+  &__text {
+    color: #FFF;
+    font-family:"DIN Pro", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 2rem;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__button {
+    width: 16rem;
+    height: 17.6rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C20A26;
+    margin-bottom: 1rem;
+
+    transition: .4s ease opacity;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__button-icon {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__card-info {
+  }
+
+  &__count {
+    color: #FFF;
+    text-align: center;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__name {
+    color: #FFF;
+    text-align: center;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__data {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-20%);
+    right: -30rem;
+
+    @include breakpoint(large-desktop) {
+      top: 30%;
+    }
+  }
+
+  &__block {
+    position: relative;
+  }
+
+  &__block-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    @include breakpoint(large-desktop) {
+      width: 90%;
+    }
+  }
+
+  &__data-info {
+    position: absolute;
+    bottom: 2rem;
+    left: 30%;
+    transform: translateX(-30%);
+  }
+
+  &__block-count {
+    color: var(--primary-white, #FFF);
+    font-family: "Mont", sans-serif;
+    font-size: 15.6rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 90%; /* 140.4px */
+
+    @include breakpoint(large-desktop) {
+      font-size: 10rem;
+    }
+  }
+
+  &__block-name {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 28.8px */
+    @include breakpoint(large-desktop) {
+      font-size: 2rem;
+    }
+  }
+}
