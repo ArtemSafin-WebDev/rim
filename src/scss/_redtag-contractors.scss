@@ -1,0 +1,59 @@
+.redtag-contractors {
+  background-color: white;
+  position: relative;
+  padding: 10rem 0;
+  &__content {
+  }
+
+  &__link {
+    color: #C20A26 !important;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    color: #010101;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 57rem;
+  }
+
+  &__text {
+    color: #010101;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    width: 100%;
+    max-width: 51.7rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 2rem;
+    }
+  }
+
+  &__icon-number {
+    width: 100%;
+    max-width: 95rem;
+    height: auto;
+    position: absolute;
+    top: -10rem;
+    right: -5rem;
+
+    @include breakpoint(large-desktop) {
+      max-width: 65rem;
+      top: -5rem;
+    }
+  }
+}
