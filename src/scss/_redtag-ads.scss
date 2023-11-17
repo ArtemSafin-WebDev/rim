@@ -30,7 +30,7 @@
     width: 30rem;
     min-height: 26rem;
     position: relative;
-    padding: 2rem;
+    padding: 2rem 0;
     transition: .6s ease all;
     border-radius: 2rem;
   }
@@ -42,12 +42,14 @@
   &__card.active > &__card-wrapper {
     background-color: #C20A26;
     border-radius: 2rem;
+    padding-left: 2rem;
   }
 
   &__card.active:hover > &__card-wrapper {
-    background-color: transparent !important;
+    background-color: transparent;
     outline: .5rem solid #C20A26;
     box-shadow: 0px 0px 4px 0px rgba(194, 10, 38, 0.50), 0px 0px 8px 0px rgba(194, 10, 38, 0.50), 0px 0px 16px 0px rgba(194, 10, 38, 0.50), 0px 0px 32px 0px rgba(194, 10, 38, 0.50), 0px 0px 64px 0px rgba(194, 10, 38, 0.50), 0px 0px 128px 0px rgba(194, 10, 38, 0.50);
+    animation: hoverEffect 5s linear infinite;
   }
 
   &__card.active > &__card-wrapper > * {
@@ -67,9 +69,10 @@
   }
 
   &__card.active:hover > &__card-wrapper {
-    background-color: #C20A26;
+
     border-radius: 2rem;
     transform: rotate(-5deg);
+
   }
 
   &__card.active > &__card-name {
@@ -104,7 +107,7 @@
   &__card-name {
     transition: .6s ease all;
     position: absolute;
-    left: 2rem;
+    left: 0rem;
     top: 2rem;
     color: #F20D30;
     font-family: "DIN Pro", sans-serif;
@@ -125,5 +128,23 @@
     font-weight: 500;
     line-height: 140%;
     transition: .6s ease all;
+  }
+}
+
+@keyframes hoverEffect {
+  0% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(242, 13, 48, 0.7);
+  }
+  75% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
   }
 }

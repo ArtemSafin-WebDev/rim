@@ -1,0 +1,99 @@
+.redtag-place {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-top: 10rem;
+
+  &__content {
+
+  }
+
+  &__rect {
+    position: absolute;
+    height: 0;
+    bottom: 0;
+  }
+
+  &__rect-one {
+    width: 102.5rem;
+    height: 53.2rem;
+    transform: rotate(-151deg);
+    background-color: #960C21;
+    position: relative;
+    bottom: 20rem;
+    left: -20rem;
+    z-index: 1;
+
+    @include breakpoint(large-desktop) {
+      width: 72.5rem;
+      height: 40.5rem;
+      left: -10rem;
+    }
+  }
+
+  &__rect-two {
+    width: 102.5rem;
+    height: 53.5rem;
+    transform: rotate(-20.04deg);
+    position: relative;
+    background-color: #F20D30;
+    bottom: 65rem;
+    right: -30rem;
+
+    @include breakpoint(large-desktop) {
+      width: 82.5rem;
+      height: 45.5rem;
+      right: -45rem;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 1.8rem 0;
+    column-gap: 1.5rem;
+    left: 0;
+    top: 60%;
+    transform: translateY(-50%);
+
+    background-color: white;
+
+    color: #C20A26;
+    font-family: "Mont", sans-serif;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+  }
+
+  &__billboards {
+    display: flex;
+    align-items: center;
+  }
+
+  &__billboard-one {
+    object-fit: cover;
+    position: relative;
+    width: 54.2rem;
+    height: 52.5rem;
+    left: 5rem;
+    z-index: 1;
+    bottom: 0;
+  }
+
+  &__billboard-two {
+    position: relative;
+    object-fit: cover;
+    width: 54.2rem;
+    height: 52.5rem;
+    bottom: -6rem;
+    z-index: 2;
+  }
+}
+
+.container {
+}
+
+.js-place-line {
+}

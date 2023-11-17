@@ -30,15 +30,41 @@
     width: 20rem;
     height: 5rem;
     object-fit: cover;
-    transition: .4s ease opacity;
+
+    path {
+      transition: .4s ease all;
+    }
     @include breakpoint(large-desktop) {
       width: 17rem;
       height: 4.5rem;
     }
 
-    &:hover {
-      opacity: .8;
+    &:hover path:nth-child(1) {
+      fill: white;
     }
+    &:hover path:nth-child(2) {
+      fill: #C20A26;
+    }
+    &:hover path:nth-child(3) {
+      fill: #C20A26;
+    }
+    &:hover path:nth-child(4) {
+      fill: #C20A26;
+    }
+    &:hover path:nth-child(5) {
+      fill: #C20A26;
+    }
+    &:hover path:nth-child(6) {
+      fill: #C20A26;
+    }
+    &:hover path:nth-child(7) {
+      fill: #C20A26;
+    }
+    &:hover path:last-child {
+      fill: white;
+    }
+
+
   }
 
   &__logo-icon {

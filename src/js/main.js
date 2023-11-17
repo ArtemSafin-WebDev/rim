@@ -25,6 +25,9 @@ import marketLoopAnimation from "./marketLoop";
 import redTagTapeLoop from "./redTagTapeLoop";
 import meetPersonSkills from "./meetPersonSkills";
 import redtagCasesSlider from "./redtagCasesSlider";
+import redtagPlaceLoop from "./redtagPLaceLoop";
+import redtagBoardsAnimation from "./redtagBoardsAnimation";
+import redtagIntro from "./redtagIntro";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -54,6 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
     redTagTapeLoop()
     meetPersonSkills()
     redtagCasesSlider()
+    redtagPlaceLoop()
+    redtagBoardsAnimation()
+    redtagIntro()
 });
 
 window.addEventListener('load', function() {

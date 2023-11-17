@@ -44,6 +44,8 @@
     background-repeat: no-repeat;
     z-index: 1;
 
+    animation: bgAnimation 6s linear infinite;
+
     @include breakpoint(large-desktop) {
       right: -30rem;
       bottom: 0;
@@ -153,11 +155,14 @@
   }
 
   &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 32rem;
     height: 8.2rem;
     border-radius: 16.3rem;
     background: #C20A26;
-    color: var(--primary-white, #FFF);
+    color: #FFF !important;
 
     text-align: center;
     font-family: "DIN Pro", sans-serif;
@@ -189,8 +194,21 @@
     width: 4.8rem;
     height: 4.8rem;
 
-    &:hover {
-      opacity: .6;
+    circle {
+      transition: .4s ease stroke;
+    }
+
+    path {
+      transition: .4s ease fill;
+
+    }
+
+    &:hover circle {
+      stroke: white;
+
+    }
+    &:hover path {
+      fill: white;
     }
   }
 
@@ -206,5 +224,17 @@
   }
 }
 
-.container {
+@keyframes bgAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .7;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -50,3 +50,60 @@
         </div>
     </div>
 </div>
+
+<div class="modal js-modal" id="redtag-contact-modal">
+  <div class="redtag-modal">
+    <div class="redtag-modal__upper">
+      <img src="img/redtag/redtag-logo.svg" alt="logo" class="redtag-modal__logo">
+      <button class="redtag-modal__close js-close-modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M16.6206 18.7419L28.2879 30.4092L30.4092 28.2879L18.7419 16.6206L30.4092 4.95335L28.2879 2.83203L16.6206 14.4993L4.95335 2.83203L2.83203 4.95335L14.4993 16.6206L2.83203 28.2879L4.95335 30.4092L16.6206 18.7419Z" fill="#282833"/>
+        </svg>
+      </button>
+    </div>
+    <form action="/" method="POST" data-need-validation class="redtag-modal__form">
+      <h2 class="redtag-modal__title">ОСТАВИТЬ ЗАЯВКУ</h2>
+      <label>
+        <input type="text"
+               class="redtag-modal__input"
+               placeholder="Ваше имя*"
+               name="name"
+               required
+        >
+      </label>
+      <label>
+        <input name="phone"
+               type="tel"
+               class="redtag-modal__input js-phone-input"
+               placeholder="Номер телефона*"
+               required
+               data-parsley-phone
+        >
+      </label>
+      <label>
+        <input name="email"
+               type="email" class="redtag-modal__input"
+               placeholder="E-mail*"
+               required
+        >
+      </label>
+      <label>
+        <input name="message"
+               type="text"
+               class="redtag-modal__input"
+               placeholder="Сообщение">
+      </label>
+      <label class="redtag-modal__checkbox">
+        <input type="checkbox" name="policy" required>
+        Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных *
+      </label>
+      <label class="redtag-modal__checkbox">
+        <input type="checkbox" name="policy" required>
+        <a href="/#" class="redtag-modal__checkbox-link">Согласен получать информацию о скидках и акциях.</a>
+      </label>
+      <button type="submit" class="redtag-modal__button">
+        Оставить заявку
+      </button>
+    </form>
+  </div>
+</div>
