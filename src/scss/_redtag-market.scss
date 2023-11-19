@@ -1,5 +1,9 @@
 .redtag-market {
   padding: 10rem 0 0;
+
+  @include breakpoint(tablet) {
+    padding: 5rem 0 0;
+  }
   &__content {
   }
 
@@ -8,6 +12,10 @@
     flex-direction: column;
     align-items: flex-start;
     row-gap: 1rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.3rem;
+    }
   }
 
   &__link {
@@ -18,6 +26,10 @@
     font-weight: 700;
     line-height: 120%;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+    }
   }
 
   &__title {
@@ -29,6 +41,11 @@
     line-height: 110%; /* 59.4px */
     width: 100%;
     max-width: 120rem;
+
+    @include breakpoint(mobile) {
+      font-size: 3.2rem;
+      max-width: 36rem;
+    }
   }
 
   &__text {
@@ -38,6 +55,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
   }
 
   &__main-content {
@@ -45,6 +66,10 @@
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: repeat(12, minmax(0, 1fr));
     position: relative;
+
+    @include breakpoint(small-tablet) {
+      grid-template-rows: repeat(6, minmax(0, 1fr));
+    }
   }
 
   &__item-image-one {
@@ -59,6 +84,16 @@
 
     @include breakpoint(large-desktop) {
       grid-row: 7 / 12;
+    }
+
+    @include breakpoint(mobile) {
+      position: absolute;
+      min-width: 57rem;
+      min-height: 30rem;
+      padding-right: 0;
+      max-width: 100%;
+      left: 0rem;
+      top: 10rem;
     }
   }
 
@@ -85,6 +120,9 @@
       width: 72rem;
       height: 72rem;
     }
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
   }
 
   .layer--4 {
@@ -102,6 +140,9 @@
     @include breakpoint(large-desktop) {
       width: 61rem;
       height: 61rem;
+    }
+    @include breakpoint(small-tablet) {
+      display: none;
     }
   }
 
@@ -121,6 +162,11 @@
       width: 50rem;
       height: 50rem;
     }
+
+    @include breakpoint(small-tablet) {
+      width: 36rem;
+      height: 36rem;
+    }
   }
 
   .layer--2 {
@@ -139,6 +185,11 @@
     @include breakpoint(large-desktop) {
       width: 40rem;
       height: 40rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 29rem;
+      height: 29rem;
     }
   }
 
@@ -167,6 +218,10 @@
       width: 30.2rem;
       height: 30.2rem;
     }
+    @include breakpoint(small-tablet) {
+      width: 23rem;
+      height: 23rem;
+    }
   }
 
   &__circle-icon {
@@ -177,7 +232,10 @@
   }
 
   &__circle-mini-icon {
-
+    @include breakpoint(small-tablet) {
+      width: 5.1rem;
+      height: auto;
+    }
   }
 
   &__main-circle-title {
@@ -188,6 +246,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
+
+    @include breakpoint(small-tablet) {
+      font-size: 1.5rem;
+    }
   }
 
   &__main-circle-text {
@@ -201,8 +263,9 @@
     width: 100%;
     max-width: 26.2rem;
 
-    @include breakpoint(large-desktop) {
-      font-size: 1.4rem;
+    @include breakpoint(small-tablet) {
+      font-size: 1.1rem;
+      max-width: 17rem;
     }
   }
 
@@ -221,6 +284,13 @@
       padding-left: 3rem;
       justify-content: normal;
     }
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      grid-row: 1 / 3;
+      grid-column: 1 / 8;
+    }
 
     p {
       color: #FFF;
@@ -236,6 +306,11 @@
         font-size: 1.4rem;
         max-width: 26.7rem;
       }
+      @include breakpoint(tablet) {
+        padding-left: 0;
+        max-width: 19.5rem;
+        font-size: 1.1rem;
+      }
     }
     img {
       padding-top: 1rem;
@@ -247,6 +322,17 @@
   &__info-two {
     grid-column: 8 / 11;
     grid-row: 9 / 11;
+
+    @include breakpoint(tablet) {
+      grid-column: 8 / 11;
+    }
+    @include breakpoint(mobile) {
+      grid-column: 5 / 12;
+      grid-row: 10 / 13;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
     p {
       color: #FFF;
       font-family: "DIN Pro", sans-serif;
@@ -262,12 +348,19 @@
       @include breakpoint(large-desktop) {
         font-size: 1.4rem;
       }
+      @include breakpoint(tablet) {
+        padding-left: 0;
+        max-width: 19.5rem;
+        font-size: 1.1rem;
+      }
     }
     img {
       position: relative;
       z-index: 5;
       width: 12rem;
       height: 9.5rem;
+      @include breakpoint(tablet) {
+      }
     }
   }
 
@@ -283,17 +376,40 @@
     @include breakpoint(large-desktop) {
       padding-bottom: 3rem;
     }
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
   }
 
   &__line {
     display: flex;
     align-items: center;
     column-gap: 3rem;
-    width: 34rem;
     height: 7.1rem;
     object-fit: cover;
     grid-column: 1 / 12;
     grid-row: 6 / 7;
+
+    @include breakpoint(small-tablet) {
+      grid-row: 5 / 7;
+      position: relative;
+      top: 5rem;
+      img {
+        object-fit: cover;
+        width: auto;
+        height: 90%;
+      }
+    }
+    @include breakpoint(mobile) {
+      grid-row: 4 / 6;
+      position: relative;
+      top: 5rem;
+      img {
+        object-fit: cover;
+        width: auto;
+        height: 70%;
+      }
+    }
   }
 
 }

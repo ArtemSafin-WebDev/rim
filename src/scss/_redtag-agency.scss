@@ -1,15 +1,28 @@
 .redtag-agency {
   padding-bottom: 10rem;
+
+  @include breakpoint(small-tablet) {
+    padding-top: 15rem;
+    padding-bottom: 4.5rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 35rem;
+  }
   &__content {
     border-radius: 2rem;
     border: .4rem solid #F20D30;
-    box-shadow: 0px 0px 4px 0px rgba(194, 10, 38, 0.50), 0px 0px 8px 0px rgba(194, 10, 38, 0.50), 0px 0px 16px 0px rgba(194, 10, 38, 0.50), 0px 0px 32px 0px rgba(194, 10, 38, 0.50), 0px 0px 64px 0px rgba(194, 10, 38, 0.50), 0px 0px 128px 0px rgba(194, 10, 38, 0.50);
     padding: 6rem 6rem 8.4rem;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 4rem;
+
+    @include breakpoint(tablet) {
+      border: none;
+      padding: 0;
+      row-gap: 2.4rem;
+    }
   }
 
   &__title {
@@ -19,16 +32,40 @@
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
+    width: 100%;
+
+    @include breakpoint(mobile) {
+      font-size: 3.2rem;
+      max-width: 35.8rem;
+    }
   }
 
   &__bottom {
     display: flex;
     column-gap: 5rem;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4.8rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 3.2rem;
+      max-width: 35.8rem;
+    }
   }
 
   &__info {
     display: flex;
     column-gap: 5rem;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.4rem;
+      column-gap: 0;
+    }
   }
 
   &__info-wrapper {
@@ -57,6 +94,10 @@
     @include breakpoint(large-desktop) {
       font-size: 2.6rem;
     }
+
+    @include breakpoint(mobile) {
+      font-size: 3.2rem;
+    }
   }
 
   &__text {
@@ -66,9 +107,14 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%; /* 20.8px */
+    width: 100%;
 
     @include breakpoint(large-desktop) {
       font-size: 1.4rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+      max-width: 28.5rem;
     }
   }
 
@@ -95,11 +141,16 @@
       min-width: 26rem;
     }
 
+    @include breakpoint(mobile) {
+      width: 30rem;
+      height: 7.2rem;
+      font-size: 2rem;
+      margin-bottom: 2.4rem;
+    }
+
     &:hover {
       box-shadow: 0px 0px 6.53061px 0px rgba(194, 10, 38, 0.50), 0px 0px 13.06122px 0px rgba(194, 10, 38, 0.50), 0px 0px 26.12245px 0px rgba(194, 10, 38, 0.50), 0px 0px 52.2449px 0px rgba(194, 10, 38, 0.50), 0px 0px 104.48979px 0px rgba(194, 10, 38, 0.50), 0px 0px 208.97958px 0px rgba(194, 10, 38, 0.50);
     }
   }
 }
 
-.container {
-}

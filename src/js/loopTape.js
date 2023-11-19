@@ -12,9 +12,4 @@ export default function loopTape() {
     speed: speed,
     paddingRight: parseFloat(gsap.getProperty(loopTapes[0], "marginRight", "px"))
   })
-  
-  loopTapes?.forEach((tape) => {
-    tape.addEventListener("mouseenter", () => gsap.to(tl, {timeScale: 0, overwrite: true}));
-    tape.addEventListener("mouseleave", () => gsap.to(tl, {timeScale: speed, overwrite: true}));
-  });
 }

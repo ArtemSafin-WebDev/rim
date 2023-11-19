@@ -28,6 +28,7 @@ import redtagCasesSlider from "./redtagCasesSlider";
 import redtagPlaceLoop from "./redtagPLaceLoop";
 import redtagBoardsAnimation from "./redtagBoardsAnimation";
 import redtagIntro from "./redtagIntro";
+import inventorySlider from "./inventorySlider";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -60,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     redtagPlaceLoop()
     redtagBoardsAnimation()
     redtagIntro()
+    inventorySlider()
 });
 
 window.addEventListener('load', function() {

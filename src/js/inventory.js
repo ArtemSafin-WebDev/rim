@@ -9,6 +9,10 @@ export default function inventoryAnimation() {
   if(!dataImage || !dataCount || !dataName) return
   
   function setData({buttonImage, count, name}) {
+    dataImage.src = buttonImage
+    dataCount.textContent = count
+    dataName.textContent = name
+    
     gsap.to(dataImage, {
       yPercent: 0,
       opacity: 1,
@@ -28,45 +32,43 @@ export default function inventoryAnimation() {
       opacity: 1,
       duration: 1.2,
     })
-    
-    dataImage.src = buttonImage
-    dataCount.textContent = count
-    dataName.textContent = name
   }
   
-  cards?.forEach((card) => {
-    card.addEventListener("click", (event) => {
-      const currentCard = event?.currentTarget
-      
-      gsap.set(dataImage, {
-        opacity: 0,
-        yPercent: 5,
-        rotate: 4,
-        duration: 0,
-        overwrite: true
+  if(window.matchMedia("(min-width: 900px)").matches) {
+    cards?.forEach((card) => {
+      card.addEventListener("click", (event) => {
+        let currentCard = event?.currentTarget
+        
+        gsap.set(dataImage, {
+          opacity: 0,
+          yPercent: 5,
+          rotate: 4,
+          duration: 0,
+          overwrite: true
+        })
+        
+        if(!currentCard) return
+        
+        const buttonImage = currentCard?.querySelector(".redtag-inventory__button")?.dataset?.image
+        const count = currentCard?.querySelector(".redtag-inventory__count")?.textContent
+        const name = currentCard?.querySelector(".redtag-inventory__name")?.textContent
+        
+        gsap.set(dataCount, {
+          opacity: 0,
+          yPercent: 10,
+          duration: 0,
+          overwrite: true
+        })
+        
+        gsap.set(dataName, {
+          opacity: 0,
+          yPercent: 10,
+          duration: 0,
+          overwrite: true
+        })
+        
+        setData({buttonImage, count, name})
       })
-      
-      if(!currentCard) return
-      
-      const buttonImage = currentCard?.querySelector(".redtag-inventory__button")?.dataset?.image
-      const count = currentCard?.querySelector(".redtag-inventory__count")?.textContent
-      const name = currentCard?.querySelector(".redtag-inventory__name")?.textContent
-      
-      gsap.set(dataCount, {
-        opacity: 0,
-        yPercent: 10,
-        duration: 0,
-        overwrite: true
-      })
-      
-      gsap.set(dataName, {
-        opacity: 0,
-        yPercent: 10,
-        duration: 0,
-        overwrite: true
-      })
-      
-      setData({buttonImage, count, name})
     })
-  })
+  }
 }

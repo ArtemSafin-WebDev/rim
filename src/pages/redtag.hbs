@@ -12,12 +12,21 @@
             <p class="redtag-intro__text">Баинг OOH- и DOOH-инвентаря во всех регионах РФ</p>
             <ul class="redtag-intro__info-block">
               <li class="redtag-intro__info-list">
+                <svg width="9.5" height="5" aria-hidden="true" class="redtag-intro__checkmark">
+                  <use xlink:href="#checkmark"></use>
+                </svg>
                 <p class="redtag-intro__info-text">Низкие цены на размещение</p>
               </li>
               <li class="redtag-intro__info-list">
+                <svg width="9.5" height="5" aria-hidden="true" class="redtag-intro__checkmark">
+                  <use xlink:href="#checkmark"></use>
+                </svg>
                 <p class="redtag-intro__info-text">Быстрая обработка запросов</p>
               </li>
               <li class="redtag-intro__info-list">
+                <svg width="9.5" height="5" aria-hidden="true" class="redtag-intro__checkmark">
+                  <use xlink:href="#checkmark"></use>
+                </svg>
                 <p class="redtag-intro__info-text">Экспертиза в области мониторинга рекламного инвентаря</p>
               </li>
             </ul>
@@ -35,9 +44,9 @@
 
     <section class="redtag-ads">
       <div class="container">
-        <div class="redtag-ads__content">
+        <div class="redtag-ads__content js-ads-cards js-scroll-intro-trigger">
           <h2 class="redtag-ads__title">Делаем запуск рекламных кампаний</h2>
-          <div class="redtag-ads__row js-ads-cards">
+          <div class="redtag-ads__row">
             <div class="redtag-ads__card">
               <h4 class="redtag-ads__card-name">УДОБНЕЕ</h4>
               <div class="redtag-ads__card-wrapper">
@@ -77,9 +86,6 @@
 
     <section class="redtag-geography">
       <div class="redtag-geography__shape red-circle-shape"></div>
-      <div class="redtag-geography__map-wrapper">
-        {{> redtag-map }}
-      </div>
       <div class="container">
         <div class="redtag-geography__content">
           <div class="redtag-geography__column">
@@ -106,21 +112,24 @@
               </ul>
             </div>
           </div>
+          <div class="redtag-geography__map-wrapper">
+            {{> redtag-map }}
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="redtag-line">
-      <div class="redtag-line__tape js-tape-loop" data-speed="1">
-        <img src="img/redtag/tape/tape.svg" alt="icon">
-        <img src="img/redtag/tape/tape.svg" alt="icon">
-        <img src="img/redtag/tape/tape.svg" alt="icon">
-        <img src="img/redtag/tape/tape.svg" alt="icon">
-        <img src="img/redtag/tape/tape.svg" alt="icon">
-        <img src="img/redtag/tape/tape.svg" alt="icon">
-        <img src="img/redtag/tape/tape.svg" alt="icon">
-        <img src="img/redtag/tape/tape.svg" alt="icon">
-        <img src="img/redtag/tape/tape.svg" alt="icon">
+      <div class="redtag-line">
+        <div class="redtag-line__tape js-tape-loop" data-speed="1">
+          <img src="img/redtag/tape/tape.svg" alt="icon">
+          <img src="img/redtag/tape/tape.svg" alt="icon">
+          <img src="img/redtag/tape/tape.svg" alt="icon">
+          <img src="img/redtag/tape/tape.svg" alt="icon">
+          <img src="img/redtag/tape/tape.svg" alt="icon">
+          <img src="img/redtag/tape/tape.svg" alt="icon">
+          <img src="img/redtag/tape/tape.svg" alt="icon">
+          <img src="img/redtag/tape/tape.svg" alt="icon">
+          <img src="img/redtag/tape/tape.svg" alt="icon">
+        </div>
       </div>
     </section>
 
@@ -128,75 +137,76 @@
       <div class="red-circle-shape redtag-inventory__shape"></div>
       <div class="container">
         <div class="redtag-inventory__content">
-
+          <div class="redtag-inventory__upper">
+            <a href="" class="redtag-inventory__link">Инвентарь</a>
+            <h2 class="redtag-inventory__title">Закупаем каждый месяц</h2>
+            <p class="redtag-inventory__text">в 96 городах России, среди которых: Казань, Пермь, Нижний Новгород,Екатеринбург, Ростов-на-Дону, Уфа, Волгоград, Самара, Челябински Красноярск</p>
+          </div>
           <div class="redtag-inventory__column">
-            <div class="redtag-inventory__upper">
-              <a href="" class="redtag-inventory__link">Инвентарь</a>
-              <h2 class="redtag-inventory__title">Закупаем каждый месяц</h2>
-              <p class="redtag-inventory__text">в 96 городах России, среди которых: Казань, Пермь, Нижний Новгород,Екатеринбург, Ростов-на-Дону, Уфа, Волгоград, Самара, Челябински Красноярск</p>
-            </div>
-            <div class="redtag-inventory__cards">
-              <div class="redtag-inventory__card">
-                <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-1.png">
-                  <img src="img/redtag/inventory/billboard-mini-1.png" alt="icon" class="redtag-inventory__button-icon">
-                </button>
-                <div class="redtag-inventory__card-info">
-                  <h4 class="redtag-inventory__count">2 481</h4>
-                  <p class="redtag-inventory__name">билборд</p>
+            <div class="redtag-inventory__slider js-inventory-slider">
+              <div class="swiper-wrapper redtag-inventory__cards">
+                <div class="redtag-inventory__card swiper-slide">
+                  <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-1.png">
+                    <img src="img/redtag/inventory/billboard-mini-1.png" alt="icon" class="redtag-inventory__button-icon">
+                  </button>
+                  <div class="redtag-inventory__card-info">
+                    <h4 class="redtag-inventory__count">2 481</h4>
+                    <p class="redtag-inventory__name">билборд</p>
+                  </div>
                 </div>
-              </div>
-              <div class="redtag-inventory__card">
-                <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-2.png">
-                  <img src="img/redtag/inventory/billboard-mini-2.png" alt="icon" class="redtag-inventory__button-icon">
-                </button>
-                <div class="redtag-inventory__card-info">
-                  <h4 class="redtag-inventory__count">188</h4>
-                  <p class="redtag-inventory__name">digital-билбордов и суперсайтов</p>
+                <div class="redtag-inventory__card swiper-slide">
+                  <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-2.png">
+                    <img src="img/redtag/inventory/billboard-mini-2.png" alt="icon" class="redtag-inventory__button-icon">
+                  </button>
+                  <div class="redtag-inventory__card-info">
+                    <h4 class="redtag-inventory__count">188</h4>
+                    <p class="redtag-inventory__name">digital-билбордов и суперсайтов</p>
+                  </div>
                 </div>
-              </div>
-              <div class="redtag-inventory__card">
-                <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-3.png">
-                  <img src="img/redtag/inventory/billboard-mini-3.png" alt="icon" class="redtag-inventory__button-icon">
-                </button>
-                <div class="redtag-inventory__card-info">
-                  <h4 class="redtag-inventory__count">210</h4>
-                  <p class="redtag-inventory__name">ситибордов</p>
+                <div class="redtag-inventory__card swiper-slide">
+                  <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-3.png">
+                    <img src="img/redtag/inventory/billboard-mini-3.png" alt="icon" class="redtag-inventory__button-icon">
+                  </button>
+                  <div class="redtag-inventory__card-info">
+                    <h4 class="redtag-inventory__count">210</h4>
+                    <p class="redtag-inventory__name">ситибордов</p>
+                  </div>
                 </div>
-              </div>
-              <div class="redtag-inventory__card">
-                <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-4.png">
-                  <img src="img/redtag/inventory/billboard-mini-4.png" alt="icon" class="redtag-inventory__button-icon">
-                </button>
-                <div class="redtag-inventory__card-info">
-                  <h4 class="redtag-inventory__count">65</h4>
-                  <p class="redtag-inventory__name">пилларов</p>
+                <div class="redtag-inventory__card swiper-slide">
+                  <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-4.png">
+                    <img src="img/redtag/inventory/billboard-mini-4.png" alt="icon" class="redtag-inventory__button-icon">
+                  </button>
+                  <div class="redtag-inventory__card-info">
+                    <h4 class="redtag-inventory__count">65</h4>
+                    <p class="redtag-inventory__name">пилларов</p>
+                  </div>
                 </div>
-              </div>
-              <div class="redtag-inventory__card">
-                <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-5.png">
-                  <img src="img/redtag/inventory/billboard-mini-5.png" alt="icon" class="redtag-inventory__button-icon">
-                </button>
-                <div class="redtag-inventory__card-info">
-                  <h4 class="redtag-inventory__count">10</h4>
-                  <p class="redtag-inventory__name">суперсайтов</p>
+                <div class="redtag-inventory__card swiper-slide">
+                  <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-5.png">
+                    <img src="img/redtag/inventory/billboard-mini-5.png" alt="icon" class="redtag-inventory__button-icon">
+                  </button>
+                  <div class="redtag-inventory__card-info">
+                    <h4 class="redtag-inventory__count">10</h4>
+                    <p class="redtag-inventory__name">суперсайтов</p>
+                  </div>
                 </div>
-              </div>
-              <div class="redtag-inventory__card">
-                <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-6.png">
-                  <img src="img/redtag/inventory/billboard-mini-6.png" alt="icon" class="redtag-inventory__button-icon">
-                </button>
-                <div class="redtag-inventory__card-info">
-                  <h4 class="redtag-inventory__count">153</h4>
-                  <p class="redtag-inventory__name">ситиформата</p>
+                <div class="redtag-inventory__card swiper-slide">
+                  <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-6.png">
+                    <img src="img/redtag/inventory/billboard-mini-6.png" alt="icon" class="redtag-inventory__button-icon">
+                  </button>
+                  <div class="redtag-inventory__card-info">
+                    <h4 class="redtag-inventory__count">153</h4>
+                    <p class="redtag-inventory__name">ситиформата</p>
+                  </div>
                 </div>
-              </div>
-              <div class="redtag-inventory__card">
-                <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-7.png">
-                  <img src="img/redtag/inventory/billboard-mini-7.png" alt="icon" class="redtag-inventory__button-icon">
-                </button>
-                <div class="redtag-inventory__card-info">
-                  <h4 class="redtag-inventory__count">21</h4>
-                  <p class="redtag-inventory__name">медиафасад</p>
+                <div class="redtag-inventory__card swiper-slide">
+                  <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-7.png">
+                    <img src="img/redtag/inventory/billboard-mini-7.png" alt="icon" class="redtag-inventory__button-icon">
+                  </button>
+                  <div class="redtag-inventory__card-info">
+                    <h4 class="redtag-inventory__count">21</h4>
+                    <p class="redtag-inventory__name">медиафасад</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -206,8 +216,8 @@
             <div class="redtag-inventory__block">
               <img class="redtag-inventory__block-image" src="img/redtag/inventory/billboard-1.png" alt="image"/>
               <div class="redtag-inventory__data-info">
-                <h3 class="redtag-inventory__block-count"></h3>
-                <p class="redtag-inventory__block-name"></p>
+                <h3 class="redtag-inventory__block-count">2 481</h3>
+                <p class="redtag-inventory__block-name">билборд</p>
               </div>
             </div>
           </div>
@@ -308,9 +318,7 @@
           <img src="img/redtag/clients/client-3.svg" alt="client-icon">
           <img src="img/redtag/clients/client-4.svg" alt="client-icon">
       </nav>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="redtag-clients__polygon">
-        <polygon fill="#FF173B" points="0,100 100,0 100,100"/>
-      </svg>
+      <div class="redtag-clients__polygon"></div>
     </section>
 
     <section class="redtag-help">
@@ -321,7 +329,6 @@
             <p class="redtag-help__text">Мы не размещаем бренды напрямую, но помогаем агентствам и операторам рекламы закупать программы для таких брендов, как:</p>
           </div>
           <nav class="redtag-help__partners">
-            <div class="row">
               <a href="/#" target="_blank" class="redtag-help__link">
                 <img src="img/redtag/help/brand-1.svg" alt="icon">
               </a>
@@ -340,8 +347,6 @@
               <a href="/#" target="_blank" class="redtag-help__link">
                 <img src="img/redtag/help/brand-6.svg" alt="icon">
               </a>
-            </div>
-            <div class="row">
               <a href="/#" target="_blank" class="redtag-help__link">
                 <img src="img/redtag/help/brand-7.svg" alt="icon">
               </a>
@@ -363,8 +368,6 @@
               <a href="/#" target="_blank" class="redtag-help__link">
                 <img src="img/redtag/help/brand-13.svg" alt="icon">
               </a>
-            </div>
-            <div class="row">
               <a href="/#" target="_blank" class="redtag-help__link">
                 <img src="img/redtag/help/brand-14.svg" alt="icon">
               </a>
@@ -389,7 +392,6 @@
               <a href="/#" target="_blank" class="redtag-help__link">
                 <img src="img/redtag/help/brand-21.svg" alt="icon">
               </a>
-            </div>
           </nav>
         </div>
       </div>
@@ -513,13 +515,10 @@
     <section class="redtag-meet">
       <div class="container">
         <div class="redtag-meet__content">
-          <div class="redtag-meet__info">
-            <a href="" class="redtag-meet__link">Команда</a>
-            <h2 class="redtag-meet__title">Давайте знакомиться!</h2>
-            <p class="redtag-meet__count" data-count="26">26</p>
-            <p class="redtag-meet__count-text">специалистов в команде:</p>
-          </div>
-          <div class="redtag-meet__person">
+            <div class="redtag-meet__upper">
+              <a href="/#" class="redtag-meet__link">Команда</a>
+              <h2 class="redtag-meet__title">Давайте знакомиться!</h2>
+            </div>
             <div class="redtag-meet__person-info">
               <img src="img/redtag/meet/portret.png" alt="portret" class="redtag-meet__person-portret">
               <div class="redtag-meet__person-info-detail">
@@ -527,6 +526,10 @@
                 <p class="redtag-meet__person-position">баинг-директор</p>
                 <p class="redtag-meet__person-about">Я более 15 лет в рекламной сфере. Сотрудничала с крупнейшими брендами и агентствами на рынке наружной рекламы: С-Маркетинг, ВТБ, Tele2, Лента, Газпром-медиа, X5 Group. И уже мечтаю помочь вам!</p>
               </div>
+            </div>
+            <div class="redtag-meet__count-spec">
+              <p class="redtag-meet__count" data-count="26">26</p>
+              <p class="redtag-meet__count-text">специалистов в команде:</p>
             </div>
             <ul class="redtag-meet__person-skills">
               <li class="redtag-meet__person-skill">
@@ -605,7 +608,6 @@
                 <p class="redtag-meet__person-skill-text">4 специалиста по документообороту</p>
               </li>
             </ul>
-          </div>
         </div>
       </div>
     </section>
@@ -679,11 +681,10 @@
 
               <div class="swiper-slide">
                 <div class="redtag-cases__slide">
-
+                  <h3 class="redtag-cases__slide-title">Запустили рекламную кампанию на <span class="red-color">1470</span> сторонах
+                    за <span class="red-color">6 дней</span></h3>
                   <div class="redtag-cases__slide-upper">
                     <div class="redtag-cases__column">
-                      <h3 class="redtag-cases__slide-title">Запустили рекламную кампанию на <span class="red-color">1470</span> сторонах
-                        за <span class="red-color">6 дней</span></h3>
                       <ul class="redtag-cases__slide-info">
                         <li class="redtag-cases__slide-list">
                           <div class="redtag-cases__slide-info-wrapper">
@@ -738,10 +739,10 @@
                         <p class="redtag-cases__bottom-info-text">С 1 по 7 сентября баннеры монтировали на конструкции, а уже к 10 сентября клиент получил фотоотчеты.</p>
                       </li>
                     </ul>
-                    <div class="redtag-cases__bottom-slat">
-                      <h4 class="redtag-cases__bottom-slat-title">Результат</h4>
-                      <p class="redtag-cases__bottom-slat-text">Собрали адресную программу и запустили рекламу на 1 470 сторонах всего за 6 дней</p>
-                    </div>
+                  </div>
+                  <div class="redtag-cases__bottom-slat">
+                    <h4 class="redtag-cases__bottom-slat-title">Результат</h4>
+                    <p class="redtag-cases__bottom-slat-text">Собрали адресную программу и запустили рекламу на 1 470 сторонах всего за 6 дней</p>
                   </div>
 
                 </div>
@@ -749,9 +750,9 @@
               <div class="swiper-slide">
                 <div class="redtag-cases__slide">
 
+                  <h3 class="redtag-cases__slide-title"><span class="red-color">Закупили</span> рекламные стороны рядом с новыми магазинами сети <span class="red-color">«Находка»</span></h3>
                   <div class="redtag-cases__slide-upper">
                     <div class="redtag-cases__column">
-                      <h3 class="redtag-cases__slide-title"><span class="red-color">Закупили</span> рекламные стороны рядом с новыми магазинами сети <span class="red-color">«Находка»</span></h3>
                       <ul class="redtag-cases__slide-info">
                         <li class="redtag-cases__slide-list">
                           <div class="redtag-cases__slide-info-wrapper">
@@ -802,21 +803,20 @@
                         <p class="redtag-cases__bottom-info-text">В остальных — нашли альтернативный канал продвижения: жители 10 населенных пунктов узнали об открытии магазинов из газет и журналов.</p>
                       </li>
                     </ul>
-                    <div class="redtag-cases__bottom-slat">
-                      <h4 class="redtag-cases__bottom-slat-title">Результат</h4>
-                      <p class="redtag-cases__bottom-slat-text">Обеспечили рекламную поддержку более 20 новых магазинов сети «Находка»</p>
-                    </div>
+                  </div>
+                  <div class="redtag-cases__bottom-slat">
+                    <h4 class="redtag-cases__bottom-slat-title">Результат</h4>
+                    <p class="redtag-cases__bottom-slat-text">Обеспечили рекламную поддержку более 20 новых магазинов сети «Находка»</p>
                   </div>
 
                 </div>
               </div>
-
               <div class="swiper-slide">
                 <div class="redtag-cases__slide">
 
+                  <h3 class="redtag-cases__slide-title">Собрали охватную годовую АП и запустили рекламу в <span class="red-color">48 городах</span> по цене ниже рыночной</h3>
                   <div class="redtag-cases__slide-upper">
                     <div class="redtag-cases__column">
-                      <h3 class="redtag-cases__slide-title">Собрали охватную годовую АП и запустили рекламу в <span class="red-color">48 городах</span> по цене ниже рыночной</h3>
                       <ul class="redtag-cases__slide-info">
                         <li class="redtag-cases__slide-list">
                           <div class="redtag-cases__slide-info-wrapper">
@@ -858,10 +858,10 @@
                         <p class="redtag-cases__bottom-info-text">Обеспечили смену рекламных материалов не менее двух раз в месяц на статичных конструкциях, каждую неделю — на digital.</p>
                       </li>
                     </ul>
-                    <div class="redtag-cases__bottom-slat">
-                      <h4 class="redtag-cases__bottom-slat-title">Результат</h4>
-                      <p class="redtag-cases__bottom-slat-text">В течение года размещаем рекламу в 48 городах и каждый месяц обслуживаем до 670 сторон</p>
-                    </div>
+                  </div>
+                  <div class="redtag-cases__bottom-slat">
+                    <h4 class="redtag-cases__bottom-slat-title">Результат</h4>
+                    <p class="redtag-cases__bottom-slat-text">В течение года размещаем рекламу в 48 городах и каждый месяц обслуживаем до 670 сторон</p>
                   </div>
 
                 </div>

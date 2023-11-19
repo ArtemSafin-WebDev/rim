@@ -1,6 +1,6 @@
 export default function redtagIntro() {
   const button = document.querySelector(".redtag-intro__arrow-button");
-  const element = document.querySelector(".redtag-ads")
+  const element = document.querySelector(".js-scroll-intro-trigger")
   
   if(!button || !element) {
     return

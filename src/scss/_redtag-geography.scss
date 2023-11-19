@@ -8,8 +8,20 @@
     padding-bottom:  15rem;
   }
 
-  &__content {
+  @include breakpoint(tablet) {
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+  }
 
+  @include breakpoint(mobile) {
+    padding: 5rem 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
 
   &__shape {
@@ -24,10 +36,22 @@
     position: absolute;
     top: 20rem;
     right: 0;
-
+    z-index: 1;
     @include breakpoint(large-desktop) {
       top: 30rem;
       transform: translateX(20rem);
+    }
+
+    @include breakpoint(laptop) {
+      width: 80%;
+      right: 5rem;
+    }
+
+    @include breakpoint(mobile) {
+      position: relative;
+      top: 2.5rem;
+      right: 20rem;
+      width: 120%;
     }
   }
 
@@ -45,6 +69,17 @@
       width: 75rem;
       height: 15rem;
     }
+
+    @include breakpoint(tablet) {
+      width: 65rem;
+      height: 12.5rem;
+      opacity: .6;
+    }
+
+    @include breakpoint(mobile) {
+      width: 41.2rem;
+      height: 7rem;
+    }
   }
 
   &__block {
@@ -54,6 +89,12 @@
 
     @include breakpoint(large-desktop) {
       padding-top: 4rem;
+    }
+    @include breakpoint(tablet) {
+      padding-top: 3rem;
+    }
+    @include breakpoint(mobile) {
+      padding-top: 2rem;
     }
   }
 
@@ -68,6 +109,9 @@
     @include breakpoint(large-desktop) {
       font-size: 5.4rem;
     }
+    @include breakpoint(mobile) {
+      font-size: 3.2rem;
+    }
   }
 
   &__info {
@@ -80,6 +124,9 @@
     @include breakpoint(large-desktop) {
       margin-top: 8rem;
       row-gap: 2rem;
+    }
+    @include breakpoint(mobile) {
+      margin-top: 3.2rem;
     }
   }
 
@@ -142,6 +189,9 @@
     @include breakpoint(large-desktop) {
       font-size: 1.8rem;
       margin-top: 1.5rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2.4rem;
     }
   }
 }

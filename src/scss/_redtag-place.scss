@@ -4,10 +4,6 @@
   position: relative;
   padding-top: 10rem;
 
-  &__content {
-
-  }
-
   &__rect {
     position: absolute;
     height: 0;
@@ -29,6 +25,18 @@
       height: 40.5rem;
       left: -10rem;
     }
+
+    @include breakpoint(laptop) {
+      width: 62.5rem;
+      height: 38.5rem;
+      bottom: 18rem;
+      left: -5rem;
+    }
+    @include breakpoint(mobile) {
+      width: 34rem;
+      height: 24rem;
+      bottom: 10rem;
+    }
   }
 
   &__rect-two {
@@ -44,6 +52,13 @@
       width: 82.5rem;
       height: 45.5rem;
       right: -45rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 34rem;
+      height: 24rem;
+      right: -15rem;
+      bottom: 35rem;
     }
   }
 
@@ -65,11 +80,18 @@
     font-style: normal;
     font-weight: 800;
     line-height: 110%;
+
+    @include breakpoint(mobile) {
+      font-size: 1.1rem;
+      padding: 0.95rem 0;
+      top: 80%;
+    }
   }
 
   &__billboards {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   &__billboard-one {
@@ -80,6 +102,24 @@
     left: 5rem;
     z-index: 1;
     bottom: 0;
+
+    @include breakpoint(laptop) {
+      width: 44.2rem;
+      height: 42.5rem;
+      left: 15rem;
+    }
+    @include breakpoint(tablet) {
+        left: 5rem;
+    }
+    @include breakpoint(small-tablet) {
+      width: 40rem;
+      height: 35rem;
+    }
+    @include breakpoint(mobile) {
+      width: 19.3rem;
+      height: 18.6rem;
+      left: 0rem;
+    }
   }
 
   &__billboard-two {
@@ -89,11 +129,25 @@
     height: 52.5rem;
     bottom: -6rem;
     z-index: 2;
+
+    @include breakpoint(laptop) {
+      width: 44.2rem;
+      height: 42.5rem;
+      left: 10rem;
+    }
+    @include breakpoint(tablet) {
+      left: 0rem;
+    }
+    @include breakpoint(small-tablet) {
+      width: 35rem;
+      height: 30rem;
+      left: -5rem;
+    }
+    @include breakpoint(mobile) {
+      width: 19.3rem;
+      height: 18.6rem;
+      bottom: -3rem;
+      left: 0rem;
+    }
   }
-}
-
-.container {
-}
-
-.js-place-line {
 }
