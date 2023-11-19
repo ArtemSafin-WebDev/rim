@@ -9,19 +9,17 @@ export default function redtagBoardsAnimation() {
   
   if(!boardOne || !boardTwo) return
   
-  gsap.set(boardOne, {y: 150, rotate: -5, opacity: 0})
-  gsap.set(boardTwo, {y: 150, rotate: 5, opacity: 0})
+  gsap.set(boardOne, {y: 150, rotate: -5})
+  gsap.set(boardTwo, {y: 150, rotate: 5,})
   
   function initAnimation() {
     gsap.to(boardOne, {
       y: 0,
       duration: 1,
       opacity: 1,
-      delay: .2,
       rotate: 0,
       scrollTrigger: {
         trigger: ".redtag-place__line",
-        start: "bottom 100%",
         once: true,
       }
     })
@@ -29,12 +27,10 @@ export default function redtagBoardsAnimation() {
     gsap.to(boardTwo, {
       y: 0,
       duration: 1,
-      delay: .4,
       opacity: 1,
       rotate: 0,
       scrollTrigger: {
         trigger: ".redtag-place__line",
-        start: "bottom 100%",
         once: true,
       }
     })

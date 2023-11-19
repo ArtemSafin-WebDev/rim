@@ -36,5 +36,7 @@ export default function redtagCasesSlider() {
     })
   }
   
-  initSwiper(slider)
+  if(window.matchMedia("(min-width: 1110px)").matches) {
+    initSwiper(slider)
+  }
 }

@@ -1,5 +1,6 @@
 .redtag-help {
-  background-color: #FF173B;
+  background: rgb(255,23,59);
+  background: linear-gradient(90deg, rgba(255,23,59,1) 0%, rgba(187,2,30,1) 100%);
   width: 100%;
   padding: 5rem 0 20rem;
   position: relative;
@@ -10,6 +11,10 @@
 
   &__upper {
     margin-bottom: 8rem;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__title {
@@ -20,6 +25,11 @@
     font-weight: 700;
     line-height: 110%;
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+      max-width: 35.8rem;
+      font-size: 3.2rem;
+    }
   }
 
   &__text {
@@ -31,14 +41,28 @@
     line-height: 130%;
     width: 100%;
     max-width: 90rem;
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+      max-width: 35.8rem;
+    }
   }
 
   &__partners {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     row-gap: 5rem;
     column-gap: 4.5rem;
-    flex-wrap: wrap;
+    justify-items: center;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 2rem;
+    }
   }
 
   &__link {
@@ -55,18 +79,15 @@
 
   &__polygon {
     width: 100%;
-    height: 15rem;
+    height: 10rem;
     position: absolute;
-    bottom: 0;
+    bottom: -.3rem;
     clip-path: polygon(0% 10%, 100% 100%, 0% 100%);
     background-color: black;
     left: 0;
-  }
 
-  .row {
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: space-between;
+    @include breakpoint(mobile) {
+      height: 10rem;
+    }
   }
 }

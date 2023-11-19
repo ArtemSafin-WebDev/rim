@@ -2,16 +2,31 @@
   padding: 10rem 0;
   background-color: black;
 
+  @include breakpoint(desktop) {
+    padding: 7.5rem 0;
+  }
+
+  @include breakpoint(tablet) {
+    padding: 6.4rem 0;
+  }
+
   &__content {
   }
 
   &__title {
     color: white;
     font-family: "DIN Pro", sans-serif;
-    font-size: 54px;
+    font-size: 5.4rem;
     font-style: normal;
     font-weight: 700;
     line-height: 110%; /* 59.4px */
+
+    @include breakpoint(mobile) {
+      font-size: 3.2rem;
+      line-height: 110%; /* 35.2px */
+      width: 100%;
+      max-width: 35.8rem;
+    }
   }
 
   &__row {
@@ -19,6 +34,27 @@
     column-gap: 2rem;
     align-items: flex-start;
     margin-top: 8.5rem;
+
+    @include breakpoint(desktop) {
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(2, minmax(0, 32rem));
+      justify-items: center;
+      row-gap: 2.5rem;
+      column-gap: 2.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      row-gap: 1rem;
+      column-gap: 2rem;
+      grid-template-columns: repeat(2, minmax(0, 17rem));
+    }
+    @media only screen and (max-width: (390px)) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 2rem;
+    }
   }
 
   &__card {
@@ -33,75 +69,161 @@
     padding: 2rem 0;
     transition: .6s ease all;
     border-radius: 2rem;
+
+    @include breakpoint(mobile) {
+      min-height: 18rem;
+      width: 18rem;
+      background-color: #1A1A1A;
+      padding: 1.6rem .9rem;
+    }
+    @media only screen and (max-width: (390px)) {
+      width: 100%;
+      height: auto;
+      padding: 2rem 1rem;
+    }
   }
 
+  // with active class
   &__card.active {
     position: relative;
   }
 
   &__card.active > &__card-wrapper {
-    background-color: #C20A26;
-    border-radius: 2rem;
-    padding-left: 2rem;
+    @include breakpointMF(small-tablet) {
+      background-color: #C20A26;
+      border-radius: 2rem;
+      padding-left: 2rem;
+    }
   }
 
   &__card.active:hover > &__card-wrapper {
-    background-color: transparent;
-    outline: .5rem solid #C20A26;
-    box-shadow: 0px 0px 4px 0px rgba(194, 10, 38, 0.50), 0px 0px 8px 0px rgba(194, 10, 38, 0.50), 0px 0px 16px 0px rgba(194, 10, 38, 0.50), 0px 0px 32px 0px rgba(194, 10, 38, 0.50), 0px 0px 64px 0px rgba(194, 10, 38, 0.50), 0px 0px 128px 0px rgba(194, 10, 38, 0.50);
-    animation: hoverEffect 5s linear infinite;
+    @include breakpointMF(small-tablet) {
+      background-color: transparent;
+      outline: .5rem solid #C20A26;
+      box-shadow: 0px 0px 4px 0px rgba(194, 10, 38, 0.50), 0px 0px 8px 0px rgba(194, 10, 38, 0.50), 0px 0px 16px 0px rgba(194, 10, 38, 0.50), 0px 0px 32px 0px rgba(194, 10, 38, 0.50), 0px 0px 64px 0px rgba(194, 10, 38, 0.50), 0px 0px 128px 0px rgba(194, 10, 38, 0.50);
+      animation: hoverEffect 5s linear infinite;
+    }
   }
 
   &__card.active > &__card-wrapper > * {
-    opacity: 0;
+    @include breakpointMF(small-tablet) {
+      opacity: 0;
+    }
   }
 
   &__card.active > &__card-wrapper > * {
-    margin-top: 7rem;
+    @include breakpointMF(small-tablet) {
+      margin-top: 7rem;
+    }
   }
   &__card.active:hover > &__card-wrapper > * {
-    margin-top: 4rem;
+    @include breakpointMF(small-tablet) {
+      margin-top: 4rem;
+    }
   }
 
   &__card.active:hover > &__card-wrapper > * {
-    opacity: 1;
-    transform: rotate(5deg);
+    @include breakpointMF(small-tablet) {
+      opacity: 1;
+      transform: rotate(5deg);
+    }
   }
 
   &__card.active:hover > &__card-wrapper {
-
-    border-radius: 2rem;
-    transform: rotate(-5deg);
-
+    @include breakpointMF(small-tablet) {
+      border-radius: 2rem;
+      transform: rotate(-5deg);
+    }
   }
 
   &__card.active > &__card-name {
-    color: #FFF;
-    font-family: "DIN Pro", sans-serif;
-    font-size: 3.7rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%;
-    text-transform: uppercase;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include breakpointMF(small-tablet) {
+      color: #FFF;
+      font-family: "DIN Pro", sans-serif;
+      font-size: 3.7rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      text-transform: uppercase;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__card.active:hover > &__card-name {
-    transition: .6s ease all;
-    position: absolute;
-    left: 1.9rem;
-    top: 2rem;
-    transform: translate(0, 0);
-    color: #F20D30;
-    font-family: "DIN Pro", sans-serif;
-    font-size: 2.4rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%;
-    text-transform: uppercase;
-    z-index: 2;
+    @include breakpointMF(small-tablet) {
+      transition: .6s ease all;
+      position: absolute;
+      left: 1.9rem;
+      top: 2rem;
+      transform: translate(0, 0);
+      color: #F20D30;
+      font-family: "DIN Pro", sans-serif;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+  }
+
+  // on mobile
+
+  &__card {
+    position: relative;
+  }
+
+  &__card > &__card-wrapper {
+    @include breakpoint(mobile) {
+      border-radius: 2rem;
+      padding-left: 2rem;
+    }
+  }
+
+  &__card:hover > &__card-wrapper {
+    @include breakpoint(mobile) {
+      background-color: #F20D30;
+      box-shadow: 0px 0px 4px 0px rgba(194, 10, 38, 0.50), 0px 0px 8px 0px rgba(194, 10, 38, 0.50), 0px 0px 16px 0px rgba(194, 10, 38, 0.50), 0px 0px 32px 0px rgba(194, 10, 38, 0.50), 0px 0px 64px 0px rgba(194, 10, 38, 0.50), 0px 0px 128px 0px rgba(194, 10, 38, 0.50);
+    }
+  }
+  &__card:hover > &__card-wrapper > * {
+    @include breakpoint(mobile) {
+
+    }
+  }
+
+  &__card:hover > &__card-wrapper > * {
+    @include breakpoint(mobile) {
+      opacity: 1;
+      transform: rotate(5deg);
+    }
+  }
+
+  &__card:hover > &__card-wrapper {
+    @include breakpoint(mobile) {
+      border-radius: 2rem;
+      transform: rotate(-5deg);
+    }
+  }
+
+
+  &__card:hover > &__card-name {
+    @include breakpoint(mobile) {
+      transition: .6s ease all;
+      position: absolute;
+      left: 2rem;
+      top: 2rem;
+      transform: translate(0, 0);
+      color: white;
+      font-family: "DIN Pro", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      text-transform: uppercase;
+      z-index: 2;
+    }
   }
 
   &__card-name {
@@ -117,6 +239,14 @@
     line-height: 120%;
     text-transform: uppercase;
     z-index: 2;
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+      left: 2rem;
+    }
+    @media only screen and (max-width: (390px)) {
+      font-size: 2rem;
+    }
   }
 
   &__card-text {
@@ -128,6 +258,15 @@
     font-weight: 500;
     line-height: 140%;
     transition: .6s ease all;
+
+    @include breakpoint(mobile) {
+      font-size: 1.1rem;
+      margin-top: 3rem;
+    }
+    @media only screen and (max-width: (390px)) {
+      font-size: 1.5rem;
+      margin-top: 3.75rem;
+    }
   }
 }
 
