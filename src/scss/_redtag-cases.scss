@@ -373,8 +373,12 @@
     cursor: pointer;
     transition: .4s ease opacity;
 
-    &:hover {
-      opacity: .6;
+    path {
+      transition: .4s ease all;
+    }
+
+    &:hover > svg > path {
+      stroke: #F20D30;
     }
     svg {
       width: 2.4rem;
@@ -384,19 +388,24 @@
 
   &__button-right {
     cursor: pointer;
-    transition: .4s ease opacity;
+    transition: .4s ease all;
 
-    &:hover {
-      opacity: .6;
+    &:hover > svg > path {
+      stroke: #F20D30;
     }
     svg {
       width: 2.4rem;
       height: 2.4rem;
     }
+    path {
+      transition: .4s ease all;
+    }
   }
 
   .swiper-button-disabled {
     opacity: .4;
+    cursor: default;
+    pointer-events: none;
   }
 
   &__pagination {

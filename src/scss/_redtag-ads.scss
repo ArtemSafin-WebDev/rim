@@ -1,6 +1,7 @@
 .redtag-ads {
-  padding: 10rem 0;
-  background-color: black;
+  padding: 11.8rem 0;
+  position: relative;
+  z-index: 2;
 
   @include breakpoint(desktop) {
     padding: 7.5rem 0;
@@ -99,9 +100,8 @@
   &__card.active:hover > &__card-wrapper {
     @include breakpointMF(small-tablet) {
       background-color: transparent;
-      outline: .5rem solid #C20A26;
-      box-shadow: 0px 0px 4px 0px rgba(194, 10, 38, 0.50), 0px 0px 8px 0px rgba(194, 10, 38, 0.50), 0px 0px 16px 0px rgba(194, 10, 38, 0.50), 0px 0px 32px 0px rgba(194, 10, 38, 0.50), 0px 0px 64px 0px rgba(194, 10, 38, 0.50), 0px 0px 128px 0px rgba(194, 10, 38, 0.50);
-      animation: hoverEffect 5s linear infinite;
+      outline: 0;
+      animation: hoverEffect 4s linear infinite;
     }
   }
 
@@ -250,7 +250,7 @@
   }
 
   &__card-text {
-    margin-top: 4rem;
+    margin-top: 3rem;
     color: #FFF;
     font-family: "DIN Pro", sans-serif;
     font-size: 1.5rem;
@@ -258,6 +258,8 @@
     font-weight: 500;
     line-height: 140%;
     transition: .6s ease all;
+    width: 100%;
+    max-width: 28.5rem;
 
     @include breakpoint(mobile) {
       font-size: 1.1rem;
@@ -272,18 +274,18 @@
 
 @keyframes hoverEffect {
   0% {
-    background-color: transparent;
+    box-shadow: 0 0 3px 3px #C20A26;
   }
   25% {
-    background-color: transparent;
+    box-shadow: 0 0 3px 3px #C20A26;
   }
   50% {
-    background-color: rgba(242, 13, 48, 0.7);
+    box-shadow: 0 0 5px 5px #F20D30;
   }
   75% {
-    background-color: transparent;
+    box-shadow: 0 0 3px 3px #C20A26;
   }
   100% {
-    background-color: transparent;
+    box-shadow: 0 0 3px 3px #C20A26;
   }
 }

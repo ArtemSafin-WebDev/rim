@@ -31,8 +31,14 @@ export default function redtagCasesSlider() {
       },
       pagination: {
         el: ".redtag-cases__pagination",
-        type: "fraction"
-      }
+        type: "fraction",
+        formatFractionCurrent: function (number) {
+          return ('0' + number).slice(-2);
+        },
+        formatFractionTotal: function (number) {
+          return ('0' + number).slice(-2);
+        },
+      },
     })
   }
   

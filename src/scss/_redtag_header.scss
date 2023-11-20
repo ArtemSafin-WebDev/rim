@@ -154,8 +154,9 @@
     transition: .4s ease all;
 
     &:hover {
-      filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 16px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 32px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 64px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 128px rgba(255, 255, 255, 0.3));
-      text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.1), 0px 0px 8px rgba(255, 255, 255, 0.1), 0px 0px 16px rgba(255, 255, 255, 0.1), 0px 0px 32px rgba(255, 255, 255, 0.1), 0px 0px 64px rgba(255, 255, 255, 0.1), 0px 0px 128px rgba(255, 255, 255, 0.1);
+      background: #FFF;
+      color: #C20A26;
+      box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.50), 0px 0px 8px 0px rgba(255, 255, 255, 0.50), 0px 0px 16px 0px rgba(255, 255, 255, 0.50), 0px 0px 32px 0px rgba(255, 255, 255, 0.50), 0px 0px 64px 0px rgba(255, 255, 255, 0.50), 0px 0px 128px 0px rgba(255, 255, 255, 0.50);
     }
 
 

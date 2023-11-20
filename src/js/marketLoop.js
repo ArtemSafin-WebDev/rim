@@ -12,9 +12,4 @@ export default function marketLoopAnimation() {
     speed: speed || 1,
     paddingRight: parseFloat(gsap.getProperty(marketLoopTapes[0], "marginRight", "px"))
   })
-  
-  marketLoopTapes?.forEach((tape) => {
-    tape.addEventListener("mouseenter", () => gsap.to(tl, {timeScale: 0, overwrite: true}));
-    tape.addEventListener("mouseleave", () => gsap.to(tl, {timeScale: speed, overwrite: true}));
-  });
 }

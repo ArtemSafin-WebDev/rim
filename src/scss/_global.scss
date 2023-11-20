@@ -27,6 +27,7 @@ html {
     box-sizing: border-box;
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
+    height: 100%;
 
     @include noHighlight();
 
@@ -52,6 +53,7 @@ html {
 
 body {
     min-width: 320px;
+
     font-size: 1.6rem;
     line-height: 1.2;
     min-height: 100vh;
@@ -251,8 +253,48 @@ select:-webkit-autofill:focus {
 .red-circle-shape {
     border-radius: 104.2rem;
     background: #C20A26;
-    -webkit-filter: blur(500px);
-    -moz-filter: blur(500px);
-    -ms-filter: blur(500px);
-    filter: blur(500px);
+    -webkit-filter: blur(200px);
+    -moz-filter: blur(200px);
+    -ms-filter: blur(200px);
+    filter: blur(200px);
+    opacity: .9;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+
+.redtag-lines {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    z-index: 0;
+
+    @include breakpoint(large-desktop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    span {
+        display: block;
+        background: rgb(0,0,0);
+        background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(240,240,240,1) 50%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(240,240,240,1) 50%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(240,240,240,1) 50%, rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+        opacity: .4;
+        width: .1rem;
+        height: 100%;
+        @include breakpoint(large-desktop) {
+            opacity: .3;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }
