@@ -9,6 +9,9 @@
   @include breakpoint(tablet) {
     padding: 6.4rem 0 4rem;
   }
+  @include breakpoint(mobile) {
+    padding: 6.4rem 0 7rem;
+  }
 
   &__polygon {
     width: 100%;
@@ -141,7 +144,7 @@
     p {
       color: #010101;
       font-family: "Mont", sans-serif;
-      font-size: 12px;
+      font-size: 1.2rem;
       font-style: normal;
       font-weight: 600;
       line-height: 130%; /* 15.6px */
@@ -150,9 +153,11 @@
 
       @include breakpoint(small-tablet) {
         position: absolute;
-        bottom: -1rem;
+        bottom: -2rem;
         left: 50%;
         transform: translateX(-50%);
+        font-size: 1rem;
+        text-align: center;
       }
     }
   }

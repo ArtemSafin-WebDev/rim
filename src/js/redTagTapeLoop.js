@@ -12,9 +12,4 @@ export default function redTagTapeLoop() {
     speed: speed,
     paddingLeft: parseFloat(gsap.getProperty(redtagTapes[0], "marginRight", "px"))
   })
-  
-  redtagTapes?.forEach((tape) => {
-    tape.addEventListener("mouseenter", () => gsap.to(tl, {timeScale: 0, overwrite: true}));
-    tape.addEventListener("mouseleave", () => gsap.to(tl, {timeScale: speed, overwrite: true}));
-  });
 }
