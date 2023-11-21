@@ -52,6 +52,7 @@
       width: auto;
       background-position: center;
       min-height: calc(100vh - 5rem);
+      opacity: .4;
     }
     @include breakpoint(mobile) {
       animation: bgAnimationMobile 6s linear infinite;
