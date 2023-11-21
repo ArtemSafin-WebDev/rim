@@ -34,15 +34,10 @@
     right: -15rem;
     bottom: 0;
     width: 100%;
-    max-width: 146.7rem;
+    max-width: 100%;
+    object-fit: cover;
     min-height: calc(100vh - (5rem + 7rem));
-    background-image: url("../img/redtag/intro/background.jpg");
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
     z-index: 1;
-
-    animation: bgAnimation 6s linear infinite;
 
     @include breakpoint(large-desktop) {
       right: -30rem;
@@ -252,7 +247,7 @@
     text-transform: uppercase;
     margin-bottom: 6rem;
 
-    transition: .4s ease all;
+    transition: .4s box-shadow ease, .4s background ease;
 
     &:hover {
       background: #F20D30;
@@ -294,11 +289,6 @@
     }
     &:hover path {
       fill: white;
-      filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.50)) drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.50)) drop-shadow(0px 0px 16px rgba(255, 255, 255, 0.50)) drop-shadow(0px 0px 32px rgba(255, 255, 255, 0.50)) drop-shadow(0px 0px 64px rgba(255, 255, 255, 0.50)) drop-shadow(0px 0px 128px rgba(255, 255, 255, 0.50));
-    }
-
-    &:hover {
-      filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 16px rgba(255, 255, 255, 0.3)) drop-shadow(0px 0px 32px rgba(255, 255, 255, 0.50));
     }
   }
 
@@ -326,20 +316,5 @@
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes bgAnimationMobile {
-  0% {
-    opacity: .5;
-  }
-  50% {
-    opacity: .3;
-  }
-  75% {
-    opacity: .3;
-  }
-  100% {
-    opacity: .5;
   }
 }

@@ -31,6 +31,8 @@ import redtagIntro from "./redtagIntro";
 import inventorySlider from "./inventorySlider";
 import geographyMapAnimation from "./geographyMapAnimation";
 import marketImagesParallax from "./marketImagesParallax";
+import redtagIntroAnimation from "./redtagIntroAnimation";
+import removeRedtagMapMobile from "./removeRedtagMapMobile";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -66,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
     inventorySlider()
     geographyMapAnimation()
     marketImagesParallax()
+    redtagIntroAnimation()
+    removeRedtagMapMobile()
 });
 
 window.addEventListener('load', function() {
