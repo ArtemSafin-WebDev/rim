@@ -8,6 +8,10 @@
   @include breakpoint(large-desktop) {
     width: 83%;
   }
+  @include breakpoint(mobile) {
+    display: none;
+  }
+
   &__link {
     display: block;
     width: 5rem;
@@ -24,6 +28,20 @@
     }
     path {
 
+    }
+  }
+
+  &__mobile {
+    @include breakpoint(mobile) {
+      background-image: url("../img/redtag/geography/maps.png");
+      width: 35.8rem;
+      min-height: 17.5rem;
+      height: 100%;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-width: none;
     }
   }
 }

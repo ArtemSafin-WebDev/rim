@@ -1,38 +1,41 @@
 {{#extend "redtag-layout"}}
   {{#content "main"}}
-    <section class="redtag-intro">
+    <!--  #NOTE: data-direction(left or bottom) | text animation  -->
+    <section class="redtag-intro" data-direction="bottom">
       {{> redtag-lines}}
       <div class="container">
         <div class="redtag-intro__content">
-          <div class="redtag-intro__overlay"></div>
+          <video class="redtag-intro__overlay lazyload" muted="" data-autoplay="" loop playsinline preload="none">
+            <source src="assets/video/redtag-video.mp4" type="video/mp4" />
+          </video>
           <div class="redtag-intro__column">
             <div class="redtag-intro__title-wrapper">
-              <img src="img/redtag/intro/text.svg" alt="title-icon" class="redtag-intro__title-icon">
-              <h1 class="redtag-intro__title">MEDIABUYING LOWCOSTER AGENCY</h1>
+              <img src="img/redtag/intro/text.svg" alt="title-icon" class="redtag-intro__title-icon js-intro-text">
+              <h1 class="redtag-intro__title js-intro-text">MEDIABUYING LOWCOSTER AGENCY</h1>
             </div>
-            <p class="redtag-intro__text">Баинг OOH- и DOOH-инвентаря во всех регионах РФ</p>
+            <p class="redtag-intro__text js-intro-text">Баинг OOH- и DOOH-инвентаря во всех регионах РФ</p>
             <ul class="redtag-intro__info-block">
-              <li class="redtag-intro__info-list">
+              <li class="redtag-intro__info-list js-intro-text">
                 <svg width="9.5" height="5" aria-hidden="true" class="redtag-intro__checkmark">
                   <use xlink:href="#checkmark"></use>
                 </svg>
                 <p class="redtag-intro__info-text">Низкие цены на размещение</p>
               </li>
-              <li class="redtag-intro__info-list">
+              <li class="redtag-intro__info-list js-intro-text">
                 <svg width="9.5" height="5" aria-hidden="true" class="redtag-intro__checkmark">
                   <use xlink:href="#checkmark"></use>
                 </svg>
                 <p class="redtag-intro__info-text">Быстрая обработка запросов</p>
               </li>
-              <li class="redtag-intro__info-list">
+              <li class="redtag-intro__info-list js-intro-text">
                 <svg width="9.5" height="5" aria-hidden="true" class="redtag-intro__checkmark">
                   <use xlink:href="#checkmark"></use>
                 </svg>
-                <p class="redtag-intro__info-text">Экспертиза в области мониторинга рекламного инвентаря</p>
+                <p class="redtag-intro__info-text js-intro-text">Экспертиза в области мониторинга рекламного инвентаря</p>
               </li>
             </ul>
-            <a class="redtag-intro__button" href="/#">Оставить заявку</a>
-            <button class="redtag-intro__arrow-button">
+            <a class="redtag-intro__button js-intro-text" href="/#">Оставить заявку</a>
+            <button class="redtag-intro__arrow-button js-intro-text">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" class="redtag-intro__arrow-icon">
                 <circle cx="24" cy="24" r="23" stroke="#C20A26" stroke-width="2"/>
                 <path d="M22.9729 32.7071C23.3634 33.0976 23.9966 33.0976 24.3871 32.7071L30.7511 26.3431C31.1416 25.9526 31.1416 25.3195 30.7511 24.9289C30.3605 24.5384 29.7274 24.5384 29.3368 24.9289L23.68 30.5858L18.0231 24.9289C17.6326 24.5384 16.9994 24.5384 16.6089 24.9289C16.2184 25.3195 16.2184 25.9526 16.6089 26.3431L22.9729 32.7071ZM22.68 16L22.68 32L24.68 32L24.68 16L22.68 16Z" fill="#C20A26"/>
