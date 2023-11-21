@@ -16,11 +16,14 @@
     overflow: hidden;
 }
 
-.page-main-redtag {
-    overflow: hidden;
-    height: max-content;
-    background-color: black;
+.page-main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+}
+
+.page-main--black {
+    overflow: hidden;
+    height: max-content;
+    background-color: black;
 }
