@@ -10,7 +10,7 @@
           </video>
           <div class="redtag-intro__column">
             <div class="redtag-intro__title-wrapper">
-              <img src="img/redtag/intro/text.svg" alt="title-icon" class="redtag-intro__title-icon js-intro-text">
+              <img src="img/redtag/intro/text.png" alt="title-icon" class="redtag-intro__title-icon js-intro-text">
               <h1 class="redtag-intro__title js-intro-text">MEDIABUYING LOWCOSTER AGENCY</h1>
             </div>
             <p class="redtag-intro__text js-intro-text">Баинг OOH- и DOOH-инвентаря во всех регионах РФ</p>
@@ -25,16 +25,10 @@
                 <svg width="9.5" height="5" aria-hidden="true" class="redtag-intro__checkmark">
                   <use xlink:href="#checkmark"></use>
                 </svg>
-                <p class="redtag-intro__info-text">Быстрая обработка запросов</p>
-              </li>
-              <li class="redtag-intro__info-list js-intro-text">
-                <svg width="9.5" height="5" aria-hidden="true" class="redtag-intro__checkmark">
-                  <use xlink:href="#checkmark"></use>
-                </svg>
                 <p class="redtag-intro__info-text js-intro-text">Экспертиза в области мониторинга рекламного инвентаря</p>
               </li>
             </ul>
-            <a class="redtag-intro__button js-intro-text" href="/#">Оставить заявку</a>
+            <a class="redtag-intro__button js-intro-text js-open-modal" href="#redtag-contact-modal">Оставить заявку</a>
             <button class="redtag-intro__arrow-button js-intro-text">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" class="redtag-intro__arrow-icon">
                 <circle cx="24" cy="24" r="23" stroke="#C20A26" stroke-width="2"/>
@@ -53,32 +47,24 @@
           <h2 class="redtag-ads__title">Делаем запуск рекламных кампаний</h2>
           <div class="redtag-ads__row">
             <div class="redtag-ads__card">
-              <h4 class="redtag-ads__card-name">УДОБНЕЕ</h4>
               <div class="redtag-ads__card-wrapper">
+                <h4 class="redtag-ads__card-name">БЫСТРЕЕ</h4>
                 <p class="redtag-ads__card-text">Вам не придется тратить время
                   и ресурсы на обсуждение условий размещения и заключение договоров с каждым подрядчиком — мы сделаем все сами.
                 </p>
               </div>
             </div>
             <div class="redtag-ads__card">
-              <h4 class="redtag-ads__card-name">БЫСТРЕЕ</h4>
               <div class="redtag-ads__card-wrapper">
-                <p class="redtag-ads__card-text">Мы постоянно улучшаем взаимодействие с операторами наружной рекламы и даже
-                  по объемным адресным программам закупаем инвентарь нереально быстро.
-                </p>
-              </div>
-            </div>
-            <div class="redtag-ads__card active">
-              <h4 class="redtag-ads__card-name">УДОБНЕЕ</h4>
-              <div class="redtag-ads__card-wrapper">
+               <h4 class="redtag-ads__card-name">УДОБНЕЕ</h4>
                 <p class="redtag-ads__card-text">Мы постоянно улучшаем взаимодействие с операторами наружной рекламы и даже
                   по объемным адресным программам закупаем инвентарь нереально быстро.
                 </p>
               </div>
             </div>
             <div class="redtag-ads__card">
-              <h4 class="redtag-ads__card-name">эффективнее</h4>
               <div class="redtag-ads__card-wrapper">
+                <h4 class="redtag-ads__card-name">эффективнее</h4>
                 <p class="redtag-ads__card-text">Мы занимаемся баингом уже более 3 лет и обладаем экспертизой в этой
                   сфере, постоянно осуществляем мониторинг инвентаря и предлагаем клиентам только те конструкции, реклама на которых приносит результат.
                 </p>
@@ -93,19 +79,20 @@
       {{> redtag-lines}}
       <div class="redtag-geography__shape red-circle-shape"></div>
       <div class="container">
+        <img src="img/redtag/geography/icon-russia.svg" alt="icon" class="redtag-geography__icon">
         <div class="redtag-geography__content js-geo-map-trigger">
           <div class="redtag-geography__column">
-            <img src="img/redtag/geography/icon-russia.svg" alt="icon" class="redtag-geography__icon">
             <div class="redtag-geography__block">
               <h2 class="redtag-geography__title">География закупок</h2>
               <ul class="redtag-geography__info">
                 <li class="redtag-geography__list">
                   <h4 class="redtag-geography__list-title">350+</h4>
-                  <p class="redtag-geography__text">городов</p>
+                  <p class="redtag-geography__text">городов в активной закупке</p>
                 </li>
                 <li class="redtag-geography__list">
                   <img src="img/redtag/geography/items-1120.svg" alt="1120-items" class="redtag-geography__icon-title">
-                  <p class="redtag-geography__text">населенных пунктов</p>
+                  <p class="redtag-geography__text">населенных пунктов<br>
+                    в экспертизе</p>
                 </li>
                 <li class="redtag-geography__list">
                   <h4 class="redtag-geography__list-title">97</h4>
@@ -118,9 +105,14 @@
               </ul>
             </div>
           </div>
-          <div class="redtag-geography__map-wrapper js-redtag-geography-map">
-            {{> redtag-map }}
+          <div class="redtag-geography__card">
+            <h3 class="redtag-geography__card-title">Уж в чем мы настоящие эксперты, так это
+              в <span class="red-color">региональном баинге: </span></h3>
+            <p class="redtag-geography__card-text">закупаем инвентарь по всей России и даже в самых отдаленных ее уголках находим эффективные решения для размещения</p>
           </div>
+        </div>
+        <div class="redtag-geography__map-wrapper js-redtag-geography-map">
+          {{> redtag-map }}
         </div>
       </div>
 
@@ -246,7 +238,7 @@
 
             <div class="redtag-inventory__data">
               <div class="redtag-inventory__block">
-                <img class="redtag-inventory__block-image" src="img/redtag/inventory/billboard-1.png" alt="image"/>
+                <img class="redtag-inventory__block-image" srcset="img/redtag/inventory/billboard-1.png" src="img/redtag/inventory/billboard-1.png" alt="image"/>
                 <div class="redtag-inventory__data-info">
                   <h3 class="redtag-inventory__block-count">2 481</h3>
                   <p class="redtag-inventory__block-name">билборд</p>
@@ -304,18 +296,12 @@
                 <p class="redtag-tasks__list-text">компетентный баинг даже в отдаленных районах РФ</p>
               </div>
             </li>
-            <li class="redtag-tasks__list block--7">
-              <div class="redtag-tasks__list-wrapper">
-                <h3 class="redtag-tasks__list-title">Анализируем</h3>
-                <p class="redtag-tasks__list-text">ЦА и подбираем конструкции, наиболее подходящие для решения ваших бизнес-задач</p>
-              </div>
-            </li>
           </ul>
-          <button class="redtag-tasks__button">Оставить заявку</button>
+          <a class="redtag-tasks__button js-open-modal" href="#redtag-contact-modal">Оставить заявку</a>
         </div>
         <div class="redtag-tasks__bottom">
           <div class="redtag-tasks__shape red-circle-shape"></div>
-          <img src="img/redtag/tasks/redtag-icon.svg" alt="redtag-icon" class="redtag-tasks__bottom-icon">
+          <img src="img/redtag/tasks/redtag-icon.png" alt="redtag-icon" class="redtag-tasks__bottom-icon">
           <img src="img/redtag/tasks/tasks-bg.png" alt="tasks-bg" class="redtag-tasks__bottom-bg">
         </div>
       </div>
@@ -325,7 +311,8 @@
       {{> redtag-lines}}
       <div class="container">
         <div class="redtag-clients__content">
-          <h2 class="redtag-clients__title">Наши клиенты — это федеральные, региональные рекламные агентства и медиа агентства</h2>
+          <h2 class="redtag-clients__title">Наши клиенты — это федеральные, региональные рекламные агентства
+            и медиаагентства</h2>
           <ul class="redtag-clients__info">
             <li class="redtag-clients__list">
               <h4 class="redtag-clients__number">30+</h4>
@@ -478,9 +465,10 @@
             <div class="redtag-market__main-circle layer--1">
               <img src="img/redtag/market/circle.svg" alt="circle-image" class="redtag-market__circle-icon" data-speed="">
               <img src="img/redtag/market/icon.svg" alt="icon" class="redtag-market__circle-mini-icon">
-              <h5 class="redtag-market__main-circle-title">НИЗКАЯ ЦЕНА</h5>
-              <p class="redtag-market__main-circle-text">Это позволяет нам закупать только качественный digital-инвентарь
-                по самым низким ценам</p>
+              <h5 class="redtag-market__main-circle-title">КАЧЕСТВО</h5>
+              <p class="redtag-market__main-circle-text">Это позволяет нам закупать
+                только качественный
+                digital-инвентарь</p>
             </div>
           </div>
 
@@ -525,7 +513,7 @@
                 </div>
               </li>
             </ul>
-            <button class="redtag-agency__button">Оставить заявку</button>
+            <a class="redtag-agency__button js-open-modal" href="#redtag-contact-modal">Оставить заявку</a>
           </div>
         </div>
       </div>
@@ -582,11 +570,16 @@
               <div class="redtag-meet__person-info-detail">
                 <h5 class="redtag-meet__person-name">Олеся Попова</h5>
                 <p class="redtag-meet__person-position">баинг-директор</p>
-                <p class="redtag-meet__person-about">Я более 15 лет в рекламной сфере. Сотрудничала с крупнейшими брендами и агентствами на рынке наружной рекламы: С-Маркетинг, ВТБ, Tele2, Лента, Газпром-медиа, X5 Group. И уже мечтаю помочь вам!</p>
+                <p class="redtag-meet__person-about">Более 15 лет в рекламной сфере. Сотрудничала
+                  с крупнейшими брендами и агентствами на рынке наружной рекламы: С-Маркетинг, ВТБ, Tele2, Лента, Газпром-медиа, X5 Group.</p>
               </div>
             </div>
             <div class="redtag-meet__count-spec">
-              <p class="redtag-meet__count" data-count="26">26</p>
+              <div class="redtag-meet__count-icon-wrapper">
+                <img class="redtag-meet__count-icon-bg" src="img/redtag/meet/count.png" alt="image"/>
+                <img class="redtag-meet__count-icon-main" src="img/redtag/meet/count.png" alt="image"/>
+              </div>
+              <p class="redtag-meet__count" data-count="26"></p>
               <p class="redtag-meet__count-text">специалистов в команде:</p>
             </div>
             <ul class="redtag-meet__person-skills">
@@ -707,19 +700,20 @@
           <div class="redtag-principles__cards">
             <div class="redtag-principles__card">
               <img src="img/redtag/principles/Image-1.png" alt="image" class="redtag-principles__card-image lazyload">
-              <h4 class="redtag-principles__card-name">Ориентируемся</h4>
-              <p class="redtag-principles__card-text">на получение объемов закупки и можем работать от 3% доходности</p>
+              <h4 class="redtag-principles__card-name">Предоставляем сервис высокого качества</h4>
+              <p class="redtag-principles__card-text">Нам доверяют крупнейшие российские бренды: Tele2, Сбермегамаркет, Самокат, Газпром и др.</p>
             </div>
             <div class="redtag-principles__card">
               <img src="img/redtag/principles/Image-2.png" alt="image" class="redtag-principles__card-image lazyload">
-              <h4 class="redtag-principles__card-name">Сокращаем</h4>
-              <p class="redtag-principles__card-text">издержки, чтобы увеличить маржу клиента</p>
+              <h4 class="redtag-principles__card-name">Составляем АП любого объема</h4>
+              <p class="redtag-principles__card-text">От 1 рекламной конструкции
+                до масштабных тендерных запросов</p>
             </div>
             <div class="redtag-principles__card">
               <img src="img/redtag/principles/Image-3.png" alt="image" class="redtag-principles__card-image lazyload">
-              <h4 class="redtag-principles__card-name">Предоставляем</h4>
-              <p class="redtag-principles__card-text">прозрачные условия закупки
-                и показываем реальные цены</p>
+              <h4 class="redtag-principles__card-name">Работаем в сжатые
+                сроки</h4>
+              <p class="redtag-principles__card-text">Собираем адресные программы даже за 1 рабочий день</p>
             </div>
           </div>
         </div>
@@ -730,7 +724,12 @@
     <section class="redtag-cases">
       <div class="container">
         <div class="redtag-cases__content">
-          <a href="/#" class="redtag-cases__link">Кейсы</a>
+          <div class="redtag-cases__link-wrapper">
+            <svg width="14" height="14" aria-hidden="true" class="icon-down">
+              <use xlink:href="#arrow-right-icon"></use>
+            </svg>
+            <p class="redtag-cases__link">Кейсы</p>
+          </div>
           <h2 class="redtag-cases__title">Примеры наших эффективных закупок</h2>
           <div class="redtag-cases__slider js-redtag-cases-slider" data-speed="800">
 
@@ -754,7 +753,7 @@
               <div class="swiper-slide">
                 <div class="redtag-cases__slide">
                   <h3 class="redtag-cases__slide-title">Запустили рекламную кампанию на <span class="red-color">1470</span> сторонах
-                    за <span class="red-color">6 дней</span></h3>
+                    за <span class="red-color">6 рабочих дней</span></h3>
                   <div class="redtag-cases__slide-upper">
                     <div class="redtag-cases__column">
                       <ul class="redtag-cases__slide-info">
@@ -808,7 +807,9 @@
                       </li>
                       <li class="redtag-cases__bottom-info-list">
                         <span class="redtag-cases__bottom-info-counter"></span>
-                        <p class="redtag-cases__bottom-info-text">С 1 по 7 сентября баннеры монтировали на конструкции, а уже к 10 сентября клиент получил фотоотчеты.</p>
+                        <p class="redtag-cases__bottom-info-text">За 2 дня осуществили монтаж
+                          и в течение 3 дней предоставили
+                          клиенту фотоотчет</p>
                       </li>
                     </ul>
                   </div>
@@ -866,13 +867,9 @@
                         <span class="redtag-cases__bottom-info-counter"></span>
                         <p class="redtag-cases__bottom-info-text">Собрали адресную программу</p>
                       </li>
-                      <li class="redtag-cases__bottom-info-list">
+                      <li class="redtag-cases__bottom-info-list span--2">
                         <span class="redtag-cases__bottom-info-counter"></span>
-                        <p class="redtag-cases__bottom-info-text">Запустили рекламу на конструкциях в тех населенных пунктах, где это было возможно</p>
-                      </li>
-                      <li class="redtag-cases__bottom-info-list">
-                        <span class="redtag-cases__bottom-info-counter"></span>
-                        <p class="redtag-cases__bottom-info-text">В остальных — нашли альтернативный канал продвижения: жители 10 населенных пунктов узнали об открытии магазинов из газет и журналов.</p>
+                        <p class="redtag-cases__bottom-info-text">Обеспечили оперативную смену рекламного материала в течение всего срока размещения — от открытия до проведения поддерживающих акций</p>
                       </li>
                     </ul>
                   </div>
@@ -886,7 +883,8 @@
               <div class="swiper-slide">
                 <div class="redtag-cases__slide">
 
-                  <h3 class="redtag-cases__slide-title">Собрали охватную годовую АП и запустили рекламу в <span class="red-color">48 городах</span> по цене ниже рыночной</h3>
+                  <h3 class="redtag-cases__slide-title">Закупка и обслуживание годовой адресной программы в <span class="red-color">48 городах</span>
+                    с населением от 300 тыс. человек</h3>
                   <div class="redtag-cases__slide-upper">
                     <div class="redtag-cases__column">
                       <ul class="redtag-cases__slide-info">

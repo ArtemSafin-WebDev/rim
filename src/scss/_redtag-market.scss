@@ -63,7 +63,7 @@
     }
   }
   &__link {
-    color: #C20A26 !important;
+    color: #F20D30 !important;
     font-family: "DIN Pro", sans-serif;
     font-size: 1.6rem;
     font-style: normal;
@@ -290,6 +290,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
+    text-transform: uppercase;
 
     @include breakpoint(small-tablet) {
       font-size: 1.5rem;
@@ -305,7 +306,7 @@
     font-weight: 700;
     line-height: 130%;
     width: 100%;
-    max-width: 26.2rem;
+    max-width: 24.2rem;
 
     @include breakpoint(small-tablet) {
       font-size: 1.1rem;

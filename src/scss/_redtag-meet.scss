@@ -7,9 +7,11 @@
   }
 
   &__content {
+    position: relative;
     display: grid;
     grid-template-columns: minmax(0, .5fr) minmax(0, 1fr);
     column-gap: 4.4rem;
+    z-index: 1;
 
     @include breakpoint(tablet) {
       grid-template-columns: 1fr;
@@ -31,7 +33,7 @@
   }
 
   &__link {
-    color: #C20A26 !important;
+    color: #F20D30 !important;
     font-family: "DIN Pro", sans-serif;
     font-size: 1.6rem;
     font-style: normal;
@@ -64,49 +66,33 @@
     }
   }
 
-  &__count {
-    padding-top: 6.9rem;
-    font-family: "Mont", sans-serif;
-    font-size: 30rem;
-    margin-bottom: 2rem;
-    color: black;
-    -webkit-text-fill-color: black;
-    -webkit-text-stroke-color: #ff0225;
-    -webkit-text-stroke-width: 0.4rem;
-    font-style: normal;
-    font-weight: 900;
-    line-height: .5;
+  &__count-icon-wrapper {
     position: relative;
-    display: block;
+    width: 100%;
+  }
+
+  &__count-icon-bg {
+    position: absolute;
+    left: -35rem;
+    z-index: 0;
+    opacity: .3;
+    width: 100%;
+    max-width: 32.3rem;
+    height: auto;
+  }
+
+  &__count-icon-main {
+    position: relative;
     z-index: 1;
-    text-shadow: 0px 0px 14px rgba(255,2,37,1);
+    width: 100%;
+    max-width: 32.3rem;
+    height: auto;
+    object-fit: cover;
+    opacity: .9;
 
-    @include breakpoint(mobile) {
-      font-size: 28rem;
-      margin-bottom: 1.6rem;
-    }
-
-    &::before {
-      content: attr(data-count);
-      display: block;
-      position: absolute;
-      left: -33.5rem;
-      z-index: -1;
-      font-size: 30rem;
-      margin-bottom: 2rem;
-      color: black;
-      -webkit-text-fill-color: black;
-      -webkit-text-stroke-color: #ff0225;
-      -webkit-text-stroke-width: 0.4rem;
-      font-style: normal;
-      font-weight: 900;
-      line-height: .5;
-      opacity: .2;
-      text-shadow: 0px 0px 10px rgba(255,2,37,1);
-
-      @include breakpoint(mobile) {
-        display: none;
-      }
+    @include breakpoint(tablet) {
+      max-width: 28rem;
+      margin-top: 3.2rem;
     }
   }
 
@@ -263,9 +249,15 @@
 
   &__shape {
     position: absolute;
-    width: 50rem;
-    height: 50rem;
-    bottom: -20rem;
-    right: -20rem;
+    width: 100rem;
+    height: 100rem;
+    bottom: -40rem;
+    right: -40rem;
+    z-index: 0;
+
+    @include breakpoint(large-desktop) {
+      bottom: -50rem;
+      right: -50rem;
+    }
   }
 }
