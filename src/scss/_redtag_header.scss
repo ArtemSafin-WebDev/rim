@@ -142,7 +142,7 @@
     border-radius: 10rem;
     border: .2rem solid #FFF;
     background: rgba(30, 30, 30, 0.38);
-    color: #FFF;
+    color: #FFF !important;
     font-family: "DIN Pro", sans-serif;
     font-size: 1.4rem;
     font-style: normal;
@@ -153,9 +153,13 @@
     height: 5rem;
     transition: .4s ease all;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     &:hover {
       background: #FFF;
-      color: #C20A26;
+      color: #C20A26 !important;
       box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.50), 0px 0px 8px 0px rgba(255, 255, 255, 0.50), 0px 0px 16px 0px rgba(255, 255, 255, 0.50), 0px 0px 32px 0px rgba(255, 255, 255, 0.50), 0px 0px 64px 0px rgba(255, 255, 255, 0.50), 0px 0px 128px 0px rgba(255, 255, 255, 0.50);
     }
 
