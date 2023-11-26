@@ -1,14 +1,15 @@
 .redtag-ads {
-  padding: 11.8rem 0;
+  margin-top: 10rem;
+
   position: relative;
   z-index: 2;
 
-  @include breakpoint(desktop) {
-    padding: 7.5rem 0;
-  }
-
   @include breakpoint(tablet) {
     padding: 6.4rem 0;
+  }
+
+  @include breakpoint(mobile) {
+    margin-top: 0;
   }
 
   &__content {
@@ -31,10 +32,10 @@
   }
 
   &__row {
-    display: flex;
-    column-gap: 2rem;
     align-items: flex-start;
-    margin-top: 8.5rem;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     @include breakpoint(desktop) {
       display: grid;
@@ -60,7 +61,6 @@
 
   &__card {
     position: relative;
-    cursor: pointer;
   }
 
   &__card-wrapper {
@@ -84,59 +84,7 @@
     }
   }
 
-  // with active class
-  &__card.active {
-    position: relative;
-  }
-
-  &__card.active > &__card-wrapper {
-    @include breakpointMF(small-tablet) {
-      background-color: #C20A26;
-      border-radius: 2rem;
-      padding-left: 2rem;
-    }
-  }
-
-  &__card.active:hover > &__card-wrapper {
-    @include breakpointMF(small-tablet) {
-      background-color: transparent;
-      outline: 0;
-      animation: hoverEffect 4s linear infinite;
-    }
-  }
-
-  &__card.active > &__card-wrapper > * {
-    @include breakpointMF(small-tablet) {
-      opacity: 0;
-    }
-  }
-
-  &__card.active > &__card-wrapper > * {
-    @include breakpointMF(small-tablet) {
-      margin-top: 7rem;
-    }
-  }
-  &__card.active:hover > &__card-wrapper > * {
-    @include breakpointMF(small-tablet) {
-      margin-top: 4rem;
-    }
-  }
-
-  &__card.active:hover > &__card-wrapper > * {
-    @include breakpointMF(small-tablet) {
-      opacity: 1;
-      transform: rotate(5deg);
-    }
-  }
-
-  &__card.active:hover > &__card-wrapper {
-    @include breakpointMF(small-tablet) {
-      border-radius: 2rem;
-      transform: rotate(-5deg);
-    }
-  }
-
-  &__card.active > &__card-name {
+  &__card > &__card-name {
     @include breakpointMF(small-tablet) {
       color: #FFF;
       font-family: "DIN Pro", sans-serif;
@@ -182,34 +130,7 @@
     }
   }
 
-  &__card:hover > &__card-wrapper {
-    @include breakpoint(mobile) {
-      background-color: #F20D30;
-      box-shadow: 0px 0px 4px 0px rgba(194, 10, 38, 0.50), 0px 0px 8px 0px rgba(194, 10, 38, 0.50), 0px 0px 16px 0px rgba(194, 10, 38, 0.50), 0px 0px 32px 0px rgba(194, 10, 38, 0.50), 0px 0px 64px 0px rgba(194, 10, 38, 0.50), 0px 0px 128px 0px rgba(194, 10, 38, 0.50);
-    }
-  }
-  &__card:hover > &__card-wrapper > * {
-    @include breakpoint(mobile) {
-
-    }
-  }
-
-  &__card:hover > &__card-wrapper > * {
-    @include breakpoint(mobile) {
-      opacity: 1;
-      transform: rotate(5deg);
-    }
-  }
-
-  &__card:hover > &__card-wrapper {
-    @include breakpoint(mobile) {
-      border-radius: 2rem;
-      transform: rotate(-5deg);
-    }
-  }
-
-
-  &__card:hover > &__card-name {
+  &__card > &__card-name {
     @include breakpoint(mobile) {
       transition: .6s ease all;
       position: absolute;
@@ -227,18 +148,12 @@
   }
 
   &__card-name {
-    transition: .6s ease all;
-    position: absolute;
-    left: 0rem;
-    top: 2rem;
     color: #F20D30;
-    font-family: "DIN Pro", sans-serif;
-    font-size: 2.4rem;
+    font-family: "Mont", sans-serif;
+    font-size: 4.2rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 120%;
-    text-transform: uppercase;
-    z-index: 2;
 
     @include breakpoint(mobile) {
       font-size: 1.6rem;
@@ -250,7 +165,6 @@
   }
 
   &__card-text {
-    margin-top: 3rem;
     color: #FFF;
     font-family: "DIN Pro", sans-serif;
     font-size: 1.5rem;
@@ -259,7 +173,6 @@
     line-height: 140%;
     transition: .6s ease all;
     width: 100%;
-    max-width: 28.5rem;
 
     @include breakpoint(mobile) {
       font-size: 1.1rem;
@@ -269,23 +182,5 @@
       font-size: 1.5rem;
       margin-top: 3.75rem;
     }
-  }
-}
-
-@keyframes hoverEffect {
-  0% {
-    box-shadow: 0 0 3px 3px #C20A26;
-  }
-  25% {
-    box-shadow: 0 0 3px 3px #C20A26;
-  }
-  50% {
-    box-shadow: 0 0 5px 5px #F20D30;
-  }
-  75% {
-    box-shadow: 0 0 3px 3px #C20A26;
-  }
-  100% {
-    box-shadow: 0 0 3px 3px #C20A26;
   }
 }

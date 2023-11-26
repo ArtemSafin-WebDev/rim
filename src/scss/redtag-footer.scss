@@ -90,7 +90,11 @@
     border-radius: 16rem;
     background: #C20A26;
 
-    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFF !important;
     font-family: "DIN Pro", sans-serif;
     font-size: 2.2rem;
     font-style: normal;
@@ -181,10 +185,10 @@
 
   &__link {
     color: #010101;
-    font-family: "DIN Pro", sans-serif;
+    font-family: "Mont", sans-serif;
     font-size: 2.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 130%; /* 31.2px */
     transition: .4s ease opacity;
 

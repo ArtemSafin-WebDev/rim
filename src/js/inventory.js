@@ -10,6 +10,7 @@ export default function inventoryAnimation() {
   
   function setData({buttonImage, count, name}) {
     dataImage.src = buttonImage
+    dataImage.srcset = buttonImage
     dataCount.textContent = count
     dataName.textContent = name
     
