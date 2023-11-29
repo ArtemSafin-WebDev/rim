@@ -65,11 +65,11 @@
     font-weight: 700;
     line-height: 110%;
     width: 100%;
-    max-width: 120rem;
+    max-width: 90rem;
 
     @include breakpoint(large-desktop) {
       font-size: 4rem;
-      max-width: 85rem;
+      max-width: 68rem;
     }
 
     @include breakpoint(mobile) {

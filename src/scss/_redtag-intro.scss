@@ -23,11 +23,16 @@
     width: 100%;
     min-height: calc(100vh - 5rem);
     justify-content: center;
-    padding-top: 5rem;
+    padding-top: 14rem;
 
     @include breakpoint(large-desktop) {
       padding: 0;
-      padding-top: 9vh;
+      padding-top: 13.5vh;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 0;
+      padding-top: 10vh;
     }
   }
 

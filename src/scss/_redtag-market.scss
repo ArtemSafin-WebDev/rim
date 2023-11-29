@@ -1,6 +1,8 @@
 .redtag-market {
   padding: 10rem 0 0;
   position: relative;
+  height: calc(100% + 1.9vw);
+  bottom: 1.9vw;
 
   @include breakpoint(tablet) {
     padding: 5rem 0 0;
@@ -84,7 +86,7 @@
     font-weight: 700;
     line-height: 110%; /* 59.4px */
     width: 100%;
-    max-width: 120rem;
+    max-width: 95rem;
 
     @include breakpoint(mobile) {
       font-size: 3.2rem;
@@ -316,7 +318,7 @@
 
   &__info-one {
     grid-column: 3 / 6;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     display: flex;
     padding-left: 4rem;
     justify-content: center;
@@ -347,11 +349,10 @@
       font-weight: 700;
       line-height: 150%;
       width: 100%;
-      max-width: 27.7rem;
+      max-width: 27.4rem;
 
       @include breakpoint(large-desktop) {
         font-size: 1.4rem;
-        max-width: 26.7rem;
       }
       @include breakpoint(tablet) {
         padding-left: 0;
@@ -419,6 +420,7 @@
     object-fit: cover;
     position: relative;
     z-index: 1;
+    right: -10rem;
 
     @include breakpoint(large-desktop) {
       padding-bottom: 3rem;
