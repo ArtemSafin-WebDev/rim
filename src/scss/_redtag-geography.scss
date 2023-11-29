@@ -34,7 +34,7 @@
 
   &__map-wrapper {
     position: absolute;
-    top: 35rem;
+    top: 25rem;
     right: 10rem;
     z-index: 1;
     @include breakpoint(large-desktop) {
@@ -226,7 +226,7 @@
     font-family: "Mont", sans-serif;
     font-size: 3.2rem;
     font-style: normal;
-    font-weight: 950;
+    font-weight: 900;
     line-height: 100%;
     width: 100%;
     max-width: 45.1rem;

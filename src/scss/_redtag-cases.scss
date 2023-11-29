@@ -124,13 +124,12 @@
     font-weight: 900;
     line-height: 120%; /* 48px */
     width: 100%;
-    max-width: 69.4rem;
-    margin-bottom: 2rem;
-
+    max-width: 64.4rem;
+    margin-bottom: 3rem;
 
     @include breakpoint(large-desktop) {
       font-size: 3.2rem;
-      max-width: 66.4rem;
+      max-width: 60.4rem;
     }
     @include breakpoint(laptop) {
       grid-row: 1 / 2;
@@ -215,9 +214,17 @@
     height: auto;
     max-width: 46.8rem;
     border-radius: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
 
     @include breakpoint(large-desktop) {
       max-width: 40rem;
+    }
+
+    @include breakpoint(laptop) {
+      position: static;
+      bottom: 0;
     }
   }
 
@@ -376,7 +383,7 @@
 
   &__navigation {
     position: absolute;
-    right: 0;
+    right: -7.5rem;
     top: .5rem;
     display: flex;
     align-items: center;

@@ -1,9 +1,12 @@
 .redtag-agency {
+  position: relative;
+  top: -5rem;
   padding-bottom: 10rem;
 
   @include breakpoint(small-tablet) {
     padding-top: 15rem;
     padding-bottom: 4.5rem;
+    position: static;
   }
   @include breakpoint(mobile) {
     padding-top: 35rem;

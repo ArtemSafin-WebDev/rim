@@ -4,6 +4,8 @@
   width: 100%;
   padding: 5rem 0 20rem;
   position: relative;
+  height: calc(100% + 1.9vw);
+  bottom: 1.9vw;
 
   @include breakpoint(tablet) {
     padding: 5rem 0 10rem;
@@ -88,9 +90,5 @@
     height: 5rem;
     cursor: pointer;
     transition: .4s ease opacity;
-
-    &:hover {
-      opacity: .4;
-    }
   }
 }

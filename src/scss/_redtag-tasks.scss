@@ -81,13 +81,12 @@
     width: 77.5%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
     column-gap: 2rem;
-    row-gap: 6rem;
+    row-gap: 3rem;
+    margin-bottom: 5rem;
 
     @include breakpoint(large-desktop) {
       column-gap: 1.5rem;
-      row-gap: 4rem;
     }
 
     @include breakpoint(tablet) {
@@ -148,6 +147,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%; /* 20.8px */
+    width: 100%;
 
     @include breakpoint(large-desktop) {
       font-size: 1.4rem;

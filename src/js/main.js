@@ -33,6 +33,7 @@ import geographyMapAnimation from "./geographyMapAnimation";
 import marketImagesParallax from "./marketImagesParallax";
 import redtagIntroAnimation from "./redtagIntroAnimation";
 import removeRedtagMapMobile from "./removeRedtagMapMobile";
+import anchorNavigation from "./anchorNavigation";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     marketImagesParallax()
     redtagIntroAnimation()
     removeRedtagMapMobile()
+    anchorNavigation()
 });
 
 window.addEventListener('load', function() {
