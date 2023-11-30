@@ -270,13 +270,13 @@ select:-webkit-autofill:focus {
     height: 100%;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     justify-items: center;
     z-index: 1;
     opacity: .1;
 
     @include breakpoint(large-desktop) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     @include breakpoint(mobile) {

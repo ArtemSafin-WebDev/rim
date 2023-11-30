@@ -11,15 +11,17 @@
   }
 
   &__tape {
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    white-space: nowrap;
     column-gap: 3rem;
     transform: rotate(-5deg);
 
     img {
+      display: inline-block;
       width: auto;
       height: 100%;
       object-fit: cover;
+      padding: 0 1rem;
 
       @include breakpoint(tablet) {
         width: 100%;

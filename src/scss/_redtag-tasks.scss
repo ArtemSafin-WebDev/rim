@@ -22,13 +22,14 @@
     z-index: -1;
 
     @include breakpoint(small-tablet) {
-      z-index: 0;
+      z-index: 1;
       height: 20rem;
     }
   }
 
   &__content {
     position: relative;
+    z-index: 1;
   }
 
   &__link-wrapper {
@@ -320,7 +321,7 @@
 
   &__bottom-bg {
     width: 100%;
-    max-width: 122.5rem;
+    max-width: 112.5rem;
     height: auto;
     object-fit: cover;
     position: absolute;

@@ -4,6 +4,18 @@
   position: relative;
   padding-top: 10rem;
 
+  &__shape {
+    width: 70rem;
+    height: 70rem;
+    position: absolute;
+    bottom: -30rem;
+    left: -30rem;
+
+    @include breakpoint(laptop) {
+      bottom: -60rem;
+      left: -50rem;
+    }
+  }
   &__rect {
     position: absolute;
     height: 0;

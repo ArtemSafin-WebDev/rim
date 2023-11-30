@@ -1,7 +1,7 @@
 .redtag-inventory {
   padding: 5rem 0 7.5rem;
   position: relative;
-
+  z-index: 1;
 
   @include breakpoint(laptop) {
     padding: 5rem 0 7.5rem;
@@ -26,6 +26,10 @@
     right: -20rem;
     top: -40rem;
     background: rgba(194, 10, 38, 0.56);
+
+    @include breakpoint(tablet) {
+      z-index: -2;
+    }
   }
 
   &__column {
