@@ -32,9 +32,10 @@
 
 @font-face {
     font-family: 'DIN Pro';
-    src: url('../assets/fonts/dinpro_medium.woff') format('woff');
+    src: url('../assets/fonts/DINPro-Medium.woff') format('woff'), url('../assets/fonts/DINPro-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {

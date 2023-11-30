@@ -297,7 +297,7 @@
 
   &__bottom-icon {
     position: absolute;
-    bottom: -14.5rem;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: auto;
@@ -306,16 +306,15 @@
 
     @include breakpoint(large-desktop) {
       max-width: 70rem;
-      bottom: -10rem;
+      bottom: 0;
     }
 
     @include breakpoint(mobile) {
-      bottom: 6rem;
+      bottom: 11.5rem;
       transform: translateX(-45%) rotate(-11deg);
-      width: auto;
-      height: 20rem;
-      left: 50%;
-      max-width: 100%;
+      width: 43rem;
+      height: auto;
+      left: 45%;
     }
   }
 
