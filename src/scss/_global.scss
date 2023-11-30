@@ -273,7 +273,7 @@ select:-webkit-autofill:focus {
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     z-index: 1;
-    opacity: .125;
+    opacity: .1;
 
     @include breakpoint(large-desktop) {
         grid-template-columns: repeat(3, 1fr);
@@ -302,3 +302,10 @@ select:-webkit-autofill:focus {
         max-width: 61.4rem;
     }
 }
+
+
+
+
+
+
+
