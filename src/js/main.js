@@ -34,6 +34,7 @@ import marketImagesParallax from "./marketImagesParallax";
 import redtagIntroAnimation from "./redtagIntroAnimation";
 import removeRedtagMapMobile from "./removeRedtagMapMobile";
 import anchorNavigation from "./anchorNavigation";
+import redtagLines from "./redtagLines";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     redtagIntroAnimation()
     removeRedtagMapMobile()
     anchorNavigation()
+    redtagLines()
 });
 
 window.addEventListener('load', function() {
