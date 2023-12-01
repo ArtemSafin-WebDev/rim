@@ -77,13 +77,19 @@
   }
 
   &__count-icon-shape {
-    width: 30rem;
-    height: 30rem;
+    width: 50rem;
+    height: 50rem;
     border-radius: 50%;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     background: #F20D30;
-    right: 0;
+    top: -5rem;
+    right: -1rem;
+
+    @include breakpoint(mobile) {
+      opacity: .7;
+      top: 0
+    }
   }
 
   &__count-icon-bg {
@@ -92,8 +98,8 @@
     z-index: 0;
     opacity: .3;
     width: 100%;
-    max-width: 36.3rem;
-    height: 23.3rem;
+    max-width: 32.3rem;
+    height: auto;
     object-fit: cover;
 
     @include breakpoint(tablet) {
@@ -107,13 +113,12 @@
     z-index: 1;
     width: 100%;
     object-fit: cover;
-    opacity: .9;
-    max-width: 36.3rem;
-    height: 23.3rem;
+    max-width: 32.3rem;
+    height: auto;
 
     @include breakpoint(tablet) {
       max-width: 32rem;
-      height: 22rem;
+      height: auto;
       margin-top: 5.2rem;
     }
   }
@@ -125,11 +130,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
+    margin-top: 2rem;
 
     @include breakpoint(mobile) {
       font-size: 1.6rem;
-      position: relative;
-      bottom: 2rem;
     }
   }
 
