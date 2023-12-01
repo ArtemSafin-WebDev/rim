@@ -3,7 +3,7 @@ export default function anchorNavigation() {
   const sections = document.getElementsByTagName("section")
   
   function slide(element) {
-    element?.scrollIntoView({behavior: "smooth", block: "center"})
+    element?.scrollIntoView({behavior: "smooth", block: "start"})
   }
   
   menu?.forEach((anchor) => {
