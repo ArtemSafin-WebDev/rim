@@ -1,6 +1,7 @@
 .redtag-meet {
   padding: 10rem 0 20rem;
   position: relative;
+  overflow: hidden;
 
   @include breakpoint(tablet) {
     padding: 4.5rem 0 20rem;
@@ -83,8 +84,8 @@
     position: absolute;
     z-index: 0;
     background: #F20D30;
-    top: -5rem;
-    right: -1rem;
+    bottom: 0;
+    left: 0;
 
     @include breakpoint(mobile) {
       opacity: .7;
@@ -287,6 +288,13 @@
     @include breakpoint(large-desktop) {
       bottom: -50rem;
       right: -50rem;
+    }
+
+    &--second {
+      bottom: -10rem;
+      left: -10rem;
+      width: 50rem;
+      height: 50rem;
     }
   }
 }
