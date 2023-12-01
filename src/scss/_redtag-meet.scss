@@ -76,6 +76,16 @@
     width: 100%;
   }
 
+  &__count-icon-shape {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    background: #F20D30;
+    right: 0;
+  }
+
   &__count-icon-bg {
     position: absolute;
     left: -35rem;
