@@ -135,8 +135,10 @@
       grid-row: 1 / 2;
     }
     @include breakpoint(mobile) {
-      font-size: 4rem;
       margin-bottom: 1.6rem;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 110%;
     }
   }
 
