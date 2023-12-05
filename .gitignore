@@ -82,8 +82,7 @@ typings/
 #DynamoDB Local files
 .dynamodb/
 
-
-
+build
 
 # MacOS Files
 
