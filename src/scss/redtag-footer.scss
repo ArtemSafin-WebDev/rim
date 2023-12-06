@@ -63,6 +63,10 @@
       font-size: 6.4rem;
       line-height: 100%;
     }
+    @include breakpoint(supersmall-mobile) {
+      font-size: 5rem;
+      line-height: 90%;
+    }
   }
 
   &__text {
@@ -81,6 +85,9 @@
       font-size: 1.6rem;
       width: 100%;
       max-width: 29.8rem;
+    }
+    @include breakpoint(supersmall-mobile) {
+      font-size: 1.4rem;
     }
   }
 

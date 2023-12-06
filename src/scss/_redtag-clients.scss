@@ -29,6 +29,9 @@
       font-size: 3.2rem;
       width: 36rem;
     }
+    @include breakpoint(supersmall-mobile) {
+      width: 100%;
+    }
   }
 
   &__info {
