@@ -135,6 +135,7 @@
 
     @include breakpoint(mobile) {
       font-size: 1.6rem;
+      margin-top: .5rem;
     }
   }
 
@@ -290,11 +291,19 @@
       right: -50rem;
     }
 
+    @include breakpoint(mobile) {
+      opacity: .65;
+      top: 12rem;
+    }
+
     &--second {
       bottom: -10rem;
       left: -10rem;
       width: 50rem;
       height: 50rem;
+      @include breakpoint(mobile) {
+        display: none;
+      }
     }
   }
 }
