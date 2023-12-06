@@ -2,6 +2,10 @@
   background-color: white;
   position: relative;
   padding: 10rem 0;
+
+  @include breakpoint(mobile) {
+    padding: 10rem 0 5rem;
+  }
   &__content {
   }
 
