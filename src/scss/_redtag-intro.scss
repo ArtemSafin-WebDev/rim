@@ -100,6 +100,9 @@
       max-width: 32rem;
       height: auto;
     }
+    @include breakpoint(supersmall-mobile) {
+      max-width: 28rem;
+    }
   }
 
   &__title {
@@ -123,6 +126,9 @@
       max-width: 32rem;
       margin-bottom: .8rem;
     }
+    @include breakpoint(supersmall-mobile) {
+      font-size: 4rem;
+    }
   }
 
   &__text {
@@ -145,6 +151,9 @@
       text-align: center;
       margin-bottom: 2.4rem;
       position: relative;
+    }
+    @include breakpoint(supersmall-mobile) {
+      font-size: 1.6rem;
     }
   }
 

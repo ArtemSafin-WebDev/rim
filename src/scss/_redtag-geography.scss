@@ -56,6 +56,10 @@
       width: 120%;
       z-index: 2;
     }
+    @include breakpoint(supersmall-mobile) {
+      right: 21.5rem;
+      width: 100%;
+    }
   }
 
   &__column {
