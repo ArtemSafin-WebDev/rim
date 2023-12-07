@@ -30,8 +30,6 @@ export default function redtagIntroAnimation() {
     })
   }
   
-  console.log(directionMap[direction])
-  
   arrayText?.forEach((text, index) => {
     gsap.set(text, {...directionMap[direction], opacity: 0})
     initAnimation(text, index)
