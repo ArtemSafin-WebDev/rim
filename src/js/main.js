@@ -35,6 +35,7 @@ import redtagIntroAnimation from "./redtagIntroAnimation";
 import removeRedtagMapMobile from "./removeRedtagMapMobile";
 import anchorNavigation from "./anchorNavigation";
 import redtagLines from "./redtagLines";
+import autoLoadingImages from "./autoLoadingImages";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     removeRedtagMapMobile()
     anchorNavigation()
     redtagLines()
+    autoLoadingImages()
 });
 
 window.addEventListener('load', function() {

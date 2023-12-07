@@ -761,16 +761,16 @@
         </a>
         <div class="redtag-header__navigation">
           <nav class="redtag-header__menu js-anchor-nav">
-            <button class="redtag-header__link" data-anchor="anchor-intro-geography">Карта</button>
-            <button class="redtag-header__link" data-anchor="anchor-intro-inventory">Инвентарь</button>
-            <button class="redtag-header__link" data-anchor="anchor-intro-tasks">Задачи</button>
-            <button class="redtag-header__link" data-anchor="anchor-intro-clients">Клиенты</button>
-            <button class="redtag-header__link" data-anchor="anchor-intro-market">Исследования</button>
-            <button class="redtag-header__link" data-anchor="anchor-intro-contractors">Подрядчики</button>
-            <button class="redtag-header__link" data-anchor="anchor-intro-cases">Кейсы</button>
-            <button class="redtag-header__link" data-anchor="anchor-intro-principles">Принципы работы</button>
-            <button class="redtag-header__link" data-anchor="anchor-intro-meet">Команда</button>
-            <button class="redtag-header__link" data-anchor="">Контакты</button>
+            <button class="redtag-header__link" data-anchor="anchor-geography">Карта</button>
+            <button class="redtag-header__link" data-anchor="anchor-inventory">Инвентарь</button>
+            <button class="redtag-header__link" data-anchor="anchor-tasks">Задачи</button>
+            <button class="redtag-header__link" data-anchor="anchor-clients">Клиенты</button>
+            <button class="redtag-header__link" data-anchor="anchor-market">Исследования</button>
+            <button class="redtag-header__link" data-anchor="anchor-meet">Команда</button>
+            <button class="redtag-header__link" data-anchor="anchor-contractors">Подрядчики</button>
+            <button class="redtag-header__link" data-anchor="anchor-principles">Принципы работы</button>
+            <button class="redtag-header__link" data-anchor="anchor-cases">Кейсы</button>
+            <button class="redtag-header__link" data-anchor="anchor-contacts">Контакты</button>
           </nav>
         <a class="redtag-header__button js-open-modal" href="#redtag-contact-modal">Оставить заявку</a>
         </div>
@@ -855,7 +855,7 @@
       </div>
     </section>
 
-    <section class="redtag-geography" id="anchor-intro-geography">
+    <section class="redtag-geography" id="anchor-geography">
       <div class="redtag-geography__shape red-circle-shape"></div>
       <div class="redtag-container">
         <img src="img/redtag/geography/icon-russia.svg" alt="icon" class="redtag-geography__icon">
@@ -1084,7 +1084,7 @@
       </div>
     </section>
 
-    <section class="redtag-inventory" id="anchor-intro-inventory">
+    <section class="redtag-inventory" id="anchor-inventory">
       <div class="red-circle-shape redtag-inventory__shape"></div>
       <div class="redtag-inventory__container">
         <div class="redtag-container">
@@ -1100,8 +1100,8 @@
               <p class="redtag-inventory__text">в 96 городах России, среди которых: Казань, Пермь, Нижний Новгород,Екатеринбург, &nbsp; Ростов-на-Дону, Уфа, Волгоград, Самара, Челябинск&nbsp;и Красноярск</p>
             </div>
             <div class="redtag-inventory__column">
-              <div class="redtag-inventory__slider js-inventory-slider">
-                <div class="swiper-wrapper redtag-inventory__cards">
+              <div class="redtag-inventory__slider js-inventory-slider js-autoload-img">
+                <div class="swiper-wrapper redtag-inventory__cards js-autoload">
                   <div class="redtag-inventory__card swiper-slide">
                     <button class="redtag-inventory__button" data-image="img/redtag/inventory/billboard-1.png">
                       <img src="img/redtag/inventory/billboard-mini-1.png" alt="icon" class="redtag-inventory__button-icon">
@@ -1190,7 +1190,7 @@
 
             <div class="redtag-inventory__data">
               <div class="redtag-inventory__block">
-                <img class="redtag-inventory__block-image" srcset="img/redtag/inventory/billboard-1.png" src="img/redtag/inventory/billboard-1.png" alt="image"/>
+                <img class="redtag-inventory__block-image" src="img/redtag/inventory/billboard-1.png" alt="image"/>
                 <div class="redtag-inventory__data-info">
                   <h3 class="redtag-inventory__block-count">2 481</h3>
                   <p class="redtag-inventory__block-name">билборд</p>
@@ -1203,7 +1203,7 @@
       <div class="redtag-inventory__gradient"></div>
     </section>
 
-    <section class="redtag-tasks" id="anchor-intro-tasks">
+    <section class="redtag-tasks" id="anchor-tasks">
       <div class="redtag-container">
         <div class="redtag-tasks__gradient"></div>
         <div class="redtag-tasks__content">
@@ -1258,7 +1258,7 @@
       </div>
     </section>
 
-    <section class="redtag-clients" id="anchor-intro-clients">
+    <section class="redtag-clients" id="anchor-clients">
       <div class="redtag-container">
         <div class="redtag-clients__content">
           <h2 class="redtag-clients__title">Наши клиенты&nbsp;&mdash; это федеральные, региональные рекламные агентства
@@ -1300,7 +1300,7 @@
       </nav>
     </section>
 
-    <section class="redtag-help" id="anchor-intro-help">
+    <section class="redtag-help" id="anchor-help">
       <div class="redtag-help__polygon"></div>
       <div class="redtag-container">
         <div class="redtag-help__content">
@@ -1377,7 +1377,7 @@
       </div>
     </section>
 
-    <section class="redtag-market js-market-trigger" id="anchor-intro-market">
+    <section class="redtag-market js-market-trigger" id="anchor-market">
       <div class="redtag-market__polygon"></div>
       <div class="redtag-market__shape redtag-market__shape--one red-circle-shape"></div>
         <div class="redtag-container">
@@ -1403,7 +1403,7 @@
             <img src="img/redtag/market/info-one.svg" alt="info-icon">
           </div>
 
-          <div class="redtag-market__circle-redtag-container">
+          <div class="redtag-market__circle-container">
             <div class="redtag-market__circle layer--5"></div>
             <div class="redtag-market__circle layer--4"></div>
             <div class="redtag-market__circle layer--3"></div>
@@ -1443,7 +1443,7 @@
       <div class="redtag-market__shape redtag-market__shape--two redtag-market__shape--one red-circle-shape"></div>
       </section>
 
-    <section class="redtag-agency" id="anchor-intro-agency">
+    <section class="redtag-agency" id="anchor-agency">
       <div class="redtag-container">
         <div class="redtag-agency__content">
           <h2 class="redtag-agency__title">Ах да, мы умеем решать и другие задачи рекламных агентств</h2>
@@ -1501,7 +1501,7 @@
       <p class="redtag-tape__text">REDTAG</p>
     </section>
 
-    <section class="redtag-meet" id="anchor-intro-meet">
+    <section class="redtag-meet" id="anchor-meet">
       <div class="redtag-container">
         <div class="redtag-meet__content">
             <div class="redtag-meet__upper">
@@ -1611,7 +1611,7 @@
       <div class="redtag-meet__shape red-circle-shape"></div>
     </section>
 
-    <section class="redtag-contractors" id="anchor-intro-contractors">
+    <section class="redtag-contractors" id="anchor-contractors">
       <div class="redtag-container">
         <div class="redtag-contractors__content">
           <div class="redtag-contractors__link-wrapper">
@@ -1628,7 +1628,7 @@
       <img src="img/redtag/contactors/number.svg" alt="icon" class="redtag-contractors__icon-number">
     </section>
 
-    <section class="redtag-principles" id="anchor-intro-principles">
+    <section class="redtag-principles" id="anchor-principles">
       <div class="redtag-principles__shape red-circle-shape"></div>
       <div class="redtag-container">
         <div class="redtag-principles__content">
@@ -1665,7 +1665,7 @@
       <div class="redtag-principles__shadow"></div>
     </section>
 
-    <section class="redtag-cases" id="anchor-intro-cases">
+    <section class="redtag-cases" id="anchor-cases">
       <div class="redtag-container">
         <div class="redtag-cases__content">
           <div class="redtag-cases__link-wrapper">
@@ -1887,7 +1887,7 @@
       </div>
     </section>
 
-    <section class="redtag-place" id="anchor-intro-place">
+    <section class="redtag-place" id="anchor-place">
       <div class="redtag-place__shape red-circle-shape"></div>
       <div class="redtag-container">
         <div class="redtag-place__content">
@@ -1928,7 +1928,7 @@
     </section>
 
   </main>
-  <footer class="redtag-footer">
+  <footer class="redtag-footer" id="anchor-contacts">
     <div class="redtag-footer__polygon"></div>
     <div class="container">
       <div class="redtag-footer__content">
