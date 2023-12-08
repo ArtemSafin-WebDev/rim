@@ -7,7 +7,7 @@ export default function anchorNavigation() {
   
   if(!redtagHeader && !redtagFooter) return
   
-  const yOffsetHeader = -(redtagHeader.clientHeight + newHeader?.clientHeight - 20)
+  const yOffsetHeader = -((redtagHeader.clientHeight * 1.75) + newHeader?.clientHeight)
   
   function slide(element, yPos) {
     window.scrollTo({top: yPos, behavior: 'smooth'});
