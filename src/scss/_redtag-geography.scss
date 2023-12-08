@@ -33,6 +33,9 @@
   }
 
   &__map-wrapper {
+    @include breakpointMF(super-large) {
+      right: calc((100vw - 1920px) / 2);
+    }
     position: absolute;
     top: 25rem;
     right: -7.5rem;
