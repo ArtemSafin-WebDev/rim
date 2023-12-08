@@ -1,0 +1,12 @@
+@import 'vendor';
+@import 'fontface';
+@import 'mixins';
+@import 'global';
+@import 'layout';
+
+@import 'modal';
+@import 'new-header';
+
+h1 {
+  color: red;
+}

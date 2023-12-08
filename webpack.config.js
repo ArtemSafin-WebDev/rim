@@ -3,7 +3,9 @@ const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/js/main.js'
+    app: './src/js/main.js',
+    redtagChunk: './src/js/redtag.js',
+    driveChunk: './src/js/drive.js'
   },
   output: {
     path: path.resolve(__dirname, './build/js'),

@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="css/redtag.css" />
+  <link rel="stylesheet" href="css/drive.css" />
   <link rel="stylesheet" href="css/new-header.css" />
   <title>
     {{ title }}
@@ -24,17 +24,14 @@
   {{> sprite }}
 </div>
 
-<div class="page-content page-content--black">
-  {{> new-header }}
-  {{> redtag-header}}
+<div class="page-content">
   <main class="page-main">
     {{#block "main"}}{{/block}}
   </main>
-  {{> redtag-footer}}
   {{> modals }}
   {{> ie-placeholder }}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/redtagChunk.js"></script>
+  <script src="js/driveChunk.js"></script>
   <script src="assets/js/backend.js"></script>
 </div>
 
