@@ -1,41 +1,21 @@
-import polyfills from './polyfills';
-import './lazyload';
-import detectTouch from './detectTouch';
-import setScrollbarWidth from './setScrollbarWidth';
-import validation from './validation';
-import customSelects from './customSelects';
-import phoneMask from './phoneMask';
-import onlyNumeric from './onlyNumeric';
-import fileUpload from './fileUpload';
-import publicationsSlider from './publicationsSlider';
-import ourClientsSlider from './ourClientsSlider';
-import qualitySlider from './qualitySlider';
-import actualNewsSlider from './actualNewsSlider';
-import leadersSlider from './leadersSlider';
-import anchorLinks from './anchorLinks';
-import clientsReviews from './clientsReviews';
-import modals from './modal';
-import geographyInnerSliders from './geographyLeadersInnerSlider';
-// #NOTE: dev-azat
-import loopTape from "./loopTape";
-import inventoryAnimation from "./inventory";
-import loopClients from "./loopClients";
-import headerAnimation from "./redtagHeader";
-import marketLoopAnimation from "./marketLoop";
-import redTagTapeLoop from "./redTagTapeLoop";
-import meetPersonSkills from "./meetPersonSkills";
-import redtagCasesSlider from "./redtagCasesSlider";
-import redtagPlaceLoop from "./redtagPLaceLoop";
-import redtagBoardsAnimation from "./redtagBoardsAnimation";
-import redtagIntro from "./redtagIntro";
-import inventorySlider from "./inventorySlider";
-import geographyMapAnimation from "./geographyMapAnimation";
-import marketImagesParallax from "./marketImagesParallax";
-import redtagIntroAnimation from "./redtagIntroAnimation";
-import removeRedtagMapMobile from "./removeRedtagMapMobile";
-import anchorNavigation from "./anchorNavigation";
-import redtagLines from "./redtagLines";
-import autoLoadingImages from "./autoLoadingImages";
+import polyfills from './utils/polyfills';
+import './utils/lazyload';
+import detectTouch from './utils/detectTouch';
+import setScrollbarWidth from './utils/setScrollbarWidth';
+import validation from './utils/validation';
+import customSelects from './utils/customSelects';
+import phoneMask from './utils/phoneMask';
+import onlyNumeric from './utils/onlyNumeric';
+import fileUpload from './utils/fileUpload';
+import publicationsSlider from './main/publicationsSlider';
+import ourClientsSlider from './main/ourClientsSlider';
+import qualitySlider from './main/qualitySlider';
+import actualNewsSlider from './main/actualNewsSlider';
+import leadersSlider from './main/leadersSlider';
+import anchorLinks from './main/anchorLinks';
+import clientsReviews from './main/clientsReviews';
+import modals from './utils/modal';
+import geographyInnerSliders from './main/geographyLeadersInnerSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -56,26 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     modals();
     geographyInnerSliders();
-    // #NOTE: dev-azat
-    loopTape()
-    inventoryAnimation()
-    loopClients()
-    headerAnimation()
-    marketLoopAnimation()
-    redTagTapeLoop()
-    meetPersonSkills()
-    redtagCasesSlider()
-    redtagPlaceLoop()
-    redtagBoardsAnimation()
-    redtagIntro()
-    inventorySlider()
-    geographyMapAnimation()
-    marketImagesParallax()
-    redtagIntroAnimation()
-    removeRedtagMapMobile()
-    anchorNavigation()
-    redtagLines()
-    autoLoadingImages()
 });
 
 window.addEventListener('load', function() {
