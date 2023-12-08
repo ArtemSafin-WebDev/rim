@@ -125,14 +125,14 @@
     width: fit-content;
     display: flex;
     flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 4rem;
     margin-top: 11.7rem;
 
     @include breakpoint(large-desktop) {
       margin-top: 8rem;
       row-gap: 3.5rem;
-
     }
+
     @include breakpoint(mobile) {
       margin-top: 6rem;
     }
@@ -151,6 +151,7 @@
     text-shadow: 0px 0px 4px rgba(194, 10, 38, 0.50), 0px 0px 8px rgba(194, 10, 38, 0.50), 0px 0px 16px rgba(194, 10, 38, 0.50), 0px 0px 32px rgba(194, 10, 38, 0.50), 0px 0px 64px rgba(194, 10, 38, 0.50), 0px 0px 128px rgba(194, 10, 38, 0.50);
     font-style: normal;
     text-transform: uppercase;
+    padding-top: 1rem;
   }
 
   &__list-title {
@@ -189,18 +190,19 @@
     font-size: 2.4rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 130%; /* 31.2px */
+    line-height: 110%;
     width: 100%;
     max-width: 29.6rem;
-    margin-top: 2rem;
+    margin-top: .5rem;
 
     @include breakpoint(large-desktop) {
       font-size: 1.8rem;
-      margin-top: 1.5rem;
     }
+
     @include breakpoint(mobile) {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       margin-top: .75rem;
+      line-height: 120%;
     }
   }
 

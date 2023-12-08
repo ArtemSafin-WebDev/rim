@@ -42,9 +42,9 @@
       background-size: cover;
       background-position: center;
       max-width: none;
+      margin: 0 auto;
     }
     @include breakpoint(supersmall-mobile) {
-      width: 31rem;
     }
   }
 }
