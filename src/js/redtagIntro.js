@@ -9,7 +9,6 @@ export default function redtagIntro() {
   const yOffsetHeader = -(redtagHeader?.clientHeight + newHeader?.clientHeight)
   const yPos = element.getBoundingClientRect().top + window.scrollY + yOffsetHeader
   
-  
   button.addEventListener("click", () => {
     window.scrollTo({ top: yPos, behavior: "smooth" })
   })

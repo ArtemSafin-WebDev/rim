@@ -315,7 +315,7 @@
     }
 
     @include breakpoint(mobile) {
-      bottom: 11.5rem;
+      bottom: 11rem;
       transform: translateX(-45%) rotate(-11deg);
       width: 43rem;
       height: auto;
