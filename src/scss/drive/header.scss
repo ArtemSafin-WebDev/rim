@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.23);
+  backdrop-filter: blur(4px);
+  color: white;
+  z-index: 5;
+
+  &__content {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    height: 7.4rem;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 6rem;
+    height: 4rem;
+    object-fit: cover;
+    flex-shrink: 0;
+    grid-column: 1 / 1;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    grid-column: 4 / 13;
+    column-gap: 2rem;
+  }
+
+  &__button-navigation {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 17.6px */
+  }
+}
