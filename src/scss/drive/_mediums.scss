@@ -1,0 +1,202 @@
+.mediums {
+  margin-top: 14.2rem;
+  position: relative;
+
+  &__shape {
+    position: absolute;
+    width: 70rem;
+    height: 120rem;
+    left: 0;
+    top: -50rem;
+    opacity: .8;
+    z-index: -2;
+  }
+
+
+  &__title {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    width: 100%;
+    max-width: 50rem;
+    margin-bottom: 7.5rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14rem;
+
+    @include breakpoint(mobile) {
+      row-gap: 7rem;
+    }
+  }
+
+  &__li {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+    }
+
+    &:last-child {
+      justify-content: flex-start;
+
+      @include breakpoint(small-tablet) {
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__info-lsd-image {
+    width: 50%;
+    bottom: 0;
+    max-width: 69rem;
+    height: auto;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+
+    @include breakpoint(small-tablet) {
+      position: static;
+      width: 95%;
+    }
+  }
+
+  &__info-led-image {
+    width: 70%;
+    bottom: -4rem;
+    max-width: 68rem;
+    height: auto;
+    right: -15rem;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+
+    @include breakpoint(small-tablet) {
+      position: static;
+      width: 100%;
+      margin-left: 2rem
+    }
+  }
+
+  &__card {
+    width: 100%;
+    max-width: 66.7rem;
+    padding: 2.2rem 3.5rem 3.5rem;
+
+    border-radius: 2rem;
+    border: 1px solid #5229A1;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(15px);
+
+    @include breakpoint(mobile) {
+      padding: 2.2rem 2.5rem 2.8rem;
+    }
+  }
+
+  &__card-title {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    margin-bottom: 5rem;
+
+    @include breakpoint(small-mobile) {
+      font-size: 4rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &__card-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    row-gap: 4rem;
+    column-gap: 3rem;
+
+    @include breakpoint(small-mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      column-gap: 0;
+      row-gap: 2rem;
+    }
+  }
+
+  &__card-li {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    width: fit-content;
+
+    @include breakpoint(mobile) {
+      row-gap: 0;
+    }
+  }
+
+  &__card-title-info {
+    color: #FF5129;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__card-text-info {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  &__button {
+    display: flex;
+    width: 32rem;
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+    margin: 10.5rem auto 0;
+
+    border-radius: 71rem;
+    background: #FC3F1D;
+
+    color: #FFF !important;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    transition: .4s ease box-shadow;
+
+    @include breakpoint(small-tablet) {
+      margin: 10.5rem 0 0;
+    }
+
+    @include breakpoint(mobile) {
+      margin: 4.5rem auto 0;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 30px 0px #FF5129, 0px 0px 5px 0px #FF5129;
+    }
+  }
+}

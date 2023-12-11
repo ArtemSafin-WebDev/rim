@@ -1,0 +1,323 @@
+.allocation {
+  padding-top: 30rem;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    padding-top: 25rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-top: 25rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 15rem;
+  }
+
+  &__overlay {
+    background-image: url("../../img/drive/allocation/allocation-bg.png");
+    position: absolute;
+    width: 100%;
+    height: 115%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    max-width: 162rem;
+    min-width: 14rem;
+    top: 0;
+    right: -10rem;
+    z-index: -1;
+
+    @include breakpoint(small-tablet) {
+      right: 0;
+      width: 100%;
+      height: 115%;
+      background-size: cover;
+    }
+
+    @include breakpoint(mobile) {
+      padding-top: 8rem;
+    }
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    width: 100%;
+    max-width: 62.5rem;
+
+    margin-bottom: 7.2rem;
+
+    @include breakpoint(tablet) {
+      font-size: 3.4rem;
+      line-height: 100%;
+    }
+    @include breakpoint(mobile) {
+      font-size: 3.6rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__info {
+    border-radius: 2rem;
+    border: 1px solid rgba(82, 41, 161, 0.25);
+    background-color: rgba(58, 58, 58, 0.8);
+
+
+    width: 100%;
+    max-width: 62.5rem;
+    padding: 2.8rem 3rem;
+
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(small-tablet) {
+      padding: 1.8rem 2rem;
+    }
+  }
+
+  &__info-upper {
+    margin-bottom: 3.7rem;
+    @media only screen and (max-width: (490px)) {
+      margin-bottom: 1.8rem;
+    }
+    h3 {
+      text-shadow:
+              -1px 0px 0px white,
+              1px 0px 0px white,
+              0px -1px 0px white,
+              0px 1px 0px white;color: rgba(58, 58, 58);;
+
+      font-family: "Uni Neue", sans-serif;
+      font-size: 7.2rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 110%;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      @media only screen and (max-width: (490px)) {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      color: #FFF;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      width: 100%;
+      max-width: 50.4rem;
+
+      @include breakpoint(small-tablet) {
+        max-width: 35rem;
+      }
+
+    }
+  }
+
+  &__info-bottom {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 3.2rem;
+
+    @include breakpoint(small-tablet) {
+      column-gap: 1.4rem;
+    }
+    @media only screen and (max-width: (490px)) {
+      display: flex;
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 1.8rem;
+    }
+  }
+
+  &__info-card {
+    .orange {
+      color: #FC3F1D;
+      text-shadow: 0px 0px 12.3px #FF5129;
+    }
+    .purple {
+      color: #8F62E4;
+      text-shadow: 0px 0px 12.3px #8F62E4;
+    }
+    h3 {
+      font-family: "Uni Neue", sans-serif;
+      font-size: 4.5rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 110%;
+      text-transform: uppercase;
+    }
+    p {
+      color: #FFF;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      width: 100%;
+      max-width: 24.8rem;
+
+      @media only screen and (max-width: (490px)) {
+        max-width: 35rem;
+      }
+    }
+  }
+
+  &__slice {
+    margin-left: 2.8rem;
+    @include breakpoint(small-tablet) {
+      margin-left: 1.8rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 3.6rem;
+      margin-bottom: 4rem;
+    }
+
+    h3 {
+      color: #FFF;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 4.5rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+    p {
+      color: #FFF;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+
+      width: 100%;
+      max-width: 24.8rem;
+    }
+  }
+
+  &__content-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 21.3rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 15rem;
+    }
+  }
+
+  &__title-bottom {
+    color: #FFF;
+    text-align: center;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    width: 100%;
+    max-width: 88.6rem;
+
+    margin-bottom: 1.4rem;
+
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+      max-width: 50rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 3rem;
+      max-width: 40rem;
+    }
+  }
+
+  &__text-bottom {
+    color: #FFF;
+    text-align: center;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    width: 100%;
+    max-width: 43.5rem;
+
+    margin-bottom: 4rem;
+  }
+
+  &__button-bottom {
+    display: flex;
+    width: 33.2rem;
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 71rem;
+    background: #FC3F1D;
+
+    color: #FFF !important;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    transition: .4s ease box-shadow;
+
+    &:hover {
+      box-shadow: 0px 0px 30px 0px #FF5129, 0px 0px 5px 0px #FF5129;
+    }
+  }
+
+  &__rim-icon {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    left: 5rem;
+    top: 5rem;
+    z-index: -2;
+
+    @include breakpoint(mobile) {
+      margin: 0 auto;
+      left: 0;
+    }
+  }
+
+  &__drive-icon {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: 20rem;
+
+    @include breakpoint(laptop) {
+      display: none;
+    }
+  }
+
+  &__car-icon {
+    position: absolute;
+    bottom: -2rem;
+    right: 0;
+    z-index: 1;
+    object-fit: cover;
+
+    @include breakpoint(mobile) {
+      width: 200%;
+      max-width: none;
+      height: auto;
+      z-index: -1;
+    }
+  }
+}

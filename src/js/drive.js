@@ -9,6 +9,21 @@ import onlyNumeric from './utils/onlyNumeric';
 import anchorLinks from './main/anchorLinks';
 import modals from './utils/modal';
 
+import initMediametryTabs from "./drive/mediametryTabs";
+import initCarMediametryAnimation from "./drive/mediametryCardAnimate";
+import initAllocationCarAnimate from "./drive/allocationCarAnimate";
+import initReportsAnimation from "./drive/reportsAnimation";
+import initAboutOccurAnimation from "./drive/aboutOccurAnimation";
+import initMediumsImagesAnimation from "./drive/animateMediumsImages";
+import initAdvantagesOccurAnimation from "./drive/advantagesOccurAnimation";
+import initNavigation from "./drive/driveNavigation";
+import initBagsOccurAnimation from "./drive/bagsOccurAnimation";
+import initTermsOccurAnimation from "./drive/termsOccurAnimation";
+import initAllocationOccurAnimation from "./drive/allocationOccurAnimation";
+import initBrandingSliders from "./drive/brandingSliders";
+import initBrandingTabs from "./drive/brandingTabs";
+import initIntroOccurAnimation from "./drive/introOccurAnimation";
+
 document.addEventListener('DOMContentLoaded', function() {
   polyfills();
   detectTouch();
@@ -20,7 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
   anchorLinks();
   modals();
   
-  console.log("hello from drive page")
+  initMediametryTabs()
+  initCarMediametryAnimation()
+  initAllocationCarAnimate()
+  initAboutOccurAnimation()
+  initReportsAnimation()
+  initMediumsImagesAnimation()
+  initAdvantagesOccurAnimation()
+  initNavigation()
+  initBagsOccurAnimation()
+  initTermsOccurAnimation()
+  initAllocationOccurAnimation()
+  initBrandingSliders()
+  initBrandingTabs()
+  initIntroOccurAnimation()
 });
 
 window.addEventListener('load', function() {

@@ -413,7 +413,7 @@
 		if (!el.ieCP_sheet) {
 			const styleEl = document.createElement('style');
 			styleEl.ieCP_elementSheet = 1;
-			//el.appendChild(styleEl); // yes! self-closing tags can have style as children, but - if i set innerHTML, the stylesheet is lost
+			//el.appendChild(styleEl); // yes! self-closing terms can have style as children, but - if i set innerHTML, the stylesheet is lost
 			document.head.appendChild(styleEl);
 			el.ieCP_sheet = styleEl.sheet;
 		}
@@ -457,7 +457,7 @@
         if (!el.ieCP_styleEl && css) {
             const styleEl = document.createElement('style');
             styleEl.ieCP_elementSheet = 1;
-            //el.appendChild(styleEl); // yes! self-closing tags can have style as children, but - if i set innerHTML, the stylesheet is lost
+            //el.appendChild(styleEl); // yes! self-closing terms can have style as children, but - if i set innerHTML, the stylesheet is lost
             document.head.appendChild(styleEl);
             el.ieCP_styleEl = styleEl;
         }

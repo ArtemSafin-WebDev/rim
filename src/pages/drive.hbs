@@ -1,25 +1,580 @@
 {{#extend "drive-layout"}}
 {{#content "main"}}
-  <section class="intro">
+  <section class="intro js-intro-trigger">
+    <div class="orange-shape intro__shape-top"></div>
     <div class="intro__overlay"></div>
-    <div class="container">
+    <div class="drive-container">
       <div class="intro__content">
         <div class="intro__info">
-          <h1 class="intro__title">Реклама на&nbsp;экранах автомобилей таксопарков, подключенных к&nbsp;Яндекс Такси</h1>
+          <h1 class="intro__title js-intro-occur-animate">Реклама на&nbsp;экранах автомобилей таксопарков, подключенных к&nbsp;Яндекс Такси</h1>
           <div class="intro__collab">
-            <div class="intro__clients">
+            <div class="intro__clients js-intro-occur-animate">
               <img src="img/logo.svg" alt="icon">
               <p>X</p>
               <img src="img/drive/yandex-go.svg" alt="icon">
               <p>X</p>
               <img src="img/drive/mediamiles.svg" alt="icon">
             </div>
-            <p class="intro__text">Официальный селлер — медиагруппа «РИМ»</p>
+            <p class="intro__text js-intro-occur-animate">Официальный селлер&nbsp;&mdash; медиагруппа &laquo;РИМ&raquo;</p>
           </div>
-          <button class="intro__button">Заказать размещение</button>
+          <button class="intro__button js-intro-occur-animate">Заказать размещение</button>
         </div>
       </div>
     </div>
+    <div class="orange-shape intro__shape"></div>
+    <div class="intro__gradient"></div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="drive-map"></div>
+    <div class="white-shape about__shape"></div>
+    <div class="drive-container">
+      <div class="about__content js-about-trigger">
+        <div class="about__column js-occur-animate">
+          <h2 class="about__title">О проекте</h2>
+          <p class="about__text">Машины с&nbsp;рекламными экранами  на&nbsp;крыше перемещаются по&nbsp;всей Москве и&nbsp;собирают миллионы контактов  по&nbsp;самой низкой стоимости среди всех форматов наружной рекламы</p>
+          <ul class="about__statistics">
+            <div>
+              <li class="about__info about__info--small js-occur-animate">
+                <h3 class="about__info-title">1 800</h3>
+                <p class="about__info-text">экранов</p>
+              </li>
+              <li class="about__info about__info--large js-occur-animate">
+                <h3 class="about__info-title">
+                  <span class="about__info-title--small">
+                    от
+                  </span> 0,0032 ₽
+                </h3>
+                <p class="about__info-text">стоимость контакта</p>
+              </li>
+            </div>
+            <div>
+              <li class="about__info about__info--medium-large js-occur-animate">
+                <h3 class="about__info-title">
+                  252,7
+                  <span class="about__info-title--small">
+                    млн
+                  </span>
+                </h3>
+                <p class="about__info-text">показов в месяц</p>
+              </li>
+              <li class="about__info about__info--medium-small js-occur-animate">
+                <h3 class="about__info-title">
+                  890
+                  <span class="about__info-title--small">
+                    млн
+                  </span>
+                </h3>
+                <p class="about__info-text">контактов в месяц</p>
+              </li>
+            </div>
+            <div>
+              <li class="about__info about__info--medium js-occur-animate">
+                <h3 class="about__info-title">
+                  <span class="about__info-title--small">
+                    от
+                  </span>
+                  0,14 ₽
+                </h3>
+                <p class="about__info-text">стоимость показа</p>
+              </li>
+              <li class="about__info about__info--medium js-occur-animate">
+                <h3 class="about__info-title">
+                  <span class="about__info-title--small">
+                    от
+                  </span>
+                  3,23 ₽
+                </h3>
+                <p class="about__info-text">CPT</p>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <img src="img/drive/about/about-icon.png" alt="icon" class="about__icon-img">
+  </section>
+
+  <section class="bags" id="bags">
+    <div class="drive-container">
+      <div class="bags__content js-bags-trigger">
+        <h2 class="bags__main-title">Пакеты запуска рекламы в РИМ DRIVE</h2>
+        <div class="bags__info">
+          <div class="bags__upper-card js-bags-occur-animate">
+            <h2 class="bags__title">Вся сеть</h2>
+            <div class="bags__card-content-upper">
+              <img src="img/drive/bags/bags-main.png" alt="icon" class="bags__image">
+              <div class="bags__upper-info">
+                <div class="bags__card-title-wrapper">
+                  <h3 class="bags__upper-title">1 800</h3>
+                  <p class="bags__upper-title-text">экранов</p>
+                </div>
+                <p class="bags__text">Ваша реклама транслируется одновременно на&nbsp;всех экранах сети&nbsp;&mdash; и&nbsp;на&nbsp;фиолетовых, и&nbsp;на&nbsp;оранжевых</p>
+              </div>
+            </div>
+          </div>
+          <div class="bags__card js-bags-occur-animate">
+            <h2 class="bags__title purple">Фиолетовая сеть</h2>
+            <div class="bags__card-content">
+              <img src="img/drive/bags/bags-left.png" alt="image" class="bags__image">
+              <div class="bags__info-text">
+                <div class="bags__card-title-wrapper">
+                  <h3 class="bags__upper-title purple">1 200</h3>
+                  <p class="bags__upper-title-text purple">экранов</p>
+                </div>
+                <p class="bags__text">Ваша реклама транслируется одновременно  на&nbsp;всех экранах с&nbsp;фиолетовой наклейкой</p>
+              </div>
+            </div>
+          </div>
+          <div class="bags__card js-bags-occur-animate">
+            <h2 class="bags__title orange">Оранжевая сеть</h2>
+            <div class="bags__card-content">
+              <img src="img/drive/bags/bags-right.png" alt="image" class="bags__image">
+              <div class="bags__info-text">
+                <div class="bags__card-title-wrapper">
+                  <h3 class="bags__upper-title orange">600</h3>
+                  <p class="bags__upper-title-text orange">экранов</p>
+                </div>
+                <p class="bags__text">Ваша реклама транслируется одновременно на&nbsp;всех экранах с&nbsp;оранжевой наклейкой</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mediametry" id="mediametry">
+    <div class="white-shape mediametry__shape"></div>
+    <div class="drive-container">
+      <div class="mediametry__content js-mediametry-trigger">
+        <h2 class="mediametry__title">Медиаметрия сети</h2>
+        <div class="mediametry__info">
+          <div class="mediametry__tabs js-mediametry-tabs">
+            <button class="mediametry__button mediametry__button--active">Вся сеть</button>
+            <button class="mediametry__button purple">Фиолетовая сеть</button>
+            <button class="mediametry__button orange">Оранжевая сеть</button>
+          </div>
+          <div class="mediametry__info-content js-mediametry-tabs-content">
+            <ul class="mediametry__left-column">
+              <li></li>
+              <li>День</li>
+              <li>Неделя</li>
+              <li>Месяц</li>
+            </ul>
+            <div class="mediametry__statistics">
+              <ul class="mediametry__column">
+                <li class="mediametry__statistics-title">OTS</li>
+                <li class="mediametry__statistics-info">29 700 000</li>
+                <li class="mediametry__statistics-info">207 900 000</li>
+                <li class="mediametry__statistics-info">207 900 000</li>
+              </ul>
+              <ul class="mediametry__column">
+                <li class="mediametry__statistics-title">Показы</li>
+                <li class="mediametry__statistics-info">8 424 000</li>
+                <li class="mediametry__statistics-info">58 968 000</li>
+                <li class="mediametry__statistics-info">252 720 000</li>
+              </ul>
+              <ul class="mediametry__column">
+                <li class="mediametry__statistics-title">CPT</li>
+                <li class="mediametry__statistics-info">от 3,23 ₽</li>
+                <li class="mediametry__statistics-info"></li>
+                <li class="mediametry__statistics-info"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mediametry__info-content js-mediametry-tabs-content">
+            <ul class="mediametry__left-column">
+              <li></li>
+              <li>День</li>
+              <li>Неделя</li>
+              <li>Месяц</li>
+            </ul>
+            <div class="mediametry__statistics">
+              <ul class="mediametry__column">
+                <li class="mediametry__statistics-title">OTS сети</li>
+                <li class="mediametry__statistics-info">19 800 000</li>
+                <li class="mediametry__statistics-info">138 600 000</li>
+                <li class="mediametry__statistics-info">594 000 000</li>
+              </ul>
+              <ul class="mediametry__column">
+                <li class="mediametry__statistics-title">Показы сети</li>
+                <li class="mediametry__statistics-info">5 616 000</li>
+                <li class="mediametry__statistics-info">39 312 000</li>
+                <li class="mediametry__statistics-info">168 480 000</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mediametry__info-content js-mediametry-tabs-content">
+            <ul class="mediametry__left-column">
+              <li></li>
+              <li>День</li>
+              <li>Неделя</li>
+              <li>Месяц</li>
+            </ul>
+            <div class="mediametry__statistics">
+              <ul class="mediametry__column">
+                <li class="mediametry__statistics-title">OTS сети</li>
+                <li class="mediametry__statistics-info">9 900 000</li>
+                <li class="mediametry__statistics-info">69 300 000</li>
+                <li class="mediametry__statistics-info">297 000 000</li>
+              </ul>
+              <ul class="mediametry__column">
+                <li class="mediametry__statistics-title">Показы сети</li>
+                <li class="mediametry__statistics-info">2 808 000</li>
+                <li class="mediametry__statistics-info">19 656 000</li>
+                <li class="mediametry__statistics-info">84 240 000</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mediametry__bottom js-mediametry-top">
+          <a href="/#" class="mediametry__bottom-button">Узнать цену</a>
+          <p class="mediametry__text">Оставляйте заявку, чтобы получить бесплатную консультацию или зарезервировать эфирное время</p>
+        </div>
+      </div>
+    </div>
+    <img src="img/drive/mediametry/taxi.png" alt="icon" class="mediametry__icon-taxi js-mediametry-car-animate">
+  </section>
+
+  <section class="terms js-terms-trigger" id="terms">
+    <img src="img/drive/terms/car.png" alt="image" class="terms__card-img">
+    <div class="drive-container">
+      <div class="terms__content">
+        <h2 class="terms__title">Понятные условия для вашего удобства</h2>
+        <div class="terms__cards">
+          <div class="terms__card js-terms-occur-animate">
+            <div class="terms__card-content">
+              <h3 class="terms__card-title">Фиксированный рекламный блок</h3>
+              <p class="terms__card-text">Если вы&nbsp;покупаете долю эфира,то ролик будет гарантированно выходить  в&nbsp;эфир нужное количество раз каждые 5&nbsp;минут на&nbsp;всех экранах сети</p>
+              <div class="terms__card-bottom">
+                <img src="img/drive/terms/statistics.png" alt="icon" class="terms__card-bottom-image">
+                <div class="terms__card-bottom-info">
+                  <ul class="terms__card-statistics">
+                    <li class="terms__card-detail">
+                      <h4><span class="large">5</span> минут</h4>
+                      <p>размер рекламного блока</p>
+                    </li>
+                    <li class="terms__card-detail">
+                      <h4><span class="large">60</span> спотов по <span class="large">5</span> СЕКУНД</h4>
+                      <p>размер рекламного блока</p>
+                    </li>
+                  </ul>
+                  <button class="terms__card-button">
+                    <img src="img/drive/terms/warning.svg" alt="icon">
+                    Выбирайте любой объем эфира, кратный 5 секундам
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="terms__card js-terms-occur-animate">
+            <div class="terms__card-content">
+              <h3 class="terms__card-title">Минимальное гарантированное количество показов</h3>
+              <p class="terms__card-text">Если вы&nbsp;покупаете долю эфира, то&nbsp;ролик будет гарантированно выходить в&nbsp;эфир нужное количество раз каждые 5&nbsp;минут  на&nbsp;всех экранах сети</p>
+            </div>
+          </div>
+          <div class="terms__card js-terms-occur-animate">
+            <div class="terms__card-content">
+              <h3 class="terms__card-title">Показы только внутри МКАД</h3>
+              <p class="terms__card-text">Все показы вне МКАДа, а&nbsp;их&nbsp;10%,&nbsp;&mdash; бесплатные.  Да, мы&nbsp;просто дарим&nbsp;их!</p>
+            </div>
+          </div>
+          <div class="terms__card js-terms-occur-animate">
+            <div class="terms__card-content">
+              <h3 class="terms__card-title">Данные из&nbsp;сервисов Яндекс</h3>
+              <p class="terms__card-text">Используем программное обеспечение Яндекс, чтобы формировать прогнозы и&nbsp;отчеты о&nbsp;фактическом количестве показов и&nbsp;контактов</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="result">
+    <div class="result__polugon--first"></div>
+    <div class="drive-container">
+      <div class="result__content">
+        <h2 class="result__title">Можете быть уверены в&nbsp;результате:  для формирования прогнозов и&nbsp;отчетов используем данные исследований Яндекс</h2>
+        <ul class="result__info">
+          <li class="result__li">
+            <h3>990 000</h3>
+            <p>ежемесячный OTS одного такси</p>
+          </li>
+          <li class="result__li">
+            <h3>6,5 часов/день</h3>
+            <p>среднее время работы
+              одного экрана</p>
+          </li>
+          <li class="result__li">
+            <h3>33 000 контактов</h3>
+            <p>собирает один автомобиль каждый день</p>
+          </li>
+          <li class="result__li">
+            <h3>24 км/час</h3>
+            <p>средняя скорость 
+              движения такси</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="result__polugon--second"></div>
+  </section>
+
+  <section class="allocation">
+    <div class="allocation__overlay"></div>
+    <div class="drive-container js-allocation-trigger">
+      <div class="allocation__content-upper">
+        <h2 class="allocation__title js-allocation-occur-animate">Распределение доли показов внутри колец</h2>
+        <div class="allocation__info js-allocation-occur-animate">
+          <div class="allocation__info-upper">
+            <h3>90%</h3>
+            <p>Водителям, работающим на&nbsp;такси с&nbsp;рекламными форматами, поступают заказы с&nbsp;точкой завершения заказа только внутри МКАДа</p>
+          </div>
+          <div class="allocation__info-bottom">
+            <div class="allocation__info-card">
+              <h3 class="orange">43%</h3>
+              <p>Ежедневно с&nbsp;18&nbsp;до&nbsp;24&nbsp;для водителей такси с&nbsp;рекламными конструкциями точка завершения заказа размещается внутри ТТК</p>
+            </div>
+            <div class="allocation__info-card">
+              <h3 class="purple">16%</h3>
+              <p>Высокая доля показов внутри Садового кольца за&nbsp;счет удержания автомобилей внутри колец</p>
+            </div>
+          </div>
+        </div>
+        <div class="allocation__slice js-allocation-occur-animate">
+          <h3>10%</h3>
+          <p>Такова доля показов вне МКАДа, их вы получаете бесплатно</p>
+        </div>
+      </div>
+      <div class="allocation__content-bottom js-allocation-trigger">
+        <h2 class="allocation__title-bottom">Хотите узнать подробнее об условиях размещения рекламы?</h2>
+        <p class="allocation__text-bottom">Мы можем ответить на ваши вопросы и предложить подходящий вариант размещения рекламы</p>
+        <a href="/#" class="allocation__button-bottom">Оставить заявку</a>
+      </div>
+    </div>
+    <img src="img/drive/allocation/drive.svg" alt="icon" class="allocation__drive-icon">
+    <img src="img/drive/allocation/rim.svg" alt="icon" class="allocation__rim-icon">
+    <img src="img/drive/allocation/card.png" alt="icon" class="allocation__car-icon js-allocation-car-animate">
+  </section>
+
+  <section class="mediums" id="mediums">
+    <div class="white-shape mediums__shape"></div>
+    <div class="drive-map"></div>
+    <div class="drive-container">
+      <div class="mediums__content">
+        <h2 class="mediums__title">Рекламные носители LCD- и&nbsp;LED-дисплеи</h2>
+        <ul class="mediums__info">
+          <li class="mediums__li">
+            <img src="img/drive/mediums/LCD.png" alt="icon" class="mediums__info-lsd-image js-mediums-image"/>
+            <div class="mediums__card">
+              <h3 class="mediums__card-title">LCD-дисплеи</h3>
+              <ul class="mediums__card-info">
+                <li class="mediums__card-li">
+                  <h4 class="mediums__card-title-info">37,8 дюймов</h4>
+                  <p class="mediums__card-text-info">диагональ экрана</p>
+                </li>
+                <li class="mediums__card-li">
+                  <h4 class="mediums__card-title-info">1920×540 px</h4>
+                  <p class="mediums__card-text-info">размер экрана</p>
+                </li>
+                <li class="mediums__card-li">
+                  <h4 class="mediums__card-title-info">до 6000 кд/м²</h4>
+                  <p class="mediums__card-text-info">яркость</p>
+                </li>
+                <li class="mediums__card-li">
+                  <h4 class="mediums__card-title-info">Широкий</h4>
+                  <p class="mediums__card-text-info">цветовой охват</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mediums__li js-allocation-endtrigger">
+            <div class="mediums__card">
+              <h3 class="mediums__card-title">LED-дисплеи</h3>
+              <ul class="mediums__card-info">
+                <li class="mediums__card-li">
+                  <h4 class="mediums__card-title-info">39,8 дюймов</h4>
+                  <p class="mediums__card-text-info">диагональ экрана</p>
+                </li>
+                <li class="mediums__card-li">
+                  <h4 class="mediums__card-title-info">384x128 px</h4>
+                  <p class="mediums__card-text-info">размер экрана</p>
+                </li>
+                <li class="mediums__card-li">
+                  <h4 class="mediums__card-title-info">до 5000 кд/м²</h4>
+                  <p class="mediums__card-text-info">яркость</p>
+                </li>
+                <li class="mediums__card-li">
+                  <h4 class="mediums__card-title-info">Средний</h4>
+                  <p class="mediums__card-text-info">цветовой охват</p>
+                </li>
+              </ul>
+            </div>
+            <img src="img/drive/mediums/LED.png" alt="icon" class="mediums__info-led-image js-mediums-image"/>
+          </li>
+        </ul>
+        <a href="#" class="mediums__button">Узнать цены</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="advantages" id="advantages">
+    <div class="white-shape advantages__shape"></div>
+    <div class="drive-container">
+      <div class="advantages__content js-advantages-occur">
+        <h2 class="advantages__title">Преимущества рекламного формата</h2>
+        <p class="advantages__text">Сервис Яндекс Аудитории показывает низкий уровень схожести пользователей Яндекс.Go по&nbsp;интересам, возрасту и&nbsp;категориям</p>
+        <ul class="advantages__info">
+          <li class="advantages__li">
+            <h3 class="advantages__info-title">0,14 ₽/ПОКАЗ</h3>
+            <p class="advantages__info-text">низкая стоимость</p>
+          </li>
+          <li class="advantages__li">
+            <h3 class="advantages__info-title">от 178 млн/мес</h3>
+            <p class="advantages__info-text">большие охваты</p>
+          </li>
+          <li class="advantages__li">
+            <h3 class="advantages__info-title">от 1 раб. дня</h3>
+            <p class="advantages__info-text">запуск рекламы</p>
+          </li>
+          <li class="advantages__li">
+            <h3 class="advantages__info-title">0,33</h3>
+            <p class="advantages__info-text">GRP одного такси</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="reports" id="reports">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="503" viewBox="0 0 1920 503" fill="none" class="reports__line-icon">
+      <mask class="path" id="theMask" maskUnits="userSpaceOnUse">
+        <path class="path" d="M-235 411.499C-215.36 351.42 50.2996 227.13 303.822 275.594C620.726 336.174 736.291 259.259 783 215C872.182 130.496 894.5 0.99885 1170 0.998047C1459.07 0.997204 1506.77 118.384 1744.5 294.499C1961.77 455.458 2449.98 501.499 2466 501.499" stroke="white" stroke-width="2" stroke-dasharray="13, 13"/>
+      </mask>
+      <g mask="url(#theMask)">
+        <path class="js-reports-svg path" d="M-235 411.499C-215.36 351.42 50.2996 227.13 303.822 275.594C620.726 336.174 736.291 259.259 783 215C872.182 130.496 894.5 0.99885 1170 0.998047C1459.07 0.997204 1506.77 118.384 1744.5 294.499C1961.77 455.458 2449.98 501.499 2466 501.499" stroke="white" stroke-width="2" stroke-dasharray="13, 13"/>
+      </g>
+    </svg>
+    <div class="drive-container">
+      <div class="reports__content js-reports-trigger">
+        <h2 class="reports__title">Предоставляем полезные отчеты, используя ПО&nbsp;Яндекс</h2>
+        <ul class="reports__content-container">
+          <li class="reports__info js-reports-animation-list">
+            <img src="img/drive/reports/one.svg" alt="icon" class="reports__info-icon">
+            <div class="reports__info-card">
+              <p class="reports__info-text">Объем эфира за&nbsp;каждый день&nbsp;РК</p>
+            </div>
+          </li>
+          <li class="reports__info js-reports-animation-list">
+            <img src="img/drive/reports/two.svg" alt="icon" class="reports__info-icon">
+            <div class="reports__info-card">
+              <p class="reports__info-text">Количество показов за&nbsp;каждый день&nbsp;РК</p>
+            </div>
+          </li>
+          <li class="reports__info js-reports-animation-list">
+            <img src="img/drive/reports/three.svg" alt="icon" class="reports__info-icon">
+            <div class="reports__info-card">
+              <p class="reports__info-text">Карта передвижения такси с&nbsp;рекламным коробом</p>
+            </div>
+          </li>
+          <li class="reports__info js-reports-animation-list">
+            <img src="img/drive/reports/four.svg" alt="icon" class="reports__info-icon">
+            <div class="reports__info-card">
+              <p class="reports__info-text">Тепловая карта контактов</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="branding" id="branding">
+    <img src="img/drive/allocation/rim.svg" alt="rim" class="branding__icon-rim">
+    <div class="drive-container">
+      <div class="branding__content">
+        <h2 class="branding__title">Брендирование для креативной и охватной рекламы</h2>
+        <div class="branding__tabs js-branding-tabs">
+          <button class="branding__tab-button branding__tab-button--active">Полное брендирование</button>
+          <button class="branding__tab-button">Монобрендирование</button>
+        </div>
+        <div class="branding__tab js-branding-tabs-content">
+          <ul class="branding__text-info">
+            <li>Брендирование заднего стекла</li>
+            <li>Брендирование заднего стекла и 100% эфира</li>
+          </ul>
+          <div class="branding__slider js-branding-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="branding__slide">
+                  <img src="img/drive/branding/image-one.png" alt="slider-image"/>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="branding__slide">
+                  <img src="img/drive/branding/image-two.png" alt="slider-image"/>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="branding__slide">
+                  <img src="img/drive/branding/image-three.png" alt="slider-image"/>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="branding__slide">
+                  <img src="img/drive/branding/image-four.png" alt="slider-image"/>
+                </div>
+              </div>
+            </div>
+            <button class="js-branding-prev branding__slider-prev">
+              <img src="img/drive/branding/icon-prev.svg" alt="icon-prev"/>
+            </button>
+            <button class="js-branding-next branding__slider-next">
+              <img src="img/drive/branding/icon-next.svg" alt="icon-next"/>
+            </button>
+            <div class="branding__pagination js-branding-pagination"></div>
+          </div>
+        </div>
+        <div class="branding__tab js-branding-tabs-content">
+          <ul class="branding__text-info">
+            <li>Брендирование заднего стекла</li>
+            <li>Брендирование заднего стекла и 100% эфира</li>
+          </ul>
+          <div class="branding__slider js-branding-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="branding__slide">
+                  <img src="img/drive/branding/image-one.png" alt="slider-image"/>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="branding__slide">
+                  <img src="img/drive/branding/image-two.png" alt="slider-image"/>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="branding__slide">
+                  <img src="img/drive/branding/image-three.png" alt="slider-image"/>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="branding__slide">
+                  <img src="img/drive/branding/image-four.png" alt="slider-image"/>
+                </div>
+              </div>
+            </div>
+            <button class="js-branding-prev branding__slider-prev">
+              <img src="img/drive/branding/icon-prev.svg" alt="icon-prev"/>
+            </button>
+            <button class="js-branding-next branding__slider-next">
+              <img src="img/drive/branding/icon-next.svg" alt="icon-next"/>
+            </button>
+            <div class="branding__pagination js-branding-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="img/drive/allocation/drive.svg" alt="icon" class="branding__icon-drive">
   </section>
 {{/content}}
 {{/extend}}
