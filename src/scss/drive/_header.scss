@@ -1,0 +1,92 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  color: white;
+  z-index: 5;
+
+  &__content {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    height: 7.4rem;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: 6rem;
+    height: 4rem;
+    object-fit: cover;
+    flex-shrink: 0;
+    grid-column: 1 / 1;
+    transition: .4s ease opacity;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    grid-column: 4 / 13;
+    column-gap: 2rem;
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__button-navigation {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      border-radius: 2rem;
+      background: white;
+      top: 2rem;
+      left: 0;
+      height: .2rem;
+      transition: transform .3s ease-in-out;
+      transform-origin: right;
+      transform: scaleX(0);
+    }
+
+    &:hover::after {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+  &__phone-link {
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+      color: #FFF;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+
+      transition: .4s ease opacity;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+}

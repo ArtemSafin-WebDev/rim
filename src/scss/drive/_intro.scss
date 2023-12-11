@@ -1,0 +1,241 @@
+.intro {
+  overflow: hidden;
+  position: relative;
+
+  &__overlay {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../img/drive/intro/intro-overlay.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+
+    &::before {
+      content: "";
+      display: block;
+      opacity: 1;
+      background-color: rgba(0, 0, 0, .4);
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      @include breakpoint(tablet) {
+        background-color: rgba(0, 0, 0, .6);
+      }
+    }
+  }
+
+  &__content {
+    min-height: calc(100vh - 71px);
+    margin-top: 71px;
+    display: flex;
+    align-items: flex-end;
+
+    padding-bottom: 15.8rem;
+
+    @include breakpoint(small-tablet) {
+      align-items: flex-start;
+      padding-bottom: 0;
+      padding-top: 12.5vh;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    row-gap: 7.1rem;
+
+    @include breakpoint(tablet) {
+      row-gap: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      row-gap: 2.1rem;
+    }
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    width: 100%;
+    max-width: 64.8rem;
+
+    @include breakpoint(tablet) {
+      font-size: 3rem;
+      max-width: 42rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__collab {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    @include breakpoint(tablet) {
+      row-gap: 1rem;
+    }
+
+    @include breakpoint(mobile) {
+      row-gap: .8rem;
+    }
+  }
+
+  &__clients {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    @include breakpoint(tablet) {
+      column-gap: 1.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      column-gap: .8rem;
+    }
+    img {
+      max-width: none;
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+
+      @include breakpoint(tablet) {
+        width: 12.5%;
+        height: auto;
+      }
+
+      @include breakpoint(mobile) {
+        &:nth-child(1) {
+          width: 6rem;
+          height: 3.8rem;
+        }
+        &:nth-child(3) {
+          width: 8.9rem;
+          height: 2.6rem
+        }
+        &:nth-child(5) {
+          width: 10.4rem;
+          height: 4rem;
+          object-fit: contain;
+        }
+      }
+    }
+
+    p {
+      color: #FFF;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+
+      @include breakpoint(tablet) {
+        font-size: 1.8rem;
+      }
+
+      @include breakpoint(mobile) {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &__text {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__button {
+    border-radius: 70.9rem;
+    background-color: #FF5129;
+
+    transition: .4s ease box-shadow;
+    width: 35rem;
+    height: 5rem;
+
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    &:hover {
+      box-shadow: 0px 0px 30px 0px #FF5129, 0px 0px 5px 0px #FF5129;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 30.6rem;
+      height: 5.8rem;
+      font-size: 2rem;
+      margin-top: 1.2rem;
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    bottom: -40rem;
+    left: -40rem;
+    width: 100rem;
+    height: 100rem;
+    z-index: -1;
+
+    @include breakpoint(tablet) {
+      top: -20rem;
+      left: 20rem;
+      width: 80rem;
+      height: 80rem;
+      z-index: -1;
+    }
+  }
+
+  &__gradient {
+    display: none;
+    @include breakpoint(mobile) {
+      display: block;
+      background: rgb(240,240,240);
+      background: linear-gradient(180deg, rgba(240,240,240,0) 0%, rgba(7,8,10,1) 88%);
+      width: 100%;
+      height: 30vh;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
