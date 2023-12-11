@@ -5,6 +5,14 @@
   backdrop-filter: blur(4px);
   color: white;
   z-index: 5;
+  top: 5rem;
+
+  @include breakpoint(small-tablet) {
+    top: 7rem
+  }
+  @include breakpoint(mobile) {
+    top: 5rem
+  }
 
   &__content {
     color: white;
