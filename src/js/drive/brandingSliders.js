@@ -4,8 +4,23 @@ Swiper.use([Parallax, Navigation, Pagination])
 
 export default function initBrandingSliders() {
   const sliders = document.querySelectorAll(".js-branding-slider");
+  const list = document.querySelector(".js-branding-list")?.children
+  
+  list[0].classList.add("branding__tab-info--active")
   function initSliders(slider) {
     new Swiper(slider, {
+      on: {
+        slideChange() {
+          const slideIdx = this?.activeIndex
+          
+          list.forEach((li, index) => {
+            li.classList.remove("branding__tab-info--active")
+            if(index === slideIdx) {
+              list[slideIdx].classList.add("branding__tab-info--active")
+            }
+          })
+        }
+      },
       watchOverflow: true,
       parallax: true,
       speed: 1000,
@@ -17,7 +32,7 @@ export default function initBrandingSliders() {
       pagination: {
         type: "bullets",
         el: ".js-branding-pagination"
-      }
+      },
     })
   }
   sliders.forEach((slider) => {
