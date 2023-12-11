@@ -2,10 +2,18 @@
   border-radius: 50%;
   background: #2D3240;
   filter: blur(358.25px);
+
+  @include breakpoint(laptop) {
+    display: none;
+  }
 }
 
 .orange-shape {
   border-radius: 50%;
   filter: blur(358.25px);
   background-color: rgba(255, 81, 41, 0.5);
+
+  @include breakpoint(laptop) {
+    display: none;
+  }
 }

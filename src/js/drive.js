@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initTermsOccurAnimation()
   initAllocationOccurAnimation()
   initBrandingSliders()
-  initBrandingTabs()
   initIntroOccurAnimation()
 });
 

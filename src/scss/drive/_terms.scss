@@ -62,10 +62,19 @@
 
   &__card {
     border-radius: 2rem;
-    border: 1px solid #5229A1;
-    background: rgba(255, 255, 255, 0.10);
+    background-color: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(15px);
     padding: 3rem 2rem;
+
+    background-image:
+            radial-gradient(circle at 100% 100%, transparent 19px, rgba(255, 255, 255, 0.5) 19px, rgba(255, 255, 255, 0.5) 20px, transparent 20px),
+            linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(154, 107, 225, 0.5)), radial-gradient(circle at 0% 100%, transparent 19px, rgba(154, 107, 225, 0.5) 19px, rgba(154, 107, 225, 0.5) 20px, transparent 20px),
+            linear-gradient(to bottom, rgba(154, 107, 225, 0.5), rgba(255, 255, 255, 0.5)), radial-gradient(circle at 0% 0%, transparent 19px, rgba(255, 255, 255, 0.4) 19px, rgba(255, 255, 255, 0.3) 20px, transparent 20px),
+            linear-gradient(to left, rgba(255, 255, 255, 0.25), rgba(184, 137, 230, 0.45)), radial-gradient(circle at 100% 0%, transparent 19px, rgba(184, 137, 230, 0.5) 19px, rgba(184, 137, 230, 0.6) 20px, transparent 20px),
+            linear-gradient(to top, rgba(184, 137, 230, 0.65), rgba(255, 255, 255, 0.6));
+    background-size: 20px 20px, calc(100% - 40px) 1px, 20px 20px, 1px calc(100% - 40px);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
 
     &:nth-child(1) {
       grid-column: 1 / 9;
@@ -144,6 +153,7 @@
     display: flex;
     align-items: center;
     row-gap: 3rem;
+    column-gap: 2rem;
 
     @include breakpoint(small-tablet) {
       display: flex;
@@ -157,7 +167,7 @@
     h4 {
       color: #FC3F1D;
       font-family: "Uni Neue", sans-serif;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       font-style: normal;
       font-weight: 800;
       line-height: 110%;
@@ -184,7 +194,7 @@
     }
   }
 
-  &__card-button {
+  &__card-info {
     border-radius: 70.9rem;
     background: #FC3F1D;
     display: flex;
@@ -202,23 +212,15 @@
 
     transition: .4s ease box-shadow;
 
-    @include breakpoint(small-tablet) {
-      font-size: 1.2rem;
-    }
-
     img {
       width: 3rem;
       height: 3rem;
       object-fit: cover;
       margin-right: 1.4rem;
-
-      @include breakpoint(small-tablet) {
-        display: none;
-      }
     }
 
-    &:hover {
-      box-shadow: 0px 0px 30px 0px #FF5129, 0px 0px 5px 0px #FF5129;
+    @include breakpoint(mobile) {
+      padding: 0 2rem;
     }
   }
 }

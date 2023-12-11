@@ -102,16 +102,29 @@
 
     &:first-child > .reports__info-icon {
       @include breakpoint(small-tablet) {
-        width: 12.5%;
+        width: 100%;
+        max-width: 6rem;
+        margin-right: 2.5rem;
+      }
+      @include breakpoint(mobile) {
+        width: 100%;
+        max-width: 3.5rem;
+        margin-right: 2rem;
       }
     }
   }
 
   &__info-icon {
     @include breakpoint(small-tablet) {
-      width: 17.5%;
+      width: 100%;
+      max-width: 8.5rem;
       height: auto;
       object-fit: cover;
+    }
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      max-width: 5.5rem;
     }
   }
 
