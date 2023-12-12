@@ -2,22 +2,20 @@
   margin-top: 40.7rem;
   position: relative;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(15px);
+  background-color: rgb(78, 78, 79);
 
   &__polugon--first {
     position: absolute;
     clip-path: polygon(100% 74%, 0% 100%, 100% 100%);
     width: 100%;
     height: 50rem;
-    top: -50rem;
+    top: -49.9rem;
 
-    background-color: rgba(255, 255, 255, 0.25);
-
+    background-color: rgb(78, 78, 79);
 
     @include breakpoint(small-tablet) {
       height: 30rem;
-      top: -30rem;
+      top: -29.9rem;
     }
   }
 
@@ -127,13 +125,13 @@
     clip-path: polygon(0 74%, 100% 74%, 0 100%);
     width: 100%;
     height: 50rem;
-    bottom: -13rem;
+    bottom: -12.8rem;
 
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgb(78, 78, 79);
 
     @include breakpoint(small-tablet) {
       height: 35rem;
-      bottom: -9.1rem;
+      bottom: -9rem;
     }
   }
 }

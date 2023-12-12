@@ -102,6 +102,11 @@
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
+    transition: .4s ease opacity;
+
+    &:hover {
+      opacity: .6;
+    }
 
     &--active {
       color: #FF5129;
@@ -110,6 +115,7 @@
 
     @include breakpoint(tablet) {
       font-size: 2.6rem;
+      text-align: start;
     }
   }
 

@@ -21,7 +21,6 @@ import initBagsOccurAnimation from "./drive/bagsOccurAnimation";
 import initTermsOccurAnimation from "./drive/termsOccurAnimation";
 import initAllocationOccurAnimation from "./drive/allocationOccurAnimation";
 import initBrandingSliders from "./drive/brandingSliders";
-import initBrandingTabs from "./drive/brandingTabs";
 import initIntroOccurAnimation from "./drive/introOccurAnimation";
 
 document.addEventListener('DOMContentLoaded', function() {
