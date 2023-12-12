@@ -15,6 +15,26 @@
     z-index: -3;
   }
 
+  &__video {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -3;
+    width: 41.5%;
+    max-width: 100rem;
+    object-fit: cover;
+    height: auto;
+    max-height: 80rem;
+
+    @include breakpoint(large-desktop) {
+      width: 60%;
+      opacity: .7;
+    }
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
+  }
+
   &__column {
     display: flex;
     flex-direction: column;

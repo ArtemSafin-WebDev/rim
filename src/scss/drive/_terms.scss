@@ -16,15 +16,15 @@
 
   &__card-img {
     position: absolute;
-    width: 50%;
+    width: 70%;
     height: auto;
     opacity: .5;
     bottom: -30rem;
     max-width: 104.5rem;
 
     @include breakpoint(small-tablet) {
-      width: 80%;
-      bottom: -32.5rem;
+      width: 100%;
+      bottom: -28.5rem;
     }
   }
 

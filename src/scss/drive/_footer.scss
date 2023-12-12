@@ -50,6 +50,7 @@
     background-image: url("../img/drive/footer/footer-img.png");
     background-repeat: no-repeat;
     background-position: center;
+    object-fit: cover;
     position: absolute;
     width: 100%;
     height: 65.8rem;
@@ -58,8 +59,12 @@
     bottom: 0;
 
     @include breakpoint(tablet) {
-      height: 30rem;
       opacity: .4;
+      width: 100%;
+      height: 100%;
+      transform: scale(2) translateX(-50%);
+      background-size: contain;
+      left: 125%;
     }
   }
 }

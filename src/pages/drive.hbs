@@ -27,6 +27,9 @@
   <section class="about" id="about">
     <div class="drive-map"></div>
     <div class="white-shape about__shape"></div>
+    <video class="about__video lazyload" muted="" data-autoplay="" loop playsinline preload="none">
+      <source src="assets/video/video-drive.mp4" type="video/mp4" />
+    </video>
     <div class="drive-container">
       <div class="about__content js-about-trigger">
         <div class="about__column js-occur-animate">
@@ -490,12 +493,12 @@
     <div class="drive-container">
       <div class="branding__content">
         <h2 class="branding__title">Брендирование для креативной и охватной рекламы</h2>
-        <ul class="branding__tabs js-branding-list">
-          <li class="branding__tab-info">Полное брендирование</li>
-          <li class="branding__tab-info">Монобрендирование</li>
-          <li class="branding__tab-info">Брендирование заднего стекла</li>
-          <li class="branding__tab-info">Брендирование заднего стекла и 100% эфира</li>
-        </ul>
+        <div class="branding__tabs js-branding-list">
+          <button class="branding__tab-info">Полное брендирование</button>
+          <button class="branding__tab-info">Монобрендирование</button>
+          <button class="branding__tab-info">Брендирование заднего стекла</button>
+          <button class="branding__tab-info">Брендирование заднего стекла и 100% эфира</button>
+        </div>
         <div class="branding__tab js-branding-tabs-content">
           <div class="branding__slider js-branding-slider">
             <div class="swiper-wrapper">
