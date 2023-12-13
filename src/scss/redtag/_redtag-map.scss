@@ -33,7 +33,7 @@
 
   &__mobile {
     @include breakpoint(mobile) {
-      background-image: url("../../img/redtag/geography/maps.png");
+      background-image: url("../img/redtag/geography/maps.png");
       width: 35.8rem;
       min-height: 17.5rem;
       height: 100%;
