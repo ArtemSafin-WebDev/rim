@@ -10,6 +10,18 @@ export default function initBrandingSliders() {
   
   function initSlider(slider) {
     const brandingSlider = new Swiper(slider, {
+      on: {
+        slideChange() {
+          const activeIndex = this.activeIndex
+          
+          buttons?.forEach((button, index) => {
+            button.classList.remove("branding__tab-info--active")
+            if(index === activeIndex) {
+              button.classList.add("branding__tab-info--active")
+            }
+          })
+        }
+      },
       watchOverflow: true,
       parallax: true,
       speed: 1000,
@@ -50,3 +62,4 @@ export default function initBrandingSliders() {
     })
   })
 }
+
