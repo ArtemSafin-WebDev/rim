@@ -8,6 +8,7 @@ export default function initMediametryTabs() {
   
   function initMarginToBottom(mediametryBottomItem) {
     if(!mediametryBottomItem) return
+    
     mediametryBottomItem.style.marginTop = `${(contentTab[0]?.clientHeight / 10) * 2}rem`
     gsap.set([contentTab], {opacity: 0, y: 50})
   }
@@ -26,7 +27,17 @@ export default function initMediametryTabs() {
     gsap.to(tab, {
       opacity: 1,
       y: 0,
-      delay: .45
+      delay: .45,
+      onStart: () => {
+        buttonsTab?.forEach((button) => {
+          button.disabled = true
+        })
+      },
+      onComplete: () => {
+        buttonsTab?.forEach((button) => {
+          button.disabled = false
+        })
+      }
     })
   }
   
