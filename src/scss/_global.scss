@@ -49,6 +49,13 @@ html {
     @include breakpoint(mobile) {
         font-size: 10px;
     }
+
+    &.fluid {
+        font-size: clamp(2px, 0.52vw, 125px);
+        @include breakpoint(mobile) {
+            font-size: 10px;
+        }
+    }
 }
 
 body {
@@ -252,12 +259,12 @@ select:-webkit-autofill:focus {
 
 .red-circle-shape {
     border-radius: 104.2rem;
-    background: #C20A26;
+    background: #c20a26;
     -webkit-filter: blur(200px);
     -moz-filter: blur(200px);
     -ms-filter: blur(200px);
     filter: blur(200px);
-    opacity: .9;
+    opacity: 0.9;
 
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -273,7 +280,7 @@ select:-webkit-autofill:focus {
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
     z-index: 1;
-    opacity: .1;
+    opacity: 0.1;
 
     @include breakpoint(large-desktop) {
         grid-template-columns: repeat(5, 1fr);
@@ -285,15 +292,15 @@ select:-webkit-autofill:focus {
 
     span {
         display: block;
-        background: rgb(0,0,0);
-        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(240,240,240,1) 10%, rgba(240,240,240,1) 90%, rgba(0,0,0,0) 100%);
-        width: .1rem;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(240, 240, 240, 1) 10%, rgba(240, 240, 240, 1) 90%, rgba(0, 0, 0, 0) 100%);
+        width: 0.1rem;
         height: 100%;
     }
 }
 
 .red-color {
-    color: #F20D30;
+    color: #f20d30;
 }
 .span--2 {
     grid-column: span 2;
@@ -302,10 +309,3 @@ select:-webkit-autofill:focus {
         max-width: 61.4rem;
     }
 }
-
-
-
-
-
-
-

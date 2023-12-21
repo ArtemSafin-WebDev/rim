@@ -1,0 +1,159 @@
+.about-presence {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 1;
+}
+
+.about-presence__main-blur {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    max-width: none;
+    z-index: -1;
+    position: absolute;
+
+    @include breakpoint(mobile) {
+        width: 120%;
+    }
+}
+
+.about-presence__heading {
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 3.2rem;
+    }
+}
+
+.about-presence__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 51rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        gap: 1rem;
+    }
+}
+
+.about-presence__list-item {
+    flex-shrink: 0;
+}
+
+.about-presence__card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2.5rem;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding: 1.2rem 1.3rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        z-index: -2;
+        background: rgba(255, 255, 255, 0.1);
+
+        backdrop-filter: blur(15px);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+        background: linear-gradient(to right bottom, #624f86, #ffedd4, #5229a1) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+.about-presence__card-number {
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #ff5129;
+    white-space: nowrap;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        text-transform: uppercase;
+    }
+}
+
+.about-presence__card-title {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    color: white;
+    width: max-content;
+    max-width: 18.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        max-width: 15rem;
+        width: auto;
+    }
+}
+
+.about-presence__content {
+    position: relative;
+    z-index: 1;
+    padding-top: 20rem;
+    padding-bottom: 31rem;
+    @include breakpoint(mobile) {
+        padding-top: 4.7rem;
+        padding-bottom: 18rem;
+    }
+}
+
+.about-presence__map {
+    position: absolute;
+    width: 228rem;
+    height: auto;
+    z-index: -1;
+    left: 25rem;
+    top: -5rem;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        width: 79rem;
+        bottom: 0;
+        top: auto;
+        left: 6rem;
+
+        // display: none;
+    }
+}
