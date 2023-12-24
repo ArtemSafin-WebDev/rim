@@ -1,0 +1,180 @@
+.advantages {
+  background-color: rgba(33, 30, 38, 1);
+
+  .container {
+    position: relative;
+  }
+  &__content {
+    padding-top: 10rem;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(tablet) {
+      padding-top: 5rem;
+    }
+  }
+
+  &__title {
+    color: white;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 4.6rem;
+    }
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 110%;
+      width: 100%;
+      max-width: 35.8rem;
+      margin-bottom: .8rem;
+    }
+  }
+
+  &__text {
+    color: white;
+
+    font-family: "Uni Neue", sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 13rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      max-width: 35.7rem;
+      margin-bottom: 7.5rem;
+    }
+  }
+
+  &__slider {
+    counter-set: advantages-counter;
+    width: 100%;
+    .small-width {
+      width: 24.9rem;
+
+      @include breakpoint(tablet) {
+        width: 10.8rem;
+      }
+    }
+
+    .large-width{
+      width: 51.8rem;
+
+      @include breakpoint(tablet) {
+        width: 27rem;
+      }
+    }
+
+    .swiper-slide {
+      width: fit-content;
+      counter-increment: advantages-counter;
+      position: relative;
+    }
+  }
+
+  &__counter {
+    position: relative;
+    z-index: -1;
+  }
+
+  &__counter::before {
+    position: absolute;
+    display: block;
+    content: "0"counter(advantages-counter)"";
+    font-family: "Uni Neue", sans-serif;
+    font-size: 14.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90%;
+    letter-spacing: -5.76px;
+    z-index: -1;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -3.5rem;
+    color: #FF5129;
+
+
+    @include breakpoint(tablet) {
+      text-align: center;
+      font-size: 8.8rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 90%;
+      bottom: -2.5rem;
+      letter-spacing: 0;
+    }
+  }
+
+
+  &__slide {
+    width: fit-content;
+    padding: 4rem;
+    background-image: radial-gradient(circle at 100% 100%, transparent 2.9rem, #fcd1bd 2.9rem, #fcd1bd 3.2rem, transparent 3.2rem), linear-gradient(to right, #fcd1bd, #724778), radial-gradient(circle at 0% 100%, transparent 2.9rem, #724778 2.9rem, #724778 3.2rem, transparent 3.2rem), linear-gradient(to bottom, #724778, #ecc5b2), radial-gradient(circle at 0% 0%, transparent 2.9rem, #ecc5b2 2.9rem, #ecc5b2 3.2rem, transparent 3.2rem), linear-gradient(to left, #ecc5b2, #6b4270), radial-gradient(circle at 100% 0%, transparent 2.9rem, #6b4270 2.9rem, #6b4270 3.2rem, transparent 3.2rem), linear-gradient(to top, #6b4270, #fcd1bd);
+    background-size: 3.2rem 3.2rem, calc(100% - 6.4rem) .3rem, 3.2rem 3.2rem, .3rem calc(100% - 6.4rem);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(8px);
+    border-radius: 3rem;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      padding: 1.2rem .8rem;
+      background: none;
+      border: .1rem solid #FCD1BDFF;
+      border-radius: 1rem;
+    }
+
+    p {
+      color: white;
+      text-align: center;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 130%;
+
+      @include breakpoint(tablet) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.container {
+}
+
+.js-advantages-slider {
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}

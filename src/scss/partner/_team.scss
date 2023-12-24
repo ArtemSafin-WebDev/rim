@@ -1,0 +1,309 @@
+.team {
+  position: relative;
+  padding: 15rem 0;
+  overflow: hidden;
+
+  @include breakpoint(tablet) {
+    margin-top: 7.5rem;
+    padding: 0 0 30rem;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 100vw;
+    max-width: 100rem;
+    bottom: -20rem;
+    right: 0;
+    z-index: -1;
+
+    @include breakpoint(large-desktop) {
+      max-width: 80rem;
+    }
+
+    @include breakpoint(tablet) {
+      max-width: none;
+      width: 140%;
+      height: 70rem;
+    }
+  }
+
+  &__content-main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+  }
+
+  &__title {
+    font-family: "Uni Neue", sans-serif;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    color: white;
+    margin-bottom: 10rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 4.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 110%;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__column-title {
+    color: white;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 12rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80%;
+    width: 100%;
+    max-width: 73rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 6.5rem;
+      max-width: 50erm;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 5.2rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 85%;
+    }
+  }
+
+  &__columm-block {
+    background-image:
+            radial-gradient(circle at 100% 100%, transparent 14px, #d5b9fd 14px, #d5b9fd 1.7rem, transparent 1.7rem), linear-gradient(to right, #d5b9fd, #ffffff),
+            radial-gradient(circle at 0% 100%, transparent 14px, #ffffff 14px, #ffffff 17px, transparent 1.7rem), linear-gradient(to bottom, #ffffff, #d5b9fd),
+            radial-gradient(circle at 0% 0%, transparent 1.4rem, #d5b9fd 1.4rem, #d5b9fd 1.7rem, transparent 1.7rem), linear-gradient(to left, #d5b9fd, #ffffff),
+            radial-gradient(circle at 100% 0%, transparent 1.4rem, #ffffff 1.4rem, #ffffff 17px, transparent 1.7rem),
+            linear-gradient(to top, #ffffff, #d5b9fd);
+    background-size: 1.7rem 1.7rem, calc(100% - 3.4rem) .3rem, 1.7rem 1.7rem, .3rem calc(100% - 3.4rem);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 67rem;
+    min-height: fit-content;
+    padding: 3rem 4rem;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1.35rem;
+
+    @include breakpoint(large-desktop) {
+      max-width: 50rem;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 3rem 2.4rem;
+    }
+  }
+
+  &__column-text {
+    color: white;
+
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+
+  &__column--second {
+    position: relative;
+    bottom: -10rem;
+  }
+
+  &__column-image-wrapper {
+  }
+
+  &__column-image-wrapper--left {
+    position: absolute;
+    bottom: -10rem;
+    left: -4rem;
+
+    @include breakpoint(tablet) {
+      bottom: -20rem;
+      left: -2.5rem;
+    }
+  }
+
+  &__column-image-wrapper--left > &__column-person-info {
+    bottom: 7.5rem;
+    left: 2rem;
+
+    @include breakpoint(tablet) {
+      bottom: 5.5rem;
+    }
+  }
+
+  &__column-image-wrapper--middle {
+    position: absolute;
+    bottom: -15rem;
+    right: -16.5rem;
+
+    @include breakpoint(tablet) {
+      right: -32.5rem;
+      bottom: -22.5rem;
+    }
+  }
+
+  &__column-image-wrapper--middle > &__column-person-info {
+    bottom: 25rem;
+    right: 22.5rem;
+
+    @include breakpoint(tablet) {
+      bottom: 10rem;
+      right: 10.5rem;
+    }
+  }
+
+  &__column-image-wrapper--right {
+    position: absolute;
+    bottom: -37.5rem;
+    right: -35rem;
+
+    @include breakpoint(tablet) {
+      right: -46rem;
+    }
+  }
+
+  &__column-image-wrapper--right > &__column-person-info {
+    bottom: 35rem;
+    right: 20.5rem;
+
+    @include breakpoint(tablet) {
+      bottom: 20rem;
+      right: 12.5rem;
+    }
+  }
+
+
+  &__column-image-wrapper--middle >  &__column-image {
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+
+    @include breakpoint(tablet) {
+      width: 28rem;
+      height: 38.5rem;
+    }
+  }
+
+  &__column-image-wrapper--left >  &__column-image {
+    height: 100%;
+    max-height: 68.4rem;
+    width: auto;
+    object-fit: cover;
+
+    @include breakpoint(tablet) {
+      min-width: 31rem;
+      height: 34.5rem;
+    }
+  }
+
+  &__column-image-wrapper--right >  &__column-image {
+    height: 100%;
+    max-height: 90.4rem;
+    width: auto;
+    object-fit: cover;
+
+    @include breakpoint(tablet) {
+      max-height: 53.4rem;
+    }
+  }
+
+  &__column-image {
+  }
+
+  &__column-person-info {
+    padding: 1.8rem;
+    background-image:
+            radial-gradient(circle at 100% 100%, transparent 14px, #d5b9fd 14px, #d5b9fd 1.7rem, transparent 1.7rem), linear-gradient(to right, #d5b9fd, #ffffff),
+            radial-gradient(circle at 0% 100%, transparent 14px, #ffffff 14px, #ffffff 17px, transparent 1.7rem), linear-gradient(to bottom, #ffffff, #d5b9fd),
+            radial-gradient(circle at 0% 0%, transparent 1.4rem, #d5b9fd 1.4rem, #d5b9fd 1.7rem, transparent 1.7rem), linear-gradient(to left, #d5b9fd, #ffffff),
+            radial-gradient(circle at 100% 0%, transparent 1.4rem, #ffffff 1.4rem, #ffffff 17px, transparent 1.7rem),
+            linear-gradient(to top, #ffffff, #d5b9fd);
+    background-size: 1.7rem 1.7rem, calc(100% - 3.4rem) .3rem, 1.7rem 1.7rem, .3rem calc(100% - 3.4rem);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(7.012145519256592px);
+    border-radius: 1.75rem;
+    position: absolute;
+    z-index: 3;
+
+    @include breakpoint(small-tablet) {
+      min-width: 10.4rem;
+      padding: .7rem;
+      background-image: radial-gradient(circle at 100% 100%, transparent 10px, #fcd1bd 10px, #fcd1bd 12px, transparent 12px), linear-gradient(to right, #fcd1bd, #724778), radial-gradient(circle at 0% 100%, transparent 10px, #724778 10px, #724778 12px, transparent 12px), linear-gradient(to bottom, #724778, #e6c0ac), radial-gradient(circle at 0% 0%, transparent 10px, #e6c0ac 10px, #e6c0ac 12px, transparent 12px), linear-gradient(to left, #e6c0ac, #724778), radial-gradient(circle at 100% 0%, transparent 10px, #724778 10px, #724778 12px, transparent 12px), linear-gradient(to top, #724778, #fcd1bd);
+      background-size: 12px 12px, calc(100% - 24px) 2px, 12px 12px, 2px calc(100% - 24px);
+      background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__column-person-name {
+    color: white;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%;
+
+    @include breakpoint(tablet) {
+      color: #FFF;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 130%;
+    }
+  }
+
+  &__column-person-role {
+    color: white;
+
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    width: 100%;
+    max-width: 20rem;
+
+    @include breakpoint(tablet) {
+      font-size: .7rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      max-width: 8.8rem;
+    }
+  }
+}
+
+.container {
+}

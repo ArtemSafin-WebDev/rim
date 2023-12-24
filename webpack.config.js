@@ -5,7 +5,8 @@ module.exports = {
   entry: {
     app: './src/js/main.js',
     redtagChunk: './src/js/redtag.js',
-    driveChunk: './src/js/drive.js'
+    driveChunk: './src/js/drive.js',
+    partnerChunk: './src/js/partner.js'
   },
   output: {
     path: path.resolve(__dirname, './build/js'),
