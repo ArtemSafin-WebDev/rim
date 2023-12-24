@@ -1,5 +1,5 @@
 export default function initNavigation() {
-  const driveNavigation = document.querySelector(".js-drive-nav-links").children
+  const driveNavigation = document.querySelector(".js-drive-nav-links")?.children
   const sections = document.getElementsByTagName("section")
   
   driveNavigation?.forEach((link) => {
