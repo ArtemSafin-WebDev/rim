@@ -179,11 +179,13 @@
     @include breakpointMF(small-tablet) {
         position: absolute;
         z-index: 5;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) translateZ(0);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        transition: transform 0.2s;
+        backface-visibility: hidden;
         &:nth-child(1) {
             left: 28%;
             top: 42%;
@@ -225,6 +227,16 @@
             left: 20%;
             top: 57%;
         }
+
+        @media (hover: hover) {
+            &:hover {
+                transform: translate(-50%, -50%) scale(1.05) translateZ(0);
+
+                .about-business__planet-item-logo {
+                    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.5));
+                }
+            }
+        }
     }
 
     @include breakpoint(mobile) {
@@ -252,6 +264,7 @@
     display: block;
     margin-bottom: 1.2rem;
     object-fit: contain;
+    transition: filter 0.2s;
 
     &--small {
         height: 3.7rem;

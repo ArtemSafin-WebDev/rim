@@ -13,6 +13,8 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <link rel="stylesheet" href="css/about-page.css" />
         <link rel="stylesheet" href="css/new-header.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
         <title>
             
         </title>
@@ -921,64 +923,64 @@
                                 loading="lazy">
                         </picture>
                         <div class="about-business__planet-items">
-                            <div class="about-business__planet-item">
+                            <a href="#" class="about-business__planet-item">
                                 <img src="img/planet-items/rim-billboard.svg" alt=""
                                     class="about-business__planet-item-logo">
                                 <div class="about-business__planet-item-text">
                                     Оператор<br>outdoor-рекламы
                                 </div>
-                            </div>
-                            <div class="about-business__planet-item">
+                            </a>
+                            <a href="#" class="about-business__planet-item">
                                 <img src="img/planet-items/rim-indoor.svg" alt=""
                                     class="about-business__planet-item-logo">
                                 <div class="about-business__planet-item-text">
                                     Оператор<br>indoor-рекламы
                                 </div>
-                            </div>
-                            <div class="about-business__planet-item">
+                            </a>
+                            <a href="#" class="about-business__planet-item">
                                 <img src="img/planet-items/rim-media.svg" alt=""
                                     class="about-business__planet-item-logo">
                                 <div class="about-business__planet-item-text">
                                     Медиабаинговое<br> агентство
                                 </div>
-                            </div>
-                            <div class="about-business__planet-item">
+                            </a>
+                            <a href="#" class="about-business__planet-item">
                                 <img src="img/planet-items/ekranium.svg" alt=""
                                     class="about-business__planet-item-logo">
                                 <div class="about-business__planet-item-text">
                                     Производство и установка<br> светодиодных экранов
                                 </div>
-                            </div>
-                            <div class="about-business__planet-item">
+                            </a>
+                            <a href="#" class="about-business__planet-item">
                                 <img src="img/planet-items/mediastore.svg" alt=""
                                     class="about-business__planet-item-logo">
                                 <div class="about-business__planet-item-text">
                                     Агентство планирования<br> и стратегий
                                 </div>
-                            </div>
-                            <div class="about-business__planet-item">
+                            </a>
+                            <a href="#" class="about-business__planet-item">
                                 <img src="img/planet-items/prodigital.svg" alt=""
                                     class="about-business__planet-item-logo about-business__planet-item-logo--small">
                                 <div class="about-business__planet-item-text">
                                     Платформа автоматизированной<br>
                                     закупки наружной рекламы
                                 </div>
-                            </div>
-                            <div class="about-business__planet-item">
+                            </a>
+                            <a href="#" class="about-business__planet-item">
                                 <img src="img/planet-items/brain-store.svg" alt=""
                                     class="about-business__planet-item-logo">
                                 <div class="about-business__planet-item-text">
                                     Креативное агентство
                                 </div>
-                            </div>
-                            <div class="about-business__planet-item">
+                            </a>
+                            <a href="#" class="about-business__planet-item">
                                 <img src="img/planet-items/bs.svg" alt=""
                                     class="about-business__planet-item-logo about-business__planet-item-logo--small">
                                 <div class="about-business__planet-item-text">
                                     Агентство интернет-<br>маркетинга
                                 </div>
-                            </div>
-                            <div class="about-business__planet-item">
+                            </a>
+                            <a href="#" class="about-business__planet-item">
                                 <div class="about-business__planet-item-title">
                                     Федеральная<br> партнерская сеть
                                 </div>
@@ -986,13 +988,13 @@
                                     Отдел по привлечению партнеров,<br> собственников рекламных<br> конструкций по всей
                                     России
                                 </div>
-                            </div>
-                            <div class="about-business__planet-item">
+                            </a>
+                            <a href="#" class="about-business__planet-item">
                                 <img src="img/planet-items/red-tag.svg" alt="" class="about-business__planet-item-logo">
                                 <div class="about-business__planet-item-text">
                                     Баинговое агентство
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1504,6 +1506,30 @@
 
         <script type="module" src="assets/js/new-header.js">
 
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const presenceList = document.querySelector('.about-presence__list')
+                if (presenceList) {
+                    const cards = Array.from(document.querySelectorAll('.about-presence__card'));
+
+                    const tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: presenceList,
+                            start: 'top bottom'
+                        }
+                    })
+
+                    tl.from(cards, {
+                        autoAlpha: 0,
+                        y: 40,
+                        duration: 0.4,
+                        ease: 'power2.out',
+                        stagger: 0.1
+                    })
+                }
+            })
         </script>
     </body>
 
