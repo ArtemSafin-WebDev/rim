@@ -73,11 +73,20 @@
     width: 4.3rem;
     height: 4.3rem;
     border-radius: 50%;
+    transition: box-shadow 0.2s;
 
-    @include breakpointMF(small-tablet) {
-        filter: drop-shadow(0px 0px 0.31px #fff) drop-shadow(0px 0px 0.619px #fff) drop-shadow(0px 0px 2.167px #fff) drop-shadow(0px 0px 4.334px #fff)
-            drop-shadow(0px 0px 7.43px #fff) drop-shadow(0px 0px 13.003px #fff);
+    &:not(.swiper-button-disabled) {
+        @media (hover: hover) {
+            &:hover {
+                box-shadow: 0px 0px 0.31px #fff, 0px 0px 0.619px #fff, 0px 0px 2.167px #fff, 0px 0px 7.43px #fff, 0px 0px 13.003px #fff;
+            }
+        }
     }
+
+    &.swiper-button-disabled {
+        cursor: default;
+    }
+
     svg {
         display: block;
         width: 100%;
