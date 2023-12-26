@@ -15,7 +15,6 @@ import initPartnerSlider from "./partner/partnerSlider";
 import initEntrySlider from "./partner/entrySlider";
 import initLoopFeedback from "./partner/initLoopFeedback";
 import initScrollTrigger from "./partner/scrollTrigger";
-import removeMapOnMobile from "./partner/map";
 
 document.addEventListener('DOMContentLoaded', function() {
   polyfills();
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initEntrySlider()
   initLoopFeedback()
   initScrollTrigger()
-  removeMapOnMobile()
 });
 
 window.addEventListener('load', function() {

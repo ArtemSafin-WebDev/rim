@@ -104,20 +104,15 @@
   }
 
   &__card {
-    background-image:
-            radial-gradient(circle at 100% 100%, transparent 14px, #d5b9fd 14px, #d5b9fd 1.7rem, transparent 1.7rem), linear-gradient(to right, #d5b9fd, #ffffff),
-            radial-gradient(circle at 0% 100%, transparent 14px, #ffffff 14px, #ffffff 17px, transparent 1.7rem), linear-gradient(to bottom, #ffffff, #d5b9fd),
-            radial-gradient(circle at 0% 0%, transparent 1.4rem, #d5b9fd 1.4rem, #d5b9fd 1.7rem, transparent 1.7rem), linear-gradient(to left, #d5b9fd, #ffffff),
-            radial-gradient(circle at 100% 0%, transparent 1.4rem, #ffffff 1.4rem, #ffffff 17px, transparent 1.7rem),
-            linear-gradient(to top, #ffffff, #d5b9fd);
-    background-size: 1.7rem 1.7rem, calc(100% - 3.4rem) .3rem, 1.7rem 1.7rem, .3rem calc(100% - 3.4rem);
-    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-image: radial-gradient(circle at 100% 100%,transparent 13px,#d4b8fc 13px,#d4b8fc 14px,transparent 14px),linear-gradient(to right,#d4b8fc,#ece0fe),radial-gradient(circle at 0% 100%,transparent 13px,#ece0fe 13px,#ece0fe 14px,transparent 14px),linear-gradient(to bottom,#ece0fe,#d4b8fc),radial-gradient(circle at 0% 0%,transparent 13px,#d4b8fc 13px,#d4b8fc 14px,transparent 14px),linear-gradient(to left,#d4b8fc,#ece0fe),radial-gradient(circle at 100% 0%,transparent 13px,#ece0fe 13px,#ece0fe 14px,transparent 14px),linear-gradient(to top,#ece0fe,#d4b8fc);
+    background-size: 14px 14px,calc(100% - 28px) 1px,14px 14px,1px calc(100% - 28px);
+    background-position: top left,top center,top right,center right,bottom right,bottom center,bottom left,center left;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.20);
     backdrop-filter: blur(8px);
     position: relative;
     padding: 3rem;
-    border-radius: 1.8rem;
+    border-radius: 1rem;
 
     &:nth-child(1) {
       height: 58rem;
@@ -140,16 +135,17 @@
     width: 12rem;
     height: 12rem;
     border-radius: 12rem;
-    border: .25rem solid #ffffff;
+    border: .1rem solid #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000616;
+    background: rgba(256, 256, 256, .1);
     backdrop-filter: blur(8px);
     position: absolute;
     z-index: 2;
     top: -4.5rem;
     left: 1rem;
+
 
     @include breakpoint(tablet) {
       width: 10rem;

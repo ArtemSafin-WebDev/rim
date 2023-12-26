@@ -6,7 +6,7 @@ export default function initLoopFeedback() {
   
   if(!loopLine) return
   
-  const loopSpeed = document.querySelector(".js-tasks-line")?.dataset.speed
+  const loopSpeed = document.querySelector(".js-feedback-line")?.dataset.speed
   
   const tl = horizontalLoop(loopLine, {
     repeat: -1,
