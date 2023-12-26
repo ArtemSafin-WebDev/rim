@@ -1,22 +1,32 @@
-import { Swiper, Parallax } from 'swiper';
+import {Swiper, Parallax, Navigation} from 'swiper';
 
-Swiper.use([Parallax]);
+Swiper.use([Parallax, Navigation]);
 
 export default function initAdvantagesSlider() {
   const slider = document.querySelector(".js-advantages-slider");
   
   if(!slider) return
   
-  function initSwiper(slider) {
+  const buttonPrev = slider.querySelector(".js-button-prev")
+  const buttonNext = slider.querySelector(".js-button-next")
+  
+  function initSwiper(slider, options) {
     new Swiper(slider, {
       slidesPerView: "auto",
       parallax: true,
       slideToClickedSlide: true,
       spaceBetween: 20,
       speed: 900,
+      navigation: {
+        nextEl: options?.buttonNext,
+        prevEl: options?.buttonPrev
+      }
     })
   }
   
-  initSwiper(slider)
+  initSwiper(slider, {
+    buttonPrev,
+    buttonNext
+  })
 }
 

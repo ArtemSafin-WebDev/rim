@@ -33,6 +33,7 @@
           </div>
         </div>
       </div>
+      <div class="intro__gradient"></div>
       <div class="intro__shape"></div>
       <img src="img/partner/intro/intro.png" alt="image" class="intro__image">
     </section>
@@ -81,10 +82,13 @@
             </ul>
           </div>
         </div>
+        <div class="about__shape"></div>
         <div class="about__map js-about-map">
-          {{> map }}
+          <picture>
+            <source srcset="img/presence-map.avif" type="image/avif">
+            <img src="img/presence-map.webp" alt="Description" class="about__presence-map" loading="lazy">
+          </picture>
         </div>
-        <img src="img/partner/about/map-mobile.png" alt="mobile" class="about__map-mobile">
       </div>
     </section>
 
@@ -263,8 +267,9 @@
     </section>
 
     <section class="advantages">
+      <img src="img/partner/advantages/advantages-shape.png" alt="shape" class="advantages__shape--second">
       <div class="container">
-        <img src="img/partner/advantages/advantages-shape.png" alt="" class="advantages__shape">
+        <img src="img/partner/advantages/advantages-shape.png" alt="shape" class="advantages__shape">
         <div class="advantages__content">
           <h2 class="advantages__title">Преимущества вступления в партнерскую сеть</h2>
           <p class="advantages__text">Почему стоит выбирать именно нас?</p>
@@ -308,9 +313,18 @@
                 </div>
               </div>
             </div>
+            <div class="advantages__navigation">
+              <button class="advantages__navigation-button js-button-prev">
+                <img src="img/partner/entry/arrow-prev.svg" alt="prev-icon">
+              </button>
+              <button class="advantages__navigation-button js-button-next">
+                <img src="img/partner/entry/arrow-next.svg" alt="prev-icon">
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      <img src="img/partner/advantages/advantages-shape.png" alt="shape" class="advantages__shape--third">
     </section>
 
     <section class="result">
@@ -335,7 +349,9 @@
         <div class="partner__content">
           <h2 class="partner__title">Результаты наших партнеров</h2>
           <div class="partner__slider js-partner-slider">
-            <button class="partner__slider-button-prev js-prev-button">←</button>
+            <button class="partner__slider-button-prev js-prev-button">
+              <img src="img/partner/partner/prev-nav.svg" alt="icon-prev">
+            </button>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="partner__slide">
@@ -826,7 +842,9 @@
                 </div>
               </div>
             </div>
-            <button class="partner__slider-button-next js-next-button">→</button>
+            <button class="partner__slider-button-next js-next-button">
+              <img src="img/partner/partner/next-nav.svg" alt="icon-prev">
+            </button>
           </div>
           <button class="partner__button">Присоединиться к сети</button>
         </div>
@@ -893,6 +911,7 @@
           <a href="/#" class="partnership__button js-scroll-item">Узнать подробнее</a>
         </div>
       </div>
+      <div class="partnership__shape partnership__shape--second"></div>
       <div class="partnership__gradient"></div>
     </section>
 
@@ -951,10 +970,10 @@
           </div>
           <div class="entry__navigation js-entry-navigation">
             <button class="entry__navigation-button js-button-prev">
-              <span>←</span>
+              <img src="img/partner/entry/arrow-prev.svg" alt="prev-icon">
             </button>
             <button class="entry__navigation-button js-button-next">
-              <span>→</span>
+              <img src="img/partner/entry/arrow-next.svg" alt="prev-icon">
             </button>
           </div>
         </div>
@@ -1015,7 +1034,7 @@
           </ul>
         </div>
       </div>
-      <div class="feedback__loop-line js-feedback-line" data-speed="1">
+      <div class="feedback__loop-line js-feedback-line" data-speed=".5">
         <img src="img/partner/feedback/yandex.svg" alt="icon">
         <img src="img/partner/feedback/magnit.svg" alt="icon">
         <img src="img/partner/feedback/lenta.svg" alt="icon">
