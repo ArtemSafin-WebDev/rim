@@ -17,6 +17,7 @@ export default function initAdvantagesSlider() {
       slideToClickedSlide: true,
       spaceBetween: 20,
       speed: 900,
+      allowTouchMove: (window.matchMedia("(max-width: 600px)").matches ? true : false),
       navigation: {
         nextEl: options?.buttonNext,
         prevEl: options?.buttonPrev

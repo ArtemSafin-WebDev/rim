@@ -23,6 +23,7 @@ export default function initEntrySlider() {
       slideToClickedSlide: true,
       spaceBetween: 20,
       speed: 900,
+      allowTouchMove: (window.matchMedia("(max-width: 600px)").matches ? true : false),
       on: {
         slideChange() {
           const slider = this

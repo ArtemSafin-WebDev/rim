@@ -17,6 +17,7 @@ export default function initPartnerSlider() {
       slideToClickedSlide: true,
       spaceBetween: 70,
       speed: 900,
+      allowTouchMove: false,
       navigation: {
         prevEl: options?.prevButton,
         nextEl: options?.nextButton
