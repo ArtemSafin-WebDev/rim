@@ -84,8 +84,11 @@
     }
   }
 
-  &__slide {
+  .swiper-slide {
     counter-increment: entry-counter;
+  }
+
+  &__slide {
     display: flex;
     align-items: center;
     column-gap: 4rem;
