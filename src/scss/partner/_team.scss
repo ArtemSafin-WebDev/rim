@@ -148,7 +148,7 @@
   }
 
   &__column-image-wrapper--left > &__column-person-info {
-    bottom: 7.5rem;
+    bottom: 9.5rem;
     left: 2rem;
 
     @include breakpoint(tablet) {
@@ -168,7 +168,7 @@
   }
 
   &__column-image-wrapper--middle > &__column-person-info {
-    bottom: 25rem;
+    bottom: 27rem;
     right: 22.5rem;
 
     @include breakpoint(tablet) {
@@ -188,7 +188,7 @@
   }
 
   &__column-image-wrapper--right > &__column-person-info {
-    bottom: 35rem;
+    bottom: 37rem;
     right: 20.5rem;
 
     @include breakpoint(tablet) {
