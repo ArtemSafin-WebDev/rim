@@ -18,12 +18,12 @@ export default function initEntrySlider() {
   
   function initSwiper(slider, options) {
     return new Swiper(slider, {
-      slidesPerView: "auto",
+      slidesPerView: 3,
       parallax: true,
       slideToClickedSlide: true,
       spaceBetween: 20,
       speed: 900,
-      allowTouchMove: (window.matchMedia("(max-width: 600px)").matches ? true : false),
+      // allowTouchMove: (window.matchMedia("(max-width: 600px)").matches ? true : false),
       on: {
         slideChange() {
           const slider = this
@@ -33,6 +33,23 @@ export default function initEntrySlider() {
       navigation: {
         prevEl: options?.buttonPrev,
         nextEl: options?.buttonNext,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 3
+        },
+        1024: {
+          slidesPerView: "auto"
+        },
+        768: {
+          slidesPerView: "auto"
+        },
+        640: {
+          slidesPerView: "auto"
+        },
+        320: {
+          slidesPerView: "auto"
+        }
       }
     })
   }

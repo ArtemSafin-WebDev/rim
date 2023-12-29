@@ -51,8 +51,7 @@
     counter-set: entry-counter;
     position: relative;
 
-    width: 50%;
-    @include breakpoint(large-desktop) {
+    @include breakpoint(laptop) {
       width: 40%;
     }
 
