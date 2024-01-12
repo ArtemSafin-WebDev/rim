@@ -31,7 +31,7 @@
 
     @include breakpoint(tablet) {
       height: 20%;
-      top: -19%;
+      top: -15.5%;
     }
 
   }
@@ -175,16 +175,13 @@
     flex-direction: column;
     row-gap: .4rem;
 
-    background-image: radial-gradient(circle at 100% 100%,transparent 27px,#d4b8fc 27px,#d4b8fc 28px,transparent 28px),linear-gradient(to right,#d4b8fc,#ece0fe),radial-gradient(circle at 0% 100%,transparent 27px,#ece0fe 27px,#ece0fe 28px,transparent 28px),linear-gradient(to bottom,#ece0fe,#d4b8fc),radial-gradient(circle at 0% 0%,transparent 27px,#d4b8fc 27px,#d4b8fc 28px,transparent 28px),linear-gradient(to left,#d4b8fc,#ece0fe),radial-gradient(circle at 100% 0%,transparent 27px,#ece0fe 27px,#ece0fe 28px,transparent 28px),linear-gradient(to top,#ece0fe,#d4b8fc);
-    background-size: 28px 28px,calc(100% - 56px) 1px,28px 28px,1px calc(100% - 56px);
-    background-position: top left,top center,top right,center right,bottom right,bottom center,bottom left,center left;
-    background-repeat: no-repeat;
-
+    border: .1rem solid #D4B8FCFF;
+    border-radius: 2rem;
 
     @include breakpoint(tablet) {
-      border-radius: .2rem;
       padding: 1.2rem .8rem;
-
+      padding: 1rem .8rem;
+      border-radius: 1rem;
     }
 
     &:nth-child(1) {
@@ -249,7 +246,7 @@
     grid-template-columns: repeat(10, minmax(0, 1fr));
 
     @include breakpoint(tablet) {
-      display: flex;
+      display: grid;
       flex-wrap: wrap;
       width: fit-content;
     }
@@ -446,10 +443,8 @@
     row-gap: 1.8rem;
     padding: 2rem 1.8rem;
 
-    background-image: radial-gradient(circle at 100% 100%,transparent 27px,#d4b8fc 27px,#d4b8fc 28px,transparent 28px),linear-gradient(to right,#d4b8fc,#ece0fe),radial-gradient(circle at 0% 100%,transparent 27px,#ece0fe 27px,#ece0fe 28px,transparent 28px),linear-gradient(to bottom,#ece0fe,#d4b8fc),radial-gradient(circle at 0% 0%,transparent 27px,#d4b8fc 27px,#d4b8fc 28px,transparent 28px),linear-gradient(to left,#d4b8fc,#ece0fe),radial-gradient(circle at 100% 0%,transparent 27px,#ece0fe 27px,#ece0fe 28px,transparent 28px),linear-gradient(to top,#ece0fe,#d4b8fc);
-    background-size: 28px 28px,calc(100% - 56px) 1px,28px 28px,1px calc(100% - 56px);
-    background-position: top left,top center,top right,center right,bottom right,bottom center,bottom left,center left;
-    background-repeat: no-repeat;
+    border: .1rem solid #D4B8FCFF;
+    border-radius: 2rem;
 
     img {
       width: 100%;
@@ -548,7 +543,7 @@
     }
 
     @include breakpoint(large-desktop) {
-      font-size: 2.4rem;
+      font-size: 3.2rem;
 
       width: 35.2rem;
       height: 7.9rem;
@@ -556,10 +551,10 @@
 
     @include breakpoint(tablet) {
       width: 100%;
-      max-width: 30.7rem;
-      height: 6.8rem;
+      max-width: 32.7rem;
+      height: 8.8rem;
 
-      font-size: 2rem;
+      font-size: 3.2rem;
       font-style: normal;
       font-weight: 800;
       line-height: 110%;

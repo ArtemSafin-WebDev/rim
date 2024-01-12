@@ -146,6 +146,12 @@
     transform: scale(.75);
     right: -40rem;
 
+    @include breakpointMF(super-large) {
+      top: -100rem;
+      transform: scale(.65);
+      right: -45rem;
+    }
+
     @include breakpoint(large-desktop) {
       transform: scale(.75);
       right: -25rem;

@@ -201,6 +201,10 @@
     &:nth-child(3) {
       grid-column: 3 / 3;
       grid-row: 1/ 7;
+
+      @include breakpoint(tablet) {
+        padding-top: 4.5rem;
+      }
     }
 
     &:nth-child(4) {

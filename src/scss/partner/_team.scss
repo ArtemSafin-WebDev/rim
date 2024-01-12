@@ -61,6 +61,20 @@
     }
   }
 
+  &__shape {
+    position: absolute;
+    width: 100rem;
+    height: 100rem;
+    z-index: 0;
+    opacity: .4;
+    z-index: -2;
+
+    @include breakpoint(tablet) {
+      width: 70rem;
+      height: 80rem;
+    }
+  }
+
   &__column-title {
     color: white;
     font-family: "Uni Neue", sans-serif;

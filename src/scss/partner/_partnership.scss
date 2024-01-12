@@ -57,7 +57,7 @@
     gap: 2rem;
     margin-bottom: 10rem;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     @include breakpoint(tablet) {
       display: flex;
@@ -161,7 +161,7 @@
     border-radius: 6rem;
     background: #FF5129;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     color: white !important;
     display: flex;
@@ -183,17 +183,18 @@
     }
 
     @include breakpoint(large-desktop) {
-      width: 25.4rem;
-      height: 6.9rem;
-      font-size: 2.2rem;
+      width: 100%;
+      max-width: 35.7rem;
+      height: 8.7rem;
+      font-size: 3.2rem;
     }
 
     @include breakpoint(tablet) {
       margin: 0 auto;
       width: 100%;
-      max-width: 30.7rem;
-      height: 6.8rem;
-      font-size: 2rem;
+      max-width: 35.7rem;
+      height: 8.7rem;
+      font-size: 3.2rem;
       font-style: normal;
       font-weight: 800;
       line-height: 110%;

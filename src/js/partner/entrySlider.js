@@ -36,7 +36,7 @@ export default function initEntrySlider() {
       },
       breakpoints: {
         1200: {
-          slidesPerView: 3
+          slidesPerView: "auto"
         },
         1024: {
           slidesPerView: "auto"
