@@ -1,0 +1,108 @@
+.new-numbers {
+    padding-top: 12rem;
+    position: relative;
+    z-index: 2;
+}
+
+.new-numbers__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-numbers__list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7.7rem;
+    justify-content: center;
+}
+
+.new-numbers__list-item {
+    flex-shrink: 0;
+    border-right: 1px solid rgba(white, 0.15);
+    &:last-child {
+        border: none;
+    }
+}
+
+.new-numbers__card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 3.2rem;
+}
+
+.new-numbers__card-amount {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 9rem;
+    line-height: 116%;
+    b {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 5.2rem;
+        line-height: 116%;
+    }
+}
+
+.new-numbers__card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+}
+
+.new-numbers__achivements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.new-numbers__achivements-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+    row-gap: 5rem;
+    padding: 1rem 5rem;
+    border: 2px solid rgba(white, 0.25);
+    border-radius: 100rem;
+}
+
+.new-numbers__achivements-list-item {
+    flex-shrink: 0;
+}
+
+.new-numbers__achivements-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.new-numbers__achivements-card-icon {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.new-numbers__achivements-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.new-numbers__achivements-card-amount {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 100%;
+}
+
+.new-numbers__achivements-card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+}
