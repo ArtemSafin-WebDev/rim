@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const aboutUsBlocks = Array.from(document.querySelectorAll('.new-main-about-us'));
+    const aboutUsBlocks = Array.from(document.querySelectorAll('.new-main-about-us__slider'));
     aboutUsBlocks.forEach(block => {
         const container = block.querySelector('.swiper');
         if (!container) return;
@@ -53,7 +53,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const reviewsBlocks = Array.from(document.querySelectorAll('.new-main-reviews'));
+    const aboutUsMobile = Array.from(document.querySelectorAll('.new-main-about-us__mobile-slider'));
+
+    aboutUsMobile.forEach(block => {
+        const container = block.querySelector('.swiper');
+        if (!container) return;
+        const wrapper = block.querySelector('.swiper-wrapper');
+
+        const slides = Array.from(block.querySelectorAll('.swiper-slide'));
+
+        const pagination = block.querySelector('.new-main-about-us__mobile-slider-pagination');
+
+        slides.forEach(slide => wrapper.append(slide.cloneNode(true)));
+
+        const bullets = slides.map(() => {
+            const item = document.createElement('div');
+            item.classList.add('new-main-about-us__slider-pagination-bullet');
+            return item;
+        });
+
+        const setActiveBullet = index => {
+            const activeIndex = index;
+            bullets.forEach(bullet => bullet.classList.remove('active'));
+            const activeBulletIndex = index > slides.length - 1 ? index - slides.length : activeIndex;
+            bullets[activeBulletIndex]?.classList.add('active');
+        };
+
+        const instance = new Swiper(container, {
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            speed: 600,
+            navigation: {
+                prevEl: block.querySelector('.new-main-about-us__mobile-slider-arrow--prev'),
+                nextEl: block.querySelector('.new-main-about-us__mobile-slider-arrow--next')
+            },
+            on: {
+                init: swiper => {
+                    setActiveBullet(swiper.realIndex);
+                },
+                slideChange: swiper => {
+                    setActiveBullet(swiper.realIndex);
+                }
+            }
+        });
+
+        bullets.forEach((bullet, bulletIndex) => {
+            pagination.append(bullet);
+            bullet.addEventListener('click', event => {
+                event.preventDefault();
+                instance.slideToLoop(bulletIndex);
+            });
+        });
+    });
+
+    const reviewsBlocks = Array.from(document.querySelectorAll('.new-main-reviews__slider'));
 
     reviewsBlocks.forEach(block => {
         const container = block.querySelector('.swiper');
@@ -107,6 +161,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const reviewsBlocksMobile = Array.from(document.querySelectorAll('.new-main-reviews__slider-mobile'));
+
+    reviewsBlocksMobile.forEach(block => {
+        const container = block.querySelector('.swiper');
+        if (!container) return;
+        const wrapper = block.querySelector('.swiper-wrapper');
+
+        const slides = Array.from(block.querySelectorAll('.swiper-slide'));
+
+        const pagination = block.querySelector('.new-main-reviews__slider-mobile-pagination');
+
+        slides.forEach(slide => wrapper.append(slide.cloneNode(true)));
+
+        const bullets = slides.map(() => {
+            const item = document.createElement('div');
+            item.classList.add('new-main-reviews__slider-pagination-bullet');
+            return item;
+        });
+
+        const setActiveBullet = index => {
+            const activeIndex = index;
+            bullets.forEach(bullet => bullet.classList.remove('active'));
+            const activeBulletIndex = index > slides.length - 1 ? index - slides.length : activeIndex;
+            bullets[activeBulletIndex]?.classList.add('active');
+        };
+
+        const instance = new Swiper(container, {
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            speed: 600,
+            navigation: {
+                prevEl: block.querySelector('.new-main-reviews__slider-mobile-arrow--prev'),
+                nextEl: block.querySelector('.new-main-reviews__slider-mobile-arrow--next')
+            },
+            on: {
+                init: swiper => {
+                    setActiveBullet(swiper.realIndex);
+                },
+                slideChange: swiper => {
+                    setActiveBullet(swiper.realIndex);
+                }
+            }
+        });
+
+        bullets.forEach((bullet, bulletIndex) => {
+            pagination.append(bullet);
+            bullet.addEventListener('click', event => {
+                event.preventDefault();
+                instance.slideToLoop(bulletIndex);
+            });
+        });
+    });
+
     const newMainNews = Array.from(document.querySelectorAll('.new-main-news'));
 
     newMainNews.forEach(block => {
@@ -137,15 +245,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const slides = Array.from(slider.querySelectorAll('.swiper-slide'));
             slides.forEach(slide => wrapper.append(slide.cloneNode(true)));
             const instance = new Swiper(container, {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-                spaceBetween: 20,
-
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
+                spaceBetween: 0,
+                centeredSlides: true,
                 loop: true,
                 speed: 600,
                 navigation: {
                     prevEl: slider.querySelector('.new-main-news__slider-arrow:nth-child(1)'),
                     nextEl: slider.querySelector('.new-main-news__slider-arrow:nth-child(2)')
+                },
+                breakpoints: {
+                    641: {
+                        slidesPerView: 2,
+                        slidesPerGroup: 2,
+                        spaceBetween: 20,
+                        centeredSlides: false
+                    }
                 }
             });
 
