@@ -345,9 +345,16 @@
     padding: 1.2rem 6rem;
     background: #fc3f1d;
     border-radius: 100rem;
+    transition: box-shadow 0.2s;
     &:link,
     &:visited {
         color: white;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0px 0px 3.61801px #ff5129, 0px 0px 21.7081px #ff5129;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -398,7 +405,6 @@
         flex-direction: column;
         height: auto;
         box-sizing: border-box;
-
         width: 100%;
         margin: 0 2rem;
     }

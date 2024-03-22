@@ -81,14 +81,15 @@
     filter: blur(6.5px);
     transition: filter 0.5s;
 
-    @include breakpoint(mobile) {
-        padding: 1rem;
-    }
-
     .swiper-slide-active &,
     .swiper-slide-next & {
         filter: blur(0);
     }
+
+    @include breakpoint(mobile) {
+        padding: 1rem;
+    }
+
     &::after {
         content: '';
         position: absolute;

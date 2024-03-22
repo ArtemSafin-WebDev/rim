@@ -269,6 +269,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const leaders = Array.from(document.querySelectorAll('.leaders'));
+
+    leaders.forEach(block => {
+        const container = block.querySelector('.swiper');
+        if (!container) return;
+        const wrapper = block.querySelector('.swiper-wrapper');
+
+        const slides = Array.from(block.querySelectorAll('.swiper-slide'));
+
+        const pagination = block.querySelector('.leaders__slider-pagination');
+
+        slides.forEach(slide => wrapper.append(slide.cloneNode(true)));
+
+        const bullets = slides.map(() => {
+            const item = document.createElement('div');
+            item.classList.add('leaders__slider-pagination-bullet');
+            return item;
+        });
+
+        const setActiveBullet = index => {
+            const activeIndex = index;
+            bullets.forEach(bullet => bullet.classList.remove('active'));
+            const activeBulletIndex = index > slides.length - 1 ? index - slides.length : activeIndex;
+            bullets[activeBulletIndex]?.classList.add('active');
+        };
+
+        const instance = new Swiper(container, {
+            slidesPerView: 1,
+            loop: true,
+            speed: 600,
+            spaceBetween: 170,
+            centeredSlides: true,
+            navigation: {
+                prevEl: block.querySelector('.leaders__slider-arrow--prev'),
+                nextEl: block.querySelector('.leaders__slider-arrow--next')
+            },
+            on: {
+                init: swiper => {
+                    setActiveBullet(swiper.realIndex);
+                },
+                slideChange: swiper => {
+                    setActiveBullet(swiper.realIndex);
+                }
+            }
+        });
+
+        bullets.forEach((bullet, bulletIndex) => {
+            pagination.append(bullet);
+            bullet.addEventListener('click', event => {
+                event.preventDefault();
+                instance.slideToLoop(bulletIndex);
+            });
+        });
+    });
+
     const intro = Array.from(document.querySelectorAll('.new-main-intro__slider'));
 
     function b({ swiper: a, extendParams: s, on: o }) {

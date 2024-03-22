@@ -197,4 +197,7 @@
     position: absolute;
     margin-left: -34rem;
     margin-top: -16rem;
+
+    @include breakpoint(mobile) {
+    }
 }
