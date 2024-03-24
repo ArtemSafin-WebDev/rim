@@ -2,7 +2,9 @@
     padding-top: 24rem;
 
     @include breakpoint(mobile) {
-        display: none;
+        padding-top: 14rem;
+        position: relative;
+        z-index: 11;
     }
 }
 
@@ -12,18 +14,49 @@
     position: relative;
     isolation: isolate;
 
-    &::before {
-        content: '';
-        width: 57rem;
-        height: 177rem;
-        top: 0;
-        right: 100%;
-        background: linear-gradient(180deg, #5229a1 32%, #1f49c4 100%);
-        filter: blur(250px);
-        transform: rotate(-18.21deg);
-        position: absolute;
-        z-index: -1;
-        top: -75rem;
+    @include breakpointMF(small-tablet) {
+        &::before {
+            content: '';
+            width: 57rem;
+            height: 177rem;
+            top: 0;
+            right: 100%;
+            background: linear-gradient(180deg, #5229a1 32%, #1f49c4 100%);
+            filter: blur(250px);
+            transform: rotate(-18.21deg);
+            position: absolute;
+            z-index: -1;
+            top: -75rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            width: 16.7rem;
+            height: 51.7rem;
+            background: linear-gradient(180deg, #5229a1 32%, #1f49c4 100%);
+            filter: blur(73.049px);
+            transform: rotate(11.31deg);
+            bottom: 0;
+            right: -7rem;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            width: 16.7rem;
+            height: 51.7rem;
+            background: linear-gradient(180deg, #5229a1 32%, #1f49c4 100%);
+            filter: blur(73.049px);
+            transform: rotate(-11.31deg);
+            bottom: 0;
+            left: -7rem;
+        }
     }
 }
 
@@ -33,6 +66,15 @@
     font-size: 5.2rem;
     line-height: 110%;
     margin-bottom: 5.5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 4.2rem;
+    }
 }
 
 .new-companies__list {
@@ -40,6 +82,39 @@
     flex-wrap: wrap;
     gap: 2.4rem;
     justify-content: center;
+
+    @include breakpoint(mobile) {
+        padding: 1.2rem;
+        position: relative;
+        z-index: 1;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        gap: 2.5rem;
+        row-gap: 5rem;
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
+        &::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            z-index: -2;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: 1.5rem;
+            border: 1px solid transparent;
+            background: linear-gradient(to right bottom, #624f86, #ffedd4, #5229a1) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+    }
 }
 
 .new-companies__list-item {
@@ -47,38 +122,50 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        width: auto;
+        flex-basis: calc(33.33% - (2.8rem * 2 / 3));
+    }
 }
 
 .new-companies__card {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    position: relative;
-    z-index: 1;
-    border-radius: 1rem;
-    overflow: hidden;
-    padding: 0.5rem;
 
-    &::after {
-        content: '';
-        position: absolute;
-        inset: -1px;
-        z-index: -2;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(15px);
+    @include breakpoint(mobile) {
+        align-items: center;
+        text-align: center;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        z-index: -1;
+    @include breakpointMF(small-tablet) {
+        flex-grow: 1;
+        position: relative;
+        z-index: 1;
         border-radius: 1rem;
-        border: 1px solid transparent;
-        background: linear-gradient(to right bottom, #624f86, #ffedd4, #5229a1) border-box;
-        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
+        overflow: hidden;
+        padding: 0.5rem;
+        &::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            z-index: -2;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: 1rem;
+            border: 1px solid transparent;
+            background: linear-gradient(to right bottom, #624f86, #ffedd4, #5229a1) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
     }
 
     @media (hover: hover) {
@@ -90,11 +177,27 @@
     }
 }
 
+.new-companies__card-logo {
+    @include breakpoint(mobile) {
+        align-self: center;
+        flex-shrink: 0;
+        height: 2.8rem;
+        width: auto;
+        margin-bottom: 1rem;
+        width: max-content;
+        max-width: none;
+    }
+}
+
 .new-companies__card-image-container {
     position: relative;
     border-radius: 0.7rem;
     overflow: hidden;
     backface-visibility: hidden;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 
     &::before {
         content: '';
@@ -119,6 +222,10 @@
     padding: 1rem;
     padding-top: 1.3rem;
     padding-bottom: 2.2rem;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .new-companies__card-title {
@@ -127,6 +234,10 @@
     font-size: 1.6rem;
     line-height: 100%;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .new-companies__card-role {
@@ -136,6 +247,16 @@
     line-height: 110%;
     letter-spacing: -0.01em;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-transform: none;
+    }
 }
 
 .new-companies__bottom-wrapper {
@@ -144,6 +265,10 @@
     flex-direction: column;
     align-items: center;
     gap: 3.2rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .new-companies__bottom-text {
