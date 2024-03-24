@@ -1,5 +1,9 @@
 .new-main-intro {
     padding-top: 16.5rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 19rem;
+    }
 }
 
 .new-main-intro__content {
@@ -14,6 +18,12 @@
     align-items: center;
     position: relative;
     z-index: 2;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        display: contents;
+    }
 }
 
 .new-main-intro__heading {
@@ -22,11 +32,26 @@
     font-size: 6.8rem;
     line-height: 116%;
     padding-right: 1.5rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 116%;
+        text-align: center;
+        margin-bottom: 4rem;
+        order: -5;
+    }
 }
 
 .new-main-intro__text-content {
     padding-left: 3rem;
     position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
     &::before {
         content: '';
         top: 50%;
@@ -36,6 +61,10 @@
         position: absolute;
         left: 0;
         height: 15.2rem;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 }
 
@@ -46,6 +75,12 @@
     transform: translateX(-50%);
     margin-top: 7rem;
     isolation: isolate;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        order: -3;
+        margin-bottom: 5rem;
+    }
     .swiper {
         overflow: visible;
     }
@@ -55,6 +90,10 @@
         flex-direction: column;
         height: auto;
         width: 40rem;
+
+        @include breakpoint(mobile) {
+            width: 18rem;
+        }
     }
 
     &::before {
@@ -71,6 +110,11 @@
         background-image: url('../img/new-intro/ellipse.svg');
         margin-top: 1rem;
         pointer-events: none;
+
+        @include breakpoint(mobile) {
+            width: 37.4rem;
+            height: 4.1rem;
+        }
     }
 }
 
@@ -84,6 +128,13 @@
     max-width: none;
     z-index: -1;
     pointer-events: none;
+
+    @include breakpoint(mobile) {
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: auto;
+    }
 }
 
 .new-main-intro__scroll-down {
@@ -98,6 +149,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .new-main-intro__slider-card {
@@ -164,12 +219,26 @@
     font-size: 1.6rem;
     line-height: 120%;
     margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-bottom: 5rem;
+        text-align: center;
+    }
 }
 
 .new-main-intro__wrapper {
     display: flex;
     align-items: center;
     gap: 1.3rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        gap: 2.6rem;
+    }
 }
 
 .new-main-intro__link {
@@ -195,12 +264,29 @@
             box-shadow: 0px 0px 3.61801px #ff5129, 0px 0px 21.7081px #ff5129;
         }
     }
+
+    @include breakpoint(mobile) {
+        padding: 1rem 5.5rem;
+        text-align: center;
+        align-self: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        background: #fc3f1d;
+        border-radius: 51rem;
+        line-height: 110%;
+        order: -1;
+    }
 }
 
 .new-main-intro__social-list {
     display: flex;
     align-items: center;
     gap: 1.2rem;
+
+    @include breakpoint(mobile) {
+        gap: 1rem;
+    }
 }
 
 .new-main-intro__social-list-item {
@@ -212,6 +298,11 @@
     height: 3.6rem;
     display: block;
     transition: filter 0.2s;
+
+    @include breakpoint(mobile) {
+        width: 3rem;
+        height: 3rem;
+    }
 
     @media (hover: hover) {
         &:hover {

@@ -40,6 +40,10 @@
     flex-direction: column;
     position: relative;
     isolation: isolate;
+
+    @include breakpoint(mobile) {
+        z-index: 10;
+    }
 }
 
 .new-main-red-tag__text-content {
@@ -64,6 +68,8 @@
         font-size: 3.2rem;
         line-height: 110%;
         margin-bottom: 3.5rem;
+        position: relative;
+        z-index: 10;
     }
 }
 

@@ -299,11 +299,17 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 1,
             loop: true,
             speed: 600,
-            spaceBetween: 170,
-            centeredSlides: true,
+            spaceBetween: 30,
+            centeredSlides: false,
             navigation: {
                 prevEl: block.querySelector('.leaders__slider-arrow--prev'),
                 nextEl: block.querySelector('.leaders__slider-arrow--next')
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 170,
+                    centeredSlides: true
+                }
             },
             on: {
                 init: swiper => {
@@ -382,11 +388,20 @@ document.addEventListener('DOMContentLoaded', () => {
         new Swiper(container, {
             modules: [b],
             centeredSlides: true,
-            slidesPerView: 'auto',
+            slidesPerView: 2,
+            slidesPerGroup: 2,
             effect: 'panorama',
-            spaceBetween: 20,
-            panoramaEffect: { depth: 150, rotate: 25 },
-            loop: true
+            spaceBetween: 5,
+            panoramaEffect: { depth: 250, rotate: 45 },
+            loop: true,
+            breakpoints: {
+                641: {
+                    slidesPerView: 'auto',
+                    panoramaEffect: { depth: 150, rotate: 25 },
+                    centeredSlides: true,
+                    spaceBetween: 20
+                }
+            }
         });
     });
 });
