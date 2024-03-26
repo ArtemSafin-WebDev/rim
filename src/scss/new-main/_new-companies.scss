@@ -178,7 +178,9 @@
 }
 
 .new-companies__card-logo {
+    display: none;
     @include breakpoint(mobile) {
+        display: block;
         align-self: center;
         flex-shrink: 0;
         height: 2.8rem;
