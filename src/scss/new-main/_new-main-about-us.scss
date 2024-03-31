@@ -114,6 +114,7 @@
     grid-gap: 4.2rem;
     filter: blur(6.5px);
     transition: filter 0.5s;
+    flex-grow: 1;
 
     .swiper-slide-active & {
         filter: blur(0);

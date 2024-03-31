@@ -388,8 +388,8 @@ document.addEventListener('DOMContentLoaded', () => {
         new Swiper(container, {
             modules: [b],
             centeredSlides: true,
-            slidesPerView: 2,
-            slidesPerGroup: 2,
+            slidesPerView: 'auto',
+            slidesPerGroup: 1,
             effect: 'panorama',
             spaceBetween: 5,
             panoramaEffect: { depth: 250, rotate: 45 },
