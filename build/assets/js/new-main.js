@@ -305,6 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 prevEl: block.querySelector('.leaders__slider-arrow--prev'),
                 nextEl: block.querySelector('.leaders__slider-arrow--next')
             },
+            autoheight: window.matchMedia('(max-width: 640px)').matches ? true : false,
             breakpoints: {
                 641: {
                     spaceBetween: 170,
