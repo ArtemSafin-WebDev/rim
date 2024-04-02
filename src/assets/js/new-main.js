@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     delay: 0,
                     disableOnInteraction: true
                 },
-                speed: 6500,
+                speed: 8000,
                 allowTouchMove: false
             };
         }
