@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         slides.forEach(slide => wrapper.append(slide.cloneNode(true)));
 
-        new Swiper(container, {
+        let options = {
             modules: [b],
             centeredSlides: true,
             slidesPerView: 'auto',
@@ -398,11 +398,60 @@ document.addEventListener('DOMContentLoaded', () => {
             breakpoints: {
                 641: {
                     slidesPerView: 'auto',
-                    panoramaEffect: { depth: 150, rotate: 25 },
+                    panoramaEffect: { depth: 250, rotate: 20 },
                     centeredSlides: true,
                     spaceBetween: 20
                 }
             }
+        };
+
+        if (!window.matchMedia('(max-width: 640px)').matches) {
+            options = {
+                ...options,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: true
+                },
+                speed: 6500,
+                allowTouchMove: false
+            };
+        }
+
+        new Swiper(container, options);
+    });
+
+    const tickers = Array.from(document.querySelectorAll('.js-ticker'));
+
+    tickers.forEach(element => {
+        const mainTrack = element.querySelector('.js-ticker-track');
+        const innerTrack = element.querySelector('.js-ticker-inner-track');
+        if (!innerTrack || !mainTrack) return;
+        const items = Array.from(innerTrack.children);
+        const REPEAT_COUNT = 4;
+
+        for (let i = 0; i < REPEAT_COUNT; i++) {
+            items.forEach(item => {
+                innerTrack.appendChild(item.cloneNode(true));
+            });
+        }
+
+        mainTrack.appendChild(innerTrack.cloneNode(true));
+        mainTrack.appendChild(innerTrack.cloneNode(true));
+
+        const innerTracks = Array.from(document.querySelectorAll('.js-ticker-inner-track'));
+
+        function setTickerAnimation(item, reverse = false) {
+            gsap.to(item, {
+                ease: 'none',
+                xPercent: reverse ? 100 : -100,
+                duration: 300,
+                repeat: -1
+            });
+        }
+
+        innerTracks.forEach(innerTrack => {
+            const even = innerTrack.closest('.exclusive__list-item:nth-child(even)');
+            setTickerAnimation(innerTrack, !!even);
         });
     });
 });

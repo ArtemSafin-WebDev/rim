@@ -129,6 +129,7 @@
     z-index: 1;
     border-radius: 2rem;
     overflow: hidden;
+    flex-grow: 1;
     &::after {
         content: '';
         position: absolute;

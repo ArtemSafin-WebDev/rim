@@ -85,11 +85,17 @@
         overflow: visible;
     }
 
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+
     .swiper-slide {
         display: flex;
         flex-direction: column;
         height: auto;
         width: 55rem;
+
+        transition-timing-function: linear !important;
 
         @media (max-width: 1600px) {
             width: 40rem;
