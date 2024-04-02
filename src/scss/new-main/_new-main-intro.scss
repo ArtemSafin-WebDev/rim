@@ -86,7 +86,9 @@
     }
 
     .swiper-wrapper {
-        transition-timing-function: linear !important;
+        @include breakpointMF(small-tablet) {
+            transition-timing-function: linear !important;
+        }
     }
 
     .swiper-slide {
@@ -95,7 +97,9 @@
         height: auto;
         width: 55rem;
 
-        transition-timing-function: linear !important;
+        @include breakpointMF(small-tablet) {
+            transition-timing-function: linear !important;
+        }
 
         @media (max-width: 1600px) {
             width: 40rem;
