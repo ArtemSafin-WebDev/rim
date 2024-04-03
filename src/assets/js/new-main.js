@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerGroup: 1,
             effect: 'panorama',
             spaceBetween: 5,
-            panoramaEffect: { depth: 250, rotate: 45 },
+            panoramaEffect: { depth: 250, rotate: 30 },
             loop: true,
             breakpoints: {
                 641: {
@@ -402,20 +402,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     centeredSlides: true,
                     spaceBetween: 20
                 }
-            }
+            },
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: true
+            },
+            speed: 8000,
+            allowTouchMove: false
         };
 
-        if (!window.matchMedia('(max-width: 640px)').matches) {
+        /*if (!window.matchMedia('(max-width: 640px)').matches) {
             options = {
                 ...options,
-                autoplay: {
-                    delay: 0,
-                    disableOnInteraction: true
-                },
-                speed: 8000,
-                allowTouchMove: false
+
             };
-        }
+        }*/
 
         new Swiper(container, options);
     });
