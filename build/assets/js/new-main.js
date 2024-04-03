@@ -393,12 +393,11 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerGroup: 1,
             effect: 'panorama',
             spaceBetween: 5,
-            panoramaEffect: { depth: 250, rotate: 30 },
+            panoramaEffect: { depth: 250, rotate: 20 },
             loop: true,
             breakpoints: {
                 641: {
                     slidesPerView: 'auto',
-                    panoramaEffect: { depth: 250, rotate: 20 },
                     centeredSlides: true,
                     spaceBetween: 20
                 }
