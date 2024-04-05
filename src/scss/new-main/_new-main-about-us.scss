@@ -53,7 +53,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) translateZ(0);
         z-index: -1;
         pointer-events: none;
         height: 30.5rem;
@@ -114,6 +114,7 @@
     grid-gap: 4.2rem;
     filter: blur(6.5px);
     transition: filter 0.5s;
+    transform: translateZ(0);
     flex-grow: 1;
 
     .swiper-slide-active & {
@@ -137,7 +138,7 @@
         inset: -1px;
         z-index: -2;
         background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(15px);
+        /*backdrop-filter: blur(15px);*/
     }
 
     &::before {
@@ -281,7 +282,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) translateZ(0);
         width: 88.7rem;
         height: 30.5rem;
         background: rgba(31, 73, 196, 0.68);

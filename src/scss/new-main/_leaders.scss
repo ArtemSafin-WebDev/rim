@@ -71,6 +71,7 @@
     overflow: hidden;
     flex-grow: 1;
     filter: blur(6.5px);
+    transform: translateZ(0);
     transition: filter 0.5s;
 
     @include breakpoint(mobile) {
