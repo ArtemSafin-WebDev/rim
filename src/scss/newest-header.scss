@@ -73,6 +73,14 @@ body.menu-open {
         backdrop-filter: blur(50px);
     }
 
+    .new-header--dark & {
+        &::before {
+            background: rgba(8, 18, 44, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(50px);
+        }
+    }
+
     @media (max-width: 1400px) {
         gap: calc(20px * var(--scale-factor, 1));
     }
@@ -143,6 +151,12 @@ body.menu-open {
             opacity: 1;
             visibility: inherit;
             transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .new-header--dark & {
+            background: rgba(8, 18, 44, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
         }
     }
 }
@@ -274,10 +288,21 @@ body.menu-open {
 .new-header__dropdown-inner {
     padding: calc(25px * var(--scale-factor, 1)) calc(30px * var(--scale-factor, 1));
     border-radius: calc(10px * var(--scale-factor, 1));
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(50px);
     color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: 901px) {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 901px) {
+        .new-header--dark & {
+            background: rgba(8, 18, 44, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(50px);
+        }
+    }
 
     @media (max-width: 900px) {
         all: unset;
@@ -543,6 +568,10 @@ body.menu-open {
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0px 0px calc(20px * var(--scale-factor, 1)) rgba(255, 255, 255, 0.15);
     // filter: drop-shadow() drop-shadow(0px 0px 6.8px rgba(255, 255, 255, 0.5));
+
+    .new-header--dark & {
+        border-color: white;
+    }
 
     &:link,
     &:visited {
