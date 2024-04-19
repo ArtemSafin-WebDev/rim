@@ -1,0 +1,434 @@
+.clients {
+}
+
+.clients__content {
+    position: relative;
+    padding-top: 8.7rem;
+    padding-bottom: 18rem;
+
+    @include breakpoint(tablet) {
+        padding-top: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 2.3rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.clients__communication-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2.2rem;
+    margin-bottom: 14rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        margin-bottom: 6.5rem;
+        grid-gap: 2rem;
+    }
+}
+
+.clients__communication-list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.clients__communication-card {
+    display: flex;
+    flex-direction: column;
+
+    picture {
+        align-self: center;
+    }
+}
+
+.clients__communication-card-image {
+    align-self: center;
+    height: 30rem;
+    width: auto;
+    object-fit: contain;
+    object-position: center bottom;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.clients__communication-card-title {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.7rem;
+        text-align: center;
+    }
+}
+
+.clients__communication-card-text {
+    font-size: 2rem;
+    line-height: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        text-align: center;
+    }
+}
+
+.clients__reviews {
+}
+
+.clients__reviews-slider {
+    position: relative;
+
+    .clients__our-clients-block-slider-arrow {
+        transform: none;
+        top: 30rem;
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+    .swiper-container {
+        // overflow: visible;
+        margin: 0;
+        width: auto;
+        padding: 7rem 2rem;
+        margin: -7rem -2rem;
+        @include breakpoint(mobile) {
+            margin: 0;
+            padding: 0;
+            overflow: visible;
+        }
+    }
+}
+
+.clients__reviews-slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+        justify-content: flex-start;
+    }
+
+    .swiper-pagination-bullet {
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        border: 2px solid #dadada;
+        margin: 0 1.8rem;
+        transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+        outline: none;
+        background: transparent;
+        opacity: 1;
+        flex-shrink: 0;
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1rem;
+            margin: 0 0.9rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #5229a1;
+        border-color: #5229a1;
+        transform: scale(1.3);
+
+        @include breakpoint(mobile) {
+            transform: scale(1);
+        }
+    }
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
+}
+
+.clients__reviews-list {
+    // @include breakpointMF(small-tablet) {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, minmax(0, 1fr));
+    //     grid-gap: 6rem;
+    // }
+}
+
+.clients__reviews-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.clients__reviews-heading {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 6.1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+}
+
+.clients__reviews-quote {
+    padding: 3.2rem;
+    padding-bottom: 4.5rem;
+    background: #f3faff;
+    border-radius: 1.7rem 1.7rem 1.7rem 0px;
+    margin-bottom: 5rem;
+    position: relative;
+    font-size: 2rem;
+    line-height: 2.7rem;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 2rem;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        margin-bottom: 4rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4.2rem 4.2rem 0 0;
+        border-color: #f3faff transparent transparent transparent;
+
+        @include breakpoint(mobile) {
+            border-width: 3.5rem 3.5rem 0 0;
+        }
+    }
+}
+
+.clients__reviews-author {
+    display: flex;
+    align-items: center;
+}
+
+.clients__reviews-author-photo-container {
+    width: 12.2rem;
+    height: 12.2rem;
+    flex-shrink: 0;
+    margin-right: 5rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        width: 7.2rem;
+        height: 7.2rem;
+        margin-right: 2rem;
+    }
+}
+
+.clients__reviews-blurred-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #f3faff;
+    background-image: var(--photo-url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    opacity: 0.8;
+    filter: blur(1.5rem);
+
+    @include breakpoint(mobile) {
+        margin-top: 1.2rem;
+        margin-left: 0.6rem;
+    }
+}
+
+.clients__reviews-author-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.clients__reviews-author-content {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.clients__reviews-author-name {
+    font-size: 2.2rem;
+    line-height: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+}
+
+.clients__reviews-author-role {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #b9b9b9;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
+
+.clients__our-clients {
+    margin-bottom: 15rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 6.5rem;
+    }
+}
+
+.clients__our-clients-heading {
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 6.1rem;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 3rem;
+        margin-bottom: 2.6rem;
+    }
+}
+
+.clients__our-clients-block {
+    margin-bottom: 9rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.clients__our-clients-block-heading {
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 400;
+    margin-bottom: 5.5rem;
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 2.7rem;
+        margin-bottom: 1.7rem;
+        text-align: center;
+    }
+}
+
+.clients__our-clients-block-slider {
+    position: relative;
+
+    @include breakpoint(tablet) {
+        padding: 0 8rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0 4rem;
+    }
+}
+
+.clients__our-clients-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.clients__our-clients-card-image {
+    height: 6.2rem;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+
+    @include breakpoint(mobile) {
+        height: 5rem;
+    }
+}
+
+.clients__our-clients-block-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+
+    @include breakpoint(tablet) {
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+    }
+    &--prev {
+        right: 100%;
+        margin-right: 3rem;
+
+        @include breakpoint(tablet) {
+            left: 0;
+            right: auto;
+            margin: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-right: 0;
+        }
+    }
+
+    &--next {
+        left: 100%;
+        margin-left: 3rem;
+
+        @include breakpoint(tablet) {
+            left: auto;
+            right: 0;
+            margin: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-left: 0;
+        }
+    }
+
+    svg {
+        width: 1rem;
+        height: 1.6rem;
+        fill: #b9b9b9;
+        display: block;
+        transition: fill 0.2s;
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        svg {
+            fill: var(--text-color);
+        }
+    }
+}

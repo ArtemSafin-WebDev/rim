@@ -1,0 +1,33 @@
+.redtag-line {
+  margin-top: 20rem;
+  height: fit-content;
+  position: relative;
+  z-index: 2;
+
+  @include breakpoint(mobile) {
+    margin-top: 0;
+    z-index: 0;
+    top: -25vw;
+  }
+
+  &__tape {
+    display: inline-block;
+    white-space: nowrap;
+    column-gap: 3rem;
+    transform: rotate(-5deg);
+
+    img {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+      padding: 0 1rem;
+
+      @include breakpoint(tablet) {
+        width: 100%;
+        height: auto;
+        max-width: 22.8rem;
+      }
+    }
+  }
+}

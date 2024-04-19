@@ -1,0 +1,313 @@
+.redtag-modal {
+  width: 100%;
+  max-width: 45rem;
+  padding: 4.8rem 3.2rem;
+  border-radius: 2rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 69.8rem;
+
+  @include breakpoint(large-desktop) {
+    padding: 3.6rem 2.4rem;
+  }
+
+  @include breakpoint(mobile) {
+    width: calc(100% - 2rem);
+    padding: 3rem 1.8rem;
+    min-height: 64.5rem;
+  }
+
+  &__upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @include breakpoint(mobile) {
+      width: 15rem;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__close {
+    transition: .4s ease opacity;
+    &:hover {
+      opacity: .6;
+    }
+    svg {
+      width: 3.2rem;
+      height: 3.2rem;
+
+      @include breakpoint(large-desktop) {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+    }
+  }
+
+  label {
+    position: relative;
+  }
+
+  .parsley-errors-list {
+    color: #C20A26;
+    position: absolute;
+    bottom: 0;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 4rem;
+    row-gap: 1rem;
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__form > label > .parsley-errors-list {
+    row-gap: 0
+  }
+
+  &__title {
+    color: #010101;
+    text-align: center;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 105%;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 2.8rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #EDEDED;
+
+    color: black;
+    text-align: center;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+
+    @include breakpoint(large-desktop) {
+      padding: 1.8rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+    }
+
+    &::placeholder {
+      color: #999;
+      text-align: center;
+      @include breakpoint(mobile) {
+        font-size: 1.4rem;
+      }
+    }
+    margin-bottom: 1.2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__checkbox-wrapper {
+    position: relative;
+  }
+  &__checkbox-wrapper > .parsley-errors-list {
+    bottom: -2rem;
+  }
+  &__checkbox-wrapper > .parsley-errors-list:last-child {
+    bottom: -2rem;
+  }
+
+  &__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    color: #999;
+    text-align: justify;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 14.3px */
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    &:first-child {
+      margin-top: 1.2rem;
+    }
+
+    @include breakpoint(large-desktop) {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1rem;
+    }
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.4rem;
+    width: 2.4rem;
+    background-color: #EDEDED;
+    border-radius: .2rem;
+
+    @include breakpoint(large-desktop) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__checkbox input:checked ~ &__checkmark {
+    background-color: #F20D30;
+  }
+
+  &__checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  &__checkbox input:checked ~ &__checkmark::after {
+    display: block;
+  }
+
+  &__checkbox &__checkmark::after {
+    left: .75rem;
+    top: .35rem;
+    width: .9rem;
+    height: 1.4rem;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    @include breakpoint(large-desktop) {
+      width: .7rem;
+      left: .65rem;
+      top: .25rem;
+      border-width: 0 2px 2px 0;
+      height: 1.2rem;
+    }
+  }
+
+  &__checkbox-link {
+    text-decoration: underline;
+  }
+
+  &__checkbox-link:hover {
+    color: black;
+  }
+
+  &__button {
+    margin: 0 auto;
+    width: 30.6rem;
+    height: 7.2rem;
+    border-radius: 16.5rem;
+    background: #C20A26;
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.686px;
+    text-transform: uppercase;
+
+    @include breakpoint(large-desktop) {
+      width: 25rem;
+      height: 6.2rem;
+      margin-top: 2.5rem;
+    }
+
+    @include breakpoint(laptop) {
+      width: 20rem;
+      height: 5.6rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__title-content {
+    color: #C20A26;
+    text-align: center;
+    font-family: "Mont", sans-serif;
+    font-size: 5.7rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 105%;
+  }
+
+  &__text-content {
+    color: #010101;
+    text-align: center;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 105%;
+    width: 100%;
+    max-width: 32.6rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.js-close-modal {
+}
+
+.icon-cross {
+}
+
+.js-phone-input {
+}

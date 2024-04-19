@@ -1,0 +1,247 @@
+.about {
+  padding-top: 15rem;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    padding-top: 10rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 7.5rem;
+  }
+
+  .drive-map {
+    top: -17rem;
+    opacity: 0.0375;
+    z-index: -3;
+  }
+
+  &__video {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -3;
+    width: 41.5%;
+    max-width: 100rem;
+    object-fit: cover;
+    height: auto;
+    max-height: 80rem;
+
+    @include breakpoint(large-desktop) {
+      width: 60%;
+      opacity: .7;
+    }
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__shape {
+    width: 135rem;
+    height: 135rem;
+    position: absolute;
+    top: -72rem;
+    left: -72rem;
+    z-index: -3;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(tablet) {
+      font-size: 3.4rem;
+      margin-bottom: 2.2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 3.8rem
+    }
+  }
+
+  &__text {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    width: 100%;
+    max-width: 45rem;
+
+    margin-bottom: 8.4rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.8rem;
+      margin-bottom: 6.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4.6rem;
+      font-size: 1.6rem;
+      max-width: 30.8rem;
+    }
+  }
+
+  &__statistics {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50rem;
+    div {
+      display: flex;
+      gap: 3rem;
+      @include breakpoint(tablet) {
+        gap: 1.4rem;
+      }
+    }
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.4rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 10rem;
+    padding: 0 2rem;
+
+    border-radius: 2rem;
+    border: .1rem solid #7a689d;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(15px);
+
+    @include breakpoint(tablet) {
+      padding: 0 1.5rem;
+      height: 8.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 7.7rem;
+      padding: 0 1.25rem;
+    }
+
+    &--small {
+      flex-basis: 90%;
+    }
+
+    &--medium {
+      grid-column: span 7;
+    }
+
+    &--large {
+      flex-basis: 140%;
+    }
+
+    &--medium-large {
+      flex-basis: 110%;
+    }
+
+    &--medium-small {
+      grid-column: span 5;
+    }
+  }
+
+  &__info-title {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__info-text {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__info-title--small {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+      font-size: 2.6rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__icon-img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+    z-index: -1;
+    animation: hoverEffect 6s linear infinite;
+
+    @include breakpoint(tablet) {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      transform: rotate(-90deg);
+      width: 100%;
+      max-width: 34.8rem;
+      bottom: 15rem;
+      right: -10rem
+    }
+  }
+}
+
+@keyframes hoverEffect {
+  0% {
+    opacity: .75;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .75;
+  }
+}

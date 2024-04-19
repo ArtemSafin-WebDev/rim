@@ -1,0 +1,143 @@
+.work-with-us {
+    background: linear-gradient(345.78deg, #ff5129 4.67%, #5229a1 70.99%);
+    color: white;
+}
+
+.work-with-us__content {
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.work-with-us__bluerred-tube {
+    width: 31rem;
+    height: auto;
+    right: 100%;
+    margin-right: 17rem;
+    margin-top: 40rem;
+    position: absolute;
+    z-index: 20;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.work-with-us__heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 6.1rem;
+    margin-bottom: 8.5rem;
+
+    @include breakpoint(mobile) {
+        text-align: left;
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 3rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+.work-with-us__list {
+    max-width: 100rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.work-with-us__list-item {
+    @include breakpointMF(small-tablet) {
+        &:not(:first-child) {
+            margin-top: -7rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.work-with-us__card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        column-gap: initial;
+        position: relative;
+    }
+
+    picture,
+    img {
+        justify-self: center;
+    }
+}
+
+.work-with-us__card-number {
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 6.1rem;
+    margin-bottom: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 4.5rem;
+        line-height: 6.1rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.work-with-us__card-content {
+    padding-top: 2rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+    }
+
+    &--centered {
+        align-self: center;
+    }
+}
+
+.work-with-us__card-description {
+    font-size: 2.4rem;
+    line-height: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+}
+
+.work-with-us__card-image {
+    max-width: 100%;
+    object-position: center;
+    object-fit: contain;
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        top: 0;
+        left: 7rem;
+        height: 9rem;
+        width: auto;
+        margin-top: -.8rem;
+    }
+
+    &--offset-left {
+        @include breakpointMF(laptop) {
+            margin-left: -7rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-left: -2rem;
+        }
+    }
+}

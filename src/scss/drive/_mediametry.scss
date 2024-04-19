@@ -1,0 +1,349 @@
+.mediametry {
+  padding-top: 22.5rem;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 8.1rem;
+    padding-bottom: 0;
+  }
+
+  &__shape {
+    position: absolute;
+    width: 100rem;
+    height: 150rem;
+    z-index: -2;
+    left: -30rem;
+    @include breakpoint(mobile) {
+      left: -60rem;
+    }
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+      font-size: 3.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.5rem;
+    }
+  }
+  &__tabs {
+    display: flex;
+    align-items: center;
+    column-gap: 6rem;
+    margin-bottom: 6.1rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      row-gap: 1rem;
+      align-items: flex-start;
+    }
+
+    @include breakpoint(mobile) {
+      row-gap: .5rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__button {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      border-radius: 2rem;
+      background: white;
+      top: 4rem;
+      left: 0;
+      height: .2rem;
+      transition: transform .3s ease-in-out;
+      transform-origin: right;
+      transform: scaleX(0);
+
+      @include breakpoint(tablet) {
+        top: 3.5rem;
+      }
+      @include breakpoint(mobile) {
+        top: 2rem;
+      }
+    }
+
+    &:nth-child(2) {
+      &::after {
+        background: #8f62e4;
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        background: #ff5129;
+      }
+    }
+
+    &--active {
+      &::after {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__info-content {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 7.7rem;
+    position: absolute;
+
+    &:nth-child(3) > .mediametry__statistics > .mediametry__column > .mediametry__statistics-title {
+      color: #8F62E4;
+    }
+    &:nth-child(4) > .mediametry__statistics > .mediametry__column > .mediametry__statistics-title {
+      color: #FF5129;
+    }
+
+    &:nth-child(3) > .mediametry__statistics > .mediametry__column {
+      &::before {
+        background-color: #8F62E4;
+      }
+    }
+    &:nth-child(4) > .mediametry__statistics > .mediametry__column {
+      &::before {
+        background-color: #FF5129;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      column-gap: 4.9rem;
+    }
+    @include breakpoint(mobile) {
+      column-gap: 2rem;
+    }
+  }
+
+  &__left-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+
+    @include breakpoint(tablet) {
+      row-gap: 1.7rem;
+    }
+
+    li {
+      color: #FFF;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+
+      @include breakpoint(tablet) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__statistics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 6.2rem;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      column-gap: 4.2rem;
+    }
+    @include breakpoint(mobile) {
+      column-gap: 2rem;
+    }
+  }
+
+  &__column {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      row-gap: 1.7rem;
+    }
+
+
+    li {
+      height: 2.5rem;
+      @include breakpoint(tablet) {
+        height: 1.8rem;
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 150%;
+      left: 0;
+      height: .2rem;
+      background-color: white;
+      top: 3.5rem;
+
+      @include breakpoint(tablet) {
+        top: 2.8rem;
+      }
+      @include breakpoint(mobile) {
+        top: 2.4rem;
+        height: .1rem;
+      }
+    }
+    &:last-child::before {
+      width: 100%;
+    }
+  }
+
+  &__statistics-title {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__statistics-info {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    @include breakpoint(tablet) {
+      font-size: 1.8rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__bottom {
+  }
+
+  &__bottom-button {
+    display: flex;
+    width: 35rem;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 709.057px;
+    background: #FC3F1D;
+
+    color: #FFF !important;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    margin-bottom: 2.5rem;
+    transition: .4s ease box-shadow;
+
+    &:hover {
+      box-shadow: 0 0 35px 12px #ff5129;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 25rem;
+      height: 5.5rem;
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin: 0 auto 1.3rem;
+    }
+  }
+
+  &__text {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    width: 100%;
+    max-width: 38rem;
+
+    @include breakpoint(mobile) {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__icon-taxi {
+    width: 65%;
+    max-width: 120rem;
+    height: auto;
+    object-fit: cover;
+    right: 0;
+    bottom: -15rem;
+    position: absolute;
+    z-index: -1;
+    @include breakpoint(tablet) {
+      bottom: -7.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      position: relative;
+      bottom: 0;
+      width: 45rem;
+      height: 27rem;
+      right: 3.5rem;
+    }
+  }
+
+  .purple {
+    color: #8F62E4;
+  }
+
+  .orange {
+    color: #FF5129;
+  }
+}

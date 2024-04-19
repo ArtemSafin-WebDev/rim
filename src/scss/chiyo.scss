@@ -1,0 +1,21 @@
+@import 'vendor';
+@import 'fontface';
+@import 'mixins';
+@import 'global';
+@import 'layout';
+
+@import 'chiyo/intro';
+@import 'chiyo/about';
+@import 'chiyo/media';
+@import 'chiyo/ads';
+@import 'chiyo/map';
+@import 'chiyo/data';
+@import 'chiyo/terms';
+@import 'chiyo/contact';
+@import 'chiyo/order';
+
+.chiyo-main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10rem;
+}

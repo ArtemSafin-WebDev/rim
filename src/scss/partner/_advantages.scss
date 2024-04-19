@@ -1,0 +1,245 @@
+.advantages {
+  background-color: #000616;
+  position: relative;
+
+  .container {
+    position: relative;
+  }
+  &__content {
+    padding-top: 10rem;
+    position: relative;
+    z-index: 3;
+
+    @include breakpoint(tablet) {
+      padding-top: 5rem;
+    }
+  }
+
+  &__title {
+    color: white;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    @include breakpoint(large-desktop) {
+      font-size: 4.6rem;
+    }
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 110%;
+      width: 100%;
+      max-width: 35.8rem;
+      margin-bottom: .8rem;
+    }
+  }
+
+  &__text {
+    color: white;
+
+    font-family: "Uni Neue", sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 13rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      max-width: 35.7rem;
+      margin-bottom: 7.5rem;
+    }
+  }
+
+  &__slider {
+    counter-set: advantages-counter;
+    width: 100%;
+    .small-width {
+      width: 24.9rem;
+
+      @include breakpoint(tablet) {
+        width: 10.8rem;
+      }
+    }
+
+    .large-width{
+      width: 51.8rem;
+
+      @include breakpoint(tablet) {
+        width: 27rem;
+      }
+    }
+
+    .swiper-slide {
+      width: fit-content;
+      counter-increment: advantages-counter;
+      position: relative;
+    }
+  }
+
+  &__counter {
+    position: relative;
+    z-index: -1;
+  }
+
+  &__counter::before {
+    position: absolute;
+    display: block;
+    content: "0"counter(advantages-counter)"";
+    font-family: "Uni Neue", sans-serif;
+    font-size: 14.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90%;
+    letter-spacing: -5.76px;
+    z-index: -1;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -3.5rem;
+    color: #FF5129;
+
+
+    @include breakpoint(tablet) {
+      text-align: center;
+      font-size: 8.8rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 90%;
+      bottom: -2.5rem;
+      letter-spacing: 0;
+    }
+  }
+
+
+  &__slide {
+    width: fit-content;
+    padding: 4rem;
+    background-image: radial-gradient(circle at 100% 100%,transparent 13px,#d4b8fc 13px,#d4b8fc 14px,transparent 14px),linear-gradient(to right,#d4b8fc,#ece0fe),radial-gradient(circle at 0% 100%,transparent 13px,#ece0fe 13px,#ece0fe 14px,transparent 14px),linear-gradient(to bottom,#ece0fe,#d4b8fc),radial-gradient(circle at 0% 0%,transparent 13px,#d4b8fc 13px,#d4b8fc 14px,transparent 14px),linear-gradient(to left,#d4b8fc,#ece0fe),radial-gradient(circle at 100% 0%,transparent 13px,#ece0fe 13px,#ece0fe 14px,transparent 14px),linear-gradient(to top,#ece0fe,#d4b8fc);
+    background-size: 14px 14px,calc(100% - 28px) 1px,14px 14px,1px calc(100% - 28px);
+    background-position: top left,top center,top right,center right,bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    position: relative;
+    min-height: 14.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(tablet) {
+      padding: 1.2rem .8rem;
+      background: none;
+      border: .1rem solid #FCD1BDFF;
+      border-radius: 1rem;
+      min-height: 8.3rem;
+    }
+
+    p {
+      color: white;
+      text-align: center;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 130%;
+
+      @include breakpoint(tablet) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__shape--second {
+    position: absolute;
+    top: 0;
+    left: -25rem;
+    transform: rotate(-90deg);
+    z-index: 2;
+  }
+
+  &__shape--third {
+    position: absolute;
+    bottom: -35rem;
+    right: -25rem;
+    transform: rotate(90deg);
+    z-index: 2;
+  }
+
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-top: 3.2rem;
+
+    @include breakpoint(laptop) {
+      display: none;
+    }
+  }
+
+  &__navigation .swiper-button-disabled {
+    border: 0.15rem solid #fff;
+    pointer-events: none;
+    background-color: transparent;
+  }
+
+  &__navigation-button {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 4.8rem;
+    background-color: #ff5129;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    -webkit-transition: border .3s ease, background-color .3s ease;
+    transition: border .3s ease, background-color .3s ease, box-shadow .3s ease;
+
+    &:hover {
+      -webkit-box-shadow: 0 0 30px 0 #ff5129, 0 0 5px 0 #ff5129;
+      box-shadow: 0 0 30px 0 #ff5129, 0 0 5px 0 #ff5129;
+    }
+  }
+}
+
+.container {
+}
+
+.js-advantages-slider {
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}

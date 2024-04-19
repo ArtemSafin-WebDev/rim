@@ -1,0 +1,313 @@
+.redtag-meet {
+  padding: 10rem 0 20rem;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint(tablet) {
+    padding: 4.5rem 0 20rem;
+  }
+
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, .5fr) minmax(0, 1fr);
+    column-gap: 4.4rem;
+    z-index: 1;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(12, minmax(0, auto));
+    }
+  }
+
+  &__link-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+
+    svg {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__link {
+    color: #F20D30 !important;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.16px;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 6.9rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 3.2rem;
+
+    }
+  }
+
+  &__count-spec {
+    position: relative;
+    bottom: 2.5rem;
+  }
+
+  &__count-icon-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &__count-icon-shape {
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    background: #F20D30;
+    bottom: 0;
+    left: 0;
+
+    @include breakpoint(mobile) {
+      opacity: .7;
+      top: 0
+    }
+  }
+
+  &__count-icon-bg {
+    position: absolute;
+    left: -35rem;
+    z-index: 0;
+    opacity: .3;
+    width: 100%;
+    max-width: 32.3rem;
+    height: auto;
+    object-fit: cover;
+
+    @include breakpoint(tablet) {
+      max-width: 32rem;
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__count-icon-main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    object-fit: cover;
+    max-width: 32.3rem;
+    height: auto;
+
+    @include breakpoint(tablet) {
+      max-width: 32rem;
+      height: auto;
+      margin-top: 5.2rem;
+    }
+  }
+
+  &__count-text {
+    color:  #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+      margin-top: .5rem;
+    }
+  }
+
+  &__person {
+  }
+
+  &__person-info {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  &__person-portret {
+    width: 100%;
+    height: auto;
+    max-width: 20rem;
+
+    @include breakpoint(mobile) {
+      max-width: 10.9rem;
+    }
+  }
+
+  &__person-info-detail {
+
+  }
+
+  &__person-name {
+    color: #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__person-position {
+    color: #F20D30;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__person-about {
+    color:  #FFF;
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    width: 100%;
+    max-width: 43rem;
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      font-size: 1.1rem;
+      max-width: 23.3rem;
+      margin-top: .8rem;
+    }
+  }
+
+  &__person-skills {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    @include breakpoint(mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 1rem;
+      margin-top: 0;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__person-skill {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      column-gap: 2rem;
+      row-gap: 1rem;
+    }
+  }
+
+  &__person-skill-status {
+    display: flex;
+    align-items: center;
+    column-gap: .8rem;
+
+    @include breakpoint(mobile) {
+      column-gap: .4rem;
+    }
+
+    span {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      border: .2rem solid #F20D30;
+      border-radius: 50%;
+
+      @include breakpoint(mobile) {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
+    span.active {
+      background-color: #F20D30;;
+    }
+  }
+
+  &__person-skill-text {
+    color: var(--primary-white, #FFF);
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      max-width: 17.4rem;
+      font-size: 1.4rem;
+      line-height: 110%;
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    width: 100rem;
+    height: 100rem;
+    bottom: -40rem;
+    right: -40rem;
+    z-index: 0;
+
+    @include breakpoint(large-desktop) {
+      bottom: -50rem;
+      right: -50rem;
+    }
+
+    @include breakpoint(mobile) {
+      opacity: .65;
+      top: 12rem;
+    }
+
+    &--second {
+      bottom: -10rem;
+      left: -10rem;
+      width: 50rem;
+      height: 50rem;
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+  }
+}

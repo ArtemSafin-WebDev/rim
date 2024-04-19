@@ -1,0 +1,50 @@
+.redtag-map {
+  display: block;
+  width: 90%;
+  height: auto;
+  max-width: none;
+  object-fit: cover;
+
+  @include breakpoint(large-desktop) {
+    width: 83%;
+  }
+  @include breakpoint(mobile) {
+    display: none;
+  }
+
+  &__link {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .item-hover {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    transition: .4s ease filter;
+    &:hover {
+      filter: drop-shadow(0px 0px 4px rgba(242, 13, 48, 0.50)) drop-shadow(0px 0px 8px rgba(242, 13, 48, 0.50)) drop-shadow(0px 0px 16px rgba(242, 13, 48, 0.50)) drop-shadow(0px 0px 32px rgba(242, 13, 48, 0.50)) drop-shadow(0px 0px 64px rgba(242, 13, 48, 0.50)) drop-shadow(0px 0px 128px rgba(242, 13, 48, 0.50));
+    }
+    path {
+
+    }
+  }
+
+  &__mobile {
+    @include breakpoint(mobile) {
+      background-image: url("../img/redtag/geography/maps.png");
+      width: 35.8rem;
+      min-height: 17.5rem;
+      height: 100%;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-width: none;
+      margin: 0 auto;
+    }
+    @include breakpoint(supersmall-mobile) {
+    }
+  }
+}

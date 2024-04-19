@@ -1,0 +1,197 @@
+.about {
+  padding-top: 10rem;
+  position: relative;
+  z-index: 2;
+
+  &__title {
+    color: white;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    margin-bottom: 1rem;
+
+    @include breakpoint(large-desktop) {
+      font-size: 4.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 110%;
+      width: 100%;
+      max-width: 35.8rem;
+      margin-bottom: .8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-top: 40rem;
+    }
+  }
+
+  &__text {
+    color: white;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    width: 100%;
+    max-width: 89.1rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      max-width: 35.7rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__info-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    max-width: 71.4rem;
+
+    @include breakpoint(tablet) {
+      max-width: 35.7rem;
+      min-width: 33.7rem;
+
+      column-gap: .5rem;
+      row-gap: .5rem;
+    }
+  }
+
+  &__info {
+    padding: 1.2rem 3rem;
+    background-image: radial-gradient(circle at 100% 100%, transparent 13px, #d4b8fc 13px, #d4b8fc 14px, transparent 14px), linear-gradient(to right, #d4b8fc, #ece0fe), radial-gradient(circle at 0% 100%, transparent 13px, #ece0fe 13px, #ece0fe 14px, transparent 14px), linear-gradient(to bottom, #ece0fe, #d4b8fc), radial-gradient(circle at 0% 0%, transparent 13px, #d4b8fc 13px, #d4b8fc 14px, transparent 14px), linear-gradient(to left, #d4b8fc, #ece0fe), radial-gradient(circle at 100% 0%, transparent 13px, #ece0fe 13px, #ece0fe 14px, transparent 14px), linear-gradient(to top, #ece0fe, #d4b8fc);
+    background-size: 14px 14px, calc(100% - 28px) 1px, 14px 14px, 1px calc(100% - 28px);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1.25rem;
+    backdrop-filter: blur(10px);
+
+    @include breakpoint(tablet) {
+      padding: 2rem 1.2rem;
+      border-radius: 1.25rem;
+
+      &:nth-child(1) {
+        flex-basis: 47.5%;
+      }
+      &:nth-child(2) {
+        flex-basis: 47.5%;
+      }
+      &:nth-child(3) {
+        flex-basis: 32.5%;
+      }
+      &:nth-child(4) {
+        flex-basis: 62.5%;
+      }
+      &:nth-child(5) {
+        flex-basis: 47.5%;
+      }
+      &:nth-child(6) {
+        flex-basis: 47.5%;
+      }
+      &:nth-child(7) {
+        flex-basis: 97%;
+      }
+    }
+  }
+
+  &__info-title {
+    color: #FF5129;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 110%;
+    }
+  }
+
+  &__info-text {
+    color: white;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+
+    @include breakpoint(tablet) {
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+    }
+  }
+
+  &__map {
+    position: absolute;
+    top: -50rem;
+    object-fit: cover;
+    width: 100%;
+    z-index: -4;
+    transform: scale(.75);
+    right: -40rem;
+
+    @include breakpointMF(super-large) {
+      top: -100rem;
+      transform: scale(.65);
+      right: -45rem;
+    }
+
+    @include breakpoint(large-desktop) {
+      transform: scale(.75);
+      right: -25rem;
+      top: -30rem;
+    }
+
+    @include breakpoint(tablet) {
+      min-width: 140rem;
+      height: 75rem;
+      position: absolute;
+      top: -40rem;
+      left: -45rem;
+      right: auto;
+      z-index: -1;
+      transform: scale(.5);
+    }
+  }
+
+  &__presence-map {
+    width: 100%;
+    max-width: 355rem;
+    height: auto;
+    position: relative;
+    z-index: -5;
+  }
+
+  &__shape {
+    width: 100%;
+    max-width: 70rem;
+    height: 70rem;
+    position: absolute;
+    z-index: -1;
+    right: -10rem;
+    top: 0rem;
+    background: blue;
+    filter: blur(200rem);
+    border-radius: 50%;
+  }
+
+  &__map-mobile {
+
+  }
+}

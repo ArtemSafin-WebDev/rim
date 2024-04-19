@@ -1,0 +1,158 @@
+.modal {
+    background-color: rgba(black, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem var(--content-padding);
+    transition: opacity .4s, visibility 0s linear .4s;
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .4s, visibility .4s;
+
+    }
+}
+
+.modal__form-modal {
+    margin: auto;
+    color: var(--text-color);
+    background: #ffffff;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    padding: 4rem 8rem;
+    width: 100%;
+    max-width: 75.4rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 2rem 1.5rem;
+    }
+}
+
+.modal__form-modal-inner {
+    width: 100%;
+    max-width: 36.6rem;
+    margin: 0 auto;
+}
+
+.modal__form-modal-heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.2;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.modal__form-modal-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1rem;
+
+    .parsley-errors-list.filled {
+        color: var(--primary-color);
+        text-align: center;
+        font-size: 1.4rem;
+        margin-top: .3rem;
+    }
+}
+
+.modal__form-modal-input-row {
+}
+
+.modal__form-modal-input {
+    padding: 0 2rem;
+    border: 1px solid #dadada;
+    border-radius: 0.5rem;
+    height: 4.5rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    text-align: center;
+    transition: border-color .2s;
+    &.parsley-error {
+        border-color: var(--primary-color);
+    }
+    @include placeholder {
+        color: #c4c4c4;
+    }
+}
+
+textarea.modal__form-modal-input {
+    height: 7.8rem;
+    resize: none;
+    appearance: none;
+}
+
+.modal__form-modal-submit {
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: center;
+    text-transform: capitalize;
+    display: inline-flex;
+    align-self: center;
+    justify-self: center;
+    background: linear-gradient(180deg, #ff5129 0%, #ff9400 100%);
+    border-radius: 10rem;
+    padding: .7rem 2.4rem;
+    color: white;
+    margin-top: 1rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+
+.modal__close {
+    position: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 3rem;
+    top: 3rem;
+    border-radius: 50%;
+    background: #FAFAFA;
+    transition: background-color .2s;
+
+    @include breakpoint(mobile) {
+        position: static;
+        margin-left: auto;
+        margin-bottom: 2rem;
+    }
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: black;
+        transition: fill .2s;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+        svg {
+            fill: white;
+        }
+    }
+}

@@ -1,0 +1,165 @@
+.redtag-place {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-top: 10rem;
+
+  &__shape {
+    width: 70rem;
+    height: 70rem;
+    position: absolute;
+    bottom: -30rem;
+    left: -30rem;
+
+    @include breakpoint(laptop) {
+      bottom: -60rem;
+      left: -50rem;
+    }
+  }
+  &__rect {
+    position: absolute;
+    height: 0;
+    bottom: 0;
+  }
+
+  &__rect-one {
+    width: 102.5rem;
+    height: 53.2rem;
+    transform: rotate(-151deg);
+    background-color: #960C21;
+    position: relative;
+    bottom: 20rem;
+    left: -20rem;
+    z-index: 1;
+
+    @include breakpoint(large-desktop) {
+      width: 72.5rem;
+      height: 40.5rem;
+      left: -10rem;
+    }
+
+    @include breakpoint(laptop) {
+      width: 62.5rem;
+      height: 38.5rem;
+      bottom: 18rem;
+      left: -5rem;
+    }
+    @include breakpoint(mobile) {
+      width: 34rem;
+      height: 24rem;
+      bottom: 10rem;
+    }
+  }
+
+  &__rect-two {
+    width: 102.5rem;
+    height: 53.5rem;
+    transform: rotate(-20.04deg);
+    position: relative;
+    background-color: #F20D30;
+    bottom: 65rem;
+    right: -30rem;
+
+    @include breakpoint(large-desktop) {
+      width: 82.5rem;
+      height: 45.5rem;
+      right: -45rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 34rem;
+      height: 24rem;
+      right: -15rem;
+      bottom: 35rem;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 1.8rem 0;
+    column-gap: 1.5rem;
+    left: 0;
+    top: 60%;
+    transform: translateY(-50%);
+
+    background-color: white;
+
+    color: #C20A26;
+    font-family: "Mont", sans-serif;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+      font-size: 1.1rem;
+      padding: 0.95rem 0;
+      top: 80%;
+    }
+  }
+
+  &__billboards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__billboard-one {
+    object-fit: cover;
+    position: relative;
+    width: 54.2rem;
+    height: 52.5rem;
+    left: 5rem;
+    z-index: 1;
+    bottom: 0;
+
+    @include breakpoint(laptop) {
+      width: 44.2rem;
+      height: 42.5rem;
+      left: 15rem;
+    }
+    @include breakpoint(tablet) {
+        left: 5rem;
+    }
+    @include breakpoint(small-tablet) {
+      width: 40rem;
+      height: 35rem;
+    }
+    @include breakpoint(mobile) {
+      width: 19.3rem;
+      height: 18.6rem;
+      left: 0rem;
+    }
+  }
+
+  &__billboard-two {
+    position: relative;
+    object-fit: cover;
+    width: 54.2rem;
+    height: 52.5rem;
+    bottom: -6rem;
+    z-index: 2;
+
+    @include breakpoint(laptop) {
+      width: 44.2rem;
+      height: 42.5rem;
+      left: 10rem;
+    }
+    @include breakpoint(tablet) {
+      left: 0rem;
+    }
+    @include breakpoint(small-tablet) {
+      width: 35rem;
+      height: 30rem;
+      left: -5rem;
+    }
+    @include breakpoint(mobile) {
+      width: 19.3rem;
+      height: 18.6rem;
+      bottom: -3rem;
+      left: 0rem;
+    }
+  }
+}

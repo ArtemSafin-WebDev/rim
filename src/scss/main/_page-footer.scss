@@ -1,0 +1,138 @@
+.page-footer {
+    background: linear-gradient(139.2deg, #000000 1.7%, #5229a1 76.84%);
+    color: white;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 5.4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.page-footer__bottom-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 2rem;
+
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: initial;
+    }
+}
+
+.page-footer__col {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.page-footer__top-row {
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.page-footer__nav-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-row-gap: 0.1rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: .3rem;
+    }
+}
+
+.page-footer__nav-link {
+    font-size: 1.6rem;
+    line-height: 3rem;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}
+
+.page-footer__copyright {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        order: 5;
+    }
+}
+
+.page-footer__made-by {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #9a76e0;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        order: 6;
+    }
+    a {
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
+}
+
+.page-footer__social-list {
+    display: flex;
+    align-items: center;
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+        order: 7;
+        margin-top: 2rem;
+    }
+}
+
+.page-footer__social-list-item {
+    margin-right: 2rem;
+    flex-shrink: 0;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.page-footer__social-link {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        fill: white;
+    }
+}
+
+.page-footer__phone-link {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin-bottom: 4.5rem;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+    @include breakpoint(mobile) {
+        margin-top: 1.5rem;
+    }
+}

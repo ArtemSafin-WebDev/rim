@@ -1,0 +1,276 @@
+.branding {
+  width: 100%;
+  margin-top: 35rem;
+  padding-bottom: 25rem;
+  position: relative;
+
+  @include breakpoint(large-desktop) {
+    padding-bottom: 0;
+  }
+
+  @include breakpoint(tablet) {
+    margin-top: 15rem;
+    padding-bottom: 20rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 10rem;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__icon-rim {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -17.5rem;
+    bottom: 7.5rem;
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 70.9rem;
+
+    @include breakpoint(large-desktop) {
+      opacity: .25;
+    }
+  }
+
+  &__icon-drive {
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 60rem;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    @include breakpoint(large-desktop) {
+      opacity: .25;
+      right: -15rem;
+    }
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+
+    width: 100%;
+    max-width: 79rem;
+
+    margin-bottom: 1.7rem;
+
+    @include breakpoint(tablet) {
+      font-size: 3.4rem;
+      line-height: 100%;
+    }
+    @include breakpoint(mobile) {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    column-gap: 4rem;
+    width: 80%;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+
+    margin-bottom: 1.7rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 1.2rem;
+      column-gap: 0;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__tab-info {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    transition: .4s ease opacity;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &--active {
+      color: #FF5129;
+      text-decoration: underline;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 2.6rem;
+      text-align: start;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__tab {
+  }
+
+  &__text-info {
+    display: flex;
+    column-gap: 4rem;
+    row-gap: .5rem;
+    width: 100%;
+    flex-wrap: wrap;
+
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin-bottom: 2.5rem;
+    }
+
+    li {
+      color: #FFF;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+
+      @include breakpoint(mobile) {
+        list-style-type: disc;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    height: auto;
+
+    position: relative;
+
+    @include breakpoint(mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__slide {
+    transition:  ease transform 1s, ease opacity 1s ;
+    opacity: .4;
+    transform: scale(.8);
+    img {
+      border-radius: 2rem;
+    }
+  }
+
+  .swiper-slide-active >  &__slide {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &__slider-prev {
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+    background-color: white;
+
+    position: absolute;
+    left: -5rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: filter .4s ease, background-color .4s ease;
+    z-index: 1;
+
+    img {
+      width: 1rem;
+      height: auto;
+      object-fit: cover;
+      margin: auto
+    }
+
+    &:hover {
+      filter: drop-shadow(0px 0px 0.396px #FFF) drop-shadow(0px 0px 0.792px #FFF) drop-shadow(0px 0px 2.772px #FFF) drop-shadow(0px 0px 5.544px #FFF) drop-shadow(0px 0px 9.504px #FFF) drop-shadow(0px 0px 16.632px #FFF);
+    }
+
+    @include breakpoint(laptop) {
+      display: none;
+    }
+  }
+
+  &__slider-next {
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+
+    right: 2rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: filter .4s ease, background-color .4s ease;
+    z-index: 1;
+
+    img {
+      width: 1rem;
+      height: auto;
+      object-fit: cover;
+      margin: auto;
+    }
+
+    @include breakpoint(laptop) {
+      display: none;
+    }
+
+    &:hover {
+      filter: drop-shadow(0px 0px 0.396px #FFF) drop-shadow(0px 0px 0.792px #FFF) drop-shadow(0px 0px 2.772px #FFF) drop-shadow(0px 0px 5.544px #FFF) drop-shadow(0px 0px 9.504px #FFF) drop-shadow(0px 0px 16.632px #FFF);
+    }
+  }
+  .swiper-button-disabled {
+    cursor: default;
+    background: gray;
+    filter: none;
+  }
+
+  &__pagination {
+    display: none;
+    @include breakpoint(mobile) {
+      display: block;
+      width: fit-content !important;
+      margin-top: 1rem;
+    }
+
+    .swiper-pagination-bullet {
+      transition: .4s ease all;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 1);
+      opacity: 1;
+      height: .75rem;
+      width: .75rem;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background-color: white;
+      width: 7.5rem;
+      height: .75rem;
+      border-radius: 5rem;
+    }
+  }
+}

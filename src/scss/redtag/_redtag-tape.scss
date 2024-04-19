@@ -1,0 +1,17 @@
+.redtag-tape {
+  column-gap: 1.5rem;
+  padding: 1.8rem 0;
+  display: inline-block;
+  white-space: nowrap;
+
+  &__text {
+    color: #C20A26;
+    display: inline-block;
+    font-family: "Mont", sans-serif;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 110%;
+    padding: 0 .5rem;
+  }
+}

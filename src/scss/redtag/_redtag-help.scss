@@ -1,0 +1,90 @@
+.redtag-help {
+  background: rgb(255,23,59);
+  background: linear-gradient(90deg, rgba(255,23,59,1) 0%, rgba(187,2,30,1) 100%);
+  width: 100%;
+  padding: 5rem 0 20rem;
+  position: relative;
+  z-index: 0;
+  height: calc(100% + 1.9vw);
+  bottom: 1.9vw;
+
+  @include breakpoint(tablet) {
+    padding: 5rem 0 10rem;
+  }
+
+  &__content {
+  }
+
+  &__polygon {
+    position: absolute;
+    width: 100%;
+    height: 9.6vw;
+    top: -9.5vw;
+    clip-path: polygon(100% 50%, 0% 100%, 100% 100%);
+    background: #ff173b;
+    background: -webkit-gradient(linear,left top,right top,from(#ff173b),to(#bb021e));
+    background: linear-gradient(90deg,#ff173b 0%,#bb021e 100%);
+  }
+
+  &__upper {
+    margin-bottom: 8rem;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: 'DIN Pro', sans-serif;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+      max-width: 35.8rem;
+      font-size: 3.2rem;
+    }
+  }
+
+  &__text {
+    color: #FFF;
+    font-family: 'DIN Pro', sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    width: 100%;
+    max-width: 90rem;
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+      max-width: 35.8rem;
+    }
+  }
+
+  &__partners {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    row-gap: 5rem;
+    column-gap: 4.5rem;
+    justify-items: center;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 2rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+  }
+}

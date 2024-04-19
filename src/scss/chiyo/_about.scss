@@ -1,0 +1,211 @@
+.about {
+    position: relative;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__shape {
+        position: absolute;
+        width: 64.7rem;
+        height: 11rem;
+        left: 0;
+        right: 0;
+        top: 60%;
+        left: 15%;
+        transform: translateY(-20%);
+        z-index: -1;
+
+        filter: blur(125px);
+        background-color: rgb(31, 73, 196);
+    }
+
+    &__orange-shape {
+        position: absolute;
+        width: 16.7rem;
+        height: 35rem;
+        left: 80%;
+        top: 30%;
+        transform: translateY(-20%);
+        z-index: -1;
+
+        filter: blur(125px);
+        background-color: rgb(255, 81, 41);
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 6.9rem;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 5.2rem;
+        font-weight: 800;
+        line-height: 110%;
+        letter-spacing: 0%;
+        text-align: left;
+
+        margin-bottom: 5rem;
+
+        @include breakpoint(tablet) {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 110%;
+            letter-spacing: 0%;
+            text-align: center;
+
+            margin-bottom: 3.3rem;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: left;
+
+        width: 100%;
+        max-width: 48rem;
+        margin-bottom: 1.6rem;
+
+        @include breakpoint(tablet) {
+            color: rgb(255, 255, 255);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: left;
+
+            margin-bottom: 1.2rem;
+            max-width: 30rem;
+        }
+    }
+
+    &__description {
+        color: rgb(255, 81, 41);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 2.4rem;
+        font-weight: 800;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: left;
+
+        width: 100%;
+        max-width: 37.9rem;
+
+        @include breakpoint(tablet) {
+            font-size: 1.6rem;
+            font-weight: 800;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: left;
+            max-width: 30rem;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        max-width: 64.9rem;
+        column-gap: 7rem;
+        row-gap: 4.3rem;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+
+        @include breakpoint(tablet) {
+            max-width: 30rem;
+            column-gap: 5rem;
+            row-gap: 2.6rem;
+        }
+    }
+
+    &__list-title {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 9rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0%;
+        text-align: left;
+
+        margin-bottom: 1.5rem;
+
+        @include breakpoint(tablet) {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 116%;
+            letter-spacing: 0%;
+            text-align: left;
+
+            margin-bottom: 1rem;
+        }
+    }
+
+    .small-text {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 5.6rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0%;
+        text-align: left;
+
+        margin-bottom: 2rem;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 1rem;
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 116%;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
+
+    &__list-text {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0%;
+        text-align: left;
+
+        @include breakpoint(tablet) {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        width: fit-content;
+        height: 100%;
+        object-fit: cover;
+
+        @include breakpoint(tablet) {
+            width: 14.4rem;
+            height: 21.4rem;
+            position: absolute;
+            right: -4rem;
+            top: 8rem;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.advantages {
+  padding-top: 25rem;
+
+  @include breakpoint(tablet) {
+    padding-top: 15rem;
+  }
+
+  &__shape {
+    position: absolute;
+    width: 70rem;
+    height: 120rem;
+    right: 0;
+    z-index: -2;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+
+    @include breakpoint(tablet) {
+      font-size: 3.4rem;
+      line-height: 100%;
+    }
+    @include breakpoint(mobile) {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 70.9rem;
+
+    color: #FFF;
+    text-align: center;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    margin: 3.5rem auto 0;
+
+    @include breakpoint(tablet) {
+      font-size: 2.2rem;
+      margin-top: 2.5rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 5rem;
+    justify-content: center;
+    margin-top: 6rem;
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      justify-items: center;
+      margin-top: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 2rem;
+    }
+  }
+
+  &__info-title {
+    color: #FF5129;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%;
+    text-transform: lowercase;
+
+    @include breakpoint(tablet) {
+      font-size: 3rem;
+      margin-top: 2.5rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 3.4rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  &__info-text {
+    color: #FFF;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+
+    text-align: center;
+  }
+}

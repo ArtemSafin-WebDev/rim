@@ -1,0 +1,149 @@
+.how-much {
+    background: linear-gradient(149.32deg, #5229a1 11.71%, #ff5129 89.64%);
+    color: white;
+}
+
+.how-much__content {
+    padding-top: 7.2rem;
+    padding-bottom: 7.2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include breakpoint(tablet) {
+        padding: 7.5rem 0;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 3.5rem 0;
+    }
+}
+
+.how-much__text {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 4.1rem;
+    margin-bottom: 4rem;
+    max-width: 73rem;
+    position: relative;
+    z-index: 20;
+
+    @include breakpoint(tablet) {
+        max-width: 65rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        max-width: none;
+        margin-bottom: 3rem;
+    }
+}
+
+.how-much__link {
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 6rem;
+    position: relative;
+    border-radius: 10rem;
+    flex-shrink: 0;
+    background: #ff5129;
+    color: white;
+    align-self: center;
+    z-index: 1;
+    position: relative;
+    z-index: 20;
+
+    @include breakpoint(tablet) {
+        padding: 3rem 3.4rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.9rem 2rem;
+        padding-bottom: 2.2rem;
+        font-weight: 800;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        width: 100%;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+   
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        right: 0.5rem;
+        top: 0;
+        bottom: 1rem;
+        border-radius: 10rem;
+        z-index: -1;
+        background: linear-gradient(180deg, #ff5129 0%, #ff9400 100%);
+        transition: opacity 0.3s;
+        @include breakpoint(mobile) {
+            bottom: 0.7rem;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        right: 0.5rem;
+        top: 0;
+        bottom: 1rem;
+        border-radius: 10rem;
+        z-index: -1;
+        background: linear-gradient(to top, #FF5129 0%, #FF9400 100%);
+        transition: opacity 0.3s;
+        opacity: 0;
+        @include breakpoint(mobile) {
+            bottom: 0.7rem;
+        }
+    }
+
+    .no-touch &:hover {
+        // &::before {
+        //     opacity: 0;
+        // }
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    .touch &:active {
+        &::before,
+        &::after {
+            opacity: 0;
+        }
+    }
+}
+
+.how-much__guy {
+    position: absolute;
+    right: -10rem;
+    bottom: 0;
+    width: 57rem;
+    height: auto;
+    z-index: 5;
+    pointer-events: none;
+
+    @include breakpoint(tablet) {
+        right: -22rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}

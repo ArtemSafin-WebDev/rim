@@ -1,0 +1,26 @@
+@import 'vendor';
+@import 'fontface';
+@import 'mixins';
+@import 'global';
+@import 'layout';
+
+@import 'modal';
+/*@import 'new-header';*/
+
+@import "partner/footer";
+@import "partner/intro";
+@import "partner/about";
+@import "partner/info";
+@import "partner/tasks";
+@import "partner/advantages";
+@import "partner/result";
+@import "partner/partner";
+@import "partner/partnership";
+@import "partner/entry";
+@import "partner/feedback";
+@import "partner/team";
+
+
+body {
+  background-color: #000616;
+}

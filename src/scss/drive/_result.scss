@@ -1,0 +1,137 @@
+.result {
+  margin-top: 40.7rem;
+  position: relative;
+  z-index: 2;
+  background-color: rgb(78, 78, 79);
+
+  &__polugon--first {
+    position: absolute;
+    clip-path: polygon(100% 74%, 0% 100%, 100% 100%);
+    width: 100%;
+    height: 50rem;
+    top: -49.9rem;
+
+    background-color: rgb(78, 78, 79);
+
+    @include breakpoint(small-tablet) {
+      height: 30rem;
+      top: -29.9rem;
+    }
+  }
+
+  &__content {
+    padding: 5rem 0;
+  }
+
+  &__title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Uni Neue", sans-serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    width: 100%;
+    max-width: 112.2rem;
+
+    margin-bottom: 8rem;
+
+    @include breakpoint(small-tablet) {
+      font-size: 3.6rem;
+      max-width: 82rem;
+      margin: 0 auto 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 2.8rem;
+      text-align: left;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4.4rem;
+
+    @include breakpoint(laptop) {
+      align-items: flex-start;
+    }
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      row-gap: 2.8rem;
+      align-items: flex-start;
+    }
+  }
+
+  &__li {
+    @include breakpoint(small-tablet) {
+      &:first-child > p {
+        max-width: 15rem;
+      }
+    }
+    h3 {
+      color: #FF5129;
+      text-align: center;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 120%;
+
+      @include breakpoint(laptop) {
+        font-size: 4rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        line-height: 100%;
+        text-align: left;
+      }
+    }
+
+    p {
+      color: #FFF;
+      text-align: center;
+      font-family: "Uni Neue", sans-serif;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+
+      width: 100%;
+      max-width: 19.5rem;
+      margin: 0 auto;
+
+      @include breakpoint(laptop) {
+        font-size: 1.8rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        text-align: left;
+        margin: 0;
+      }
+    }
+  }
+
+  &__polugon--second {
+    position: absolute;
+    clip-path: polygon(0 74%, 100% 74%, 0 100%);
+    width: 100%;
+    height: 50rem;
+    bottom: -12.8rem;
+
+    background-color: rgb(78, 78, 79);
+
+    @include breakpoint(small-tablet) {
+      height: 35rem;
+      bottom: -9rem;
+    }
+  }
+}

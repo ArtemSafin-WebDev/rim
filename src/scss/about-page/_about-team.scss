@@ -1,0 +1,509 @@
+.about-team {
+    padding-bottom: 17.3rem;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 12rem;
+    }
+}
+
+.about-team__blur {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.about-team__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-team__heading {
+    font-size: 4.5rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+}
+
+.about-team__text {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        padding: 1.8rem 2.2rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        z-index: -2;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+        background: linear-gradient(to right bottom, #624f86, #ffedd4, #5229a1) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+.about-team__list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 5.2rem;
+    grid-row-gap: 13.3rem;
+    padding-top: 15rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 3rem;
+        grid-row-gap: 7rem;
+        padding-top: 8rem;
+    }
+}
+
+.about-team__list {
+    display: contents;
+}
+
+.about-team__list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-team__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    min-height: 33rem;
+    justify-content: flex-end;
+    gap: 0.4rem;
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+        padding-bottom: 1.1rem;
+        min-height: 17rem;
+    }
+}
+
+.about-team__card-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1px;
+
+    z-index: 1;
+
+    width: auto;
+    height: 40rem;
+    max-width: none;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center bottom;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    // filter: drop-shadow(0.4rem 0.6rem 1.6rem rgba(0, 0, 0, 0.2)) drop-shadow(1.6rem 2.5rem 3rem rgba(0, 0, 0, 0.17))
+    //     drop-shadow(3.6rem 5.6rem 4rem rgba(0, 0, 0, 0.1)) drop-shadow(6.5rem 9.9rem 4.7rem rgba(0, 0, 0, 0.03))
+    //     drop-shadow(10.1rem 15.5rem 5.2rem rgba(0, 0, 0, 0));
+
+    filter: drop-shadow(0.4rem 0.6rem 1.6rem rgba(0, 0, 0, 0.2));
+
+    @include breakpoint(mobile) {
+        height: 20rem;
+        max-width: 100%;
+        bottom: 1px;
+    }
+}
+
+.about-team__card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 2rem;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        z-index: -2;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+        background: linear-gradient(to right bottom, #5229a1, #ffedd4, #5229a1) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+.about-team__card-title {
+    position: relative;
+    z-index: 5;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    text-shadow: 0.3rem 0.2rem 0.7rem rgba(0, 0, 0, 0.49), 1rem 0.8rem 1.3rem rgba(0, 0, 0, 0.43), 2.3rem 1.8rem 1.8rem rgba(0, 0, 0, 0.25),
+        4.1rem 3.1rem 2.1rem rgba(0, 0, 0, 0.07), 6.5rem 4.9rem 2.3rem rgba(0, 0, 0, 0.01);
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        text-shadow: 1.541px 1.027px 3.595px rgba(0, 0, 0, 0.49), 5.136px 4.109px 6.677px rgba(0, 0, 0, 0.43),
+            11.814px 9.246px 9.246px rgba(0, 0, 0, 0.25), 21.059px 15.923px 10.786px rgba(0, 0, 0, 0.07),
+            33.387px 25.168px 11.814px rgba(0, 0, 0, 0.01);
+    }
+}
+
+.about-team__card-role {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    position: relative;
+    z-index: 5;
+    text-shadow: 1px 1px 0.3rem rgba(0, 0, 0, 0.79), 0.5rem 0.4rem 0.6rem rgba(0, 0, 0, 0.68), 1.1rem 0.8rem 0.8rem rgba(0, 0, 0, 0.4),
+        1.9rem 1.4rem 1rem rgba(0, 0, 0, 0.12), 3rem 2.3rem 1rem rgba(0, 0, 0, 0.01);
+
+    @include breakpoint(mobile) {
+        font-size: 8.218px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        text-shadow: 0.514px 0.514px 1.541px rgba(0, 0, 0, 0.79), 2.568px 2.055px 3.082px rgba(0, 0, 0, 0.68),
+            5.65px 4.109px 4.109px rgba(0, 0, 0, 0.4), 9.759px 7.191px 5.136px rgba(0, 0, 0, 0.12), 15.409px 11.814px 5.136px rgba(0, 0, 0, 0.01);
+    }
+}
+
+.about-team__join {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+    align-self: center;
+    grid-column: span 2;
+
+    @include breakpoint(mobile) {
+        grid-column: span 1;
+        align-self: flex-end;
+
+        .about-team__list-wrapper:has(.about-team__list-item:last-child:nth-child(even)) & {
+            grid-column: span 2;
+
+            .about-team__join-link {
+                align-self: center;
+                width: auto;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+
+            .about-team__join-text {
+                text-align: center;
+            }
+
+            .about-team__join {
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+.about-team__join-link {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    color: white;
+    padding: 1.2rem 7rem;
+    border-radius: 70rem;
+    background: #fc3f1d;
+
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.2s;
+    text-align: center;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0px 0px 3rem 0px #ff5129, 0px 0px 0.5rem 0px #ff5129;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        padding: 0.5rem 1rem;
+        align-self: stretch;
+        order: 10;
+    }
+}
+
+.about-team__join-text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    max-width: 41rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}
+
+.about-team__page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding-top: 9.2rem;
+    padding-bottom: 21rem;
+    background-image: url('../img/about-team-page/team-page-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include breakpoint(mobile) {
+        padding-top: 7rem;
+        background-image: url('../img/team-page-blur-mobile.webp');
+        padding-bottom: 5rem;
+    }
+}
+
+.about-team__page-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-team__intro {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+}
+
+.about-team__intro-image-wrapper {
+    width: 67rem;
+    max-width: 100%;
+    height: auto;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    @include breakpoint(mobile) {
+        width: 35rem;
+        margin-left: -7rem;
+    }
+}
+
+.about-team__intro-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.about-team__intro-text-content {
+    grid-area: stack;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+}
+
+.about-team__intro-heading {
+    font-size: 6.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 6rem;
+    margin-right: -6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        margin-bottom: 3.2rem;
+        margin-right: -2rem;
+    }
+}
+
+.about-team__intro-quote {
+    position: relative;
+    z-index: 1;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 2.8rem 3.8rem;
+    margin-bottom: 7rem;
+    margin-left: -3.8rem;
+
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        padding: 2.2rem 1.8rem;
+        margin-left: -1.8rem;
+        margin-bottom: 4rem;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        z-index: -2;
+        background: rgba(255, 255, 255, 0.1);
+
+        backdrop-filter: blur(15px);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+        background: linear-gradient(to right bottom, #624f86, #ffedd4, #5229a1) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+.about-team__ceo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 7.4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.about-team__ceo-name {
+    font-size: 8.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+    }
+}
+
+.about-team__ceo-role {
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+    }
+}
+
+.about-team__scroll-down {
+    align-self: flex-start;
+    justify-self: flex-start;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-color: #fff;
+    justify-self: flex-start;
+
+    transition: box-shadow 0.2s;
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: black;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0px 0px 11.993px rgba(255, 255, 255, 0.75), 0px 0px 7.79px rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        width: 1.8rem;
+        height: 1.8rem;
+        box-shadow: 0px 0px 5.265px rgba(255, 255, 255, 0.75), 0px 0px 3.42px rgba(255, 255, 255, 0.25);
+        position: static;
+        align-self: flex-start;
+        margin-left: 3rem;
+    }
+}
