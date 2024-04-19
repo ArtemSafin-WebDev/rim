@@ -1,0 +1,328 @@
+.ads {
+    position: relative;
+    padding: 9.3rem 0 15rem;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint(tablet) {
+            flex-direction: column;
+            justify-content: normal;
+        }
+    }
+
+    &__column {
+    }
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 4.6rem;
+        font-weight: 800;
+        line-height: 1.1;
+
+        letter-spacing: 0%;
+        text-align: left;
+
+        width: 100%;
+        max-width: 61.3rem;
+
+        margin-bottom: 10rem;
+
+        @include breakpoint(tablet) {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 110%;
+            letter-spacing: 0%;
+            text-align: center;
+
+            margin: 0 auto 3.8rem;
+            max-width: 34.8rem;
+        }
+    }
+
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 0.75rem;
+
+        @include breakpoint(tablet) {
+            justify-content: center;
+        }
+    }
+
+    &__title-middle {
+        margin-bottom: 5rem;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 1.2rem;
+        }
+
+        &:first-child {
+            color: rgb(255, 255, 255);
+            font-family: 'Uni Neue', sans-serif;
+            font-size: 9rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 0%;
+            text-align: left;
+
+            @include breakpoint(tablet) {
+                color: rgb(255, 81, 41);
+                font-size: 3.2rem;
+                font-weight: 800;
+                line-height: 116%;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+        }
+
+        &:last-child {
+            color: rgb(255, 255, 255);
+            font-family: 'Uni Neue', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 116%;
+            letter-spacing: 0%;
+            text-align: left;
+
+            width: 100%;
+            max-width: 39.6rem;
+
+            @include breakpoint(tablet) {
+                color: rgb(255, 81, 41);
+                font-size: 2rem;
+                font-weight: 800;
+                line-height: 85%;
+                letter-spacing: 0%;
+                text-align: left;
+
+                max-width: 20rem;
+            }
+        }
+    }
+
+    &__description {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0%;
+        text-align: left;
+
+        width: 100%;
+        max-width: 55.4rem;
+
+        margin-bottom: 5rem;
+
+        @include breakpoint(tablet) {
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: center;
+
+            max-width: 30rem;
+
+            margin: 0 auto 5rem;
+        }
+    }
+
+    &__column-second {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include breakpoint(tablet) {
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+
+        border-radius: 2rem;
+        overflow: hidden;
+
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.01);
+        padding: 2rem;
+
+        @include border-color(2rem);
+        width: fit-content;
+        height: fit-content;
+
+        &:nth-child(1) {
+            top: -2rem;
+            left: 0;
+        }
+
+        &:last-child {
+            top: 90%;
+            left: 70%;
+            transform: translateX(-50%);
+            width: 48rem;
+
+            @include breakpoint(tablet) {
+                left: 50%;
+                width: 34rem;
+            }
+
+            .ads__card-title {
+                font-size: 3rem;
+                width: 100%;
+                max-width: 43rem;
+
+                @include breakpoint(tablet) {
+                    font-size: 2.4rem;
+                    font-weight: 800;
+                    line-height: 116%;
+                    letter-spacing: -.05rem;
+                    text-align: left;
+                }
+            }
+
+            .ads__card-text {
+                width: 100%;
+                max-width: none;
+
+                @include breakpoint(tablet) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    &__card-title {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+   
+        @include breakpoint(tablet) {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 116%;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
+
+    &__card-text {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0%;
+        text-align: left;
+
+        width: 100%;
+        max-width: 20rem;
+
+        @include breakpoint(tablet) {
+            color: rgb(255, 255, 255);
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: left;
+            max-width: 19rem;
+        }
+    }
+
+    &__image {
+        width: fit-content;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+
+        @include breakpoint(tablet) {
+            width: 80%;
+        }
+
+        &:nth-child(2) {
+            left: 12rem;
+            z-index: 1;
+            top: 4.5rem;
+
+            @include breakpoint(tablet) {
+                left: 7rem;
+            }
+        }
+
+        &:nth-child(1) {
+            right: 10rem;
+            z-index: 0; 
+
+            @include breakpoint(tablet) {
+                right: 6rem;
+            }
+        }
+    }
+
+    .last {
+        @include breakpoint(tablet) {
+            right: 5rem;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        width: 49rem;
+        height: 42rem;
+        z-index: 2;
+        right: -40%;
+        top: 5%;
+        object-fit: cover;
+        filter: drop-shadow(-1px 5px 18px #ffffff);
+    }
+
+    .small-text {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0%;
+        text-align: left;
+
+        @include breakpoint(tablet) {
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 116%;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
+
+    .uppercase-text {
+        text-transform: uppercase;
+
+        @include breakpoint(tablet) {
+        text-transform: lowercase;
+        }
+    }
+
+    &__shape {
+        position: absolute;
+        filter: blur(200px);
+        background: rgba(255, 81, 41, 0.68);
+        width: 43.5rem;
+        height: 76rem;
+        right: 10%;
+        top: 50%;
+        transform: rotate(22.71deg) translateY(-50%) translateZ(0);
+        z-index: -1;
+    }
+}
