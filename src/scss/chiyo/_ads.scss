@@ -161,6 +161,10 @@
         &:nth-child(1) {
             top: -2rem;
             left: 20rem;
+
+            @include breakpoint(tablet) {
+                left: 0;
+            }
         }
 
         &:last-child {
