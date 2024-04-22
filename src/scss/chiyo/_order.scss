@@ -131,7 +131,7 @@
         margin: 0 auto;
 
         &:hover {
-            background-color: rgb(207, 51, 23);
+            box-shadow: 0px 0px 3.61801px #ff5129, 0px 0px 21.7081px #ff5129;
         }
 
         @include breakpoint(tablet) {
