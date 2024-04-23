@@ -13,14 +13,14 @@
         max-width: 245rem;
         height: 130.5rem;
         top: -75%;
-        right: -13.5rem;
+        right: -30.5rem;
         z-index: -1;
         transform: scale(1.1);
 
         @include breakpoint(tablet) {
             top: -5%;
-            right: -50%;
-            transform: scale(1.8);
+            right: -120%;
+            transform: scale(3.5);
             z-index: 0;
         }
     }
@@ -74,6 +74,7 @@
         border-radius: 2rem;
         backdrop-filter: blur(2.5px);
         background: rgba(255, 255, 255, 0.01);
+        backdrop-filter: blur(2px);
         position: relative;
 
         overflow: hidden;
@@ -92,6 +93,15 @@
         filter: blur(150px);
         background: rgb(28, 8, 176);
         z-index: -1;
+
+        @include breakpoint(tablet) {
+            left: 50%;
+            filter: blur(100px);
+            z-index: 0;
+            top: 25%;
+            width: 50rem;
+            height: 30rem;
+        }
     }
 
     &__card-shape-orange {
@@ -102,7 +112,7 @@
         left: 75%;
         top: 50%;
         transform: translate(-50%, -50%);
-        filter: blur(200px);
+        filter: blur(125px);
         background: #ff5129;
         z-index: -1;
     }

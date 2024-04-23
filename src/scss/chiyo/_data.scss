@@ -248,8 +248,17 @@
             text-decoration: underline;
           }
 
+        .swiper-wrapper {
+            @include breakpoint(tablet) {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+            }
+        }
+
 		&__slide {
-            width: 34.3rem;
+            width: 100%;
+            max-width: 34.3rem;
             min-height: 24.1rem;
 
             display: grid;

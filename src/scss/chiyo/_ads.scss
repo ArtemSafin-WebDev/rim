@@ -164,6 +164,7 @@
 
             @include breakpoint(tablet) {
                 left: 0;
+                z-index: 5;
             }
         }
 
@@ -176,6 +177,8 @@
             @include breakpoint(tablet) {
                 left: 50%;
                 width: 34rem;
+                z-index: -1;
+                top: 97%;
             }
 
             .ads__card-title {
@@ -290,6 +293,13 @@
         top: 5%;
         object-fit: cover;
         filter: drop-shadow(-1px 5px 18px #ffffff);
+
+        @include breakpoint(tablet) {
+            z-index: 4;
+            width: 40rem;
+            height: 35rem;
+            right: -25%;
+        }
     }
 
     .small-text {
