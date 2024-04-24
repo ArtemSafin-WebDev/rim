@@ -454,4 +454,27 @@ document.addEventListener('DOMContentLoaded', () => {
             setTickerAnimation(innerTrack, !!even);
         });
     });
+
+    const contactsTabs = Array.from(document.querySelectorAll('.new-contacts'));
+
+    contactsTabs.forEach(tab => {
+        const links = Array.from(tab.querySelectorAll('.new-contacts__tabs-nav-link'));
+        const items = Array.from(tab.querySelectorAll('.new-contacts__tabs-item'));
+
+        const setActiveTab = index => {
+            links.forEach(link => link.classList.remove('active'));
+            items.forEach(item => item.classList.remove('active'));
+            links[index]?.classList.add('active');
+            items[index]?.classList.add('active');
+        };
+
+        setActiveTab(0);
+
+        links.forEach((link, linkIndex) => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                setActiveTab(linkIndex);
+            });
+        });
+    });
 });

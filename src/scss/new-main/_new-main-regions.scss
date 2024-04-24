@@ -17,6 +17,17 @@
     }
 }
 
+.new-main-regions--contacts {
+    padding-top: 0;
+    position: relative;
+    z-index: 85;
+    margin-top: -20rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+    }
+}
+
 .new-main-regions__content {
     display: flex;
     flex-direction: column;
