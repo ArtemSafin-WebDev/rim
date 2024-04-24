@@ -1,10 +1,10 @@
 .new-guarantee {
-    padding-top: 23rem;
+    padding-top: 10rem;
     position: relative;
     z-index: 5;
 
     @include breakpoint(mobile) {
-        padding-top: 16rem;
+        padding-top: 0rem;
     }
 }
 

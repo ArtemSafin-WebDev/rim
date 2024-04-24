@@ -1,0 +1,177 @@
+.contact {
+    .container {
+        position: relative;
+    }
+
+    &__shape-orange {
+        position: absolute;
+        width: 63.2rem;
+        height: 45rem;
+        right: -20%;
+        top: 10%;
+        transform: rotate(22.71deg) translateZ(0);
+        filter: blur(150px);
+        background: rgba(255, 81, 41, 0.68);
+        z-index: -2;
+    }
+
+    &__shape-blue {
+        position: absolute;
+        width: 65rem;
+        height: 45.5rem;
+        left: -25%;
+        top: 50%;
+        transform: rotate(-10.82deg) translateZ(0);
+        filter: blur(300.2px);
+        background: rgb(28, 8, 176);
+        z-index: -1;
+    }
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 5.2rem;
+        font-weight: 800;
+        line-height: 110%;
+        letter-spacing: 0%;
+        text-align: left;
+        width: 100%;
+        max-width: 81.2rem;
+
+        margin-bottom: 2.7rem;
+
+        @include breakpoint(tablet) {
+            color: rgb(255, 255, 255);
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 110%;
+            letter-spacing: 0%;
+            text-align: center;
+
+            width: 100%;
+            max-width: 32rem;
+            margin: 0 auto 3.3rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint(tablet) {
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 3.3rem;
+        }
+    }
+
+    &__image {
+        width: fit-content;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &__column {
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__column-title {
+        color: rgb(255, 81, 41);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 9rem;
+        font-weight: 800;
+        line-height: 116%;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+
+        @include breakpoint(tablet) {
+            color: rgb(255, 81, 41);
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 116%;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
+
+    &__text {
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: left;
+
+        margin-bottom: 5rem;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 2.2rem;
+        }
+    }
+
+    &__link {
+        border-radius: 5rem;
+        background-color: rgb(252, 63, 29);
+
+        color: rgb(255, 255, 255);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0%;
+        text-align: left;
+
+        width: 30rem;
+        height: 5rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+
+        transition: 0.3s ease background-color;
+
+        &:hover {
+            box-shadow: 0px 0px 3.61801px #ff5129, 0px 0px 21.7081px #ff5129;
+        }
+
+        @include breakpoint(tablet) {
+            color: rgb(255, 255, 255);
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 110%;
+            letter-spacing: 0%;
+            text-align: left;
+
+            width: 24.5rem;
+            height: 4rem;
+        }
+    }
+
+    .small-text {
+        color: rgb(255, 81, 41);
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 5.2rem;
+        font-weight: 800;
+        line-height: 116%;
+        letter-spacing: 0%;
+        text-align: left;
+
+        @include breakpoint(tablet) {
+            color: rgb(255, 81, 41);
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 116%;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
+}
