@@ -43,7 +43,6 @@
 
         @include breakpoint(tablet) {
             width: 100%;
-            align-items: center;
         }
     }
 
@@ -205,7 +204,7 @@
             width: 14.4rem;
             height: 21.4rem;
             position: absolute;
-            right: -4rem;
+            right: -3rem;
             top: 8rem;
         }
     }
