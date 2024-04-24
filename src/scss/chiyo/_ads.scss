@@ -2,6 +2,10 @@
     position: relative;
     padding: 9.3rem 0 15rem;
 
+    @include breakpoint(tablet) {
+        padding: 0 0 15rem;
+    }
+
     .container {
         display: flex;
         align-items: center;
