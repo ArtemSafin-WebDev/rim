@@ -13,6 +13,14 @@
         filter: blur(150px);
         background: rgba(255, 81, 41, 0.68);
         z-index: -2;
+
+        @include breakpoint(tablet) {
+            filter: blur(20px);
+            width: 23.5rem;
+            height: 41.5rem;
+            border-radius: 30rem;
+            background: rgba(255, 81, 41, 0.75);
+        }
     }
 
     &__shape-blue {
@@ -25,6 +33,14 @@
         filter: blur(300.2px);
         background: rgb(28, 8, 176);
         z-index: -1;
+
+        @include breakpoint(tablet) {
+            width: 38.5rem;
+            height: 30rem;
+            filter: blur(70.2px);
+            border-radius: 30rem;
+            left: -75%;
+        }
     }
 
     &__title {
@@ -70,6 +86,8 @@
         width: fit-content;
         height: auto;
         object-fit: cover;
+        -webkit-filter: drop-shadow(3px -1px 17px #000);
+        filter: drop-shadow(3px -1px 17px #000);
     }
 
     &__column {

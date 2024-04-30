@@ -106,6 +106,7 @@
 
     
         @include breakpoint(tablet) {
+            display: none;
             color: rgb(255, 255, 255);
             font-size: 3.2rem;
             font-weight: 800;
@@ -306,5 +307,7 @@
 
     .orange {
         color: #fc3f1d;
+        font-family: 'Uni Neue', sans-serif;
+        font-weight: 800;
     }
 }

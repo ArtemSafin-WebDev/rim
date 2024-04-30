@@ -18,9 +18,9 @@
         transform: scale(1.1);
 
         @include breakpoint(tablet) {
-            top: -5%;
-            right: -120%;
-            transform: scale(3.5);
+            top: -25%;
+            right: 0;
+            background-image: url('../img/chiyo/map-mobile.png');
             z-index: 0;
         }
     }
@@ -115,6 +115,15 @@
         filter: blur(125px);
         background: #ff5129;
         z-index: -1;
+
+        @include breakpoint(tablet) {
+            z-index: 0;
+            width: 31.7rem;
+            left: 50%;
+            top: 75%;
+            height: 16.2rem;
+            filter: blur(80px);
+        }
     }
 
     &__card-wrapper {

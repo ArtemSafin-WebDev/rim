@@ -18,6 +18,21 @@
         transform: rotate(-10.82deg);
         z-index: -1;
     }
+
+    &__mobile-shape {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        filter: blur(120.2px);
+        background: rgb(37, 16, 195);
+        z-index: -1;
+        height: 46.3rem;
+        width: 36.5rem;
+    }
+    
     &__title {
         color: rgb(255, 255, 255);
         font-family: 'Uni Neue', sans-serif;
@@ -51,9 +66,6 @@
         margin-bottom: 6.5rem;
     }
 
-    &__column {
-    }
-
     &__column-title {
         color: rgb(255, 255, 255);
         font-family: 'Uni Neue', sans-serif;
@@ -65,9 +77,6 @@
 
         height: 20%;
         margin-bottom: auto;
-    }
-
-    &__column-list {
     }
 
     &__column-item {
