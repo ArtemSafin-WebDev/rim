@@ -455,7 +455,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-<<<<<<< HEAD
     const contactsTabs = Array.from(document.querySelectorAll('.new-contacts'));
 
     contactsTabs.forEach(tab => {
@@ -478,8 +477,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-=======
     const interBubble = document.querySelector('.interactive');
+
+    if (interBubble) {
         let curX = 0;
         let curY = 0;
         let tgX = 0;
@@ -494,11 +494,88 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        window.addEventListener('mousemove', (event) => {
+        window.addEventListener('mousemove', event => {
             tgX = event.clientX;
             tgY = event.clientY;
         });
 
         move();
->>>>>>> 37feb3f300c7f5c1786bb14cf538194e70c3e7af
+    }
+
+    const constructionImageSliders = Array.from(document.querySelectorAll('.constr__images-slider'));
+
+    constructionImageSliders.forEach(block => {
+        const container = block.querySelector('.swiper');
+        if (!container) return;
+
+        new Swiper(container, {
+            slidesPerView: 1,
+            speed: 600,
+            navigation: {
+                prevEl: block.querySelector('.constr__images-slider-arrow--prev'),
+                nextEl: block.querySelector('.constr__images-slider-arrow--next')
+            },
+            pagination: {
+                el: block.querySelector('.constr__images-slider-wrapper-pagination'),
+                type: 'bullets',
+                clickable: true
+            }
+        });
+    });
+
+    const constructionBlocks = Array.from(document.querySelectorAll('.constr'));
+    constructionBlocks.forEach(block => {
+        const firstLevelRadios = Array.from(block.querySelectorAll('.constr__block:nth-child(1) .constr__radio-input'));
+        const secondLevelTabs = Array.from(block.querySelectorAll('.constr__block:nth-child(2) .constr__tabs-item'));
+        const outerSlidersTabs = Array.from(block.querySelectorAll('.constr__left-col .constr__tabs-item'));
+        const outerTextTabs = Array.from(block.querySelectorAll('.constr__block:nth-child(1) .constr__tabs-item'));
+        const setActiveOuterTab = index => {
+            outerSlidersTabs.forEach(tab => tab.classList.remove('active'));
+            outerSlidersTabs[index]?.classList.add('active');
+            outerTextTabs.forEach(tab => tab.classList.remove('active'));
+            outerTextTabs[index]?.classList.add('active');
+            secondLevelTabs.forEach(tab => tab.classList.remove('active'));
+            secondLevelTabs[index]?.classList.add('active');
+
+            console.log('Setting active tab', index);
+
+            const correspondingRadios = Array.from(secondLevelTabs[index] ? secondLevelTabs[index].querySelectorAll('.constr__radio-input') : []);
+
+            const innerSliderTabs = Array.from(outerSlidersTabs[index] ? outerSlidersTabs[index].querySelectorAll('.constr__tabs-inner-item') : []);
+            const innerTextTabs = Array.from(secondLevelTabs[index] ? secondLevelTabs[index].querySelectorAll('.constr__tabs-inner-item') : []);
+
+            if (correspondingRadios.length) {
+                const activeIndex = correspondingRadios.findIndex(radio => radio.checked);
+
+                const setActiveInnerTabs = index => {
+                    innerSliderTabs.forEach(tab => tab.classList.remove('active'));
+                    innerSliderTabs[index]?.classList.add('active');
+                    innerTextTabs.forEach(tab => tab.classList.remove('active'));
+                    innerTextTabs[index]?.classList.add('active');
+                };
+
+                setActiveInnerTabs(activeIndex);
+
+                correspondingRadios.forEach(radio => {
+                    radio.addEventListener('change', () => {
+                        const activeIndex = correspondingRadios.findIndex(radio => radio.checked);
+                        setActiveInnerTabs(activeIndex);
+                    });
+                });
+            } else {
+                innerSliderTabs.forEach(tab => tab.classList.remove('active'));
+                innerSliderTabs[0]?.classList.add('active');
+            }
+        };
+
+        firstLevelRadios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                const activeIndex = firstLevelRadios.findIndex(radio => radio.checked);
+                setActiveOuterTab(activeIndex);
+            });
+        });
+
+        const activeIndex = firstLevelRadios.findIndex(radio => radio.checked);
+        setActiveOuterTab(activeIndex);
+    });
 });
