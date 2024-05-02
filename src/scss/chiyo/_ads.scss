@@ -17,9 +17,6 @@
         }
     }
 
-    &__column {
-    }
-
     &__title {
         color: rgb(255, 255, 255);
         font-family: 'Uni Neue', sans-serif;
@@ -343,5 +340,26 @@
         top: 50%;
         transform: rotate(22.71deg) translateY(-50%) translateZ(0);
         z-index: -1;
+
+        @include breakpoint(tablet) {
+            filter: blur(150px);
+        }
+    }
+
+    &__shape-blue {
+        display: none;
+        @include breakpoint(tablet) {
+            display: block;
+
+            position: absolute;
+            filter: blur(100px);
+            background: rgb(28, 8, 176);
+            height: 33.1rem;
+            width: 33.4rem;
+            left: -50%;
+            top: 20%;
+            transform: rotate(22.71deg) translateY(-50%) translateZ(0);
+            z-index: -1;
+        } 
     }
 }
