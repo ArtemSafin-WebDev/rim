@@ -349,12 +349,6 @@ body.menu-open {
         color: white;
     }
 
-    @media (hover: hover) {
-        &:hover {
-            color: var(--primary-color);
-        }
-    }
-
     @media (max-width: 900px) {
         font-size: calc(10px * var(--scale-factor, 1));
     }
@@ -977,12 +971,6 @@ body.menu-open {
     &:link,
     &:visited {
         color: white;
-    }
-
-    @media (hover: hover) {
-        &:hover {
-            color: var(--primary-color);
-        }
     }
 
     @media (max-width: 900px) {
