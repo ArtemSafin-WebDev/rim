@@ -3,7 +3,6 @@
     padding-bottom: 8rem;
     padding-bottom: 30rem;
     position: relative;
-    z-index: 1;
 
     @include breakpoint(mobile) {
         padding-top: 11.7rem;
@@ -16,7 +15,9 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    // object-fit: cover;
+    // object-position: center top;
     z-index: -1;
 }
 
@@ -193,7 +194,7 @@
     gap: 5rem;
 
     @include breakpoint(mobile) {
-        display: none;
+        margin: 0;
     }
 }
 
@@ -204,6 +205,26 @@
     border: 0.2rem solid white;
     border-radius: 50%;
     transition: border-color 0.2s;
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 50;
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid white;
+
+        &--prev {
+            right: 100%;
+            margin-right: 1rem;
+        }
+
+        &--next {
+            left: 100%;
+            margin-left: 1rem;
+        }
+    }
 
     svg {
         display: block;
