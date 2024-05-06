@@ -337,7 +337,7 @@
 }
 
 .constr__radio {
-    cursor: default;
+    cursor: pointer;
     user-select: none;
 }
 
@@ -366,6 +366,13 @@
         padding: 0.8rem 2rem;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(12.5px);
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            color: #ff5129;
+            text-shadow: 0 0 12.1056px #ff5129;
+        }
     }
 }
 
