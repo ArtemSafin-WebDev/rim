@@ -421,7 +421,7 @@
         border-radius: 1.5rem;
         position: relative;
         z-index: 1;
-        padding: 1.5rem;
+        padding: 1.5rem 1.3rem;
         display: flex;
         flex-direction: column;
         gap: 0.3rem;
@@ -468,7 +468,7 @@
 .leaders__slider-card-numbers-card-value {
     font-style: normal;
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 120%;
 
     @include breakpoint(mobile) {
