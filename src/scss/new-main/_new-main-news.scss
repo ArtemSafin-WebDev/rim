@@ -45,6 +45,10 @@
     &.active {
         background: #fc3f1d;
         color: white;
+
+        &:nth-child(2) {
+            background: #1f49c4;
+        }
     }
 }
 
