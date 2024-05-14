@@ -1,5 +1,6 @@
 .new-main-intro {
     padding-top: 16.5rem;
+    position: relative;
 
     @include breakpoint(mobile) {
         padding-top: 13rem;
