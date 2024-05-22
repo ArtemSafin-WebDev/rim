@@ -191,6 +191,19 @@
     }
 }
 
+.new-companies__card-desktop-logo {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    height: 2.8rem;
+    width: auto;
+    z-index: 10;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
 .new-companies__card-image-container {
     position: relative;
     border-radius: 0.7rem;
