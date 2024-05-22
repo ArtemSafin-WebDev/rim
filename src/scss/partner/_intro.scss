@@ -15,6 +15,10 @@
       align-items: center;
       padding-top: 9rem;
     }
+
+    @include breakpoint(laptop) {
+      padding-top: 3rem;
+    }
   }
 
   &__column {

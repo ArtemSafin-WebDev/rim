@@ -17,10 +17,10 @@
 
     &__overlay {
         width: 100%;
-        background-image: url('../img/chiyo/digital-texture.png');
+        background-image: url('../img/chiyo/digital-texture-min-2.png');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: contain;
         position: absolute;
         top: 0;
         left: 0;
@@ -28,7 +28,7 @@
         bottom: 0;
         z-index: -2;
         transform: scale(1.25);
-        opacity: 0.7;
+        /*opacity: 0.7;*/
     }
 
     &__upper {

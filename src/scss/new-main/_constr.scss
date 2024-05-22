@@ -8,6 +8,48 @@
         padding-top: 11.7rem;
         padding-bottom: 6.4rem;
     }
+
+    &__overlay {
+        width: 100%;
+        background-image: url('../img/chiyo/digital-texture-min-2.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2;
+        transform: scale(1.25);
+        /*opacity: 0.7;*/
+    }
+
+    &__shape-orange {
+        position: absolute;
+        left: -10%;
+        top: 25%;
+        width: 74.3rem;
+        height: 43.7rem;
+        filter: blur(173.95px);
+        background-color: #fd3000;
+        transform: translateZ(0) rotate(90deg) translateY(-50%);
+        z-index: -1;
+    }
+
+    &__shape-blue {
+        position: absolute;
+        right: -10%;
+        top: -20%;
+        width: 57.2rem;
+        height: 177rem;
+        transform: translateZ(0) rotate(-96.7deg);
+        z-index: -1;
+        opacity: 0.75;
+
+        filter: blur(250px);
+        background: linear-gradient(180deg, rgb(82, 41, 161) 32%, rgb(31, 73, 196) 100%);
+    }
 }
 
 .constr__bg-image {
@@ -370,8 +412,7 @@
 
     @media (hover: hover) {
         &:hover {
-            color: #ff5129;
-            text-shadow: 0 0 12.1056px #ff5129;
+            box-shadow: 0px 0px 3.61801px rgba(255, 255, 255, 0.7), 0px 0px 21.7081px rgba(255, 255, 255, 0.25);
         }
     }
 }
