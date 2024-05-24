@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     span {
       &:nth-child(1) {
@@ -140,10 +140,10 @@
   &__button {
     @include button();
 
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   &__user {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }

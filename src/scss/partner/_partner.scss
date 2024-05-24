@@ -1,7 +1,7 @@
 .partner {
   background-color: rgba(240,240,240,1);
   position: relative;
-  padding: 10rem 0;
+  padding: 0 0 10rem 0;
   margin-top: 55rem;
 
   @include breakpoint(large-desktop) {
@@ -27,7 +27,7 @@
     right: 0;
     top: -29%;
     background: rgb(0,0,0);
-    background: linear-gradient(180deg,transparent 0%,rgba(240,240,240,.4976584384) 50%,rgba(240,240,240,.9038209034) 70%,#f0f0f0 77%);
+    background: linear-gradient(180deg,transparent 0%,rgba(240,240,240,.4976584384) 56%,rgba(240,240,240,.9038209034) 80%,#f0f0f0 92%);
 
     @include breakpoint(tablet) {
       height: 20%;

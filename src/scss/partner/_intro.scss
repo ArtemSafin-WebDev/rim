@@ -275,10 +275,8 @@
   }
 
   &__tv {
-    top: 23.9rem;
-    right: -8rem;
     position: absolute;
-    width: 80.1rem;
+    right: 1rem;
 
     &-img {
       width: 100%;
@@ -294,51 +292,77 @@
       }
     }
 
-    @include breakpoint(laptop) {
-      width: 60.1rem;
-      top: 38.9rem;
-      right: -5rem;
-    }
-
     @include breakpoint(tablet) {
       position: relative;
-      top: auto;
       right: auto;
+    }
+  }
+
+  &__tv-video-container {
+    display: block;
+    width: 77.4rem;
+    height: auto;
+    background-image: url("../img/partner/intro/tv-container.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transform: rotate(1deg);
+    padding: 1rem;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      z-index: -1;
+      transform: translateX(-50%);
+      width: 10.3rem;
+      height: 40.7rem;
+      background-image: url("../img/partner/intro/tv-leg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+      content: "";
+    }
+
+    @include breakpoint(desktop) {
+      width: 66.4rem;
+    }
+
+    @include breakpoint(laptop) {
+      width: 44.4rem;
+
+      &::before {
+        width: 6rem;
+        height: 29.7rem;
+      }
+    }
+
+    @include breakpoint(mobile) {
       width: 100%;
-      height: auto;
     }
   }
 
   &__tv-controls {
-    position: absolute;
-    bottom: 38%;
-    left: 42%;
-    transform: translateX(-50%);
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
+    margin-top: 3rem;
 
     .intro__button {
       padding-left: 6.4rem;
       padding-right: 6.4rem;
       width: auto;
     }
+  }
 
-    @include breakpoint(tablet) {
-      bottom: 21%;
-      left: 49%;
-    }
-
-    @include breakpoint(mobile) {
-      position: static;
-      transform: none;
-      background-image: url("../img/partner/intro/tv-mobile.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center top;
-      padding-top: 24.3rem;
-    }
+  &__tv-img-gif {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   &__small-labels {
@@ -379,38 +403,10 @@
   }
 
   &__tv-small-link {
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: 800;
-    margin-top: 1rem;
-  }
-
-  &__tv-img-gif {
-    position: absolute;
-    top: 5%;
-    left: 6%;
-    width: 52.7rem;
-    height: 31.8rem;
-    object-fit: cover;
-    transform: rotate(0.8deg);
-
-    @include breakpoint(laptop) {
-      top: 4.8%;
-      left: 5.1%;
-      width: 41.6rem;
-      height: 23.7rem;
-    }
-
-    @include breakpoint(tablet) {
-      left: 13.1%;
-      width: 59.6rem;
-      height: auto;
-    }
-
-    @include breakpoint(mobile) {
-      left: 13.1%;
-      width: 59.6rem;
-      height: auto;
-    }
+    margin-top: 2rem;
   }
 
   &__tv-button {
