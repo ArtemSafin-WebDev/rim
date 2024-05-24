@@ -301,7 +301,9 @@
     }
 
     @include breakpoint(tablet) {
-      position: static;
+      position: relative;
+      top: auto;
+      right: auto;
       width: 100%;
       height: auto;
     }
@@ -380,6 +382,35 @@
     text-transform: uppercase;
     font-weight: 800;
     margin-top: 1rem;
+  }
+
+  &__tv-img-gif {
+    position: absolute;
+    top: 5%;
+    left: 6%;
+    width: 52.7rem;
+    height: 31.8rem;
+    object-fit: cover;
+    transform: rotate(0.8deg);
+
+    @include breakpoint(laptop) {
+      top: 4.8%;
+      left: 5.1%;
+      width: 41.6rem;
+      height: 23.7rem;
+    }
+
+    @include breakpoint(tablet) {
+      left: 13.1%;
+      width: 59.6rem;
+      height: auto;
+    }
+
+    @include breakpoint(mobile) {
+      left: 13.1%;
+      width: 59.6rem;
+      height: auto;
+    }
   }
 
   &__tv-button {
