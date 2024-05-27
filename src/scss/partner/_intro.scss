@@ -18,6 +18,7 @@
 
     @include breakpoint(laptop) {
       padding-top: 10rem;
+      padding-bottom: 5rem;
     }
   }
 
@@ -91,7 +92,6 @@
       font-style: normal;
       font-weight: 500;
       line-height: 120%;
-      margin-bottom: 1.6rem;
       text-align: center;
     }
   }
