@@ -15,6 +15,7 @@ import initPartnerSlider from "./partner/partnerSlider";
 import initEntrySlider from "./partner/entrySlider";
 import initLoopFeedback from "./partner/initLoopFeedback";
 import initScrollTrigger from "./partner/scrollTrigger";
+import initYtPlayerByClick from "./partner/initYtPlayerByClick";
 
 document.addEventListener('DOMContentLoaded', function() {
   polyfills();
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initEntrySlider()
   initLoopFeedback()
   initScrollTrigger()
+  initYtPlayerByClick()
 });
 
 window.addEventListener('load', function() {

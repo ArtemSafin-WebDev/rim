@@ -17,7 +17,8 @@
     }
 
     @include breakpoint(laptop) {
-      padding-top: 3rem;
+      padding-top: 10rem;
+      padding-bottom: 5rem;
     }
   }
 
@@ -26,7 +27,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 10rem;
+      padding-bottom: 5rem;
     }
   }
 
@@ -65,7 +66,6 @@
       line-height: 100%;
       margin-bottom: .4rem;
       text-align: center;
-      max-width: 35.2rem;
     }
 
     .orange {
@@ -92,7 +92,6 @@
       font-style: normal;
       font-weight: 500;
       line-height: 120%;
-      margin-bottom: 1.6rem;
       text-align: center;
     }
   }
@@ -109,6 +108,8 @@
 
     @include breakpoint(tablet) {
       margin-bottom: 3.2rem;
+      flex-direction: row;
+      gap: 2rem;
     }
   }
 
@@ -138,7 +139,6 @@
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
-        max-width: 28rem;
       }
     }
 
@@ -205,6 +205,7 @@
       height: auto;
       margin: 0 auto;
       margin-top: 3.2rem;
+      display: none;
     }
   }
 
@@ -216,9 +217,9 @@
     border-radius: 177.9rem;
     background: radial-gradient(50% 50% at 50% 50%, #FF5129 0%, #32028D 100%);
     filter: blur(15rem);
-    bottom: 10rem;
+    bottom: 49rem;
     z-index: -1;
-    right: calc((100vw - 2100px) / 2);
+    right: calc((100vw - 3242px) / 2);
 
     @include breakpoint(large-desktop) {
       width: 144.7rem;
@@ -270,6 +271,150 @@
 
     @include breakpoint(tablet) {
       display: flex;
+    }
+  }
+
+  &__tv {
+    position: absolute;
+    right: 1rem;
+
+    &-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+
+      @include breakpoint(tablet) {
+        transform: translateX(6.7rem);
+      }
+
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      position: relative;
+      right: auto;
+    }
+  }
+
+  &__tv-video-container {
+    display: block;
+    width: 77.4rem;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-image: url("../img/partner/intro/tv-container.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transform: rotate(1deg);
+    padding: 1rem;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      z-index: -1;
+      transform: translateX(-50%);
+      width: 10.3rem;
+      height: 40.7rem;
+      background-image: url("../img/partner/intro/tv-leg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+      content: "";
+    }
+
+    @include breakpoint(desktop) {
+      width: 66.4rem;
+    }
+
+    @include breakpoint(laptop) {
+      width: 44.4rem;
+
+      &::before {
+        width: 6rem;
+        height: 29.7rem;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+
+  &__tv-controls {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin-top: 3rem;
+
+    .intro__button {
+      padding-left: 6.4rem;
+      padding-right: 6.4rem;
+      width: auto;
+    }
+  }
+
+  &__tv-img-gif {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__small-labels {
+    --fz: 3.2rem;
+    --lh: 3.35rem;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: var(--fz);
+    line-height: var(--lh);
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+
+      &::before {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: #FF5129;
+        box-shadow: 0 0 7.2px 0 #FF5129;
+        content: "";
+      }
+    }
+
+    @include breakpoint(mobile) {
+      --fz: 2.4rem;
+      --lh: 3.1rem;
+
+      span {
+        text-transform: none;
+      }
+    }
+  }
+
+  &__tv-small-link {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 2rem;
+  }
+
+  &__tv-button {
+    @include button();
+
+    @include breakpoint(mobile) {
+      margin-top: 0;
     }
   }
 }
