@@ -1,0 +1,202 @@
+@import 'vendor';
+@import 'fontface';
+@import 'mixins';
+@import 'global';
+
+.telegram-popup {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.telegram-popup__blur {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(50%) scale(1.5);
+    pointer-events: none;
+    z-index: -1;
+
+    width: 98px;
+    height: 203px;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.telegram-popup__btn {
+    border-radius: 15px 0 0 15px;
+    padding: 27px 12px;
+    background: #ff5129;
+    color: white;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s, visibility 0.4s;
+
+    @media (max-width: 640px) {
+        padding: 27px 7px;
+    }
+
+    .open & {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s, visibility 0s linear 0.4s;
+    }
+}
+
+.telegram-popup__text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 110%;
+    transform: rotate(180deg);
+    @media (max-width: 640px) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 110%;
+    }
+}
+
+.telegram-popup__icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border: 2px solid white;
+    border-radius: 50%;
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+.telegram-popup__dropdown {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    margin-right: -20px;
+
+    .open & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
+
+.telegram-popup__dropdown-inner {
+    background: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+    color: #08122c;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    max-width: 300px;
+
+    @media (max-width: 640px) {
+        max-width: 260px;
+    }
+}
+
+.telegram-popup__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+    }
+}
+
+.telegram-popup__inner-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 8px;
+    line-height: 110%;
+
+    @media (max-width: 640px) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 110%;
+    }
+}
+
+.telegram-popup__inner-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+    margin-bottom: 12px;
+
+    @media (max-width: 640px) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 110%;
+    }
+}
+
+.telegram-popup__subscribe {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 33px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 110%;
+    background: #ff5129;
+    border-radius: 100px;
+    color: white;
+    align-self: flex-start;
+    transition: box-shadow 0.2s;
+
+    @media (max-width: 640px) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 110%;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.telegram-popup__subscribe-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid white;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+    }
+}

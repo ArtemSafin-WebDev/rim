@@ -11,7 +11,9 @@
         <link rel="stylesheet" href="css/new-styles.css" />
         <link rel="stylesheet" href="css/new-main-footer.css" />
         <link rel="stylesheet" href="css/newest-header.css" />
+        <link rel="stylesheet" href="css/telegram-popup.css">
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="assets/js/telegram-popup.js"></script>
         <title>
             {{ title }}
         </title>
@@ -21,6 +23,7 @@
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             {{> sprite }}
         </div>
+        {{> telegram-popup }}
 
         <div class="page-content">
             {{> newest-header-dark }}
