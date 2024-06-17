@@ -1,0 +1,105 @@
+.has-questions {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+        margin-bottom: 8rem;
+    }
+}
+
+.has-questions__image {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        margin-top: 5rem;
+    }
+}
+
+.has-questions__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.has-questions__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        min-height: 61.2rem;
+    }
+}
+
+.has-questions__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 110%;
+    margin-bottom: 2.6rem;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+        margin-bottom: 2rem;
+    }
+}
+
+.has-questions__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 110%;
+    max-width: 65rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
+}
+
+.has-questions__link {
+    align-self: center;
+    padding: 1.2rem 4rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    background: #fc3f1d;
+    border-radius: 52rem;
+    color: white;
+    line-height: 110%;
+    margin-top: 4.2rem;
+    position: relative;
+    z-index: 10;
+
+    @include breakpoint(mobile) {
+        padding: 1rem 5rem;
+        align-self: center;
+        margin-top: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 110%;
+        margin-top: 4rem;
+        align-self: flex-start;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        align-self: center;
+        text-align: center;
+        margin-top: auto;
+    }
+}
