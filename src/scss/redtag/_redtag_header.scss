@@ -10,9 +10,6 @@
   right: 0;
   z-index: 10;
   transition: .4s ease all;
-  @include breakpoint(small-tablet) {
-    margin-top: 4.5rem;
-  }
 
   &--active {
     background: rgba(1, 1, 1, 0.50);
