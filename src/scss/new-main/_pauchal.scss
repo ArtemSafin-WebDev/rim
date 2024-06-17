@@ -1,0 +1,222 @@
+.pauchal {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        picture {
+            order: 70;
+        }
+    }
+}
+
+.pauchal__blur {
+    display: none;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        pointer-events: none;
+        display: block;
+        margin-top: -10rem;
+    }
+}
+
+.pauchal__bg-image {
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    pointer-events: none;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        width: 100vw;
+        position: relative;
+        order: 40;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        margin-top: -7rem;
+    }
+}
+
+.pauchal__content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas: 'nothing wrapper';
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.pauchal__wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-area: wrapper;
+}
+
+.pauchal__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 105%;
+    max-width: 60rem;
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+        max-width: none;
+    }
+
+    b {
+        font-weight: inherit;
+        color: #ff5129;
+    }
+}
+
+.pauchal__heading-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 100%;
+    margin-top: 1.8rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 110%;
+        margin-top: 1rem;
+    }
+}
+
+.pauchal__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 4rem;
+    }
+}
+
+.pauchal__card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pauchal__card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pauchal__card-amount {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.1rem;
+    line-height: 100%;
+    color: #ff5129;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+    }
+}
+
+.pauchal__card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 110%;
+    }
+}
+
+.pauchal__card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pauchal__card-list-item {
+    position: relative;
+    padding-left: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 110%;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0.7rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        left: 0;
+        background-image: url('../img/oon-list-arrow.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include breakpoint(mobile) {
+            top: 0.4rem;
+        }
+    }
+}
+
+.pauchal__callback {
+    align-self: flex-start;
+    padding: 1.2rem 4rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    background: #fc3f1d;
+    border-radius: 52rem;
+    color: white;
+    line-height: 110%;
+    margin-top: 5rem;
+
+    @include breakpoint(mobile) {
+        padding: 1rem 5rem;
+        align-self: center;
+        margin-top: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 110%;
+        margin-top: 2.7rem;
+        align-self: flex-start;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}

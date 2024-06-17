@@ -1,7 +1,11 @@
 .demand {
-    margin-bottom: 8rem;
+    margin-bottom: 16rem;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .demand__image {

@@ -1,0 +1,240 @@
+.formats {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
+}
+
+.formats__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.formats__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 105%;
+    text-align: center;
+    margin-bottom: 5.2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+        margin-bottom: 3rem;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.formats__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4.8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 6rem;
+    }
+}
+
+.formats__list-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.formats__top-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.8rem;
+    gap: 1.5rem;
+    flex-grow: 1;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        gap: 0.9rem;
+    }
+}
+
+.formats__top-card-heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.2rem;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 2.4rem;
+        line-height: 110%;
+        text-align: center;
+    }
+}
+
+.formats__top-card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 110%;
+        text-align: center;
+    }
+}
+
+.formats__bottom-card {
+    padding: 4rem;
+    padding-left: 3rem;
+    padding-right: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(50px);
+    border-radius: 1.2rem;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        backdrop-filter: none;
+        border-radius: 0;
+        padding: 0;
+        background: transparent;
+    }
+}
+
+.formats__numbers-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-row-gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2rem;
+        row-gap: 3rem;
+        flex-wrap: wrap;
+    }
+}
+
+.formats__numbers-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+    }
+}
+
+.formats__numbers-card-amount {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.2rem;
+    line-height: 110%;
+    color: #ff5129;
+    white-space: nowrap;
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 116%;
+    }
+}
+
+.formats__numbers-card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
+}
+
+.formats__callback-link {
+    align-self: center;
+    padding: 1.2rem 4rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    background: #fc3f1d;
+    border-radius: 52rem;
+    color: white;
+    line-height: 110%;
+    margin-top: 5rem;
+
+    @include breakpoint(mobile) {
+        padding: 1rem 5rem;
+        align-self: center;
+        margin-top: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 110%;
+        margin-top: 6.5rem;
+    }
+}
+
+.formats__bg-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+    width: 100%;
+    height: auto;
+    left: 50%;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.formats__mobile-top-blur {
+    display: none;
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: auto;
+        width: 100vw;
+        z-index: -1;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        display: block;
+        max-width: none;
+    }
+}
+
+.formats__mobile-bottom-blur {
+    display: none;
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: auto;
+        width: 100vw;
+        z-index: -1;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        display: block;
+        max-width: none;
+    }
+}
