@@ -1,0 +1,280 @@
+.what-is {
+    margin-bottom: 20rem;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
+}
+
+.what-is__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.what-is__bg-image {
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+}
+
+.what-is__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 105%;
+    margin-bottom: 8rem;
+    max-width: 606rem;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        margin-bottom: 3.8rem;
+        line-height: 100%;
+    }
+}
+
+.what-is__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 3rem;
+
+    @include breakpoint(mobile) {
+        margin: 0 auto;
+        max-width: 19.3rem;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.what-is__list-item {
+    display: flex;
+    flex-direction: column;
+    &::before {
+        display: none;
+    }
+}
+
+.what-is__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 4rem;
+
+    border-radius: 1.2rem;
+    gap: 4rem;
+    min-height: 42rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    justify-content: flex-end;
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    @include breakpointMF(small-tablet) {
+        .what-is__list-item:nth-child(1) & {
+            transform: rotate(-4.94deg);
+        }
+        .what-is__list-item:nth-child(2) & {
+            transform: translateY(-3rem) translateX(-2rem) rotate(3.17deg);
+
+            .what-is__card-title {
+                margin-bottom: auto;
+            }
+
+            .what-is__card-number {
+                top: 6rem;
+            }
+
+            .what-is__card-text {
+                padding-left: 5rem;
+            }
+        }
+        .what-is__list-item:nth-child(3) & {
+            transform: translateX(-6rem) rotate(-3.27deg);
+            .what-is__card-title {
+                margin-bottom: auto;
+                padding-left: 5rem;
+            }
+
+            .what-is__card-number {
+                top: 6rem;
+                margin-left: -6rem;
+            }
+
+            .what-is__card-text {
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        .what-is__list-item:nth-child(1) & {
+            transform: translateX(-6rem) rotate(-4.09deg);
+        }
+        .what-is__list-item:nth-child(2) & {
+            transform: translateY(-3rem) translateX(7rem) rotate(6.46deg);
+        }
+        .what-is__list-item:nth-child(3) & {
+            transform: translateY(-5.5rem) translateX(-3rem) rotate(-3.17deg);
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        z-index: -2;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(40px);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 1.2rem;
+        border: 1px solid transparent;
+        background: linear-gradient(to bottom, white, white);
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+.what-is__card-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1.4rem;
+        line-height: 110%;
+    }
+}
+
+.what-is__card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 120%;
+        text-align: center;
+    }
+}
+
+.what-is__wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.what-is__planet-one {
+    position: absolute;
+    z-index: -1;
+    width: 50.7rem;
+    transform: translateY(-50%);
+    left: -17rem;
+    top: 50%;
+    pointer-events: none;
+    margin-top: 8rem;
+
+    @include breakpoint(mobile) {
+        width: 22rem;
+        top: 13rem;
+        left: -9rem;
+        margin-top: 4rem;
+        transform: none;
+    }
+}
+
+.what-is__planet-two {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    right: -8rem;
+    width: 22rem;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        width: 16rem;
+        top: 0;
+        transform: none;
+    }
+}
+.what-is__card-number {
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff 31.92%, rgba(255, 255, 255, 0) 84.18%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24.6rem;
+    line-height: 110%;
+    opacity: 0.5;
+
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    top: -2rem;
+    transform: translateX(-50%);
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        transform: none;
+        position: static;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 7.2rem;
+        line-height: 110%;
+        margin-bottom: -2rem;
+        margin-top: -1rem;
+    }
+}
+
+.what-is__link {
+    align-self: center;
+    padding: 1.2rem 4rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    background: #fc3f1d;
+    border-radius: 52rem;
+    color: white;
+    line-height: 110%;
+    margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+        padding: 1rem 5rem;
+        align-self: center;
+        margin-top: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 110%;
+    }
+}

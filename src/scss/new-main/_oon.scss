@@ -1,0 +1,142 @@
+.oon {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20rem;
+    margin-top: -14rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+        margin-bottom: 10rem;
+    }
+}
+
+.oon__image {
+    position: absolute;
+    top: -20rem;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+    left: 50%;
+
+    @include breakpoint(mobile) {
+        top: auto;
+        bottom: 0;
+        width: 100vw;
+        height: auto;
+        margin-bottom: -35rem;
+    }
+}
+.oon__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+    }
+}
+
+.oon__text-wrapper {
+    margin-left: auto;
+    max-width: 64.2rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        padding-bottom: 27rem;
+        position: relative;
+    }
+}
+
+.oon__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 110%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+        margin-bottom: 2.4rem;
+    }
+}
+
+.oon__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 3.8rem;
+
+    @include breakpoint(mobile) {
+        gap: 1.6rem;
+        margin-bottom: 0;
+    }
+}
+
+.oon__list-item {
+    padding-left: 1.2rem;
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 110%;
+        padding-left: 1rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0.6rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        left: 0;
+        background-image: url('../img/oon-list-arrow.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include breakpoint(mobile) {
+            top: 0.3rem;
+        }
+    }
+}
+
+.oon__card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18.2054px;
+    line-height: 110%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5rem);
+    border-radius: 1.2rem;
+    color: white;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 110%;
+        padding: 1rem 1.2rem;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5rem);
+        border-radius: 1.2rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}

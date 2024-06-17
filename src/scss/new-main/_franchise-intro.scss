@@ -1,0 +1,217 @@
+.franchise-intro {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 8rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
+}
+
+.franchise-intro__bg-image {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    height: 100rem;
+    width: auto;
+    left: 50%;
+
+    @include breakpoint(mobile) {
+        top: auto;
+        bottom: -4rem;
+        width: 100%;
+        height: auto;
+        transform: translateX(-50%);
+        max-width: none;
+        left: 50%;
+    }
+}
+
+.franchise-intro__blur {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150rem;
+    height: auto;
+    z-index: -1;
+    transform: translateX(40%) translateY(-40%);
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        transform: none;
+        width: 80rem;
+        top: -20rem;
+        bottom: auto;
+        transform: translateX(50%);
+    }
+}
+
+.franchise-intro__bg-image {
+}
+
+.franchise-intro__content {
+    min-height: 100rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 18rem;
+    padding-top: 15.7rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 10.4rem;
+        padding-bottom: 0;
+        min-height: 67rem;
+    }
+}
+
+.franchise-intro__row {
+    margin-bottom: 8rem;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        gap: 0.2rem;
+        text-align: center;
+        margin-bottom: 2.2rem;
+    }
+}
+
+.franchise-intro__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14.3rem;
+    line-height: 116%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 4.8rem;
+        line-height: 116%;
+    }
+}
+
+.franchise-intro__text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 105%;
+    white-space: nowrap;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 105%;
+        white-space: normal;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.franchise-intro__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.franchise-intro__inner-wrapper {
+    display: contents;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5rem);
+        border-radius: 1.1rem;
+        text-align: center;
+        margin-bottom: 1.1rem;
+        max-width: 24rem;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 1.2rem;
+    }
+}
+
+.franchise-intro__wrapper-text {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.6rem;
+    line-height: 105%;
+    margin-bottom: 2.5rem;
+    max-width: 50rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 105%;
+        max-width: none;
+    }
+}
+
+.franchise-intro__profit {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.6rem;
+    line-height: 120%;
+    color: #08122c;
+    background-color: #fff;
+    padding: 0.9rem 3.4rem;
+    border-radius: 100rem;
+    margin-bottom: 2.5rem;
+    align-self: flex-start;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 105%;
+        padding: 0.8rem 2rem;
+        align-self: stretch;
+    }
+}
+
+.franchise-intro__small-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 100%;
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 100%;
+        align-self: center;
+        max-width: 24rem;
+        text-align: center;
+    }
+}
+
+.franchise-intro__callback-link {
+    align-self: center;
+    padding: 1.2rem 4rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    background: #fc3f1d;
+    border-radius: 52rem;
+    color: white;
+    line-height: 110%;
+    margin-top: auto;
+
+    @include breakpoint(mobile) {
+        padding: 1rem 5rem;
+        align-self: center;
+        margin-top: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 110%;
+    }
+}
