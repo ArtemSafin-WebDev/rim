@@ -1,0 +1,203 @@
+.control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    position: relative;
+    z-index: 10;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
+}
+
+.control__wrapper {
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        position: static;
+    }
+}
+
+.control__bg-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+.control__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 110%;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+        max-width: none;
+        margin-bottom: 4.5rem;
+    }
+}
+
+.control__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.control__list-item {
+    @include breakpointMF(small-tablet) {
+        &:nth-child(1) {
+            width: 44.8rem;
+            .control__card-icon {
+                left: 0;
+                top: 0;
+                transform: translate(-50%, -50%) rotate(-4.96deg);
+                width: 5.6rem;
+                height: auto;
+            }
+        }
+        &:nth-child(2) {
+            width: 49rem;
+
+            .control__card-icon {
+                right: 4rem;
+                top: 100%;
+                width: 6.1rem;
+                height: auto;
+                margin-top: -1rem;
+                transform: rotate(13.7deg);
+            }
+        }
+        &:nth-child(3) {
+            width: 38rem;
+            .control__card-icon {
+                bottom: 100%;
+                right: 0;
+                width: 6.7rem;
+                height: auto;
+                transform: rotate(-1.29deg);
+                margin-bottom: -1.3rem;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin: -0.2rem 0;
+        &:nth-child(1) {
+            .control__card-icon {
+                width: 4.4rem;
+                left: 5.2rem;
+                top: 0;
+                transform: translateY(-50%) rotate(-4.96deg);
+            }
+        }
+        &:nth-child(2) {
+            .control__card-icon {
+                right: 0;
+                top: 0;
+                transform: translate(50%, -50%) rotate(13.7deg);
+                width: 4.4rem;
+                height: auto;
+                margin-top: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        &:nth-child(3) {
+            .control__card-icon {
+                right: 4.6rem;
+                top: 100%;
+                transform: rotate(-8.89deg);
+                width: 4.6rem;
+                height: auto;
+                margin-top: -4rem;
+            }
+        }
+    }
+}
+
+.control__card-icon {
+    position: absolute;
+}
+
+.control__card {
+    padding: 3rem;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 110%;
+        padding: 2.2rem;
+    }
+
+    b {
+        font-weight: inherit;
+        font-weight: 800;
+    }
+
+    .control__list-item:nth-child(1) & {
+        background-image: url('../img/control-card-1-bg.svg');
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @include breakpoint(mobile) {
+            padding-left: 2.5rem;
+            padding-top: 2.8rem;
+            padding-right: 1.5rem;
+            padding-bottom: 3rem;
+            background-image: url('../img/control-card-1-bg-mobile.svg');
+        }
+    }
+    .control__list-item:nth-child(2) & {
+        background-image: url('../img/control-card-2-bg.svg');
+        margin-left: -1rem;
+        text-align: center;
+
+        @include breakpoint(mobile) {
+            margin: 0;
+            padding: 2.4rem;
+        }
+    }
+    .control__list-item:nth-child(3) & {
+        padding-top: 2rem;
+        background-image: url('../img/control-card-3-bg.svg');
+
+        @include breakpoint(mobile) {
+            padding: 2rem;
+            padding-left: 3.4rem;
+            padding-right: 3rem;
+            padding-bottom: 3.6rem;
+            max-width: 30rem;
+            margin: 0 auto;
+            background-image: url('../img/control-card-3-bg-mobile.svg');
+        }
+    }
+}
