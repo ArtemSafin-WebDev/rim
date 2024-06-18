@@ -13,21 +13,25 @@
     width: 100%;
     height: auto;
 
-    @include breakpointMF(small-tablet) {
-        mix-blend-mode: overlay;
-        opacity: 0.1;
-    }
+    mix-blend-mode: overlay;
+    opacity: 0.1;
 }
 
 .resp__cols {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .resp__col {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .resp__col-heading {
@@ -36,6 +40,14 @@
     font-size: 3.2rem;
     line-height: 110%;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 100%;
+        margin-bottom: 2rem;
+    }
 
     b {
         font-weight: inherit;
@@ -70,6 +82,14 @@
     line-height: 105%;
     padding-left: 2.6rem;
     position: relative;
+
+    @include breakpoint(mobile) {
+        gap: 0.8rem;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 105%;
+    }
     &::after {
         content: '';
         position: absolute;
@@ -96,6 +116,13 @@
         text-fill-color: transparent;
         opacity: 0.33;
         flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 3.2rem;
+            line-height: 110%;
+        }
     }
 }
 
@@ -113,11 +140,96 @@
     margin-top: 3.4rem;
     @include breakpoint(mobile) {
         padding: 1rem 5rem;
-        align-self: flex-start;
+        align-self: center;
         margin-top: auto;
         font-style: normal;
         font-weight: 500;
         font-size: 1.8rem;
         line-height: 110%;
+        margin-top: 9rem;
+    }
+}
+
+.resp__connector {
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 8;
+    margin-right: -1rem;
+    width: 10.4rem;
+
+    @include breakpoint(mobile) {
+        width: 17rem;
+        height: auto;
+        top: 100%;
+        margin: 0;
+        left: 0;
+        right: auto;
+        margin-top: -14rem;
+    }
+}
+
+.resp__connector-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.resp__connector-red-text {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 105%;
+    letter-spacing: 0.05em;
+    transform: rotate(7.83deg);
+    text-shadow: 0px 0px 11.2266px #ff5129;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    margin-right: -4.2rem;
+    white-space: nowrap;
+    color: #ff5129;
+    margin-top: -2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1.2rem;
+        line-height: 105%;
+        letter-spacing: 0.05em;
+
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) rotate(-15.11deg);
+        bottom: 6.5rem;
+        top: auto;
+    }
+}
+
+.resp__connector-white-text {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 105%;
+    letter-spacing: 0.05em;
+    transform: translateY(-50%) rotate(-2.94deg);
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    white-space: nowrap;
+    margin-right: 2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1.2rem;
+        line-height: 105%;
+        letter-spacing: 0.05em;
+        right: auto;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%) rotate(8.11deg);
+        margin-left: 2.5rem;
     }
 }
