@@ -737,6 +737,102 @@
             </div>
         </section>
 
+        <section class="qa">
+            <picture>
+                <source srcset="img/qa-bg-mobile.webp" media="(max-width: 640px)" />
+                <img src="img/qa-bg.webp" alt="MDN" class="qa__image" />
+            </picture>
+            <div class="container">
+                <div class="qa__content">
+                    <h2 class="qa__heading">
+                        Q<b>&</b>A
+                    </h2>
+                    <ul class="qa__list">
+                        <li class="qa__list-item">
+                            <div class="qa__accordion">
+                                <div class="qa__accordion-btn">
+                                    Для кого эта франшиза?
+                                    <div class="qa__accordion-btn-plus">
+
+                                    </div>
+                                </div>
+                                <div class="qa__accordion-content">
+                                    <div class="qa__accordion-content-inner">
+                                        <div class="qa__accordion-content-text">
+                                            Для бизнесменов в регионах и инвесторов.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="qa__list-item">
+                            <div class="qa__accordion">
+                                <div class="qa__accordion-btn">
+                                    Чем отличаются форматы франшизы?
+                                    <div class="qa__accordion-btn-plus">
+
+                                    </div>
+                                </div>
+                                <div class="qa__accordion-content">
+                                    <div class="qa__accordion-content-inner">
+                                        <div class="qa__accordion-content-text">
+                                            Для бизнесменов в регионах и инвесторов.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="qa__list-item">
+                            <div class="qa__accordion">
+                                <div class="qa__accordion-btn">
+                                    Как получить экономическое обоснование и бизнес-план?
+                                    <div class="qa__accordion-btn-plus">
+
+                                    </div>
+                                </div>
+                                <div class="qa__accordion-content">
+                                    <div class="qa__accordion-content-inner">
+                                        <div class="qa__accordion-content-text">
+                                            Для бизнесменов в регионах и инвесторов.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="qa__list-item">
+                            <div class="qa__accordion">
+                                <div class="qa__accordion-btn">
+                                    Кому я смогу задавать вопросы в процессе обучения?
+                                    <div class="qa__accordion-btn-plus">
+
+                                    </div>
+                                </div>
+                                <div class="qa__accordion-content">
+                                    <div class="qa__accordion-content-inner">
+                                        <div class="qa__accordion-content-text">
+                                            Для бизнесменов в регионах и инвесторов.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const elements = Array.from(document.querySelectorAll('.qa__accordion-btn'));
+
+                elements.forEach(element => element.addEventListener('click', event => {
+                    event.preventDefault();
+                    element.parentElement.classList.toggle('active')
+                }))
+            })
+        </script>
+
 
     {{/content}}
 {{/extend}}
