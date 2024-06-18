@@ -1,9 +1,11 @@
 import initIntroAnimation from "./franchise/introAnimation";
+import initOonAnimation from "./franchise/oonAnimation";
 
 
 document.addEventListener('DOMContentLoaded', function() {
 
     initIntroAnimation()
+    initOonAnimation()
 });
 
 window.addEventListener('load', function() {
