@@ -86,6 +86,12 @@
     position: relative;
     z-index: 10;
 
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0px 0px 3.61801px #ff5129, 0px 0px 21.7081px #ff5129;
+        }
+    }
+
     @include breakpoint(mobile) {
         padding: 1rem 5rem;
         align-self: center;
