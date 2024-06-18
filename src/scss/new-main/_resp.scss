@@ -1,0 +1,123 @@
+.resp {
+    margin-bottom: 10rem;
+    position: relative;
+    z-index: 1;
+}
+
+.resp__image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 100%;
+    height: auto;
+
+    @include breakpointMF(small-tablet) {
+        mix-blend-mode: overlay;
+        opacity: 0.1;
+    }
+}
+
+.resp__cols {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 6rem;
+}
+
+.resp__col {
+    display: flex;
+    flex-direction: column;
+}
+
+.resp__col-heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.2rem;
+    line-height: 110%;
+    margin-bottom: 2rem;
+
+    b {
+        font-weight: inherit;
+        color: #ff5129;
+    }
+}
+
+.resp__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0.4rem;
+        width: 0.2rem;
+        top: 2.4rem;
+        bottom: 2.4rem;
+        background: linear-gradient(180deg, #ffffff 43.49%, rgba(255, 255, 255, 0) 128.03%);
+    }
+}
+
+.resp__list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 105%;
+    padding-left: 2.6rem;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #ff5129;
+        box-shadow: 0px 0px 1.12266rem #ff5129, 0px 0px 0.64152rem #ff5129, 0px 0px 0.37422rem #ff5129, 0px 0px 0.18711rem #ff5129,
+            0px 0px 0.05346rem #ff5129, 0px 0px 0.02673rem #ff5129;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+    }
+    &::before {
+        content: counter(ordered-list);
+        font-style: normal;
+        font-weight: 800;
+        font-size: 4.7rem;
+        line-height: 110%;
+        background: linear-gradient(180deg, #ffffff 25.96%, rgba(255, 255, 255, 0) 82.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        opacity: 0.33;
+        flex-shrink: 0;
+    }
+}
+
+.resp__callback-link {
+    align-self: flex-start;
+    padding: 1.2rem 4rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    background: #fc3f1d;
+    border-radius: 52rem;
+    color: white;
+    line-height: 110%;
+
+    margin-top: 3.4rem;
+    @include breakpoint(mobile) {
+        padding: 1rem 5rem;
+        align-self: flex-start;
+        margin-top: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 110%;
+    }
+}
