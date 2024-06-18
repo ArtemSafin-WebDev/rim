@@ -27,7 +27,7 @@
 .demand__content {
     display: flex;
     flex-direction: column;
-    min-height: 77rem;
+    min-height: 87rem;
 
     @include breakpoint(mobile) {
         min-height: 50rem;
