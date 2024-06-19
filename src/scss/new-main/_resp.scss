@@ -20,7 +20,7 @@
 .resp__cols {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 6rem;
+    grid-gap: 10rem;
 
     @include breakpoint(mobile) {
         display: flex;
@@ -123,6 +123,10 @@
             font-size: 3.2rem;
             line-height: 110%;
         }
+    }
+
+    br{
+        display: none;
     }
 }
 

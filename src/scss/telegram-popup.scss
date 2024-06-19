@@ -40,6 +40,12 @@
     flex-direction: column;
     transition: opacity 0.4s, visibility 0.4s;
 
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0px 0px 3.61801px #ff5129, 0px 0px 21.7081px #ff5129;
+        }
+    }
+
     @media (max-width: 640px) {
         padding: 27px 7px;
     }

@@ -83,6 +83,10 @@
         gap: 1.5rem;
     }
 
+    &:nth-child(1){
+        padding: 2rem 1.5rem;
+    }
+
     @include breakpointMF(small-tablet) {
         .what-is__list-item:nth-child(1) & {
             transform: rotate(-4.94deg);

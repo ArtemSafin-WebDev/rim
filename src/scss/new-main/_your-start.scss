@@ -117,10 +117,11 @@
 
     @include breakpoint(mobile) {
         max-width: none;
-        width: 30%;
+        width: 50%;
         flex-grow: 1;
-        display: block;
-        display: contents;
+        gap: 2rem 5rem;
+        /*display: block;
+        display: contents;*/
     }
 }
 
@@ -284,7 +285,7 @@
     z-index: 20;
     @include breakpoint(mobile) {
         margin-right: 0;
-        margin-left: 0;
+        /*margin-left: 0;*/
     }
 }
 .your-start__ceo-name {

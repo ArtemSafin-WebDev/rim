@@ -48,6 +48,50 @@
     flex-direction: column;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        &:nth-child(1)
+        {
+            .formats__numbers-list{
+                .formats__numbers-list-item:nth-child(1){
+                    order: 0;
+                }
+                .formats__numbers-list-item:nth-child(2){
+                    order: 4;
+                }
+                .formats__numbers-list-item:nth-child(3){
+                    order: 1;
+                }
+                .formats__numbers-list-item:nth-child(4){
+                    order: 5;
+                }
+                .formats__numbers-list-item:nth-child(5){
+                    order: 2;
+                }
+            }
+        }
+
+        &:nth-child(2)
+        {
+            .formats__numbers-list{
+                .formats__numbers-list-item:nth-child(1){
+                    order: 0;
+                }
+                .formats__numbers-list-item:nth-child(2){
+                    order: 4;
+                }
+                .formats__numbers-list-item:nth-child(3){
+                    order: 1;
+                }
+                .formats__numbers-list-item:nth-child(4){
+                    order: 5;
+                }
+                .formats__numbers-list-item:nth-child(5){
+                    order: 2;
+                }
+            }
+        }
+    }
 }
 
 .formats__top-card {
@@ -122,7 +166,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        gap: 2rem;
+        gap: 1rem;
         row-gap: 3rem;
         flex-wrap: wrap;
     }
