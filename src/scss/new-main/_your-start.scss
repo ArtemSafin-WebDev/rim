@@ -77,6 +77,9 @@
     b {
         font-weight: inherit;
         color: #ff5129;
+        @include breakpoint(mobile) {
+            display: block;
+        }
     }
 }
 
