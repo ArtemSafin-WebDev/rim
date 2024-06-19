@@ -126,6 +126,12 @@
 }
 
 .your-start__numbers-list-item {
+    &:nth-child(3) {
+        flex: 30rem;
+        @include breakpoint(mobile) {
+            flex: auto;
+        }
+    }
     @include breakpoint(mobile) {
         position: relative;
         z-index: 20;
