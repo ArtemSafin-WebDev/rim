@@ -34,6 +34,9 @@
     line-height: 110%;
     margin-bottom: 5rem;
     max-width: 70rem;
+    br {
+        display: none;
+    }
 
     @include breakpoint(mobile) {
         font-style: normal;
@@ -42,6 +45,9 @@
         line-height: 110%;
         max-width: none;
         margin-bottom: 4rem;
+        br {
+            display: block;
+        }
     }
 
     b {

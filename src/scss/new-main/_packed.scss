@@ -20,6 +20,9 @@
     text-align: center;
     max-width: 72rem;
     align-self: center;
+    br {
+        display: none;
+    }
 
     @include breakpoint(mobile) {
         max-width: none;
@@ -28,6 +31,9 @@
         font-size: 3.1rem;
         line-height: 100%;
         margin-bottom: 4rem;
+        br {
+            display: block;
+        }
     }
 }
 
