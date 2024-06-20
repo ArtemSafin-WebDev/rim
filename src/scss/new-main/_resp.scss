@@ -116,6 +116,7 @@
         text-fill-color: transparent;
         opacity: 0.33;
         flex-shrink: 0;
+        min-width: 2.5rem;
 
         @include breakpoint(mobile) {
             font-style: normal;
