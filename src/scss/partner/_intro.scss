@@ -77,6 +77,11 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @include breakpoint(mobile) {
+            background-position: 20% 60%;
+            background-size: 170%;
+        }
     }
 
     &__title {
