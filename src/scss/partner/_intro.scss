@@ -20,6 +20,28 @@
         }
     }
 
+    &__content-bg {
+        position: absolute;
+        width: 100.3rem;
+        height: 85rem;
+        background-color: #ff5129;
+        border-radius: 100%;
+        fill: radial-gradient(50% 50% at 50% 50%, rgb(255, 81, 41) 0%, rgb(50, 2, 141) 100%);
+        filter: blur(250px);
+        top: -25rem;
+        left: -25rem;
+
+        @include breakpoint(mobile) {
+            left: auto;
+            top: auto;
+            right: -25rem;
+            bottom: 0;
+            width: 75rem;
+            height: 65rem;
+            z-index: 2;
+        }
+    }
+
     &__content-wrapper {
         max-height: 94.6rem;
         display: grid;
@@ -33,18 +55,18 @@
             'main main main main bottom bottom'
             'main main main main bottom bottom';
 
-         @include breakpoint(tablet) {
+        @include breakpoint(tablet) {
             display: flex;
             flex-direction: column;
             align-items: center;
             max-height: none;
             width: 100%;
             max-width: 50rem;
-         }
+        }
 
-         @include breakpoint(mobile) {
+        @include breakpoint(mobile) {
             max-width: 354px;
-         }
+        }
     }
 
     &__main-block {
@@ -181,7 +203,7 @@
         }
 
         @include breakpoint(tablet) {
-            font-family: "Uni Neue", sans-serif;
+            font-family: 'Uni Neue', sans-serif;
             font-size: 19px;
             font-weight: 800;
             line-height: 22px;
@@ -197,6 +219,7 @@
     &__info-block {
         grid-area: bottom;
         position: relative;
+        z-index: 3;
         overflow: hidden;
         height: auto;
         padding: 4rem;
@@ -210,7 +233,7 @@
 
         @include breakpoint(tablet) {
             padding: 18px;
-            height: 176px;
+            min-height: fit-content;
             min-height: auto;
             row-gap: 40px;
         }
@@ -332,21 +355,21 @@
         &:first-of-type {
             transform: rotate(-5deg);
             left: 20px;
-            z-index: 0;
+            z-index: 3;
         }
 
         &:last-child {
             transform: rotate(5deg);
             top: 5px;
             right: 10px;
-            z-index: 1;
+            z-index: 4;
         }
 
         @include breakpoint(tablet) {
             font-size: 11px;
             font-weight: 800;
             text-align: left;
-            padding: 5px 13px ;
+            padding: 5px 13px;
         }
     }
 
@@ -361,13 +384,4 @@
     .purple-bg {
         background-color: #5229a1;
     }
-}
-
-.intro {
-}
-.orange {
-}
-.js-play-video {
-}
-.purple {
 }

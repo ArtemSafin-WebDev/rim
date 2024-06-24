@@ -21,6 +21,46 @@
         }
     }
 
+    &__shape {
+        position: absolute;
+        width: 50rem;
+        height: 50rem;
+        border-radius: 50%;
+        filter: blur(200px);
+        z-index: -2;
+
+        @include breakpoint(tablet) {
+            width: 40rem;
+            height: 40rem;
+            filter: blur(120px);
+        }
+
+        background-color: #ff5129;
+        &--first {
+            top: 25rem;
+            right: -15rem;
+
+            @include breakpoint(tablet) {
+                top: auto;
+                right: auto;
+                bottom: 30rem;
+                left: -25rem;
+            }
+        }
+
+        &--second {
+            left: -15rem;
+
+            @include breakpoint(tablet) {
+                top: auto;
+                left: auto;
+                bottom: 30rem;
+                right: -30rem;
+                background-color: #32028d;
+            }
+        }
+    }
+
     &__block-top {
         grid-area: top;
         padding: 4.5rem;
@@ -86,7 +126,7 @@
                 transform: rotate(180deg);
             }
         }
-        
+
         @include breakpoint(mobile) {
             height: 36rem;
             max-width: 35rem;
@@ -308,7 +348,7 @@
         margin-bottom: 5rem;
 
         @include breakpoint(tablet) {
-            font-family: "Uni Neue", sans-serif;
+            font-family: 'Uni Neue', sans-serif;
             font-size: 32px;
             font-weight: 800;
             line-height: 32px;
@@ -349,7 +389,7 @@
         }
 
         @include breakpoint(tablet) {
-            font-family: "Uni Neue", sans-serif;
+            font-family: 'Uni Neue', sans-serif;
             font-size: 16px;
             font-weight: 800;
             line-height: 1.1;
