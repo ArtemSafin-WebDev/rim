@@ -882,6 +882,109 @@
                 </div>
             </div>
         </section>
+        <section class="growth">
+            <div class="container">
+                <div class="growth__slider">
+                    <div class="growth__slider-controls">
+
+
+                        <div class="growth__slider-arrows">
+                            <button class="growth__slider-arrow growth__slider-arrow--prev">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#new-slider-arrow-left"></use>
+                                </svg>
+                            </button>
+                            <button class="growth__slider-arrow growth__slider-arrow--next">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#new-slider-arrow-right"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="growth__slider-pagination">
+
+                        </div>
+                    </div>
+                    <div class="growth__slider-wrapper">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="growth__slider-card">
+                                        <div class="growth__slider-card-content">
+
+
+                                            <div class="growth__slider-slider-card-title">
+                                                Рост рынка наружной рекламы 
+                                            </div>
+                                            <div class="growth__slider-slider-card-text">
+                                                Всего за 5 лет рынок наружной рекламы в России увеличился на рекордные
+                                                58% и
+                                                достиг объема 48,8 млрд ₽
+                                                <span>
+                                                    *по данным Admetrix
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <picture>
+                                            <source srcset="img/growth-slider-1-mobile.svg"
+                                                media="(max-width: 640px)" />
+                                            <img src="img/growth-slider-1.webp" alt="MDN"
+                                                class="growth__slider-card-image" />
+                                        </picture>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="growth__slider-card">
+                                        <div class="growth__slider-card-content">
+
+
+                                            <div class="growth__slider-slider-card-title">
+                                                Динамика рынка<br> OOH и DOOH
+                                            </div>
+                                        </div>
+
+                                        <picture>
+                                            <source srcset="img/growth-slider-2-mobile.svg"
+                                                media="(max-width: 640px)" />
+                                            <img src="img/growth-slider-2.svg" alt="MDN"
+                                                class="growth__slider-card-image" />
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <script type="module">
+            import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const elements = Array.from(document.querySelectorAll('.growth'));
+
+                elements.forEach(element => {
+                    const container = element.querySelector('.swiper')
+                    new Swiper(container, {
+                        slidesPerView: 'auto',
+                        speed: 600,
+                        navigation: {
+                            prevEl: element.querySelector('.growth__slider-arrow--prev'),
+                            nextEl: element.querySelector('.growth__slider-arrow--next')
+                        },
+                        pagination: {
+                            el: element.querySelector('.growth__slider-pagination'),
+                            type: 'bullets',
+                            clickable: true
+                        }
+                    })
+                })
+            })
+
+        </script>
         <section class="your-start">
 
 
