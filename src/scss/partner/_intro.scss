@@ -1,420 +1,388 @@
 .intro {
-  width: 100%;
-  position: relative;
-
-  &__content {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    width: 100%;
     position: relative;
-    z-index: 3;
 
-    @include breakpoint(tablet) {
-      align-items: center;
-      padding-top: 9rem;
+    &__content {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint(tablet) {
+            align-items: flex-start;
+            padding-top: 9rem;
+            height: auto;
+        }
+
+        @include breakpoint(laptop) {
+            padding-top: 10rem;
+            padding-bottom: 5rem;
+        }
     }
 
-    @include breakpoint(laptop) {
-      padding-top: 10rem;
-      padding-bottom: 5rem;
-    }
-  }
+    &__content-bg {
+        position: absolute;
+        width: 100.3rem;
+        height: 85rem;
+        background-color: #ff5129;
+        border-radius: 100%;
+        fill: radial-gradient(50% 50% at 50% 50%, rgb(255, 81, 41) 0%, rgb(50, 2, 141) 100%);
+        filter: blur(250px);
+        transform: translateZ(0);
+        top: -25rem;
+        left: -25rem;
 
-  &__column {
-    @include breakpoint(tablet) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 5rem;
-    }
-  }
-
-  &__gradient {
-    width: 100%;
-    position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,3,13,0.30438112745098034) 51%, rgba(0,6,22,1) 70%);
-    left: 0;
-    right: 0;
-    bottom: -20rem;
-    z-index: 1;
-    height: 100%;
-  }
-
-  &__title {
-    color: white;
-    font-family: "Uni Neue", sans-serif;
-    font-size: 8.8rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 90%;
-    width: 100%;
-    max-width: 70.5rem;
-
-    margin-bottom: 2rem;
-
-    @include breakpoint(large-desktop) {
-      font-size: 6.8rem;
+        @include breakpoint(mobile) {
+            left: auto;
+            top: auto;
+            right: -25rem;
+            bottom: 0;
+            width: 75rem;
+            height: 65rem;
+            z-index: 2;
+        }
     }
 
-    @include breakpoint(tablet) {
-      font-size: 5.2rem;
-      font-style: normal;
-      font-weight: 800;
-      line-height: 100%;
-      margin-bottom: .4rem;
-      text-align: center;
+    &__content-wrapper {
+        max-height: 94.6rem;
+        display: grid;
+        z-index: 3;
+
+        gap: 2rem;
+        grid-template-areas:
+            'main main main main top top'
+            'main main main main top top'
+            'main main main main middle middle'
+            'main main main main bottom bottom'
+            'main main main main bottom bottom';
+
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-height: none;
+            width: 100%;
+            max-width: 50rem;
+        }
+
+        @include breakpoint(mobile) {
+            max-width: 354px;
+        }
+    }
+
+    &__main-block {
+        border-radius: 4rem;
+        position: relative;
+        grid-area: main;
+        overflow: hidden;
+        padding: 5rem;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+            padding: 18px;
+            min-height: 280px;
+        }
+    }
+
+    &__block-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-image: url('../img/partner/intro/federal-bg.webp');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include breakpoint(mobile) {
+            background-position: 20% 60%;
+            background-size: 170%;
+        }
+    }
+
+    &__title {
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 7.5rem;
+        font-weight: 800;
+        line-height: 0.8;
+        text-align: left;
+        color: white;
+        margin-bottom: 4rem;
+
+        @include breakpoint(tablet) {
+            font-size: 32px;
+            font-weight: 800;
+            text-align: left;
+            max-width: 263px;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__text {
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.1;
+        text-align: left;
+
+        width: 100%;
+        max-width: 78.1rem;
+        color: white;
+
+        @include breakpoint(tablet) {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            max-width: 323px;
+        }
+    }
+
+    &__block-tv {
+        grid-area: top;
+        position: relative;
+        height: auto;
+    }
+
+    &__tv-video-container {
+        height: inherit;
+        width: 100%;
+        height: 27rem;
+        overflow: hidden;
+        cursor: pointer;
+
+        @include breakpoint(tablet) {
+            height: 176px;
+        }
+    }
+
+    &__tv-image {
+        width: 100%;
+        max-width: 55rem;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        border-radius: 4rem;
+        transition: 0.3s ease opacity;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+
+    &__link {
+        display: block;
+        grid-area: middle;
+        width: 100%;
+        max-width: 63rem;
+        height: auto;
+        padding: 2.4rem 5rem;
+        gap: 10px;
+        border-radius: 4rem;
+
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 2.6rem;
+        font-weight: 800;
+        margin: auto;
+        text-align: center;
+        color: white !important;
+        background-color: #ff5129;
+        transition: 0.3s ease box-shadow;
+
+        &:hover {
+            -webkit-box-shadow: 0 0 30px 0 #ff5129, 0 0 5px 0 #ff5129;
+            box-shadow: 0 0 30px 0 #ff5129, 0 0 5px 0 #ff5129;
+        }
+
+        @include breakpoint(tablet) {
+            font-family: 'Uni Neue', sans-serif;
+            font-size: 19px;
+            font-weight: 800;
+            line-height: 22px;
+            text-wrap: nowrap;
+            text-align: center;
+            width: 100%;
+            padding: 0;
+            padding-block: 20px;
+            margin: 0 auto;
+        }
+    }
+
+    &__info-block {
+        grid-area: bottom;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+        height: auto;
+        padding: 4rem;
+        width: 100%;
+        border-radius: 4rem;
+        background: linear-gradient(327.62deg, #5229a1 -9.84%, #ffedd5 42.01%, #624f86 93.86%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 25rem;
+
+        @include breakpoint(tablet) {
+            padding: 18px;
+            min-height: fit-content;
+            min-height: auto;
+            row-gap: 40px;
+        }
+    }
+
+    &__info-block-bg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        width: calc(100% - 3px);
+        height: calc(100% - 3px);
+        border-radius: 4rem;
+        background-color: rgb(0, 0, 0);
+    }
+
+    &__block-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+
+    &__block-item {
+        position: relative;
+        padding-left: 2.6rem;
+        color: white;
+
+        &:first-child {
+            margin-bottom: 1rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            background-image: url('../img/partner/questions-round.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            content: '';
+
+            @include breakpoint(tablet) {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        @include breakpoint(tablet) {
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+        }
+    }
+
+    &__block-bottom {
+        position: relative;
+        grid-area: bottom;
+    }
+
+    &__block-title {
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 3.2rem;
+        font-weight: 800;
+        line-height: 1;
+        text-align: left;
+        margin-bottom: 1.5rem;
+        color: white;
+        text-transform: uppercase;
+
+        @include breakpoint(tablet) {
+            font-size: 18px;
+            font-weight: 800;
+            text-align: left;
+        }
+    }
+
+    &__block-bottom-bottom {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+
+        @include breakpoint(tablet) {
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    &__block-bottom-text {
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 1;
+        text-align: left;
+        color: white;
+
+        @include breakpoint(tablet) {
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+        }
+    }
+
+    &__block-slat {
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 800;
+        line-height: 1;
+        text-align: left;
+        padding: 0.9rem 2.4rem;
+        border-radius: 4rem;
+        color: white;
+        position: relative;
+
+        &:first-of-type {
+            transform: rotate(-5deg);
+            left: 20px;
+            z-index: 3;
+        }
+
+        &:last-child {
+            transform: rotate(5deg);
+            top: 5px;
+            right: 10px;
+            z-index: 4;
+        }
+
+        @include breakpoint(tablet) {
+            font-size: 11px;
+            font-weight: 800;
+            text-align: left;
+            padding: 5px 13px;
+        }
     }
 
     .orange {
-      color: #FF5129;
-    }
-  }
-
-  &__text {
-    color: white;
-
-    font-family: "Uni Neue", sans-serif;
-    font-size: 3.2rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-    margin-bottom: 4rem;
-
-    @include breakpoint(large-desktop) {
-      font-size: 2.6rem;
+        color: #ff5129;
     }
 
-    @include breakpoint(tablet) {
-      font-size: 2.8rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 120%;
-      text-align: center;
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-    margin-bottom: 7rem;
-
-    @include breakpoint(large-desktop) {
-      margin-bottom: 5rem;
+    .orange-bg {
+        background-color: #ff5129;
     }
 
-    @include breakpoint(tablet) {
-      margin-bottom: 3.2rem;
-      flex-direction: row;
-      gap: 2rem;
+    .purple-bg {
+        background-color: #5229a1;
     }
-  }
-
-  &__info {
-    display: flex;
-    align-items: flex-start;
-    column-gap: 1rem;
-
-    p {
-      color: white;
-
-      font-family: "Uni Neue", sans-serif;
-      font-size: 2.4rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 140%;
-      width: 100%;
-      max-width: 44.1rem;
-
-      @include breakpoint(large-desktop) {
-        font-size: 1.8rem;
-        max-width: 36.1rem;
-      }
-
-      @include breakpoint(tablet) {
-        font-size: 1.6rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 150%;
-      }
-    }
-
-    svg {
-      width: 1.2rem;
-      height: 1.2rem;
-    }
-  }
-
-  &__info-icon-wrapper {
-    width: 2.4rem;
-    height: 2.4rem;
-    background-color: #FF5129;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: .6rem;
-
-    @include breakpoint(large-desktop) {
-      width: 2rem;
-      height: 2rem;
-      margin-top: .4rem;
-    }
-  }
-
-  &__button {
-    width: 37rem;
-    height: 8.3rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6rem;
-    background: #FF5129;
-
-    color: white !important;
-
-    font-family: "Uni Neue", sans-serif;
-    font-size: 3.2rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 110%;
-    transition: .3s ease box-shadow;
-
-    &:hover {
-      -webkit-box-shadow: 0 0 30px 0 #ff5129, 0 0 5px 0 #ff5129;
-      box-shadow: 0 0 30px 0 #ff5129, 0 0 5px 0 #ff5129;
-    }
-
-    @include breakpoint(large-desktop) {
-      width: 30rem;
-      height: 6.3rem;
-      font-size: 2.6rem;
-    }
-
-    @include breakpoint(tablet) {
-      font-size: 2.4rem;
-      font-style: normal;
-      font-weight: 800;
-      line-height: 110%;
-      padding: 2.4rem 5.6rem;
-      width: fit-content;
-      height: auto;
-      margin: 0 auto;
-      margin-top: 3.2rem;
-      display: none;
-    }
-  }
-
-  &__shape {
-    position: absolute;
-    width: 177.7rem;
-    height: 72.7rem;
-    transform: rotate(4.983deg);
-    border-radius: 177.9rem;
-    background: radial-gradient(50% 50% at 50% 50%, #FF5129 0%, #32028D 100%);
-    filter: blur(15rem);
-    bottom: 49rem;
-    z-index: -1;
-    right: calc((100vw - 3242px) / 2);
-
-    @include breakpoint(large-desktop) {
-      width: 144.7rem;
-      height: 52.7rem;
-    }
-  }
-
-  &__image {
-    position: absolute;
-    bottom: -5rem;
-    right: calc((100vw - 1920px) / 2);
-    width: 91.2rem;
-    height: 91.2rem;
-    z-index: -1;
-
-    @include breakpoint(large-desktop) {
-      width: 71.2rem;
-      height: 71.2rem;
-      right: 0rem;
-    }
-
-    @include breakpoint(tablet) {
-      display: none;
-    }
-  }
-
-  &__image-text {
-    position: absolute;
-    bottom: 10rem;
-    right: calc((100vw - 1700px) / 2);
-    z-index: 5;
-    object-fit: contain;
-    width: 68.2rem;
-    height: 29.5rem;
-
-
-    @include breakpoint(large-desktop) {
-      width: 45.2rem;
-      right: 10rem;
-    }
-
-    @include breakpoint(tablet) {
-      display: none;
-    }
-  }
-
-  &__image-mobile {
-    display: none;
-
-    @include breakpoint(tablet) {
-      display: flex;
-    }
-  }
-
-  &__tv {
-    position: absolute;
-    right: 1rem;
-
-    &-img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-
-      @include breakpoint(tablet) {
-        transform: translateX(6.7rem);
-      }
-
-      @include breakpoint(mobile) {
-        display: none;
-      }
-    }
-
-    @include breakpoint(tablet) {
-      position: relative;
-      right: auto;
-    }
-  }
-
-  &__tv-video-container {
-    display: block;
-    width: 77.4rem;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    background-image: url("../img/partner/intro/tv-container.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    transform: rotate(1deg);
-    padding: 1rem;
-    cursor: pointer;
-
-    &::before {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      z-index: -1;
-      transform: translateX(-50%);
-      width: 10.3rem;
-      height: 40.7rem;
-      background-image: url("../img/partner/intro/tv-leg.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center top;
-      content: "";
-    }
-
-    @include breakpoint(desktop) {
-      width: 66.4rem;
-    }
-
-    @include breakpoint(laptop) {
-      width: 44.4rem;
-
-      &::before {
-        width: 6rem;
-        height: 29.7rem;
-      }
-    }
-
-    @include breakpoint(mobile) {
-      width: 100%;
-    }
-  }
-
-  &__tv-controls {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    margin-top: 3rem;
-
-    .intro__button {
-      padding-left: 6.4rem;
-      padding-right: 6.4rem;
-      width: auto;
-    }
-  }
-
-  &__tv-img-gif {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  &__small-labels {
-    --fz: 3.2rem;
-    --lh: 3.35rem;
-
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 1rem;
-    font-size: var(--fz);
-    line-height: var(--lh);
-
-    span {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-transform: uppercase;
-
-      &::before {
-        width: 1rem;
-        height: 1rem;
-        border-radius: 50%;
-        background-color: #FF5129;
-        box-shadow: 0 0 7.2px 0 #FF5129;
-        content: "";
-      }
-    }
-
-    @include breakpoint(mobile) {
-      --fz: 2.4rem;
-      --lh: 3.1rem;
-
-      span {
-        text-transform: none;
-      }
-    }
-  }
-
-  &__tv-small-link {
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-top: 2rem;
-  }
-
-  &__tv-button {
-    @include button();
-
-    @include breakpoint(mobile) {
-      margin-top: 0;
-    }
-  }
 }

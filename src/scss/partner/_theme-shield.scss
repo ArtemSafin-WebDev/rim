@@ -1,149 +1,187 @@
 .theme-shield {
-  position: relative;
-  z-index: 3;
-  margin-bottom: 12.2rem;
-  color: #fff;
-
-  &__container {
-    background: linear-gradient(327.62deg, #5229A1 -9.84%, #FFEDD5 42.01%, #624F86 93.86%);
-    padding: 6rem;
-    border-radius: 4rem;
-    overflow: hidden;
     position: relative;
+    z-index: 3;
+    margin-bottom: 12.2rem;
+    color: #fff;
 
-    @include breakpoint(tablet) {
-      background: transparent;
-      padding: 0;
-      border-radius: 0;
+    &__container {
+        padding: 6rem;
+        border-radius: 4rem;
+        overflow: hidden;
+        position: relative;
+
+        @include breakpoint(tablet) {
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
     }
-  }
 
-  &__container-bg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: calc(100% - 3px);
-    height: calc(100% - 3px);
-    border-radius: 4rem;
-    background-color: #000;
+    &__container-wrapper {
+        position: relative;
+        z-index: 2;
+        display: flex;
 
-    @include breakpoint(tablet) {
-      display: none;
+        @include breakpoint(tablet) {
+            display: block;
+        }
     }
-  }
 
-  &__container-wrapper {
-    position: relative;
-    z-index: 2;
-    display: flex;
-
-    @include breakpoint(tablet) {
-      display: block;
-    }
-  }
-
-  &__breadcrumbs {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-
-    span {
-      &:nth-child(1) {
-        color: #FF5129;
+    &__text-top {
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 2.4rem;
         font-weight: 800;
-      }
+        text-align: left;
+        margin-bottom: 40px;
+
+        @include breakpoint(tablet) {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: left;
+            margin-bottom: 30px;
+        }
     }
 
-    @include breakpoint(mobile) {
-      font-size: 1.4rem;
-      gap: 0.2rem;
+    &__breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+
+        span {
+            &:nth-child(1) {
+                color: #ff5129;
+                font-weight: 800;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            display: block;
+            font-size: 1.4rem;
+            /*gap: 0.2rem;*/
+        }
     }
-  }
 
-  &__heading {
-    font-size: 4.2rem;
-    line-height: 1;
-    margin-bottom: 2rem;
-    max-width: 90.5rem;
+    &__heading {
+        font-size: 4.2rem;
+        line-height: 1;
+        margin-bottom: 2rem;
+        max-width: 63.5rem;
 
-    font-weight: 800;
+        font-weight: 800;
 
-    span {
-      color: #FF5129;
+        span {
+            color: #ff5129;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 3.2rem;
+            line-height: 3.5rem;
+        }
     }
 
-    @include breakpoint(mobile) {
-      font-size: 3.2rem;
-      line-height: 3.5rem;
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    font-size: 2.4rem;
-    line-height: 3.3rem;
-  }
-
-  &__item {
-    position: relative;
-    padding-left: 3.4rem;
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      display: block;
-      width: 2.4rem;
-      height: 2.4rem;
-      background-image: url("../img/check-round.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      content: "";
-    }
-  }
-
-  &__block {
-    &:nth-child(2) {
-      flex-shrink: 0;
-      padding-left: 7.8rem;
-      border-left: 1px solid white;
-
-      @include breakpoint(tablet) {
-        border-left: none;
-        border-top: 1px solid white;
-        padding-left: 0;
-        padding-top: 4.8rem;
-        margin-top: 4.8rem;
-      }
-
-      @include breakpoint(mobile) {
+    &__list {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
+        gap: 0.8rem;
+        font-size: 2.4rem;
+        line-height: 3.3rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+        }
     }
-  }
 
-  .intro__small-labels {
-    --fz: 2.4rem;
-    --lh: 2.5rem;
-  }
+    &__item {
+        position: relative;
+        padding-left: 3.4rem;
 
-  &__button {
-    @include button();
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: block;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-image: url('../img/check-round.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            content: '';
+        }
+    }
 
-    margin-top: 4rem;
-  }
+    &__bg {
+        position: absolute;
+        width: 50rem;
+        height: 50rem;
+        border-radius: 50%;
+        filter: blur(200px);
+        z-index: -2;
 
-  &__user {
-    margin-top: 3rem;
-  }
+        background-color: #8c50ff;
+        &--first {
+            top: -15rem;
+            right: -15rem;
+        }
+
+        &--second {
+            left: -15rem;
+        }
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    &__block {
+        &:nth-child(1) {
+            flex-shrink: 0;
+            padding-right: 7.8rem;
+
+            @include breakpoint(tablet) {
+                padding-right: 0;
+            }
+        }
+        &:nth-child(2) {
+            flex-shrink: 0;
+            padding-left: 7.8rem;
+            border-left: 1px solid white;
+
+            @include breakpoint(tablet) {
+                border-left: none;
+                border-top: 1px solid white;
+                padding-left: 0;
+                padding-top: 4.8rem;
+                margin-top: 4.8rem;
+            }
+
+            @include breakpoint(mobile) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .intro__small-labels {
+        --fz: 2.4rem;
+        --lh: 2.5rem;
+    }
+
+    &__button {
+        @include button();
+
+        margin-top: 4rem;
+        @include breakpoint(mobile) {
+            width: 100%;
+            max-width: 340px;
+        }
+    }
+
+    &__user {
+        margin-top: 3rem;
+    }
 }

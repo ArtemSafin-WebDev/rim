@@ -77,6 +77,9 @@
     b {
         font-weight: inherit;
         color: #ff5129;
+        @include breakpoint(mobile) {
+            display: block;
+        }
     }
 }
 
@@ -114,14 +117,21 @@
 
     @include breakpoint(mobile) {
         max-width: none;
-        width: 30%;
+        width: 50%;
         flex-grow: 1;
-        display: block;
-        display: contents;
+        gap: 2rem 5rem;
+        /*display: block;
+        display: contents;*/
     }
 }
 
 .your-start__numbers-list-item {
+    &:nth-child(3) {
+        flex: 30rem;
+        @include breakpoint(mobile) {
+            flex: auto;
+        }
+    }
     @include breakpoint(mobile) {
         position: relative;
         z-index: 20;
@@ -275,13 +285,13 @@
     margin-left: auto;
     margin-top: auto;
     gap: 0.2rem;
-    margin-right: 11.1rem;
+    /*margin-right: 11.1rem;*/
     white-space: nowrap;
     position: relative;
     z-index: 20;
     @include breakpoint(mobile) {
         margin-right: 0;
-        margin-left: 0;
+        /*margin-left: 0;*/
     }
 }
 .your-start__ceo-name {

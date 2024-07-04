@@ -1,169 +1,428 @@
 .check-list {
-  position: relative;
-  z-index: 3;
-  background-color: #fff;
-  padding: 7.7rem 0 8.3rem;
-  margin-bottom: 6.1rem;
-
-  @include breakpoint(mobile) {
-    padding: 5.6rem 0 9.6rem;
-  }
-
-  &__container {
-    display: flex;
-    gap: 2.4rem;
-
-    @include breakpoint(small-tablet) {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
-
-  &__heading {
-    font-size: 4.2rem;
-    line-height: 1;
-    margin-bottom: 3rem;
-    max-width: 90.5rem;
-    font-weight: 800;
-
-    span {
-      color: #FF5129;
-    }
-
-    @include breakpoint(mobile) {
-      font-size: 3.2rem;
-      line-height: 3.5rem;
-    }
-  }
-
-  &__text {
-    font-size: 2.4rem;
-    line-height: 3.1rem;
-    max-width: 90.5rem;
-    margin-bottom: 1rem;
-    font-weight: 800;
-
-    @include breakpoint(mobile) {
-      font-size: 1.6rem;
-      line-height: 1.9rem;
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    font-size: 2.4rem;
-    line-height: 3.3rem;
-    margin-bottom: 4rem;
-
-    @include breakpoint(mobile) {
-      font-size: 1.6rem;
-      line-height: 1.9rem;
-    }
-  }
-
-  &__item {
     position: relative;
-    padding-left: 3.4rem;
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      display: block;
-      width: 2.4rem;
-      height: 2.4rem;
-      background-image: url("../img/check-round.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      content: "";
-    }
+    z-index: 3;
+    padding: 7.7rem 0 8.3rem;
+    margin-bottom: 6.1rem;
 
     @include breakpoint(mobile) {
-      padding-left: 2.6rem;
-
-      &::before {
-        width: 1rem;
-        height: 1rem;
-      }
-    }
-  }
-
-  &__button {
-    @include button();
-
-    margin-top: 4rem;
-
-    @include breakpoint(small-tablet) {
-      display: none;
+        padding: 5.6rem 0 9.6rem;
     }
 
-    &--is-mobile {
-      display: none;
-
-      @include breakpoint(small-tablet) {
-        display: block;
-      }
-    }
-  }
-
-  &__block {
-    &:nth-child(2) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: -15rem;
-
-      @include breakpoint(small-tablet) {
-        margin-top: 0;
-      }
-    }
-  }
-
-  &__label {
-    display: flex;
-    flex-direction: column;
-    font-size: 3.2rem;
-    line-height: 3.5rem;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 0.5rem;
-
-    &::before {
-      display: block;
-      align-self: center;
-      width: 4rem;
-      height: 4rem;
-      background-image: url("../img/check-round.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      content: "";
+    &__container {
+        display: grid;
+        grid-template-areas:
+            'top top top aside aside'
+            'top top top aside aside'
+            'bottom bottom bottom bottom bottom';
+        @include breakpoint(tablet) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
     }
 
-    span {
-      color: #FF5129;
+    &__shape {
+        position: absolute;
+        width: 50rem;
+        height: 50rem;
+        border-radius: 50%;
+        filter: blur(200px);
+        z-index: -2;
+
+        @include breakpoint(tablet) {
+            width: 40rem;
+            height: 40rem;
+            filter: blur(120px);
+        }
+
+        background-color: #ff5129;
+        &--first {
+            top: 25rem;
+            right: -15rem;
+
+            @include breakpoint(tablet) {
+                top: auto;
+                right: auto;
+                bottom: 30rem;
+                left: -25rem;
+            }
+        }
+
+        &--second {
+            left: -15rem;
+
+            @include breakpoint(tablet) {
+                top: auto;
+                left: auto;
+                bottom: 30rem;
+                right: -30rem;
+                background-color: #32028d;
+            }
+        }
     }
-  }
 
-  &__img {
-    width: 39.6rem;
-    height: auto;
-    object-fit: contain;
-    transform: translateX(5rem);
+    &__block-top {
+        grid-area: top;
+        padding: 4.5rem;
+        background-color: white;
+        border-radius: 4rem 4rem 0 0;
+        width: 100%;
+        max-width: 62.1rem;
+        height: 45rem;
+        position: relative;
+        column-gap: 10rem;
 
-    @include breakpoint(mobile) {
-      width: 100%;
-      height: auto;
+        &::before {
+            position: absolute;
+            display: block;
+            right: -4.5rem;
+            bottom: 0;
+            width: 4.5rem;
+            height: 4.5rem;
+            background-image: url('../img/partner/check-list/triangle.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            content: '';
+
+            @include breakpoint(tablet) {
+                display: none;
+            }
+        }
+
+        @include breakpoint(tablet) {
+            padding: 1.9rem 2.8rem;
+            max-width: 46rem;
+            height: 38rem;
+            border-radius: 2rem;
+
+            &::before {
+                position: absolute;
+                display: block;
+                right: 6.5rem;
+                bottom: -2.45rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-image: url('../img/partner/check-list/triangle.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                content: '';
+                transform: rotate(90deg);
+            }
+
+            &::after {
+                position: absolute;
+                display: block;
+                left: 6.5rem;
+                bottom: -2.45rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-image: url('../img/partner/check-list/triangle.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                content: '';
+                transform: rotate(180deg);
+            }
+        }
+
+        @include breakpoint(mobile) {
+            height: 36rem;
+            max-width: 35rem;
+
+            &::before {
+                position: absolute;
+                display: block;
+                right: 1rem;
+                bottom: -2.45rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-image: url('../img/partner/check-list/triangle.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                content: '';
+                transform: rotate(90deg);
+            }
+
+            &::after {
+                position: absolute;
+                display: block;
+                left: 1rem;
+                bottom: -2.45rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-image: url('../img/partner/check-list/triangle.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                content: '';
+                transform: rotate(180deg);
+            }
+        }
     }
-  }
 
-  &__label-text {
-    text-align: center;
-    max-width: 59.2rem;
-  }
+    &__title {
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 5.2rem;
+        font-weight: 800;
+        line-height: 1.1;
+        text-align: left;
+        width: 100%;
+        max-width: 52rem;
+
+        @include breakpoint(tablet) {
+            font-size: 3rem;
+            width: 100%;
+            max-width: 32rem;
+            line-height: 1;
+            margin-bottom: 4rem;
+            margin: 0 auto 1.5rem;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        width: 57.1rem;
+        left: -5rem;
+        bottom: 2.5rem;
+        height: auto;
+        object-fit: cover;
+
+        @include breakpoint(tablet) {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: auto;
+            transform: scale(1.1);
+        }
+    }
+
+    &__block-bottom {
+        grid-area: bottom;
+        background-color: white;
+        border-radius: 0 4rem 4rem 4rem;
+        padding: 4.5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 7.5rem;
+        position: relative;
+        bottom: 0.2rem;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 40rem;
+            border-radius: 0 0 4rem 4rem;
+            padding: 3.6rem 1.9rem;
+
+            margin-bottom: 43px;
+        }
+
+        @include breakpoint(tablet) {
+            max-width: 28rem;
+        }
+    }
+
+    &__link {
+        padding: 2.4rem 6.4rem;
+        border-radius: 4rem;
+        background-color: #ff5129;
+        font-family: 'Uni Neue', sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1;
+        text-align: left;
+        color: white !important;
+        transition: 0.3s ease box-shadow;
+
+        &:hover {
+            -webkit-box-shadow: 0 0 30px 0 #ff5129, 0 0 5px 0 #ff5129;
+            box-shadow: 0 0 30px 0 #ff5129, 0 0 5px 0 #ff5129;
+        }
+
+        @include breakpoint(tablet) {
+            font-size: 17px;
+            font-weight: 800;
+            text-align: center;
+            padding: 12px 35px;
+            position: absolute;
+            top: -8.5rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        column-gap: 7.5rem;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: normal;
+            row-gap: 4rem;
+        }
+    }
+
+    &__item {
+        width: fit-content;
+        position: relative;
+        font-family: 'Uni Neue';
+        font-size: 1.8rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: -25%;
+            transform: translateY(-50%);
+            display: block;
+            width: 1.4rem;
+            height: 2.8rem;
+            background-image: url('../img/partner/check-list/arrow-right.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            content: '';
+
+            @include breakpoint(tablet) {
+                transform: translateX(-50%) rotate(90deg);
+                right: 50%;
+                width: 7px;
+                height: 16px;
+                top: 125%;
+            }
+        }
+
+        &:last-child::before {
+            display: none;
+        }
+
+        @include breakpoint(tablet) {
+            text-align: center;
+        }
+    }
+
+    &__item-bold {
+        text-wrap: nowrap;
+        font-weight: 800;
+        margin-bottom: 0.25rem;
+    }
+
+    &__item-text {
+        font-weight: 500;
+    }
+
+    &__aside-block {
+        grid-area: aside;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+        }
+    }
+
+    &__aside-bottom {
+        position: relative;
+
+        @include breakpoint(tablet) {
+        }
+    }
+
+    &__aside-title {
+        font-family: 'Uni Neue', sans-serif;
+        font-weight: 900;
+        font-size: 4.2rem;
+        line-height: 100%;
+        color: #fff;
+        width: 100%;
+        max-width: 60.3rem;
+        margin-bottom: 5rem;
+
+        @include breakpoint(tablet) {
+            font-family: 'Uni Neue', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 32px;
+            text-align: center;
+            margin-bottom: 36px;
+        }
+    }
+
+    &__banner {
+        border-radius: 4rem;
+        padding: 2rem 6rem;
+        backdrop-filter: blur(16px);
+        background: rgba(255, 255, 255, 0.1);
+        font-family: 'Uni Neue', sans-serif;
+        font-weight: 900;
+        font-size: 2.4rem;
+        line-height: 1.1;
+        width: 100%;
+        max-width: 50rem;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: 4rem;
+            border: 1px solid transparent;
+            background: -webkit-gradient(linear, left top, right bottom, from(#624f86), color-stop(#ffedd4), to(#5229a1)) border-box;
+            background: linear-gradient(to right bottom, #624f86, #ffedd4, #5229a1) border-box;
+            -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) padding-box,
+                -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        @include breakpoint(tablet) {
+            font-family: 'Uni Neue', sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 1.1;
+            text-align: left;
+            padding: 20px 51px;
+        }
+    }
+
+    &__slot {
+        font-family: 'Uni Neue', sans-serif;
+        font-weight: 900;
+        font-size: 2rem;
+        line-height: 130%;
+        color: #fff;
+
+        border-radius: 4rem;
+        padding: 2rem 6rem;
+        background: #5229a1;
+        transform: rotate(-4deg);
+        max-width: fit-content;
+        position: absolute;
+        right: -3.5rem;
+        z-index: 1;
+        bottom: -2.5rem;
+
+        @include breakpoint(tablet) {
+            bottom: -60px;
+            font-size: 18px;
+            padding: 20px 51px;
+        }
+    }
+
+    .orange {
+        color: #ff5129;
+    }
 }
