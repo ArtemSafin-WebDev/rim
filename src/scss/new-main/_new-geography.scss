@@ -1,5 +1,8 @@
 .franchise-geography.new-geography{
     padding-top: 0;
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
 }
 .new-geography {
     padding-top: 20rem;
@@ -65,6 +68,9 @@
     &::after {
         content: none;
         top: 0;
+    }
+    @include breakpoint(mobile) {
+        margin-left: -21.5rem;
     }
 }
 .new-geography__map-wrapper {
