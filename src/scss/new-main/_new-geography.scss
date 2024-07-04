@@ -63,6 +63,7 @@
 .franchise-geography .new-geography__map-wrapper {
     margin-left: -55rem;
     &::after {
+        content: none;
         top: 0;
     }
 }
