@@ -26,6 +26,10 @@
         max-width: none;
         left: 50%;
     }
+
+    @include breakpointMF(super-large) {
+        left: 30%;
+    }
 }
 
 .franchise-intro__blur {
