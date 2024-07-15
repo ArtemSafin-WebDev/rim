@@ -19,6 +19,10 @@
     pointer-events: none;
     margin-top: 5rem;
 
+    @include breakpointMF(super-large) {
+        width: 50%;
+    }
+
     @include breakpoint(mobile) {
         margin-top: 7rem;
     }

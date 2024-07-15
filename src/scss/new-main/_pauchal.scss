@@ -41,6 +41,10 @@
     width: 100%;
     height: auto;
 
+    @include breakpointMF(super-large) {
+        width: 60%;
+    }
+
     @include breakpoint(mobile) {
         width: 100vw;
         position: relative;

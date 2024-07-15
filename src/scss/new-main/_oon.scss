@@ -20,6 +20,10 @@
     pointer-events: none;
     left: 50%;
 
+    @include breakpointMF(super-large) {
+        width: 50%;
+    }
+
     @include breakpoint(mobile) {
         top: auto;
         bottom: 0;

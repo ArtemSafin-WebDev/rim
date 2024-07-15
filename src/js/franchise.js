@@ -11,6 +11,9 @@ import initInstallationAnimation from "./franchise/installationAnimation";
 import initControlAnimation from "./franchise/controlAnimation";
 import initHasQuestionsAnimation from "./franchise/hasQuestionsAnimation";
 import initQaAnimation from "./franchise/qaAnimation";
+import initGeographyAnimation from "./franchise/geographyAnimation";
+import initGrowthAnimation from "./franchise/growthAnimation";
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -27,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initControlAnimation()
     initHasQuestionsAnimation()
     initQaAnimation()
+    initGeographyAnimation()
+    initGrowthAnimation()
 });
 
 window.addEventListener('load', function() {
