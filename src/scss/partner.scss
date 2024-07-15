@@ -7,23 +7,24 @@
 @import 'modal';
 /*@import 'new-header';*/
 
-@import "partner/footer";
-@import "partner/intro";
-@import "partner/about";
-@import "partner/info";
-@import "partner/tasks";
-@import "partner/advantages";
-@import "partner/result";
-@import "partner/partner";
-@import "partner/partnership";
-@import "partner/entry";
-@import "partner/feedback";
-@import "partner/team";
-@import "partner/theme-shield";
-@import "partner/user";
-@import "partner/check-list";
-
+@import 'partner/footer';
+@import 'partner/intro';
+@import 'partner/about';
+@import 'partner/info';
+@import 'partner/tasks';
+@import 'partner/advantages';
+@import 'partner/result';
+@import 'partner/partner';
+@import 'partner/partnership';
+@import 'partner/entry';
+@import 'partner/feedback';
+@import 'partner/team';
+@import 'partner/theme-shield';
+@import 'partner/user';
+@import 'partner/check-list';
+@import 'partner/partner-intro';
+@import 'partner/partner-mission';
 
 body {
-  background-color: #000616;
+    background-color: #000616;
 }
