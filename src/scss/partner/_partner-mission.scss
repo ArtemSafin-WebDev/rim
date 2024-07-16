@@ -11,6 +11,19 @@
     }
 }
 
+.partners-mission__desktop-blur {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    display: block;
+    pointer-events: none;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
 .partners-mission__blur {
     display: none;
 
@@ -21,6 +34,8 @@
         height: auto;
         z-index: -1;
         display: block;
+        margin-top: -18rem;
+        pointer-events: none;
     }
 }
 

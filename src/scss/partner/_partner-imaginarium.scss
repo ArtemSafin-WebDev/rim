@@ -1,0 +1,257 @@
+.partner-rimaginarium {
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 30;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.partner-rimaginarium__blur {
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: auto;
+    top: 50%;
+    width: 70%;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.partner-rimaginarium__mobile-blur {
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        z-index: -1;
+        pointer-events: none;
+        margin-bottom: -38rem;
+    }
+}
+
+.partner-rimaginarium__row {
+    display: grid;
+    grid-template-columns: 1.9fr 2.5fr;
+
+    grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.partner-rimaginarium__image-wrapper {
+    position: relative;
+}
+
+.partner-rimaginarium__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.partner-rimaginarium__content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.partner-rimaginarium__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.8rem;
+    line-height: 110%;
+    margin-bottom: 3.8rem;
+    color: white;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 5rem;
+        order: -30;
+    }
+
+    b {
+        font-weight: inherit;
+        color: #ff5129;
+    }
+}
+
+.partner-rimaginarium__card {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.36);
+    backdrop-filter: blur(50px);
+    border-radius: 4rem;
+    color: white;
+
+    @include breakpoint(mobile) {
+        background: rgba(0, 0, 0, 0.36);
+        backdrop-filter: blur(50px);
+        padding: 2.5rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+}
+
+.partner-rimaginarium__card-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.8rem;
+    line-height: 110%;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 100%;
+        margin-bottom: 4rem;
+    }
+}
+
+.partner-rimaginarium__card-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-row-gap: 2.5rem;
+    margin-bottom: 4.5rem;
+    counter-reset: ordered-list;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+    & > li {
+        counter-increment: ordered-list;
+        &::before {
+            content: counter(ordered-list) '/';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1rem;
+            line-height: 110%;
+            color: #ff5129;
+            margin-top: 0.2rem;
+
+            @include breakpoint(mobile) {
+                font-style: normal;
+                font-weight: 800;
+                font-size: 1rem;
+                line-height: 110%;
+            }
+        }
+    }
+}
+
+.partner-rimaginarium__card-list-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 110%;
+    padding-left: 1.7rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 110%;
+    }
+
+    b {
+        color: #ff5129;
+        font-weight: 800;
+    }
+}
+
+.partner-rimaginarium__card-link {
+    padding: 1rem 6.3rem;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.2rem;
+    line-height: 110%;
+    color: white;
+    background: #ff5129;
+    box-shadow: 0px 0px 3.9rem #ff5129;
+    border-radius: 6.1rem;
+    align-self: flex-start;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1.7rem;
+        line-height: 110%;
+        padding: 1rem 3.4rem;
+        align-self: center;
+    }
+}
+
+.partner-rimaginarium__label {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+
+    width: max-content;
+    max-width: 41rem;
+    padding: 0.8rem 1rem;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 100%;
+    color: #211e26;
+    text-align: center;
+    transform: translateX(-50%) rotate(2.18deg);
+    background: #ffffff;
+    box-shadow: 0px 0px 2.2rem #ffffff;
+    border-radius: 3.6rem;
+    z-index: 5;
+
+    @include breakpoint(mobile) {
+        max-width: 18rem;
+        padding: 0.6rem 1.6rem;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1.25rem;
+        line-height: 100%;
+        box-shadow: 0px 0px 1.8rem #ffffff;
+        border-radius: 2.8rem;
+        transform: translateX(0) rotate(2.08deg);
+        left: auto;
+        right: 0;
+        margin-top: -4rem;
+    }
+}
