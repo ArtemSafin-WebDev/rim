@@ -23,7 +23,6 @@ export default function scale() {
         scrollTrigger: {
             trigger: svg,
             delay: .75,
-            markers: true,
             once: true,
             start: "top 40%",
         },
