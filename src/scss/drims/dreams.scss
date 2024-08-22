@@ -1,0 +1,158 @@
+.dreams-nostalgia {
+    padding: 10.5rem;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+    }
+
+    &__title {
+        font-family: "Gilroy", sans-serif;
+        font-weight: 600;
+        font-size: 6.5rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: #fff;
+
+        width: 100%;
+        max-width: 90rem;
+
+        margin-bottom: 2.4rem;
+    }
+
+    &__subtitle {
+        font-family: "Gilroy", sans-serif;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 1.1;
+        color: #fff;
+        
+        width: 100%;
+        max-width: 69rem;
+
+        margin-bottom: 3rem;
+    }
+
+    &__container {
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+            "a a a a a a"
+            "b b b c c c"
+            "f f f d d d"
+            "m m m e e e";
+
+        gap: 1rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__item {
+    }
+
+    &__item--first {
+        grid-area: a;
+        background-color: white;
+
+        font-family: "Gilroy", sans-serif;
+        font-weight: 700;
+        font-size: 13.1rem;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #a10606;
+
+        text-align: end;
+        padding: .5rem 4rem .5rem 0;
+    }
+
+    &__item--second {
+        grid-area: b;
+
+        font-family: "Gilroy", sans-serif;
+        font-weight: 700;
+        font-size: 11.1rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+
+        position: relative;
+        top: 2rem;
+    }
+
+    &__item--third {
+        grid-area: c;
+
+        font-family: "Gilroy", sans-serif;
+        font-weight: 700;
+        font-size: 10rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+        
+        text-align: end;
+    }
+
+    &__item--fourth {
+        grid-area: d;
+        height: 8.9rem;
+    }
+    
+    &__item--fifth {
+        grid-area: e;
+
+        font-family: "Gilroy", sans-serif;
+        font-weight: 700;
+        font-size: 11.1rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+
+        text-align: end;
+    }
+
+    &__item-image-inline {
+        width: 100%;
+        position: absolute;
+
+        object-fit: cover;
+        height: 8.9rem;
+    }
+
+    &__party-image {
+        position: absolute;
+        z-index: -3;
+
+        width: 36.8rem;
+        height: 43.1rem;
+        object-fit: cover;
+
+        left: 3rem;
+        top: 35rem;
+    }
+
+    &__bg-image-alien {
+        background-image: url('../img/drims/dreams/dream-alien.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: .5s ease background-image;
+
+        width: 32rem;
+        height: 55rem;
+
+        position: absolute;
+        
+        right: 12rem;
+        top: -10rem;
+
+
+        @media (hover: hover) {
+            &:hover {
+                background-image: url('../img/drims/dreams/dream-alien-hover.png');
+            }
+        }
+    }
+}
+.container {
+}
