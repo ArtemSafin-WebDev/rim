@@ -1,0 +1,97 @@
+.dreams-events {
+    padding-block: 10.5rem;
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1.5rem;
+    }
+    .text {
+        font-family: "Gilroy", sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 110%;
+        color: #fff;
+
+        width: 100%;
+        max-width: 57.5rem;
+        border: 1.19px solid rgba(255, 255, 255, 0.2);
+        padding: 3.1rem 2.4rem;
+
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M0 99 L99 0 L100 1 L1 100' fill='rgba(255, 255, 255, 0.1)' /></svg>");
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size: 100% 100%, auto;
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+        column-gap: 3rem;
+    }
+
+    &__content {
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+            "a a a b b b b b"
+            "l c c c d d d d"
+        ;
+        gap: 6.8rem;
+
+        position: relative;
+    }
+
+    &__title {
+        font-family: "Gilroy", sans-serif;
+        font-weight: 600;
+        font-size: 13.4rem;
+        line-height: .75;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &__subtitle {
+        font-family: "Gilroy", sans-serif;
+        font-weight: 400;
+        font-size: 4.9rem;
+        line-height: 1;
+        color: #fff;
+
+        width: 100%;
+        max-width: 34rem;
+    }
+
+    &__item--first {
+        grid-area: a;
+    }
+
+    &__item--second {
+        grid-area: b;
+    }
+
+    &__item--third {
+        grid-area: c;
+    }
+
+    &__item--fourth {
+        grid-area: d;
+    }
+
+    &__cross {
+        position: absolute;
+        bottom: -5rem;
+
+        &--small {
+            position: absolute;
+            bottom: 0rem;
+            left: 50%;
+        }
+
+        &--last {
+            position: absolute;
+            bottom: 7.5rem;
+            right: 0;
+        }
+    }
+}

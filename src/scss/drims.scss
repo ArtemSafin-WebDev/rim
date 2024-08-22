@@ -1,0 +1,16 @@
+@import 'vendor';
+@import 'fontface';
+@import 'mixins';
+@import 'global';
+@import 'layout';
+
+@import 'drims/cross';
+@import 'drims/intro';
+@import 'drims/event';
+@import 'drims/dreams';
+@import 'drims/scale';
+
+.drims {
+    background-color: #050505;
+    color: white;
+}

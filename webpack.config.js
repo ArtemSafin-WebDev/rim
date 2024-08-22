@@ -5,10 +5,11 @@ module.exports = {
   entry: {
     app: './src/js/main.js',
     redtagChunk: './src/js/redtag.js',
+    franchiseChunk: './src/js/franchise.js',
     driveChunk: './src/js/drive.js',
     partnerChunk: './src/js/partner.js',
     chiyoChunk: './src/js/chiyo.js',
-    franchiseChunk: './src/js/franchise.js'
+    drimsChunk: './src/js/drims.js'
   },
   output: {
     path: path.resolve(__dirname, './build/js'),
