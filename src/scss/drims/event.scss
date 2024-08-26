@@ -1,6 +1,21 @@
 .dreams-events {
     padding-block: 10.5rem;
 
+    &__shape {
+        position: absolute;
+        z-index: -3;
+
+        background-color: #7d000d;
+        filter: blur(750px);
+        opacity: 0.95;
+        right: -10rem;
+        top: -25rem;
+
+        width: 100rem;
+        height: 225rem;
+        transform: rotate(35deg);
+    }
+
     .block {
         display: flex;
         flex-direction: column;
@@ -8,7 +23,7 @@
         row-gap: 1.5rem;
     }
     .text {
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 110%;
@@ -20,8 +35,8 @@
         padding: 3.1rem 2.4rem;
 
         background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M0 99 L99 0 L100 1 L1 100' fill='rgba(255, 255, 255, 0.1)' /></svg>");
-        background-repeat:no-repeat;
-        background-position:center center;
+        background-repeat: no-repeat;
+        background-position: center center;
         background-size: 100% 100%, auto;
     }
     .flex {
@@ -33,26 +48,25 @@
     &__content {
         display: grid;
         align-items: center;
-        grid-template-areas: 
-            "a a a b b b b b"
-            "l c c c d d d d"
-        ;
+        grid-template-areas:
+            'a a a b b b b b'
+            'l c c c d d d d';
         gap: 6.8rem;
 
         position: relative;
     }
 
     &__title {
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-weight: 600;
         font-size: 13.4rem;
-        line-height: .75;
+        line-height: 0.75;
         text-transform: uppercase;
         color: #fff;
     }
 
     &__subtitle {
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-weight: 400;
         font-size: 4.9rem;
         line-height: 1;

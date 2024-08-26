@@ -9,13 +9,21 @@
         height: 100%;
         top: 0;
         left: 0;
-        z-index: -2;
+        z-index: -4;
     }
 
     &__shape {
         position: absolute;
-        background: rgb(0,0,0);
-        background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(0,0,0,0.8960376386882878) 57%, rgba(0,0,0,0.8) 64%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.6) 74%, rgba(255,255,255,0) 100%);
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 0.8960376386882878) 57%,
+            rgba(0, 0, 0, 0.8) 64%,
+            rgba(0, 0, 0, 0.7) 70%,
+            rgba(0, 0, 0, 0.6) 74%,
+            rgba(255, 255, 255, 0) 100%
+        );
         width: 100%;
         height: 100%;
         top: 0;
@@ -50,7 +58,7 @@
         font-size: 4.2rem;
         line-height: 1.1;
 
-        margin-bottom: 3rem
+        margin-bottom: 3rem;
     }
 
     &__text-bottom {
@@ -61,7 +69,7 @@
     }
 
     &__button {
-        border: .2rem solid #fff;
+        border: 0.2rem solid #fff;
         border-radius: 2rem;
         width: fit-content;
         height: 3.4rem;
@@ -80,8 +88,8 @@
         position: absolute;
         bottom: 5rem;
 
-        transition: .3s ease filter;
-        
+        transition: 0.3s ease filter;
+
         @media (hover: hover) {
             &:hover {
                 -webkit-filter: drop-shadow(0 0 7.92px #fff) drop-shadow(0 0 3.96px #fff);
