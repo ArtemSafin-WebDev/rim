@@ -16,6 +16,9 @@ import cross from './drims/cross';
 import scale from './drims/scale';
 import initDreamsOverlayAnimation from './drims/dreamsOverlay';
 import initGallery from './drims/gallery';
+import event from './drims/events';
+import nostalgia from './drims/nostalgia';
+import team from './drims/team';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -41,4 +44,7 @@ window.addEventListener('load', function() {
 
     initDreamsOverlayAnimation();
     scale();
+    event()
+    team()
+    nostalgia()
 });

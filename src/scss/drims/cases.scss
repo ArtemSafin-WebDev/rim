@@ -228,10 +228,19 @@
 
         transition: 0.3s ease filter;
 
+        svg {
+            transition: 0.3s ease transform;
+            transform-origin: left center;
+        }
+
         @media (hover: hover) {
             &:hover {
                 -webkit-filter: drop-shadow(0 0 7.92px #fff) drop-shadow(0 0 3.96px #fff);
                 filter: drop-shadow(0 0 7.92px #fff) drop-shadow(0 0 3.96px #fff);
+            }
+
+            &:hover svg { 
+                transform: scaleX(1.5);
             }
         }
     }

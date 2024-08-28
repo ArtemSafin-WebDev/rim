@@ -45,6 +45,7 @@
     }
 
     &__item {
+        width: 95%;
         height: 9.75rem;
         display: flex;
         justify-content: space-between;
@@ -75,6 +76,12 @@
     &__item-content {
     }
 
+    &__item-star {
+        position: absolute;
+        top: 4.2rem;
+        right: 0;
+    }
+
     &__item-title {
         font-family: "Gilroy", sans-serif;
         font-weight: 600;
@@ -84,6 +91,7 @@
         color: #fff;
 
         margin-bottom: 1.1rem;
+        opacity: 0;
     }
 
     &__item-text {
@@ -92,6 +100,7 @@
         font-size: 1.8rem;
         line-height: .9;
         color: #fff;
+        opacity: 0;
     }
 
     &__block-text {
@@ -153,14 +162,4 @@
             }
         }
     }
-}
-.js-dreams-scale-svg {
-}
-.vertical {
-}
-.large-horizontal {
-}
-.horizontal {
-}
-.container {
 }

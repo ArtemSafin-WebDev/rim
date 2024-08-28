@@ -5,7 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger)
 
 export default function scale() {
-    const svg = document.querySelector('.js-dreams-scale-svg');
+    const scaleSection = document.querySelector('.dreams-scale');
+
+    if(!scaleSection) return;
+
+    const svg = scaleSection.querySelector('.js-dreams-scale-svg');
     const vertical = svg.querySelector('.vertical');
     const horizontals = [...svg.querySelectorAll('.horizontal')];
     const largeHorizontals = [...svg.querySelectorAll('.large-horizontal')];
@@ -57,5 +61,35 @@ export default function scale() {
                 })
             }
         }
+    })
+
+    const scaleAnimationText = [...scaleSection.querySelector('.js-scale-animation-text').children]
+
+    scaleAnimationText.forEach((item, index) => {
+        const title = item.querySelector('.dreams-scale__item-title')
+        const text = item.querySelector('.dreams-scale__item-text')
+        const star = item.querySelector('.dreams-scale__item-star')
+
+        gsap.set([title, text], { y: 20})
+        gsap.set(star, { opacity: 0, rotate: -90, scale: 0})
+
+        gsap.to([title, text], {
+            y: 0,
+            opacity: 1,
+            delay: (index + 1) * .35,
+            scrollTrigger: {
+                trigger: scaleSection,
+                start: 'top 70%'
+            },
+            onStart: function() {
+                gsap.to(star, {
+                    opacity: 1,
+                    scale: 1,
+                    rotate: 0,
+                    duration: 1.125,
+                    ease: 'power4.out'
+                })
+            }
+        })
     })
 }
