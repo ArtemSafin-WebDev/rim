@@ -6,14 +6,14 @@ gsap.registerPlugin(ScrollTrigger)
 export default function cross() {
     const cross = [...document.querySelectorAll('.cross')];
 
-    cross.forEach((item) => {
+    cross.forEach((item, index) => {
         const firstDiv = item.querySelector('div:first-child');
         const lastDiv = item.querySelector('div:last-child');
 
         gsap.set([firstDiv, lastDiv], { scaleY:0, duration: 5, ease: 'power4.inOut' });
         
         const tl = gsap.timeline({
-            delay: .75,
+            delay: (index + 1) * .25,
             scrollTrigger: {
                 trigger: item,
                 once: true
@@ -23,11 +23,9 @@ export default function cross() {
         tl
           .to(firstDiv, {
               scaleY:1,
-              stagger: {each: 0.15 }
           })
           .to(lastDiv, {
               scaleY:1,
-              stagger: {each: 0.15 }
           })
     })
 }

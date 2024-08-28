@@ -1,4 +1,5 @@
 .dreams-events {
+    position: relative;
     padding-block: 10.5rem;
 
     &__shape {
@@ -16,12 +17,68 @@
         transform: rotate(35deg);
     }
 
+    &__shape-top {
+        position: absolute;
+
+        height: 15rem;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: rgb(38,0,0);
+        background: linear-gradient(0deg, rgba(38,0,0,1) 26%, rgba(255,255,255,0) 100%);
+
+        z-index: -3;
+
+        background: rgb(38,0,0);
+        background: linear-gradient(180deg, rgba(38,0,0,1) 26%, rgba(255,255,255,0) 100%);
+    }
+
+    &__glass-effect {
+        position: absolute;
+        height: 2.3rem;
+        width: 90%;
+
+        opacity: 0;
+
+        bottom: 8rem;
+
+        transform: scaleX(0);
+        transform-origin:left center;
+
+        left: -2rem;
+
+        background: rgba(255, 255, 255, 0.11);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.2px);
+        -webkit-backdrop-filter: blur(4.2px);
+        filter: 250px;
+
+        z-index: 1;
+    }
+
+    &__glass-effect--inline {
+        width: 6.9rem;
+        height: 1.8rem;
+        top: -.75rem;
+        bottom: auto;
+    }
+
+    &__glass-effect--small {
+        top: 4rem;
+        bottom: auto;
+        width: 75%;
+        height: 1.65rem;
+    }
+
     .block {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         row-gap: 1.5rem;
+
+        position: relative;
     }
+
     .text {
         font-family: 'Gilroy', sans-serif;
         font-weight: 400;
@@ -39,10 +96,13 @@
         background-position: center center;
         background-size: 100% 100%, auto;
     }
+
     .flex {
         display: flex;
         align-items: center;
         column-gap: 3rem;
+
+        position: relative;
     }
 
     &__content {
@@ -63,6 +123,8 @@
         line-height: 0.75;
         text-transform: uppercase;
         color: #fff;
+
+        opacity: 0;
     }
 
     &__subtitle {
@@ -74,6 +136,8 @@
 
         width: 100%;
         max-width: 34rem;
+
+        opacity: 0;
     }
 
     &__item--first {

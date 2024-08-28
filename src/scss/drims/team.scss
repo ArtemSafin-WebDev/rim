@@ -16,6 +16,9 @@
         max-width: 68rem;
         height: auto;
         margin-left: auto;
+
+        mix-blend-mode: overlay;
+        opacity: 0.95;
     }
 
     &__img-drims-text {
@@ -24,11 +27,16 @@
         height: auto;
 
         margin-top: -2.5rem;
+
+        mix-blend-mode: overlay;
+        opacity: 0.95;
+        padding-bottom: 1rem;
     }
 
     &__content {
         position: relative;
         height: 90rem;
+        z-index: 1;
     }
 
     &__card {
@@ -115,12 +123,20 @@
         position: absolute;
         bottom: 5rem;
         left: 50%;
-        z-index: -1;
 
         transform: translateX(-50%);
 
         width: 85%;
         max-width: 149.2rem;
         height: auto;
+
+        transition: .3s ease filter;
+
+        @media (hover: hover) {
+            &:hover {
+                filter: grayscale(100%);
+                -webkit-filter: grayscale(100%);
+            }
+        }
     }
 }

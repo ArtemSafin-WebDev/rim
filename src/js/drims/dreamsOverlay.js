@@ -5,11 +5,16 @@ import DrawSVGPlugin from '../helpers/DrawSVGPlugin';
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
 export default function initDreamsOverlayAnimation() {
-    const overlay = document.querySelector('.js-dream-case-svg');
+    const caseSection = document.querySelector('.dreams-case');
 
-    if (!overlay) return;
+    if (!caseSection) return;
 
+    const overlay = caseSection.querySelector('.js-dream-case-svg');
     const overlayPath = [...overlay.getElementsByTagName('path')];
+
+    const title = caseSection.querySelector('.js-dream-case-title');
+
+    gsap.set(title, { x: -10, opacity: 0 })
 
     gsap.set(overlayPath, {
         drawSVG: 0
@@ -18,12 +23,21 @@ export default function initDreamsOverlayAnimation() {
     overlayPath.forEach((item, index) => {
         gsap.to(item, {
             drawSVG: '100%',
-            duration: 2.5,
-            delay: 1 * ((index + 1) * 0.25),
+            duration: .75,
+            delay:  ((index + 1) * 0.25),
             scrollTrigger: {
                 trigger: overlay,
-                start: 'top 20%'
+                start: 'top 70%'
             }
         });
     });
+
+    gsap.to(title, { 
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+            trigger: caseSection,
+            start: 'top 60%',
+        }
+    })
 }

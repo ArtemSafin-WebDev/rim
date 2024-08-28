@@ -4,6 +4,7 @@
     position: relative;
 
     &__content {
+        position: relative;
     }
 
     &__title {
@@ -50,7 +51,7 @@
     &__overlay {
         position: absolute;
         width: 100%;
-        height: 50%;
+        height: 95%;
         top: 100vh;
         left: 0;
         right: 0;
@@ -75,6 +76,9 @@
 
         text-align: end;
         padding: 0.5rem 4rem 0.5rem 0;
+        
+        transform: scaleX(0);
+        transform-origin: right center;
     }
 
     &__item--second {
@@ -89,6 +93,8 @@
 
         position: relative;
         top: 2rem;
+
+        opacity: 0;
     }
 
     &__item--third {
@@ -102,11 +108,31 @@
         color: #fff;
 
         text-align: end;
+
+        opacity: 0;
     }
 
     &__item--fourth {
         grid-area: d;
-        height: 8.9rem;
+        position: relative;
+        overflow-y: hidden;
+        height: 8.4rem;
+        min-width: 150%;
+       
+        img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 62rem;
+            width: 100%;
+
+            transition: .5s ease transform;
+        }
+
+        &:hover img {
+            transform: translateY(15rem);
+        }
     }
 
     &__item--fifth {
@@ -120,6 +146,8 @@
         color: #fff;
 
         text-align: end;
+
+        opacity: 0;
     }
 
     &__item-image-inline {
@@ -142,8 +170,58 @@
         top: 35rem;
     }
 
+    &__glass-effect {
+        position: absolute;
+
+        background: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+
+        left: 3rem;
+        bottom: 12rem;
+
+        transform: scaleX(1);
+
+        width: 78rem;
+        height: 8.5rem;
+
+        transition: .3s ease transform;
+        z-index: 1;
+        transform-origin: left center;
+
+        &:hover {
+            transform: scaleX(.45);
+        }
+    }
+
+    &__glass-effect-content {
+        position: absolute;
+
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.4px);
+        -webkit-backdrop-filter: blur(4.4px);
+
+        left: -3rem;
+        top: -10rem;
+
+        transform: scaleY(1);
+
+        width: 36rem;
+        height: 55rem;
+
+        transition: .3s ease transform;
+        z-index: -1;
+        transform-origin: left center;
+
+        &:hover {
+            transform: scaleY(.45);
+        }
+    }
+
     &__bg-image-alien {
-        background-image: url('../img/drims/dreams/dream-alien.png');
+        background-image: url('../img/drims/dreams/dream-alien-hover.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -155,15 +233,13 @@
 
         position: absolute;
 
-        right: 12rem;
+        right: 13rem;
         top: -10rem;
 
         @media (hover: hover) {
             &:hover {
-                background-image: url('../img/drims/dreams/dream-alien-hover.png');
+                background-image: url('../img/drims/dreams/dream-alien.png');
             }
         }
     }
-}
-.container {
 }
