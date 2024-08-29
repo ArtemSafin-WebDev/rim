@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cross();
     intro();
-    initGallery();
 });
 
 window.addEventListener('load', function() {
@@ -47,4 +46,5 @@ window.addEventListener('load', function() {
     event()
     team()
     nostalgia()
+    initGallery();
 });

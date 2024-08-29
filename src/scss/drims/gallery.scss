@@ -1,35 +1,75 @@
 .gallery {
+    padding-block: 10.5rem;
+
     &__wrapper {
     }
 
     &__title {
+
     }
 
     &__title-top {
+        display: block;
+        font-family: "Gilroy", sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 14rem;
+        line-height: 90%;
+        text-transform: uppercase;
+        color: #fff;
+
+        mix-blend-mode: overlay;
+
+        text-align: start;
     }
 
     &__title-bottom {
+        display: block;
+        font-family: "Gilroy", sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 9.3rem;
+        line-height: 90%;
+        text-transform: uppercase;
+        color: #fff;
+
+        mix-blend-mode: overlay;
+
+        text-align: end;
     }
 
     &__content {
-        position: relative;
-        width: 1000px;
-        height: 1000px;
-        border: 1px solid #000;
-        border-radius: 50%;
-
-        top: 50px;
-        left: 50px;
-        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 3.1rem;
     }
 
-    &__image {
-        width: 50px;
-        height: 50px;
-        position: absolute;
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 3.1rem;
+
+        &:nth-child(2) {
+            padding-top: 15.2rem;
+
+        }
+
+        &:nth-child(3) {
+            padding-top: 9.7rem;
+        }   
+
+        &:nth-child(4) {
+            padding-top: 15.2rem;
+        }
+    }
+
+    &__content-image {
+        width: auto;
+        height: 40rem;
+        object-fit: cover;
     }
 }
 .container {
 }
-.js-gallery {
+.js-gallery-images {
 }
