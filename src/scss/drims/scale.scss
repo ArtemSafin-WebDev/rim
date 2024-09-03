@@ -9,6 +9,10 @@
 
         transform: translateX(-50%);
         z-index: -1;
+
+        @include breakpoint(laptop) {
+            opacity: 0;
+        }
     }
 
     &__title {
@@ -21,6 +25,19 @@
 
         width: 100%;
         max-width: 69.5rem;
+
+        @include breakpoint(laptop) {
+            font-style: italic;
+            font-weight: 500;
+            font-size: 3rem;
+            line-height: 90%;
+            color: #fff;
+
+            width: 100%;
+            max-width: 26.8rem;
+
+            margin-bottom: 2.9rem;
+        }
     }
 
     &__container {
@@ -32,6 +49,11 @@
 
         @media screen and (max-width: 1441px) {
             grid-template-columns: 900px 500px
+        }
+
+        @include breakpoint(laptop) {
+            display: flex;
+            flex-direction: column-reverse;
         }
     }
 
@@ -71,6 +93,15 @@
             text-transform: uppercase;
             color: #fff;
         }
+
+        @include breakpoint(laptop) {
+            padding-left: 2.1rem;
+
+            &::before {
+                left: 2.1rem;
+                top: .5rem;
+            }
+        }
     }
 
     &__item-content {
@@ -80,6 +111,12 @@
         position: absolute;
         top: 4.2rem;
         right: 0;
+
+        @include breakpoint(laptop) {
+            width: 1.7rem;
+            height: auto;
+            object-fit: cover;
+        }
     }
 
     &__item-title {
@@ -92,6 +129,15 @@
 
         margin-bottom: 1.1rem;
         opacity: 0;
+
+        @include breakpoint(laptop) {
+            font-weight: 600;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #fff;
+
+            margin-bottom: .8rem;
+        }
     }
 
     &__item-text {
@@ -101,6 +147,12 @@
         line-height: .9;
         color: #fff;
         opacity: 0;
+
+        @include breakpoint(laptop) {
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: #fff;
+        }
     }
 
     &__block-text {
@@ -114,6 +166,25 @@
         max-width: 28.3rem;
 
         margin-bottom: 1.5rem;
+
+        @include breakpoint(laptop) {
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M0 99 L99 0 L100 1 L1 100' fill='rgba(255, 255, 255, 0.1)' /></svg>");
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: 1.19px solid rgba(255, 255, 255, 0.2);
+
+            background-size: 100% 100%, auto;
+
+            width: 100%;
+            max-width: 35.8rem;
+
+            padding: 1.7rem 1.5rem;
+
+            font-size: 16px;
+
+            margin: 0 auto;
+        }
+
     }
 
     &__block {
@@ -121,6 +192,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+
+        @include breakpoint(laptop) {
+            display: flex;
+            flex-direction: column-reverse;
+
+            margin-bottom: 4.1rem;
+        }
     }
 
     &__block-button {
@@ -138,6 +216,13 @@
         color: #fff;
 
         margin-bottom: .95rem;
+
+        @include breakpoint(laptop) {
+            position: absolute;
+            right: 2.7rem;
+
+            transform: translateY(-25px);
+        }
     }
 
     &__block-image {
@@ -160,6 +245,15 @@
             &:hover {
                 background-image: url('../img/drims/scale/dreams-hover.png');
             }
+        }
+
+        @include breakpoint(laptop) {
+            width: 100%;
+
+            max-width: 45rem;
+            height: 4.7rem;
+
+            margin: 0 auto 2.8rem;
         }
     }
 }

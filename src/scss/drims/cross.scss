@@ -1,8 +1,14 @@
+$width-laptop: 6px;
+
 .cross--std {
     div:first-child {
         width: 4px;
         background: #fff;
         height: 172px;
+
+        @include breakpoint(laptop) {
+            width: $width-laptop;
+        }
     }
 
     div:last-child {
@@ -12,6 +18,10 @@
         transform: rotate(90deg);
         position: absolute;
         bottom: 2rem;
+
+        @include breakpoint(laptop) {
+            width: $width-laptop;
+        }
     } 
 }
 
