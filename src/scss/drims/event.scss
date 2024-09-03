@@ -54,6 +54,15 @@
         filter: 250px;
 
         z-index: 1;
+
+        @include breakpoint(laptop) {
+            &--standart {
+                width: 230px;
+                height: 11px;
+                bottom: auto;
+                top: 4rem;
+            }
+        }
     }
 
     &__glass-effect--inline {
@@ -61,6 +70,51 @@
         height: 1.8rem;
         top: -.75rem;
         bottom: auto;
+
+        @include breakpoint(laptop) {
+            width: 34px;
+            height: 11px;
+            top: 1rem;
+        }
+
+    }
+
+    &__title-wrapper {
+        display: none;
+        width: 100%;
+        max-width: 30rem;
+
+        @include breakpoint(laptop) {
+            display: flex;
+            flex-direction: column;
+
+            row-gap: 1.5rem;
+        }
+    }
+
+    &__title-main {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+
+        text-align: left;
+        
+        width: 100%;
+        max-width: 26.5rem;
+    }
+
+    &__title-small {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 600;
+        font-size: 3.6rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+
+        text-align: right;
     }
 
     &__glass-effect--small {
@@ -68,6 +122,12 @@
         bottom: auto;
         width: 75%;
         height: 1.65rem;
+
+        @include breakpoint(laptop) {
+            width: 34px;
+            height: 11px;
+            right: 0;
+        }
     }
 
     .block {
@@ -77,6 +137,10 @@
         row-gap: 1.5rem;
 
         position: relative;
+
+        @include breakpoint(laptop) {
+            row-gap: 0;
+        }
     }
 
     .text {
@@ -103,6 +167,15 @@
         column-gap: 3rem;
 
         position: relative;
+
+        @include breakpoint(laptop) {
+            column-gap: 1.5rem;
+
+            .dreams-events__subtitle {
+                width: 100%;
+                max-width: 16.7rem;
+            }
+        }
     }
 
     &__content {
@@ -114,6 +187,12 @@
         gap: 6.8rem;
 
         position: relative;
+
+        @include breakpoint(laptop) {
+            display: flex;
+            flex-direction: column;
+            gap: 3.1rem;
+        }
     }
 
     &__title {
@@ -125,6 +204,14 @@
         color: #fff;
 
         opacity: 0;
+
+        @include breakpoint(laptop) {
+            font-weight: 600;
+            font-size: 6.8rem;
+            line-height: 110%;
+            text-transform: uppercase;
+            color: #fff;
+        }
     }
 
     &__subtitle {
@@ -138,6 +225,19 @@
         max-width: 34rem;
 
         opacity: 0;
+
+        @include breakpoint(laptop) {
+            font-weight: 400;
+            font-size: 2.6rem;
+            line-height: 90%;
+            color: #fff;
+        }
+    } 
+
+    &__item {
+        @include breakpoint(laptop) {
+            width: 100%;
+        }
     }
 
     &__item--first {
@@ -150,6 +250,11 @@
 
     &__item--third {
         grid-area: c;
+
+        @include breakpoint(laptop) {
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 
     &__item--fourth {
@@ -160,16 +265,40 @@
         position: absolute;
         bottom: -5rem;
 
+        @include breakpoint(laptop) {
+            bottom: auto;
+            top: 35rem;
+            right: 0;
+
+            transform: translateX(-60px) scale(.5);
+        }
+
         &--small {
             position: absolute;
             bottom: 0rem;
             left: 50%;
+
+            @include breakpoint(laptop) {
+                right: 0;
+                left: auto;
+                transform: translateX(-75px) scale(.95);
+            }
         }
 
         &--last {
             position: absolute;
             bottom: 7.5rem;
             right: 0;
+
+            @include breakpoint(laptop) {
+                bottom: auto;
+                right: auto;
+
+                top: 5rem;
+    
+                rotate: -90deg;
+                transform: scale(.5) translateY(-30px);
+            }
         }
     }
 }
