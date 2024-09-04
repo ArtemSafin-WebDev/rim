@@ -766,9 +766,10 @@
                         Маркетинговые активности
                     </div>
                 </div>
-                <button class="dreams-intro__button">
+                <a href="#drims-modal" class="dreams-intro__button js-open-modal">
                     Подробнее
-                </button>
+                </a>
+
             </div>
         </div>
         <div class="dreams-intro__shape-bottom"></div>
@@ -1288,8 +1289,73 @@
                         </button>
                     </form>
                 </div>
-            </footer>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            </footer>            <div class="modal js-modal" id="drims-modal">
+              <div class="drims-modal">
+                <div class="drims-modal__container">
+                    <div class="drims-modal__shape-red"></div>
+                    <div class="drims-modal__shape-black"></div>
+                    <img src="img/drims/modal/drims-modal-image.png" alt="image" class="drims-modal__image">
+                    <button class="drims-modal__close js-close-modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16.6206 18.7419L28.2879 30.4092L30.4092 28.2879L18.7419 16.6206L30.4092 4.95335L28.2879 2.83203L16.6206 14.4993L4.95335 2.83203L2.83203 4.95335L14.4993 16.6206L2.83203 28.2879L4.95335 30.4092L16.6206 18.7419Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <div class="drims-modal__upper">
+                        <span>
+                            BVLGARI х VERSALE
+                        </span>
+                        <span>
+                            DRIMS
+                        </span>
+                    </div>
+                    <div class="drims-modal__wrapper">
+                        <div class="drims-modal__tag drims-modal__tag--outlined">
+                            Событие
+                        </div>  
+                        <h3 class="drims-modal__title">
+                            Презентация часов BVLGARI в Казани
+                        </h3>    
+                    </div>
+                    <div class="drims-modal__wrapper">
+                        <div class="drims-modal__tag drims-modal--outlined">
+                            Задачи
+                        </div>  
+                        <ul class="drims-modal__list">
+                            <li>
+                                Погрузить в историю бренда BVLGARI
+                            </li>
+                             <li>
+                               Вовлечь целевую аудиторию в коммуникацию с брендом в игровом формате
+                            </li>
+                            <li>
+                                Презентовать продукты бренда и повысить продажи
+                            </li>
+                        </ul>    
+                    </div>
+                    <div class="drims-modal__wrapper">
+                        <div class="drims-modal__tag drims-modal--outlined">
+                            РЕШЕНИЕ
+                        </div>  
+                        <p class="drims-modal__text">
+                            Организовали зону для примерки украшений и провели лотерею с ценными подарками от BVLGARI и VERSALE
+                        </p>
+                    </div>
+                    <div class="drims-modal__wrapper">
+                        <div class="drims-modal__tag drims-modal--outlined">
+                            Результаты
+                        </div>  
+                        <ul class="drims-modal__list">
+                            <li>
+                                Продажа 4 часов BVLGARI стоимостью от 1 млн ₽ в день презентации
+                            </li>
+                             <li>
+                                Продажа 5 украшений BVLGARI на следующий день после презентации
+                            </li>
+                        </ul>    
+                    </div>
+                </div>
+              </div>
+            </div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
             <script src="assets/js/backend.js"></script>
             <script src="js/drimsChunk.js"></script>

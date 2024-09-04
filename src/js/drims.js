@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneMask();
     onlyNumeric();
     anchorLinks();
-    modals();
     smoothScrolling();
     loopAnimation();
 
@@ -47,4 +46,5 @@ window.addEventListener('load', function() {
     team()
     nostalgia()
     initGallery();
+    modals();
 });
