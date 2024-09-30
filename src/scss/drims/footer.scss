@@ -1,15 +1,15 @@
 .drims-footer {
-    padding-block: 7.5rem;
+    padding: 5.5rem 0 2rem;
     position: relative;
     background-color: transparent;
 
     &__overlay {
         position: absolute;
         left: 0;
-        top: -12.5rem;
+        top: 0rem;
         bottom: 0;
         width: 100%;
-        height: 150%;
+        height: 100%;
         z-index: -1;
         background-image: url('../img/drims/footer/footer.png');
         background-position: center center;

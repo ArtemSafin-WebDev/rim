@@ -24,13 +24,13 @@
         left: 0;
         right: 0;
         top: 0;
-        background: rgb(38,0,0);
-        background: linear-gradient(0deg, rgba(38,0,0,1) 26%, rgba(255,255,255,0) 100%);
+        background: rgb(38, 0, 0);
+        background: linear-gradient(0deg, rgba(38, 0, 0, 1) 26%, rgba(255, 255, 255, 0) 100%);
 
         z-index: -3;
 
-        background: rgb(38,0,0);
-        background: linear-gradient(180deg, rgba(38,0,0,1) 26%, rgba(255,255,255,0) 100%);
+        background: rgb(38, 0, 0);
+        background: linear-gradient(180deg, rgba(38, 0, 0, 1) 26%, rgba(255, 255, 255, 0) 100%);
     }
 
     &__glass-effect {
@@ -43,7 +43,7 @@
         bottom: 8rem;
 
         transform: scaleX(0);
-        transform-origin:left center;
+        transform-origin: left center;
 
         left: -2rem;
 
@@ -67,8 +67,8 @@
 
     &__glass-effect--inline {
         width: 6.9rem;
-        height: 1.8rem;
-        top: -.75rem;
+        height: 1.2rem;
+        top: -0.5rem;
         bottom: auto;
 
         @include breakpoint(laptop) {
@@ -76,7 +76,6 @@
             height: 11px;
             top: 1rem;
         }
-
     }
 
     &__title-wrapper {
@@ -101,7 +100,7 @@
         color: #fff;
 
         text-align: left;
-        
+
         width: 100%;
         max-width: 26.5rem;
     }
@@ -120,8 +119,9 @@
     &__glass-effect--small {
         top: 4rem;
         bottom: auto;
-        width: 75%;
+        width: 12.5%;
         height: 1.65rem;
+        left: 230px !important;
 
         @include breakpoint(laptop) {
             width: 34px;
@@ -232,7 +232,7 @@
             line-height: 90%;
             color: #fff;
         }
-    } 
+    }
 
     &__item {
         @include breakpoint(laptop) {
@@ -270,7 +270,7 @@
             top: 35rem;
             right: 0;
 
-            transform: translateX(-60px) scale(.5);
+            transform: translateX(-60px) scale(0.5);
         }
 
         &--small {
@@ -281,7 +281,7 @@
             @include breakpoint(laptop) {
                 right: 0;
                 left: auto;
-                transform: translateX(-75px) scale(.95);
+                transform: translateX(-75px) scale(0.95);
             }
         }
 
@@ -295,9 +295,9 @@
                 right: auto;
 
                 top: 5rem;
-    
+
                 rotate: -90deg;
-                transform: scale(.5) translateY(-30px);
+                transform: scale(0.5) translateY(-30px);
             }
         }
     }

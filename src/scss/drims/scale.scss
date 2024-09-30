@@ -61,9 +61,13 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 0.65rem;
 
+        padding-top: 6rem;
         counter-reset: item;
+
+        @include breakpoint(tablet) {
+            padding-top: 0.65rem;
+        }
     }
 
     &__item {
@@ -163,7 +167,7 @@
         color: #fff;
 
         width: 100%;
-        max-width: 28.3rem;
+        max-width: 26.3rem;
 
         margin-bottom: 1.5rem;
 
@@ -192,6 +196,10 @@
         justify-content: center;
         align-items: flex-start;
 
+        @include breakpointMF(laptop) {
+            padding-top: 6rem;
+        }
+
         @include breakpoint(laptop) {
             display: flex;
             flex-direction: column-reverse;
@@ -211,8 +219,8 @@
         font-weight: 500;
         font-size: 2rem;
         line-height: 1;
-        text-decoration: line-through;
         color: #fff;
+        position: relative;
 
         margin-bottom: 0.95rem;
 
@@ -221,6 +229,21 @@
             right: 2.7rem;
 
             transform: translateY(-25px);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            width: 72%;
+            background-color: white;
+            height: 1.5px;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -52%);
         }
     }
 

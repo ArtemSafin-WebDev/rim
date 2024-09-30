@@ -30,7 +30,7 @@ function initDreamsOverlayAnimation() {
             delay: (index + 1) * 0.25,
             scrollTrigger: {
                 trigger: overlay,
-                start: 'top 70%'
+                start: 'top 80%'
             }
         });
     });
