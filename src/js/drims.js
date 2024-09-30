@@ -14,7 +14,7 @@ import loopAnimation from './utils/loopAnimation';
 import intro from './drims/intro';
 import cross from './drims/cross';
 import scale from './drims/scale';
-import initDreamsOverlayAnimation from './drims/dreamsOverlay';
+import initCasesAnimation from './drims/dreamsOverlay';
 import initGallery from './drims/gallery';
 import event from './drims/events';
 import nostalgia from './drims/nostalgia';
@@ -40,11 +40,11 @@ window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300);
 
-    initDreamsOverlayAnimation();
+    initCasesAnimation();
     scale();
-    event()
-    team()
-    nostalgia()
+    event();
+    team();
+    nostalgia();
     initGallery();
     modals();
 });

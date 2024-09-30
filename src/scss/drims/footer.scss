@@ -28,6 +28,13 @@
         text-align: center;
 
         margin-bottom: 1.7rem;
+
+        @include breakpoint(small-tablet) {
+            font-weight: 500;
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+        }
     }
 
     &__text {
@@ -40,6 +47,18 @@
         text-align: center;
 
         margin-bottom: 3.4rem;
+
+        @include breakpoint(small-tablet) {
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            max-width: 18.7rem;
+            margin-bottom: 4.2rem;
+
+            margin: 0 auto 3.4rem;
+        }
     }
 
     &__form {
@@ -47,6 +66,12 @@
         justify-content: center;
         align-items: flex-start;
         column-gap: 1.9rem;
+
+        @include breakpoint(small-tablet) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+        }
     }
 
     &__form-label {
@@ -70,6 +95,11 @@
         color: #fff;
 
         width: 19rem;
+
+        &::placeholder {
+            text-align: center;
+            color: white;
+        }
     }
 
     &__form-button {
@@ -100,6 +130,4 @@
         width: 100%;
         max-width: 18.5rem;
     }
-}
-.container {
 }

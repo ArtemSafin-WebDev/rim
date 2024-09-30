@@ -1,16 +1,15 @@
 .gallery {
-    padding-block: 10.5rem;
+    padding-block: 5.5rem;
 
     &__wrapper {
     }
 
     &__title {
-
     }
 
     &__title-top {
         display: block;
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-style: italic;
         font-weight: 700;
         font-size: 14rem;
@@ -21,11 +20,18 @@
         mix-blend-mode: overlay;
 
         text-align: start;
+
+        @include breakpoint(small-tablet) {
+            font-weight: 700;
+            font-size: 40px;
+            text-transform: uppercase;
+            color: #fff;
+        }
     }
 
     &__title-bottom {
         display: block;
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-style: italic;
         font-weight: 700;
         font-size: 9.3rem;
@@ -36,12 +42,22 @@
         mix-blend-mode: overlay;
 
         text-align: end;
+
+        @include breakpoint(small-tablet) {
+            font-style: italic;
+            font-weight: 700;
+            font-size: 27px;
+        }
     }
 
     &__content {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 3.1rem;
+
+        @include breakpoint(mobile) {
+            gap: 0.9rem;
+        }
     }
 
     &__content-wrapper {
@@ -52,14 +68,29 @@
         &:nth-child(2) {
             padding-top: 15.2rem;
 
+            @include breakpoint(mobile) {
+                padding-top: 4.4rem;
+            }
         }
 
         &:nth-child(3) {
             padding-top: 9.7rem;
-        }   
+
+            @include breakpoint(mobile) {
+                padding-top: 2.8rem;
+            }
+        }
 
         &:nth-child(4) {
             padding-top: 15.2rem;
+
+            @include breakpoint(mobile) {
+                padding-top: 4.4rem;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            gap: 0.9rem;
         }
     }
 
@@ -67,5 +98,17 @@
         width: auto;
         height: 40rem;
         object-fit: cover;
+
+        @include breakpoint(tablet) {
+            height: 25rem;
+        }
+
+        @include breakpoint(mobile) {
+            height: 17.7rem;
+        }
+
+        @include breakpoint(small-mobile) {
+            height: 13.7rem;
+        }
     }
 }

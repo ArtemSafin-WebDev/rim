@@ -1,6 +1,6 @@
 .dreams-scale {
     position: relative;
-    padding-block: 10.5rem;
+    padding-block: 5.5rem;
 
     &__image-overlay {
         position: absolute;
@@ -16,7 +16,7 @@
     }
 
     &__title {
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-style: italic;
         font-weight: 500;
         font-size: 6.5rem;
@@ -48,7 +48,7 @@
         grid-template-columns: 1.75fr 1.1fr;
 
         @media screen and (max-width: 1441px) {
-            grid-template-columns: 900px 500px
+            grid-template-columns: 900px 500px;
         }
 
         @include breakpoint(laptop) {
@@ -61,8 +61,8 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-top: .65rem;
-        
+        padding-top: 0.65rem;
+
         counter-reset: item;
     }
 
@@ -79,13 +79,13 @@
         counter-increment: item;
 
         &::before {
-            content: '0'counter(item)'';
+            content: '0' counter(item) '';
             display: block;
             position: absolute;
             left: 10rem;
             top: 2rem;
 
-            font-family: "Gilroy", sans-serif;
+            font-family: 'Gilroy', sans-serif;
             font-style: italic;
             font-weight: 300;
             font-size: 1.4rem;
@@ -99,7 +99,7 @@
 
             &::before {
                 left: 2.1rem;
-                top: .5rem;
+                top: 0.5rem;
             }
         }
     }
@@ -120,10 +120,10 @@
     }
 
     &__item-title {
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-weight: 600;
         font-size: 2.4rem;
-        line-height: .9;
+        line-height: 0.9;
         text-transform: uppercase;
         color: #fff;
 
@@ -136,15 +136,15 @@
             text-transform: uppercase;
             color: #fff;
 
-            margin-bottom: .8rem;
+            margin-bottom: 0.8rem;
         }
     }
 
     &__item-text {
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-weight: 400;
         font-size: 1.8rem;
-        line-height: .9;
+        line-height: 0.9;
         color: #fff;
         opacity: 0;
 
@@ -156,7 +156,7 @@
     }
 
     &__block-text {
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-weight: 400;
         font-size: 1.4rem;
         line-height: 110%;
@@ -184,7 +184,6 @@
 
             margin: 0 auto;
         }
-
     }
 
     &__block {
@@ -202,12 +201,12 @@
     }
 
     &__block-button {
-        border: .2rem solid #fff;
+        border: 0.2rem solid #fff;
         border-radius: 2rem;
         padding-inline: 2rem;
         height: 3.5rem;
 
-        font-family: "Gilroy", sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-style: italic;
         font-weight: 500;
         font-size: 2rem;
@@ -215,7 +214,7 @@
         text-decoration: line-through;
         color: #fff;
 
-        margin-bottom: .95rem;
+        margin-bottom: 0.95rem;
 
         @include breakpoint(laptop) {
             position: absolute;
@@ -231,7 +230,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        transition: .5s ease background-image;
+        transition: 0.5s ease background-image;
 
         width: 49.5rem;
         height: 25rem;

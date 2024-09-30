@@ -1,5 +1,5 @@
 .dreams-clients {
-    padding-block: 10.5rem;
+    padding: 10.5rem 0 5.5rem;
     position: relative;
 
     .container {
@@ -8,6 +8,13 @@
         justify-content: center;
 
         margin-bottom: 7.7rem;
+
+        @include breakpoint(tablet) {
+            flex-direction: column;
+            align-items: center;
+
+            margin-bottom: 3rem;
+        }
     }
 
     &__title-image {
@@ -21,6 +28,11 @@
 
         @media screen and (max-width: 1450px) {
             max-width: 59.7rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            margin: 0 auto;
+            max-width: 27rem;
         }
     }
 
@@ -40,6 +52,19 @@
         @media screen and (max-width: 1450px) {
             font-size: 2.6rem;
         }
+
+        @include breakpoint(tablet) {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 110%;
+            color: #fff;
+
+            margin: auto;
+            margin-top: 1.9rem;
+            margin-left: 70px;
+
+            max-width: 26rem;
+        }
     }
 
     &__content {
@@ -56,5 +81,9 @@
         max-height: 9.5rem;
 
         object-fit: contain;
+
+        @include breakpoint(mobile) {
+            max-height: 3.7rem;
+        }
     }
 }
