@@ -1,7 +1,10 @@
 .dreams-nostalgia {
-    padding-block: 10.5rem;
+    padding-block: 5.5rem;
     overflow: hidden;
     position: relative;
+
+    @include breakpoint(tablet) {
+    }
 
     &__content {
         position: relative;
@@ -19,6 +22,31 @@
         max-width: 90rem;
 
         margin-bottom: 2.4rem;
+
+        @include breakpoint(tablet) {
+            display: grid;
+
+            span {
+                line-height: 1;
+            }
+            span:nth-child(1) {
+                font-size: 32px;
+            }
+
+            span:nth-child(2) {
+                font-weight: 600;
+                font-size: 75px;
+            }
+
+            span:nth-child(3) {
+                font-weight: 400;
+                font-size: 26px;
+                text-align: right;
+
+                width: 100%;
+                max-width: 325px;
+            }
+        }
     }
 
     &__subtitle {
@@ -46,6 +74,15 @@
         gap: 1rem;
         position: relative;
         z-index: 2;
+
+        @include breakpoint(tablet) {
+            grid-template-areas:
+                'a a a a'
+                'b b c c '
+                'f f d d '
+                'l l s s'
+                'm m e e ';
+        }
     }
 
     &__overlay {
@@ -76,9 +113,18 @@
 
         text-align: end;
         padding: 0.5rem 4rem 0.5rem 0;
-        
+
         transform: scaleX(0);
         transform-origin: right center;
+
+        @include breakpoint(tablet) {
+            font-size: 32px;
+            text-transform: uppercase;
+            color: #a10606;
+            text-align: start;
+
+            padding: 0.6rem 5.1rem;
+        }
     }
 
     &__item--second {
@@ -95,6 +141,20 @@
         top: 2rem;
 
         opacity: 0;
+
+        @include breakpoint(tablet) {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 110%;
+            text-transform: uppercase;
+            color: #fff;
+
+            grid-area: e;
+
+            position: relative;
+            left: -120px;
+            top: -5px;
+        }
     }
 
     &__item--third {
@@ -110,6 +170,14 @@
         text-align: end;
 
         opacity: 0;
+
+        @include breakpoint(tablet) {
+            font-weight: 700;
+            font-size: 48px;
+
+            position: relative;
+            left: -75px;
+        }
     }
 
     &__item--fourth {
@@ -118,7 +186,7 @@
         overflow-y: hidden;
         height: 8.4rem;
         min-width: 150%;
-       
+
         img {
             position: absolute;
             left: 0;
@@ -127,11 +195,28 @@
             height: 62rem;
             width: 100%;
 
-            transition: .5s ease transform;
+            transition: 0.5s ease transform;
         }
 
         &:hover img {
             transform: translateY(15rem);
+        }
+
+        @include breakpoint(tablet) {
+            grid-area: auto;
+
+            position: absolute;
+            bottom: -120px;
+
+            transform: translateX(-50%);
+            left: 50%;
+            width: 35.2rem;
+            min-width: auto;
+
+            img {
+                position: static;
+                height: 40px;
+            }
         }
     }
 
@@ -148,6 +233,16 @@
         text-align: end;
 
         opacity: 0;
+
+        @include breakpoint(tablet) {
+            font-weight: 600;
+            font-size: 32px;
+            margin-top: 121px;
+
+            grid-area: l;
+
+            text-align: left;
+        }
     }
 
     &__item-image-inline {
@@ -168,6 +263,14 @@
 
         left: 3rem;
         top: 35rem;
+
+        @include breakpoint(tablet) {
+            width: 156px;
+            height: 185px;
+            left: auto;
+            right: 20px;
+            top: 55rem;
+        }
     }
 
     &__glass-effect {
@@ -186,12 +289,18 @@
         width: 78rem;
         height: 8.5rem;
 
-        transition: .3s ease transform;
+        transition: 0.3s ease transform;
         z-index: 1;
         transform-origin: left center;
 
-        &:hover {
-            transform: scaleX(.45);
+        @media (hover: hover) {
+            &:hover {
+                transform: scaleX(0.45);
+            }
+        }
+
+        @include breakpoint(tablet) {
+            display: none;
         }
     }
 
@@ -211,12 +320,18 @@
         width: 36rem;
         height: 55rem;
 
-        transition: .3s ease transform;
+        transition: 0.3s ease transform;
         z-index: -1;
         transform-origin: left center;
 
-        &:hover {
-            transform: scaleY(.45);
+        @media (hover: hover) {
+            &:hover {
+                transform: scaleY(0.45);
+            }
+        }
+
+        @include breakpoint(tablet) {
+            display: none;
         }
     }
 
@@ -240,6 +355,15 @@
             &:hover {
                 background-image: url('../img/drims/dreams/dream-alien.png');
             }
+        }
+
+        @include breakpoint(tablet) {
+            width: 133px;
+            height: 200px;
+            top: 41rem;
+
+            right: 0;
+            left: 20px;
         }
     }
 }
