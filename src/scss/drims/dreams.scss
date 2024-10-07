@@ -1,0 +1,369 @@
+.dreams-nostalgia {
+    padding-block: 5.5rem;
+    overflow: hidden;
+    position: relative;
+
+    @include breakpoint(tablet) {
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__title {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 600;
+        font-size: 6.5rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: #fff;
+
+        width: 100%;
+        max-width: 90rem;
+
+        margin-bottom: 2.4rem;
+
+        @include breakpoint(tablet) {
+            display: grid;
+
+            span {
+                line-height: 1;
+            }
+            span:nth-child(1) {
+                font-size: 32px;
+            }
+
+            span:nth-child(2) {
+                font-weight: 600;
+                font-size: 75px;
+            }
+
+            span:nth-child(3) {
+                font-weight: 400;
+                font-size: 26px;
+                text-align: right;
+
+                width: 100%;
+                max-width: 325px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 1.1;
+        color: #fff;
+
+        width: 100%;
+        max-width: 69rem;
+
+        margin-bottom: 3rem;
+    }
+
+    &__container {
+        height: 100%;
+        display: grid;
+        grid-template-areas:
+            'a a a a a a'
+            'b b b c c c'
+            'f f f d d d'
+            'm m m e e e';
+
+        gap: 1rem;
+        position: relative;
+        z-index: 2;
+
+        @include breakpoint(tablet) {
+            grid-template-areas:
+                'a a a a'
+                'b b c c '
+                'f f d d '
+                'l l s s'
+                'm m e e ';
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 95%;
+        top: 100vh;
+        left: 0;
+        right: 0;
+        background-image: url('../img/drims/dreams/nostalgia-image.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -5;
+        opacity: 0.15;
+    }
+
+    &__item--first {
+        grid-area: a;
+        background-color: white;
+
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 700;
+        font-size: 13.1rem;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #a10606;
+
+        text-align: end;
+        padding: 0.5rem 4rem 0.5rem 0;
+
+        transform: scaleX(0);
+        transform-origin: right center;
+
+        @include breakpoint(tablet) {
+            font-size: 32px;
+            text-transform: uppercase;
+            color: #a10606;
+            text-align: start;
+
+            padding: 0.6rem 5.1rem;
+        }
+    }
+
+    &__item--second {
+        grid-area: b;
+
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 700;
+        font-size: 11.1rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+
+        position: relative;
+        top: 2rem;
+
+        opacity: 0;
+
+        @include breakpoint(tablet) {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 110%;
+            text-transform: uppercase;
+            color: #fff;
+
+            grid-area: e;
+
+            position: relative;
+            left: -120px;
+            top: -5px;
+        }
+    }
+
+    &__item--third {
+        grid-area: c;
+
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 700;
+        font-size: 10rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+
+        text-align: end;
+
+        opacity: 0;
+
+        @include breakpoint(tablet) {
+            font-weight: 700;
+            font-size: 48px;
+
+            position: relative;
+            left: -75px;
+        }
+    }
+
+    &__item--fourth {
+        grid-area: d;
+        position: relative;
+        overflow-y: hidden;
+        height: 8.4rem;
+        min-width: 150%;
+
+        img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 62rem;
+            width: 100%;
+
+            transition: 0.5s ease transform;
+        }
+
+        &:hover img {
+            transform: translateY(15rem);
+        }
+
+        @include breakpoint(tablet) {
+            grid-area: auto;
+
+            position: absolute;
+            bottom: -120px;
+
+            transform: translateX(-50%);
+            left: 50%;
+            width: 35.2rem;
+            min-width: auto;
+
+            img {
+                position: static;
+                height: 40px;
+            }
+        }
+    }
+
+    &__item--fifth {
+        grid-area: e;
+
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 700;
+        font-size: 11.1rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+
+        text-align: end;
+
+        opacity: 0;
+
+        @include breakpoint(tablet) {
+            font-weight: 600;
+            font-size: 32px;
+            margin-top: 121px;
+
+            grid-area: l;
+
+            text-align: left;
+        }
+    }
+
+    &__item-image-inline {
+        width: 100%;
+        position: absolute;
+
+        object-fit: cover;
+        height: 8.9rem;
+    }
+
+    &__party-image {
+        position: absolute;
+        z-index: -3;
+
+        width: 36.8rem;
+        height: 43.1rem;
+        object-fit: cover;
+
+        left: 3rem;
+        top: 35rem;
+
+        @include breakpoint(tablet) {
+            width: 156px;
+            height: 185px;
+            left: auto;
+            right: 20px;
+            top: 55rem;
+        }
+    }
+
+    &__glass-effect {
+        position: absolute;
+
+        background: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+
+        left: 3rem;
+        bottom: 12rem;
+
+        transform: scaleX(1);
+
+        width: 78rem;
+        height: 8.5rem;
+
+        transition: 0.3s ease transform;
+        z-index: 1;
+        transform-origin: left center;
+
+        @media (hover: hover) {
+            &:hover {
+                transform: scaleX(0.45);
+            }
+        }
+
+        @include breakpoint(tablet) {
+            display: none;
+        }
+    }
+
+    &__glass-effect-content {
+        position: absolute;
+
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.4px);
+        -webkit-backdrop-filter: blur(4.4px);
+
+        left: -3rem;
+        top: -10rem;
+
+        transform: scaleY(1);
+
+        width: 36rem;
+        height: 55rem;
+
+        transition: 0.3s ease transform;
+        z-index: -1;
+        transform-origin: left center;
+
+        @media (hover: hover) {
+            &:hover {
+                transform: scaleY(0.45);
+            }
+        }
+
+        @include breakpoint(tablet) {
+            display: none;
+        }
+    }
+
+    &__bg-image-alien {
+        background-image: url('../img/drims/dreams/dream-alien-hover.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: 0.5s ease background-image;
+
+        width: 32rem;
+        height: 55rem;
+
+        position: absolute;
+
+        right: 13rem;
+        top: -10rem;
+
+        @media (hover: hover) {
+            &:hover {
+                background-image: url('../img/drims/dreams/dream-alien.png');
+            }
+        }
+
+        @include breakpoint(tablet) {
+            width: 133px;
+            height: 200px;
+            top: 41rem;
+
+            right: 0;
+            left: 20px;
+        }
+    }
+}

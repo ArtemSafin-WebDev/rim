@@ -1,0 +1,50 @@
+@import 'vendor';
+@import 'fontface';
+@import 'mixins';
+@import 'global';
+@import 'layout';
+
+@import 'drims/cross';
+@import 'drims/intro';
+@import 'drims/event';
+@import 'drims/dreams';
+@import 'drims/scale';
+@import 'drims/team';
+@import 'drims/clients';
+@import 'drims/cases';
+@import 'drims/gallery';
+@import 'drims/wish';
+@import 'drims/footer';
+@import 'drims/modal';
+
+.drims {
+    background-color: #260000;
+    color: white;
+}
+
+.drims-main main{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}

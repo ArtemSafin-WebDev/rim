@@ -1,0 +1,20 @@
+<footer class="drims-footer">
+    <div class="drims-footer__overlay"></div>
+    <div class="container">
+        <h2 class="drims-footer__title">Остались вопросы?</h2>
+        <p class="drims-footer__text">
+            Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;вами!
+        </p>
+        <form action="/" method="POST" class="drims-footer__form" data-need-validation>
+            <label for="name" class="drims-footer__form-label">
+                <input id="name" type="text" name="name" class="drims-footer__form-input" placeholder="Имя" required>
+            </label>
+            <label for="phone" class="drims-footer__form-label">
+                <input id="phone" type="tel" name="phone" class="drims-footer__form-input" placeholder="+7 (960) 033-58-25" required data-parsley-phone>
+            </label>
+            <button type="submit" class="drims-footer__form-button">
+                Отправить
+            </button>
+        </form>
+    </div>
+</footer>

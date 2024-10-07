@@ -68,7 +68,12 @@ gulp.task('handlebars', function() {
 gulp.task('styles', function() {
     return gulp
         .src(['src/scss/**/*.scss'])
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: function (err) {
+              console.log(err);
+              this.emit('end');
+            }
+          }))
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer())

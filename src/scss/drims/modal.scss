@@ -1,0 +1,352 @@
+.modal {
+    background-color: rgba(black, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem var(--content-padding);
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
+
+.drims-modal {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+        width: 100%;
+        max-width: 1250px;
+        position: relative;
+        height: max-content;
+
+        margin: 0 auto;
+
+        padding: 5rem 4rem;
+        overflow: hidden;
+    }
+
+    &__shape-red {
+        position: absolute;
+        background-image: url('../img/drims/modal/drims-modal-red-shape.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 150.1rem;
+        height: 100.1rem;
+    }
+
+    &__shape-black {
+        position: absolute;
+        background-image: url('../img/drims/modal/drims-modal-shape.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: -10rem;
+        bottom: 0;
+        left: 0;
+        z-index: -2;
+
+        width: 150.1rem;
+        height: 100.1rem;
+    }
+
+    &__image {
+        position: absolute;
+        z-index: -3;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+
+        width: 100%;
+    }
+
+    &__close {
+        position: absolute;
+        right: 4rem;
+        top: 5rem;
+
+        transform: scale(0.85);
+    }
+
+    &__upper {
+        display: flex;
+        align-items: center;
+        column-gap: 4.2rem;
+
+        margin-bottom: 3rem;
+
+        span {
+            font-family: 'Gilroy', sans-serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            letter-spacing: -0.03em;
+            color: #fff;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 2rem;
+
+        margin-bottom: 3.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__tag {
+        border-radius: 850px;
+        padding: 0 2rem;
+        width: fit-content;
+        height: 3.3rem;
+
+        background-color: white;
+
+        display: flex;
+        align-items: center;
+
+        font-family: 'Gilroy', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #050505;
+    }
+
+    &__tag--outlined {
+        border: 2px solid #fff;
+        background-color: transparent;
+        color: white;
+    }
+
+    &__title {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+
+        width: 100%;
+        max-width: 33rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+
+        li {
+            width: 100%;
+            max-width: 37rem;
+            padding-left: 1.9rem;
+            position: relative;
+
+            font-family: 'Gilroy', sans-serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 110%;
+            color: #fff;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+
+                transform: translateY(-50%);
+                background-image: url('../img/drims/scale/star.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                width: 0.9rem;
+                height: 0.9rem;
+            }
+        }
+    }
+
+    &__text {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 110%;
+        color: #fff;
+
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M0 99 L99 0 L100 1 L1 100' fill='rgba(255, 255, 255, 0.1)' /></svg>");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%, auto;
+
+        width: 100%;
+        max-width: 36.7rem;
+        border: 1.19px solid rgba(255, 255, 255, 0.2);
+
+        padding: 2.3rem;
+    }
+}
+
+.drims-modal-success {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+        width: 100%;
+        max-width: 85rem;
+        position: relative;
+        height: max-content;
+
+        margin: 0 auto;
+
+        padding: 5rem 4rem;
+        overflow: hidden;
+        background-color: black;
+
+        @include breakpoint(tablet) {
+            padding: 3rem;
+        }
+    }
+
+    &__title {
+        display: grid;
+        margin-bottom: 3rem;
+        position: relative;
+        z-index: 2;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 4rem;
+        }
+
+        span:nth-child(1) {
+            font-family: 'Gilroy', sans-serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 152px;
+            line-height: 90%;
+            text-transform: uppercase;
+            color: #fff;
+            margin-left: -100px;
+
+            text-align: center;
+
+            @include breakpoint(tablet) {
+                font-size: 54px;
+            }
+        }
+
+        span:nth-child(2) {
+            margin-right: -100px;
+            font-family: 'Gilroy', sans-serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 119px;
+            line-height: 90%;
+            text-transform: uppercase;
+            color: #fff;
+
+            text-align: center;
+
+            @include breakpoint(tablet) {
+                font-size: 36px;
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 5rem;
+        top: 2.5rem;
+
+        transform: scale(0.85);
+        z-index: 4;
+
+        @include breakpoint(tablet) {
+            right: 1rem;
+            top: 1rem;
+        }
+    }
+
+    &__tag {
+        border: 3.41px solid #fff;
+        border-radius: 814px;
+        padding: 17px 34px;
+        height: 58px;
+        width: fit-content;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        column-gap: 10px;
+
+        @include breakpoint(tablet) {
+            padding: 17px 14px;
+            column-gap: 5px;
+        }
+
+        span {
+            font-family: 'Gilroy', sans-serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 120%;
+            text-transform: uppercase;
+            color: #fff;
+
+            @include breakpoint(tablet) {
+                font-size: 18px;
+            }
+        }
+
+        svg {
+            @include breakpoint(tablet) {
+                transform: scale(0.75);
+            }
+        }
+    }
+
+    &__shape-red {
+        position: absolute;
+        background-image: url('../img/drims/modal/drims-modal-red-shape.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        width: 150.1rem;
+        height: 100.1rem;
+    }
+}

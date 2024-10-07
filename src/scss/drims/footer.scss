@@ -1,0 +1,133 @@
+.drims-footer {
+    padding: 5.5rem 0 2rem;
+    position: relative;
+    background-color: transparent;
+
+    &__overlay {
+        position: absolute;
+        left: 0;
+        top: 0rem;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url('../img/drims/footer/footer.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        font-family: 'Gilroy', sans-serif;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 4.2rem;
+        line-height: 90%;
+        color: #fff;
+
+        text-align: center;
+
+        margin-bottom: 1.7rem;
+
+        @include breakpoint(small-tablet) {
+            font-weight: 500;
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+        }
+    }
+
+    &__text {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 110%;
+        color: #fff;
+
+        text-align: center;
+
+        margin-bottom: 3.4rem;
+
+        @include breakpoint(small-tablet) {
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            max-width: 18.7rem;
+            margin-bottom: 4.2rem;
+
+            margin: 0 auto 3.4rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        column-gap: 1.9rem;
+
+        @include breakpoint(small-tablet) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+        }
+    }
+
+    &__form-label {
+        position: relative;
+    }
+
+    &__form-input {
+        border: 0.2rem solid #fff;
+        border-radius: 47.7rem;
+        padding-inline: 2rem;
+        height: 3.3rem;
+
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 1.1;
+        color: #fff;
+
+        width: 19rem;
+
+        &::placeholder {
+            text-align: center;
+            color: white;
+        }
+    }
+
+    &__form-button {
+        border-radius: 47.7rem;
+        padding-inline: 2rem;
+        height: 3.4rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'Gilroy', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #050505;
+        background-color: white;
+    }
+
+    .parsley-errors-list {
+        font-family: 'Gilroy', sans-serif;
+        margin-top: 0.1rem;
+        font-size: 1.3rem;
+        line-height: 120%;
+
+        width: 100%;
+        max-width: 18.5rem;
+    }
+}

@@ -1,13 +1,14 @@
 export default function anchorNavigation() {
   const menu = document.querySelector(".js-anchor-nav")?.children
   const sections = document.getElementsByTagName("section")
-  const newHeader = document.querySelector(".new-header")
+  // const newHeader = document.querySelector(".new-header")
   const redtagHeader = document.querySelector(".redtag-header")
   const redtagFooter = document.querySelector(".redtag-footer")
   
   if(!redtagHeader && !redtagFooter) return
-  
-  const yOffsetHeader = -((redtagHeader.clientHeight * 1.75) + newHeader?.clientHeight)
+
+  // const yOffsetHeader = -((redtagHeader.clientHeight * 1.75) + newHeader?.clientHeight)
+  const yOffsetHeader = -(redtagHeader.clientHeight * 1.75)
   
   function slide(element, yPos) {
     window.scrollTo({top: yPos, behavior: 'smooth'});
@@ -26,7 +27,7 @@ export default function anchorNavigation() {
       sections?.forEach((section) => {
         const ID = section?.id
         yPos = section.getBoundingClientRect().top + window.scrollY + yOffsetHeader;
-        
+
         if(ID === anchorAttr) {
           slide(anchor, yPos)
         }
