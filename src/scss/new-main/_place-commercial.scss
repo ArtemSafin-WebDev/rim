@@ -1,0 +1,136 @@
+.place-commercial {
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+        position: relative;
+        z-index: 15;
+    }
+}
+
+.place-commercial__content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10rem;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.place-commercial__blur {
+    position: absolute;
+    width: 100vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+    }
+}
+
+.place-commercial__bg {
+    position: absolute;
+    width: 100vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    max-width: none;
+}
+.place-commercial__image-wrapper {
+    width: 41.3rem;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        width: 24rem;
+        align-self: center;
+    }
+}
+
+.place-commercial__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1.4);
+
+    @include breakpoint(mobile) {
+    }
+}
+
+.place-commercial__text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.place-commercial__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 100%;
+    text-shadow: 0px 0.4rem 3.7rem rgba(0, 0, 0, 0.84);
+    margin-bottom: 2.6rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        text-align: center;
+        line-height: 110%;
+        margin-bottom: 2rem;
+    }
+}
+
+.place-commercial__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    text-shadow: 0px 0.4rem 1rem rgba(0, 0, 0, 0.45);
+    margin-bottom: 4.5rem;
+    max-width: 47rem;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        text-shadow: none;
+        line-height: 110%;
+        margin-bottom: 4rem;
+    }
+}
+
+.place-commercial__link {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 3.8rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 110%;
+    background: #fc3f1d;
+    box-shadow: 0px 0px 0.36rem #ff5129, 0px 0px 2.1rem #ff5129;
+    border-radius: 51.3rem;
+
+    @include breakpoint(mobile) {
+        align-self: center;
+        padding: 1rem 4rem;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 110%;
+    }
+}

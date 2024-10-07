@@ -1,0 +1,128 @@
+.sprav {
+    margin-bottom: 6rem;
+    position: relative;
+    isolation: isolate;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
+}
+
+.sprav__blur {
+    position: absolute;
+    max-width: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        margin-top: -28rem;
+    }
+}
+
+.sprav__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sprav__image {
+    width: 94.5rem;
+    height: auto;
+    align-self: center;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.sprav__text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sprav__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 5.3rem;
+    max-width: 62rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+        margin-bottom: 2rem;
+    }
+}
+
+.sprav__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    margin-bottom: 3rem;
+    max-width: 52rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+        max-width: none;
+    }
+}
+
+.sprav__link {
+    display: block;
+    text-align: center;
+    padding: 1.2rem 4.9rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 110%;
+    color: white;
+    align-self: center;
+    background: #fc3f1d;
+    box-shadow: 0px 0px 0.36rem #ff5129, 0px 0px 2.1rem #ff5129;
+    border-radius: 51rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        padding: 1rem 4.6rem;
+        margin-bottom: 2rem;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+
+        line-height: 110%;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.sprav__remark {
+    align-self: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 120%;
+    max-width: 36rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        max-width: none;
+        line-height: 120%;
+        opacity: 0.7;
+    }
+}

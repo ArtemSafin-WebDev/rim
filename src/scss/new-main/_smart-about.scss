@@ -1,0 +1,354 @@
+.smart-about {
+    margin-bottom: 8rem;
+    position: relative;
+    z-index: 10;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 11.8rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.smart-about__heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 7rem;
+    position: relative;
+    z-index: 20;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 11rem;
+    }
+}
+
+.smart-about__heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 5.3rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+    }
+}
+
+.smart-about__small-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    max-width: 65rem;
+    line-height: 120%;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 110%;
+    }
+}
+
+.smart-about__image-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    align-self: center;
+}
+
+.smart-about__main-image {
+    align-self: center;
+    width: 42.6rem;
+    height: auto;
+    display: block;
+
+    @include breakpoint(mobile) {
+        width: 20rem;
+    }
+}
+
+.smart-about__bg-image {
+    position: absolute;
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: auto;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        margin-top: 10rem;
+    }
+}
+
+.smart-about__citybook {
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 140rem;
+    height: auto;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        width: 110vw;
+    }
+}
+
+.smart-about__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 16rem;
+    }
+}
+
+.smart-about__feature-card {
+    z-index: 1;
+    border-radius: 5rem;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        padding: 1rem 2rem;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        z-index: -2;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 5rem;
+        border: 1px solid transparent;
+        background: linear-gradient(to right bottom, #624f86, #ffedd4, #5229a1) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+.smart-about__remarks-card {
+    position: absolute;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.6rem;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    z-index: 20;
+    width: max-content;
+
+    @include breakpoint(mobile) {
+        font-style: italic;
+        font-weight: 800;
+        font-size: 1.4rem;
+        line-height: 120%;
+        .smart-about__remarks-list-item:nth-child(1) & {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            text-align: center;
+            margin-top: -6rem;
+            &::before {
+                content: '';
+                position: absolute;
+                right: 100%;
+                top: 0;
+                margin-right: -7rem;
+                margin-top: -1rem;
+                width: 16.7rem;
+                height: 15.7rem;
+                background-image: url('../img/smart-about-decor/1-mobile.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                pointer-events: none;
+                transform: scale(1);
+                // transform-origin: center top;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 100%;
+                top: 0;
+                margin-left: -5rem;
+                margin-top: -0.5rem;
+                width: 16.7rem;
+                height: 15.7rem;
+                background-image: url('../img/smart-about-decor/2-mobile.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                pointer-events: none;
+                transform: scale(1);
+                // transform-origin: center top;
+            }
+        }
+
+        .smart-about__remarks-list-item:nth-child(2) & {
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-left: 2rem;
+            top: 100%;
+            margin-top: 2rem;
+            .smart-about__remarks-card-text {
+                max-width: 14.6rem;
+            }
+            br {
+                display: none;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                margin-bottom: -2rem;
+                margin-left: -1.5rem;
+                width: 16.7rem;
+                height: 15.7rem;
+                background-image: url('../img/smart-about-decor/3-mobile.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                pointer-events: none;
+                transform: scale(1);
+            }
+        }
+
+        .smart-about__remarks-list-item:nth-child(3) & {
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-right: 2rem;
+            top: 100%;
+            margin-top: 6rem;
+            display: flex;
+            justify-content: flex-end;
+            .smart-about__remarks-card-text {
+                max-width: 22rem;
+                text-align: right;
+            }
+            br {
+                display: none;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                right: 0;
+                margin-bottom: -1rem;
+                margin-right: -2.5rem;
+                width: 16.7rem;
+                height: 15.7rem;
+                background-image: url('../img/smart-about-decor/4-mobile.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                pointer-events: none;
+                transform: scale(1);
+            }
+        }
+    }
+
+    @include breakpointMF(small-tablet) {
+        .smart-about__remarks-list-item:nth-child(1) & {
+            right: 100%;
+            top: 0;
+            margin-right: 8rem;
+            margin-top: 7rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 100%;
+                top: 1.3rem;
+                width: 14.6rem;
+                height: 7.5rem;
+                background-image: url('../img/smart-about-decor/1.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                pointer-events: none;
+                transform: scale(9);
+            }
+        }
+        .smart-about__remarks-list-item:nth-child(2) & {
+            right: 100%;
+            bottom: 2rem;
+            margin-bottom: 3rem;
+            margin-right: 8rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 100%;
+                margin-left: -6rem;
+                bottom: -6.5rem;
+                width: 16rem;
+                height: 16rem;
+                background-image: url('../img/smart-about-decor/2.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                pointer-events: none;
+                transform: scale(5);
+            }
+        }
+        .smart-about__remarks-list-item:nth-child(3) & {
+            left: 100%;
+            bottom: 7rem;
+            margin-bottom: 3rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                margin-left: -8rem;
+                top: 100%;
+                width: 24.6rem;
+                height: 11.7rem;
+                background-image: url('../img/smart-about-decor/3.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                pointer-events: none;
+                transform: scale(7);
+            }
+        }
+    }
+}
