@@ -1,0 +1,401 @@
+.smart-advantages {
+    padding-bottom: 12rem;
+    position: relative;
+    z-index: 1;
+    background-color: #09132d;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.smart-advantages__blur {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    width: 100vw;
+    height: auto;
+    max-width: none;
+    margin-top: 20rem;
+    z-index: -1;
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+        margin-top: -17rem;
+    }
+}
+
+.smart-advantages__letters {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    width: 100vw;
+    height: auto;
+    max-width: none;
+    margin-top: -7rem;
+    z-index: -1;
+    mix-blend-mode: overlay;
+    opacity: 1;
+}
+
+.smart-advantages__heading {
+    text-align: center;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2rem;
+    line-height: 5.3rem;
+    margin-bottom: 5rem;
+    text-wrap: balance;
+    max-width: 84rem;
+    align-self: center;
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.2rem;
+        line-height: 110%;
+        margin-bottom: 4rem;
+    }
+
+    b {
+        color: #ff5129;
+        font-weight: inherit;
+    }
+}
+
+.smart-advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem;
+    justify-content: center;
+
+    @include breakpoint(mobile) {
+        align-items: stretch;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}
+
+.smart-advantages__list-item {
+    @include breakpointMF(small-tablet) {
+        width: 35%;
+        position: relative;
+        &:nth-child(1) {
+            .smart-advantages__card-icon {
+                width: 9.4rem;
+                height: auto;
+                transform: rotate(-7.88deg);
+                margin-left: -12rem;
+                margin-bottom: -5rem;
+            }
+            .smart-advantages__card {
+                background: rgba(0, 0, 0, 0.15);
+                backdrop-filter: blur(50px);
+                margin-right: -1rem;
+                padding-bottom: 5rem;
+                padding-left: 5.5rem;
+                clip-path: polygon(
+                    0% 82.524%,
+                    14.63% 100%,
+                    34.622% 100%,
+                    65.471% 82.524%,
+                    92.308% 90.169%,
+                    99.872% 46.348%,
+                    82.436% 38.483%,
+                    77.949% 8.146%,
+                    46.154% 0.281%,
+                    2.179% 12.622%,
+                    5% 38.483%,
+                    0% 82.524%
+                );
+            }
+        }
+        &:nth-child(2) {
+            .smart-advantages__card-icon {
+                transform: rotate(11.68deg);
+                width: 12.2rem;
+                height: auto;
+                margin-left: -6rem;
+                margin-bottom: -12rem;
+            }
+            .smart-advantages__card {
+                background-color: #5857ff;
+                margin-left: -1rem;
+                padding-left: 10rem;
+                padding-bottom: 6rem;
+                clip-path: polygon(
+                    11.94% 36.579%,
+                    5.348% 85%,
+                    29.229% 81.316%,
+                    59.826% 100%,
+                    99.876% 78.158%,
+                    94.279% 54.737%,
+                    98.632% 16.053%,
+                    74.751% 2.105%,
+                    36.194% 7.895%,
+                    9.328% 0.263%,
+                    0.124% 29.211%,
+                    11.94% 36.579%
+                );
+            }
+        }
+
+        &:nth-child(3) {
+            margin-left: auto;
+            .smart-advantages__card-icon {
+                width: 8.5rem;
+                height: auto;
+                left: auto;
+                bottom: auto;
+                right: 100%;
+                top: 0;
+                margin-top: 3rem;
+                margin-right: -5rem;
+            }
+            .smart-advantages__card {
+                background-color: #ff5129;
+                padding-left: 8rem;
+                clip-path: polygon(
+                    0% 10.847%,
+                    19.792% 0.265%,
+                    50.911% 8.73%,
+                    77.214% 2.381%,
+                    90.625% 8.73%,
+                    90.625% 30.423%,
+                    100% 56.349%,
+                    94.792% 93.651%,
+                    63.672% 89.153%,
+                    39.453% 99.735%,
+                    5.599% 81.746%,
+                    7.813% 45.767%,
+                    0% 10.847%
+                );
+            }
+        }
+        &:nth-child(4) {
+            .smart-advantages__card-icon {
+                width: 6.4rem;
+                height: auto;
+
+                margin-left: -15rem;
+                margin-bottom: -8rem;
+            }
+            .smart-advantages__card {
+                background: rgba(0, 0, 0, 0.15);
+                backdrop-filter: blur(50px);
+                padding-top: 7rem;
+                margin-top: -2rem;
+                margin-left: -2rem;
+                padding-left: 6rem;
+                clip-path: polygon(
+                    11.743% 23.454%,
+                    21.065% 17.526%,
+                    55.085% 0.258%,
+                    73.608% 23.454%,
+                    100% 34.021%,
+                    93.826% 66.495%,
+                    97.215% 95.876%,
+                    73.002% 88.66%,
+                    32.203% 99.742%,
+                    6.053% 88.66%,
+                    9.322% 52.577%,
+                    0.121% 28.866%,
+                    0.121% 17.526%,
+                    11.743% 23.454%
+                );
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        position: relative;
+        &:nth-child(1) {
+            .smart-advantages__card-icon {
+                left: 0;
+                top: 0;
+                bottom: auto;
+                right: auto;
+                width: 7.4rem;
+                transform: rotate(-7.88deg);
+                margin-top: -2rem;
+            }
+            .smart-advantages__card {
+                clip-path: polygon(
+                    0% 87.209%,
+                    14.485% 83.721%,
+                    35.933% 100%,
+                    66.295% 89.535%,
+                    92.405% 93.867%,
+                    100% 48.39%,
+                    87.744% 40.228%,
+                    84.68% 13.953%,
+                    47.493% 0.291%,
+                    7.939% 11.047%,
+                    10.167% 40.228%,
+                    0% 87.209%
+                );
+            }
+        }
+        &:nth-child(2) {
+            .smart-advantages__card-icon {
+                left: auto;
+                top: 0;
+                bottom: auto;
+                right: 0;
+                width: 9.6rem;
+                height: auto;
+                transform: rotate(13.82deg);
+                margin-top: -3rem;
+                margin-right: -2rem;
+            }
+            .smart-advantages__card {
+                background-color: #5857ff;
+                clip-path: polygon(
+                    7.638% 46.65%,
+                    5.333% 85.27%,
+                    29.714% 81.653%,
+                    60.951% 100%,
+                    96.747% 81.653%,
+                    92.928% 54.124%,
+                    100% 7.99%,
+                    69.448% 4.897%,
+                    36.775% 12.113%,
+                    12.063% 0%,
+                    0% 30.487%,
+                    7.638% 46.65%
+                );
+            }
+        }
+        &:nth-child(3) {
+            order: 40;
+            .smart-advantages__card-icon {
+                left: auto;
+                top: 0;
+                bottom: auto;
+                right: 0;
+                width: 7.5rem;
+                height: auto;
+                transform: rotate(2.9deg);
+                margin-right: 0rem;
+                margin-top: -2rem;
+            }
+            .smart-advantages__card {
+                background-color: #ff5129;
+
+                clip-path: polygon(
+                    0% 16.377%,
+                    27.639% -0.002%,
+                    65.694% 10.343%,
+                    82.917% 7.469%,
+                    90.625% 14.078%,
+                    90.625% 37.641%,
+                    100% 65.802%,
+                    94.861% 93.389%,
+                    63.741% 88.503%,
+                    39.523% 99.998%,
+                    7.813% 88.503%,
+                    11.528% 52.871%,
+                    0% 16.377%
+                );
+            }
+        }
+        &:nth-child(4) {
+            .smart-advantages__card-icon {
+                left: 0;
+                top: 0;
+                bottom: auto;
+                right: auto;
+                width: 5.4rem;
+                height: auto;
+                transform: rotate(13.82deg);
+                margin-left: 2rem;
+            }
+
+            .smart-advantages__card {
+                clip-path: polygon(
+                    12.994% 24.865%,
+                    25.282% 0%,
+                    56.356% 19.189%,
+                    85.876% 8.649%,
+                    99.859% 28.649%,
+                    96.751% 68.649%,
+                    99.859% 94.054%,
+                    72.74% 100%,
+                    27.119% 90%,
+                    10.876% 96.757%,
+                    8.192% 68.649%,
+                    0.141% 40.541%,
+                    0.141% 28.649%,
+                    12.994% 24.865%
+                );
+            }
+        }
+    }
+}
+
+.smart-advantages__card {
+    min-height: 18rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(50px);
+
+    @include breakpoint(mobile) {
+        align-items: center;
+        padding: 3rem;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(50px);
+        gap: 1rem;
+        min-height: 17rem;
+    }
+}
+
+.smart-advantages__card-icon {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    object-fit: contain;
+    z-index: 10;
+}
+
+.smart-advantages__card-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+    }
+}
+
+.smart-advantages__card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    max-width: 30rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 120%;
+        max-width: 22rem;
+    }
+}

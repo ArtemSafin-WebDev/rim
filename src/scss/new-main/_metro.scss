@@ -2,7 +2,8 @@
     position: relative;
     padding-top: 28rem;
     margin-bottom: 9rem;
-
+    background-color: #09132d;
+    z-index: 2;
     @include breakpoint(mobile) {
         padding-top: 14rem;
         margin-bottom: 10rem;
@@ -12,6 +13,18 @@
 
 .metro__blur {
     position: absolute;
+    z-index: -2;
+    width: 100vw;
+    max-width: none;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.metro__letters {
+    position: absolute;
     z-index: -1;
     width: 100vw;
     max-width: none;
@@ -20,6 +33,13 @@
     top: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    mix-blend-mode: overlay;
+
+    @include breakpoint(mobile) {
+        transform: translateX(-50%);
+        top: 0;
+        margin-top: 25rem;
+    }
 }
 
 .metro__decor {
@@ -344,13 +364,18 @@
     top: 50%;
     transform: translateY(-50%) translateX(-35%);
     max-width: none;
-
+    pointer-events: none;
     @include breakpoint(mobile) {
         width: 104rem;
         transform: translateX(-26%) translateY(5%);
         bottom: 0;
         top: auto;
     }
+}
+
+.metro__map-image {
+    width: 100%;
+    height: auto;
 }
 
 .metro__line-wrapper {
@@ -377,7 +402,7 @@
 
     width: 5.7rem;
     height: 5.7rem;
-
+    pointer-events: all;
     @include breakpoint(mobile) {
         width: 3.8rem;
         height: 3.8rem;
@@ -504,6 +529,7 @@
         background-image: url('../img/mouse.svg');
         margin-top: -3rem;
         margin-left: -3rem;
+        pointer-events: none;
     }
 
     &::before {
@@ -518,6 +544,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        pointer-events: none;
 
         @include breakpoint(mobile) {
             width: 12rem;

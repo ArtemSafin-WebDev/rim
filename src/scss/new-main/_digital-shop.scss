@@ -1,6 +1,6 @@
 .digital-shop {
     position: relative;
-    isolation: isolate;
+    z-index: 3;
 }
 
 .digital-shop__bg {
@@ -12,6 +12,7 @@
     transform: translate(-50%, -50%);
     max-width: none;
     height: auto;
+    pointer-events: none;
 }
 
 .digital-shop__content {
