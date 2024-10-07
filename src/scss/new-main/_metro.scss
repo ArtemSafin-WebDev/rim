@@ -6,8 +6,14 @@
     z-index: 2;
     @include breakpoint(mobile) {
         padding-top: 14rem;
-        margin-bottom: 10rem;
+        margin-bottom: 0;
         position: relative;
+
+        padding-top: 14rem;
+        margin-bottom: 0;
+        position: relative;
+        z-index: unset;
+        isolation: isolate;
     }
 }
 

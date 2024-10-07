@@ -5,7 +5,13 @@
     background-color: #09132d;
 
     @include breakpoint(mobile) {
-        margin-bottom: 4rem;
+        padding-bottom: 0;
+        padding-top: 10rem;
+
+        padding-bottom: 0;
+        padding-top: 10rem;
+        margin-top: 2rem;
+        z-index: 12;
     }
 
     .container {
@@ -128,7 +134,8 @@
                 margin-bottom: -12rem;
             }
             .smart-advantages__card {
-                background-color: #5857ff;
+                background: #5857ff;
+                backdrop-filter: unset;
                 margin-left: -1rem;
                 padding-left: 10rem;
                 padding-bottom: 6rem;
@@ -162,7 +169,8 @@
                 margin-right: -5rem;
             }
             .smart-advantages__card {
-                background-color: #ff5129;
+                background: #ff5129;
+                backdrop-filter: unset;
                 padding-left: 8rem;
                 clip-path: polygon(
                     0% 10.847%,
@@ -258,7 +266,8 @@
                 margin-right: -2rem;
             }
             .smart-advantages__card {
-                background-color: #5857ff;
+                background: #5857ff;
+                backdrop-filter: unset;
                 clip-path: polygon(
                     7.638% 46.65%,
                     5.333% 85.27%,
@@ -289,7 +298,8 @@
                 margin-top: -2rem;
             }
             .smart-advantages__card {
-                background-color: #ff5129;
+                background: #ff5129;
+                backdrop-filter: unset;
 
                 clip-path: polygon(
                     0% 16.377%,
