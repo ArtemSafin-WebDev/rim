@@ -598,3 +598,199 @@
         mask-composite: exclude;
     }
 }
+
+.metro__modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 4000;
+    background-color: rgba(black, 0.1);
+    backdrop-filter: blur(3px);
+    padding: var(--content-padding);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+.metro__modal-blur {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 60rem;
+    pointer-events: none;
+}
+
+.metro__modal-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    max-width: 96.9rem;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(50px);
+    border-radius: 2.5rem;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+    }
+}
+
+.metro__modal-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'stack';
+    border-radius: 1rem;
+    overflow: hidden;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 50%;
+        grid-area: stack;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 140%;
+        }
+    }
+}
+
+.metro__image-wrapper {
+    grid-area: stack;
+    position: relative;
+}
+
+.metro__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.metro__modal-content {
+    grid-area: stack;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3.2rem;
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+    }
+}
+
+.metro__modal-info {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.metro__modal-icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background-color: #ff5129;
+    background-image: url('../img/metro-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+    @include breakpoint(mobile) {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
+
+.metro__modal-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.62rem 1.7rem;
+    background-color: #ff5129;
+    border-radius: 5rem;
+    color: white;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+.metro__modal-count {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 4.8rem;
+    line-height: 120%;
+    margin-bottom: 0.8rem;
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+    }
+}
+
+.metro__modal-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
+}
+
+.metro__modal-close {
+    position: absolute;
+    top: 4.5rem;
+    right: 4.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 18;
+
+    @include breakpoint(mobile) {
+        right: 3rem;
+        top: 3rem;
+        width: 2rem;
+        height: 2rem;
+    }
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: white;
+    }
+}
+
+.modal-open {
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    overscroll-behavior: none;
+}

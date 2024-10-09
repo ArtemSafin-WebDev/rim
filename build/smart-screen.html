@@ -1140,7 +1140,8 @@
                             Хочу в справочник
                         </a>
                         <div class="sprav__remark">
-                            <b>Это бесплатно при размещении рекламы на&nbsp;экране!</b> Оставь заявку, чтобы заказать размещение.
+                            <b>Это бесплатно при размещении рекламы на&nbsp;экране!</b> Оставь заявку, чтобы заказать
+                            размещение.
                         </div>
                     </div>
                 </div>
@@ -1156,7 +1157,9 @@
                             Загрузи карточку<br> на маркетплейс
                         </h2>
                         <div class="load__text">
-                            Каждый экран&nbsp;&mdash; это настоящий маркетплейс с&nbsp;различными категориями товаров. Добавьте сюда свой товар или услугу и&nbsp;установите прямую связь с&nbsp;потенциальными клиентами!
+                            Каждый экран&nbsp;&mdash; это настоящий маркетплейс с&nbsp;различными категориями товаров.
+                            Добавьте сюда свой товар или услугу и&nbsp;установите прямую связь с&nbsp;потенциальными
+                            клиентами!
                         </div>
                     </div>
                 </div>
@@ -1237,7 +1240,7 @@
                                             <div class="metro__points-title">
                                                 Проспект Космонавтов
                                             </div>
-                                            <a href="#" class="metro__points-link">
+                                            <a href="#metro-modal-1" class="metro__points-link">
                                                 <div class="metro__points-link-amount">
                                                     4
                                                 </div>
@@ -1396,7 +1399,71 @@
 
                 </div>
             </div>
+
         </section>
+        <div class="metro__modal" id="metro-modal-1">
+            <div class="metro__modal-inner">
+                <button class="metro__modal-close">
+                    <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.25 0L0 1.25L11.251 12.501L0 23.752L1.25 25.002L12.501 13.751L23.75 25L25 23.75L13.751 12.501L25 1.25195L23.75 0.00195312L12.501 11.251L1.25 0Z" />
+                    </svg>
+                </button>
+                <div class="metro__modal-wrapper">
+
+
+                    <div class="metro__image-wrapper">
+                        <img src="img/metro-modal.webp" alt="" class="metro__image">
+                    </div>
+                    <div class="metro__modal-content">
+                        <div class="metro__modal-info">
+                            <div class="metro__modal-icon">
+
+                            </div>
+                            <h3 class="metro__modal-title">
+                                Проспект космонавтов
+                            </h3>
+                        </div>
+                        <div class="metro__modal-count">
+                            5 097 895 чел
+                        </div>
+                        <div class="metro__modal-text">
+                            Трафик на станции за 2024 год
+                        </div>
+                    </div>
+                </div>
+                <img src="img/metro-modal-blur.svg" alt="" class="metro__modal-blur">
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const points = Array.from(document.querySelectorAll('.metro__points-link'));
+                const closeBtns = Array.from(document.querySelectorAll('.metro__modal-close'))
+                points.forEach(point => {
+                    point.addEventListener('click', event => {
+                        event.preventDefault();
+                        const modal = document.querySelector(point.hash);
+                        modal.classList.add('active');
+                        document.body.classList.add('modal-open')
+                    })
+                })
+
+                closeBtns.forEach(btn => {
+                    btn.addEventListener('click', event => {
+                        event.preventDefault();
+                        btn.closest('.metro__modal')?.classList.remove('active');
+                        document.body.classList.remove('modal-open');
+                    })
+                })
+
+                Array.from(document.querySelectorAll('.metro__modal')).forEach(modal => modal.addEventListener('click', function (event) {
+                    if (event.target === modal) {
+                        modal.classList.remove('active');
+                        document.body.classList.remove('modal-open')
+                    }
+                }))
+            })
+        </script>
         <section class="smart-advantages">
             <picture>
                 <source srcset="img/smart-advantages-blur-mobile.svg" media="(max-width: 640px)" />
@@ -1418,7 +1485,8 @@
                                 Клиенты на связи!
                             </h3>
                             <div class="smart-advantages__card-text">
-                                Увидев нужный товар или услугу, потенциальные клиенты могут позвонить вам прямо с&nbsp;экрана
+                                Увидев нужный товар или услугу, потенциальные клиенты могут позвонить вам прямо
+                                с&nbsp;экрана
                             </div>
                         </div>
                     </li>
@@ -1429,7 +1497,8 @@
                                 Длительный контакт
                             </h3>
                             <div class="smart-advantages__card-text">
-                                Часть экранов установлена на&nbsp;перронах&nbsp;&mdash; по&nbsp;статистике, люди проводят здесь от&nbsp;5&nbsp;минут
+                                Часть экранов установлена на&nbsp;перронах&nbsp;&mdash; по&nbsp;статистике, люди
+                                проводят здесь от&nbsp;5&nbsp;минут
                             </div>
                         </div>
                     </li>
@@ -1440,7 +1509,8 @@
                                 Онлайн-статистика
                             </h3>
                             <div class="smart-advantages__card-text">
-                                Подробные данные о&nbsp;том, сколько человек видели рекламу и&nbsp;взаимодействовали с&nbsp;ней
+                                Подробные данные о&nbsp;том, сколько человек видели рекламу и&nbsp;взаимодействовали
+                                с&nbsp;ней
                             </div>
                         </div>
                     </li>
@@ -1451,7 +1521,8 @@
                                 Таргетирование
                             </h3>
                             <div class="smart-advantages__card-text">
-                                Экраны есть на&nbsp;всех станциях метро&nbsp;&mdash; запускайте рекламу там, где есть ваша целевая аудитория!
+                                Экраны есть на&nbsp;всех станциях метро&nbsp;&mdash; запускайте рекламу там, где есть
+                                ваша целевая аудитория!
                             </div>
                         </div>
                     </li>
@@ -1480,10 +1551,12 @@
                                 Если потенциальные клиенты пользуются метро
                             </li>
                             <li class="why__list-item">
-                                Если нужно направить трафик в&nbsp;точку продаж, которая находится недалеко от&nbsp;метро
+                                Если нужно направить трафик в&nbsp;точку продаж, которая находится недалеко
+                                от&nbsp;метро
                             </li>
                             <li class="why__list-item">
-                                Если нужно усилить рекламную компанию и&nbsp;получить дополнительные охваты и&nbsp;заявки
+                                Если нужно усилить рекламную компанию и&nbsp;получить дополнительные охваты
+                                и&nbsp;заявки
                             </li>
                         </ul>
                         <div class="why__remark">
