@@ -122,7 +122,6 @@
     font-size: 2.4rem;
     line-height: 110%;
     background: #fc3f1d;
-    box-shadow: 0px 0px 0.36rem #ff5129, 0px 0px 2.1rem #ff5129;
     border-radius: 51.3rem;
 
     @include breakpoint(mobile) {
@@ -132,5 +131,8 @@
         font-weight: 500;
         font-size: 1.8rem;
         line-height: 110%;
+    }
+    &:hover {
+        box-shadow: 0px 0px 3.61801px #ff5129, 0px 0px 21.7081px #ff5129;
     }
 }

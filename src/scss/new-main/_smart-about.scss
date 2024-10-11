@@ -86,6 +86,7 @@
     width: 100vw;
     height: auto;
     max-width: none;
+    pointer-events: none;
 
     @include breakpoint(mobile) {
         margin-top: 10rem;
