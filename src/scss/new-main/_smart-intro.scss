@@ -133,7 +133,6 @@
     line-height: 110%;
     color: white;
     background: #fc3f1d;
-    box-shadow: 0px 0px 0.3rem #ff5129, 0px 0px 2rem #ff5129;
     border-radius: 50rem;
     align-self: flex-start;
     z-index: 80;
@@ -150,6 +149,9 @@
     &:link,
     &:visited {
         color: white;
+    }
+    &:hover {
+        box-shadow: 0px 0px 3.61801px #ff5129, 0px 0px 21.7081px #ff5129;
     }
 }
 
