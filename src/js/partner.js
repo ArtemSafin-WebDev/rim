@@ -16,6 +16,7 @@ import initEntrySlider from "./partner/entrySlider";
 import initLoopFeedback from "./partner/initLoopFeedback";
 import initScrollTrigger from "./partner/scrollTrigger";
 import initYtPlayerByClick from "./partner/initYtPlayerByClick";
+import initIntroAnimation from "./franchise/introAnimation";
 
 document.addEventListener('DOMContentLoaded', function() {
   polyfills();
@@ -27,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
   onlyNumeric();
   anchorLinks();
   modals();
-  
+
+  initIntroAnimation()
   initLoopTasks()
   initAdvantagesSlider()
   initPartnerSlider()
