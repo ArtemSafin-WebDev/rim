@@ -9,7 +9,8 @@ module.exports = {
     driveChunk: './src/js/drive.js',
     partnerChunk: './src/js/partner.js',
     chiyoChunk: './src/js/chiyo.js',
-    drimsChunk: './src/js/drims.js'
+    drimsChunk: './src/js/drims.js',
+    citybookChunk: './src/js/citybook.js'
   },
   output: {
     path: path.resolve(__dirname, './build/js'),
