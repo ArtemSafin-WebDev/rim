@@ -4,11 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
 export default function initAnimation() {
-  const trigger = document.querySelector(".js-animation-trigger")
-  const items = document.querySelectorAll(".js-animation-animate")
-  
-  if(!trigger) return
-  
+  const triggers = document.querySelectorAll(".js-animation-trigger")
   function initAnimation(items, trigger) {
     const tl = gsap.set(items, { y: 40, opacity: 0 })
     
@@ -25,6 +21,10 @@ export default function initAnimation() {
       })
     })
   }
-  
-  initAnimation(items, trigger)
+
+  triggers?.forEach((trigger, index) => {
+    const items = trigger.querySelectorAll(".js-animation-animate")
+
+    initAnimation(items, trigger)
+  })
 }
