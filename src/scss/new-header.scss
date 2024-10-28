@@ -89,7 +89,7 @@ body.menu-open {
     display: contents;
 
     @media (min-width: 901px) {
-        & > .container {
+        &>.container {
             display: contents;
         }
     }
@@ -116,6 +116,7 @@ body.menu-open {
 
         overscroll-behavior-y: contain;
         overflow-y: auto;
+
         .menu-open & {
             opacity: 1;
             visibility: inherit;
@@ -182,6 +183,7 @@ body.menu-open {
     font-weight: 500;
     line-height: normal;
     transition: color 0.2s;
+
     &:link,
     &:visited {
         color: #828282;
@@ -292,6 +294,7 @@ body.menu-open {
     line-height: normal;
     color: #1f1f1f;
     transition: color 0.2s;
+
     &:link,
     &:visited {
         color: #1f1f1f;
@@ -323,6 +326,7 @@ body.menu-open {
     line-height: normal;
     display: block;
     transition: color 0.2s;
+
     &:link,
     &:visited {
         color: #828282;
@@ -420,6 +424,7 @@ body.menu-open {
         transition: border-color 0.2s, background-color 0.2s;
         opacity: 1;
         background-color: transparent;
+
         &.swiper-pagination-bullet-active {
             background-color: white;
         }
@@ -471,6 +476,7 @@ body.menu-open {
         display: none;
     }
 }
+
 @media (max-width: 900px) {
     .new-header__contacts-list-item:not(:last-child) {
         display: block;
@@ -485,6 +491,7 @@ body.menu-open {
     line-height: normal;
     color: #1f1f1f;
     transition: color 0.2s;
+
     &:link,
     &:visited {
         color: #1f1f1f;
@@ -512,6 +519,7 @@ body.menu-open {
     background-color: var(--primary-color);
     border-radius: calc(70px * var(--scale-factor, 1));
     white-space: nowrap;
+
     &:link,
     &:visited {
         color: white;
@@ -533,7 +541,8 @@ body.menu-open {
         justify-content: center;
         position: relative;
         z-index: 120;
-        & > span {
+
+        &>span {
             width: calc(22px * var(--scale-factor, 1));
             background-color: var(--primary-color);
             transition: opacity 0.2s, transform 0.2s;
@@ -541,7 +550,7 @@ body.menu-open {
         }
 
         .menu-open & {
-            & > span {
+            &>span {
                 &:nth-child(1) {
                     transform: translateY(calc(6px * var(--scale-factor, 1))) rotate(45deg);
                 }
@@ -571,6 +580,7 @@ body.menu-open {
         color: white;
         position: relative;
         z-index: 120;
+
         &:link,
         &:visited {
             color: white;

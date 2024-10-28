@@ -1,0 +1,233 @@
+.cities-map {
+    position: relative;
+
+    padding-top: 10rem;
+    padding-bottom: 5.6rem;
+
+    &::after {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        z-index: -3;
+
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        transform: translate(-66%, 2%);
+
+        background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%222643%22%20height%3D%222234%22%20viewBox%3D%220%200%202643%202234%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20filter%3D%22url(%23filter0_f_1_117)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M958.819%201717.25C712.496%201804.23%20640.863%201511.57%20550.803%201325.02C538.709%201262.37%20511.882%201103.02%20501.333%20966.756C488.148%20796.422%20636.547%20720.667%20853.553%20913.898C1070.56%201107.13%201044.5%201052.85%201278.96%20814.502C1513.43%20576.152%201637.05%20496.574%201815.54%20500.503C1994.03%20504.432%202007.01%20626.886%202089.58%20718.569C2172.15%20810.252%202166.67%201289.49%202014.39%201478.42C1862.12%201667.34%201807.36%201407.06%201551.65%201341.96C1295.93%201276.87%201205.14%201630.27%20958.819%201717.25Z%22%20fill%3D%22%23FF5129%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cfilter%20id%3D%22filter0_f_1_117%22%20x%3D%220.52002%22%20y%3D%220.365112%22%20width%3D%222642.17%22%20height%3D%222232.66%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%20%20%20%20%20%20%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%0A%20%20%20%20%20%20%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22%2F%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%22250%22%20result%3D%22effect1_foregroundBlur_1_117%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+    }
+
+
+    @include breakpoint(mobile) {
+        padding-top: 7.5rem;
+        padding-bottom: 6rem;
+    }
+
+    &__title {
+        margin-bottom: 6rem;
+
+        font-style: normal;
+        font-weight: 800;
+        font-size: 5.2rem;
+        line-height: 110%;
+        text-align: center;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 4rem;
+
+            font-style: normal;
+            font-weight: 800;
+            font-size: 3.2rem;
+            line-height: 110%;
+            text-align: center;
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3rem;
+
+        @include breakpoint(mobile) {
+            gap: 2rem;
+        }
+    }
+
+    &__map-wrapper {
+        position: relative;
+
+        width: 100%;
+        aspect-ratio: 2.3 / 1;
+        overflow: hidden;
+
+        background-color: #fff;
+        border-radius: 2.5rem;
+
+        @include breakpoint(mobile) {
+            aspect-ratio: 1;
+        }
+
+        &>div {
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    &__row-item {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+
+        padding: 2rem 6rem;
+
+        border-radius: 10rem;
+
+        @include breakpoint(mobile) {
+            flex-direction: column;
+            align-items: center;
+
+            padding: 3rem 2rem;
+
+            border-radius: 2.5rem;
+        }
+
+        &.cities-map__row-item--blue {
+            background: #5857FF;
+        }
+
+        &.cities-map__row-item--dark {
+            background: rgba(0, 0, 0, 0.15);
+            border: 1px solid #FFF;
+            backdrop-filter: blur(25px);
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @include breakpoint(mobile) {
+                min-width: 18.4rem;
+                align-items: center;
+            }
+
+            &:has(.cities-map__icon) {
+                display: grid;
+                grid-template-areas: "cm__icon cm__number"
+                    "cm__icon cm__text";
+
+                gap: 0rem 2rem;
+
+                .cities-map__number {
+                    grid-area: cm__number;
+                }
+
+                .cities-map__text {
+                    grid-area: cm__text;
+                }
+            }
+
+            &:not(:first-child) {
+                position: relative;
+
+                padding-left: 2.6rem;
+
+                @include breakpoint(mobile) {
+                    padding-left: unset;
+                    padding-top: 2.6rem;
+                }
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+
+                    width: 2px;
+                    height: 100%;
+                    transform: translateY(-50%);
+
+                    background-color: #FFF;
+                    border-radius: 1px;
+                    opacity: 0.2;
+                    content: "";
+
+                    @include breakpoint(mobile) {
+                        top: 0;
+                        left: 50%;
+
+                        width: 100%;
+                        max-width: 15rem;
+                        height: 2px;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+
+        @include breakpoint(laptop) {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    &__number {
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    &__icon {
+        grid-area: cm__icon;
+        align-self: center;
+        justify-self: flex-end;
+        height: 4.3rem;
+
+        &.cities-map__icon--billboard {
+            width: 4.7rem;
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2247%22%20height%3D%2244%22%20viewBox%3D%220%200%2047%2044%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M46.8666%2023.1349V2.296C46.8666%201.38871%2046.1427%200.653198%2045.2497%200.653198L39.9221%200.653198C39.0291%200.653198%2038.3052%201.38871%2038.3052%202.296V23.1349C38.3052%2024.0422%2039.0291%2024.7777%2039.9221%2024.7777H45.2497C46.1427%2024.7777%2046.8666%2024.0422%2046.8666%2023.1349Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8.56137%2022.5733V2.29695C8.56137%201.39341%207.83378%200.654144%206.94449%200.654144H1.61688C0.727595%200.654144%200%201.39341%200%202.29695L0%2024.7787H0.00143051L0.00143051%2029.7354C0.00143051%2030.6526%200.927087%2031.403%202.05844%2031.403H19.1896V41.8568C19.1896%2042.7641%2019.9135%2043.4996%2020.8064%2043.4996H26.1341C27.027%2043.4996%2027.7509%2042.7641%2027.7509%2041.8568V31.403H44.7209C45.8523%2031.403%2046.7779%2030.6526%2046.7779%2029.7354V22.5733H8.56137Z%22%20fill%3D%22url(%23paint0_linear_1_582)%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M2.05952%200.5H44.722C45.8533%200.5%2046.779%201.2504%2046.779%202.16755V7.66214C46.779%208.57929%2045.8533%209.32969%2044.722%209.32969H0.00250244L0.00250244%202.16755C0.00250244%201.2504%200.928159%200.5%202.05952%200.5Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22paint0_linear_1_582%22%20x1%3D%225.08456%22%20y1%3D%2218.3148%22%20x2%3D%2241.8272%22%20y2%3D%2242.8247%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23FF5129%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FF9400%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &.cities-map__icon--cityboard {
+            width: 4.17rem;
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2243%22%20height%3D%2244%22%20viewBox%3D%220%200%2043%2044%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M42.3348%2023.1352V2.29613C42.3348%201.38883%2041.6109%200.65332%2040.718%200.65332L35.3903%200.65332C34.4973%200.65332%2033.7734%201.38883%2033.7734%202.29613V23.1352C33.7734%2024.0425%2034.4973%2024.778%2035.3903%2024.778H40.718C41.6109%2024.778%2042.3348%2024.0425%2042.3348%2023.1352Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M9.42849%2022.5741V2.29711C9.42849%201.39356%208.70089%200.654297%207.8116%200.654297H2.48395C1.59467%200.654297%200.867065%201.39356%200.867065%202.29711V24.779H0.867126V29.7364C0.867126%2030.6536%201.79279%2031.404%202.92415%2031.404L17.8602%2031.4037V41.8573C17.8602%2042.7646%2018.5841%2043.5001%2019.477%2043.5001H24.8047C25.6977%2043.5001%2026.4216%2042.7646%2026.4216%2041.8573V31.4035L40.4919%2031.4032C41.6232%2031.4032%2042.5489%2030.6528%2042.5489%2029.7356V22.5735L9.42849%2022.5741Z%22%20fill%3D%22url(%23paint0_linear_1_596)%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M2.92336%200.5H40.4946C41.626%200.5%2042.5516%201.2504%2042.5516%202.16756V7.66218C42.5516%208.57934%2041.626%209.32974%2040.4946%209.32974L0.866333%209.32974V2.16756C0.866333%201.2504%201.79199%200.5%202.92336%200.5Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22paint0_linear_1_596%22%20x1%3D%223.44254%22%20y1%3D%2218.315%22%20x2%3D%2239.2319%22%20y2%3D%2240.7092%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23FF5129%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FF9400%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &.cities-map__icon--facade {
+            width: 5.1rem;
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2252%22%20height%3D%2243%22%20viewBox%3D%220%200%2052%2043%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M30.6012%2022.2485L22.7799%2027.5234C22.4701%2027.7317%2022.0555%2027.5069%2022.0555%2027.1282V25.2564C22.0555%2025.0978%2022.1347%2024.9487%2022.2628%2024.8611L28.9568%2020.3459L30.5989%2021.4558C30.876%2021.6427%2030.876%2022.0569%2030.5989%2022.2438L30.6012%2022.2485Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M28.9568%2023.3591L22.0555%2018.7042V16.5791C22.0555%2016.2004%2022.4701%2015.9756%2022.7799%2016.1839L30.5989%2021.4588C30.876%2021.6457%2030.876%2022.0599%2030.5989%2022.2468L28.9568%2023.3591Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M24.522%2017.3599V26.3498L22.7799%2027.5258C22.4701%2027.7341%2022.0555%2027.5093%2022.0555%2027.1306V16.579C22.0555%2016.2004%2022.4701%2015.9756%2022.7799%2016.1839L24.522%2017.3599Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Crect%20x%3D%2223.5514%22%20y%3D%2220%22%20width%3D%224%22%20height%3D%224%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M51.5514%2038.208V2.79196C51.5514%201.25001%2050.875%200%2050.0405%200L45.0623%200C44.2278%200%2043.5514%201.25001%2043.5514%202.79196V38.208C43.5514%2039.75%2044.2278%2041%2045.0623%2041H50.0405C50.875%2041%2051.5514%2039.75%2051.5514%2038.208Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8.55139%2035.0001V2.58777C8.55139%201.16455%207.8715%209.15527e-05%207.04053%209.15527e-05L2.06225%209.15527e-05C1.23128%209.15527e-05%200.551392%201.16455%200.551392%202.58777V35.0001V38.0001V41.4892C0.551392%2042.3202%201.56063%2043.0001%202.79414%2043.0001H49.3086C50.5422%2043.0001%2051.5514%2042.3202%2051.5514%2041.4892V35.0001H8.55139Z%22%20fill%3D%22%23FF5129%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M2.79414%200L49.3086%200C50.5422%200%2051.5514%200.679887%2051.5514%201.51086V6.48914C51.5514%207.32011%2050.5422%208%2049.3086%208H0.551392V1.51086C0.551392%200.679887%201.56063%200%202.79414%200Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

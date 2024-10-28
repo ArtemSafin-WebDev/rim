@@ -1,9 +1,11 @@
-.franchise-geography.new-geography{
+.franchise-geography.new-geography {
     padding-top: 0;
+
     @include breakpoint(mobile) {
         margin-bottom: 10rem;
     }
 }
+
 .new-geography {
     padding-top: 20rem;
     position: relative;
@@ -65,14 +67,17 @@
 
 .franchise-geography .new-geography__map-wrapper {
     margin-left: -55rem;
+
     &::after {
         content: none;
         top: 0;
     }
+
     @include breakpoint(mobile) {
         margin-left: -21.5rem;
     }
 }
+
 .new-geography__map-wrapper {
     width: 244.2rem;
     height: 131rem;
@@ -167,6 +172,7 @@
         padding: 1.4rem;
         gap: 0.8rem;
     }
+
     &::after {
         content: '';
         position: absolute;
@@ -196,6 +202,7 @@
     font-weight: 800;
     font-size: 1.8rem;
     line-height: 120%;
+
     @include breakpoint(mobile) {
         text-align: center;
         font-style: normal;
@@ -249,6 +256,7 @@
     left: 0;
     bottom: 30rem;
     z-index: 5;
+
     @include breakpoint(mobile) {
         text-align: center;
         position: static;
@@ -257,5 +265,79 @@
         font-size: 1.4rem;
         line-height: 120%;
         margin-top: 1.8rem;
+    }
+}
+
+
+.new-geography {
+    &__stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+
+        width: 24rem;
+        margin-top: 8rem;
+        margin-right: 2.5rem;
+        margin-left: auto;
+
+        @include breakpoint(mobile) {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            width: 100%;
+            margin-top: -10rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 100%;
+
+        @include breakpoint(mobile) {
+            align-items: center;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            max-width: min-content;
+
+            @include breakpoint(mobile) {
+                max-width: unset;
+            }
+        }
+
+        &:nth-child(3) {
+            margin-right: auto;
+
+            @include breakpoint(mobile) {
+                margin-right: unset;
+            }
+        }
+    }
+
+    &__stat-number {
+        font-size: 4.8rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 116%;
+        white-space: nowrap;
+
+        @include breakpoint(mobile) {
+            font-size: 3.6rem;
+        }
+    }
+
+    &__stat-text {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        white-space: nowrap;
     }
 }

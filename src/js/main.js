@@ -17,6 +17,8 @@ import clientsReviews from './main/clientsReviews';
 import modals from './utils/modal';
 import geographyInnerSliders from './main/geographyLeadersInnerSlider';
 
+import locationMap from './main/locationMap';
+
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
@@ -36,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     modals();
     geographyInnerSliders();
+
+    locationMap();
 });
 
 window.addEventListener('load', function() {

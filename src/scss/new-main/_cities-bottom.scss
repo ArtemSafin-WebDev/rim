@@ -1,0 +1,77 @@
+.cities-bottom {
+    position: relative;
+
+    &__picture {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -2;
+
+        width: 100%;
+        aspect-ratio: 2.96 / 1;
+
+    }
+
+    &__image-contianer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 0%;
+            transform: translate(-50%, 0%);
+
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__request {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -3;
+
+            width: 100%;
+            aspect-ratio: 1.3 / 1;
+            transform: translateX(-50%);
+
+            background: linear-gradient(180deg, #5229A1 32%, #1F49C4 100%);
+            border-radius: 100%;
+            filter: blur(250px);
+            content: "";
+        }
+    }
+
+    &__fraction {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: -3;
+
+            width: 160%;
+            aspect-ratio: 1.55 / 1;
+            transform: translate(-46%, -27%);
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%222409%22%20height%3D%222229%22%20viewBox%3D%220%200%202409%202229%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20opacity%3D%220.6%22%20filter%3D%22url(%23filter0_f_1_114)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M847.919%201604.27C658.43%201699.04%20643.134%201492.92%20601.193%201367.09C600.267%201322.57%20600.767%201208.81%20610.18%201109.98C621.946%20986.449%20739.03%20912.193%20872.179%201027.04C1005.33%201141.88%20993.227%201105.25%201193.07%20900.722C1392.91%20696.193%201492.51%20622.23%201621.44%20602.77C1750.36%20583.31%201744.44%20671.681%201792.83%20728.724C1841.22%20785.767%201777.24%201138.67%201643.18%201296.58C1509.11%201454.5%201502%201270.06%201324.74%201254.23C1147.48%201238.41%201037.41%201509.51%20847.919%201604.27Z%22%20fill%3D%22%235857FF%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cfilter%20id%3D%22filter0_f_1_114%22%20x%3D%220.867432%22%20y%3D%220.0234375%22%20width%3D%222408.04%22%20height%3D%222228.4%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%20%20%20%20%20%20%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%0A%20%20%20%20%20%20%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22%2F%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%22300%22%20result%3D%22effect1_foregroundBlur_1_114%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            content: "";
+        }
+    }
+}
