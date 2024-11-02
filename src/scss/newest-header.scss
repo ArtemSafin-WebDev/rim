@@ -1288,3 +1288,10 @@ body.menu-open {
         margin-right: unset;
     }
 }
+
+
+.new-header__location {
+    @include breakpoint(laptop) {
+        display: none;
+    }
+}

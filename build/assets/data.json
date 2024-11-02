@@ -1,0 +1,2420 @@
+{
+    "type": "FeatureCollection",
+"features": [
+  {
+    "type": "Feature",
+    "id": 10760,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.47479,
+        135.08039
+      ]
+    },
+    "properties": {
+      "angle": "90",
+      "id": "point_10760",
+      "angles": "{\"26293\":90}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "95"
+      ],
+      "code": "HAB-001",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10761,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.48771,
+        135.07762
+      ]
+    },
+    "properties": {
+      "angle": "90",
+      "id": "point_10761",
+      "angles": "{\"26294\":90}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "95"
+      ],
+      "code": "HAB-002",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10762,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.4724,
+        135.06559
+      ]
+    },
+    "properties": {
+      "angle": "130",
+      "id": "point_10762",
+      "angles": "{\"26295\":130}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "95"
+      ],
+      "code": "HAB-003",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10763,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.4927,
+        135.09036
+      ]
+    },
+    "properties": {
+      "angle": "220",
+      "id": "point_10763",
+      "angles": "{\"26345\":40,\"26296\":220}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "95"
+      ],
+      "code": "HAB-004",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10764,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.47465,
+        135.07983
+      ]
+    },
+    "properties": {
+      "angle": "50",
+      "id": "point_10764",
+      "angles": "{\"26359\":230,\"26297\":50}",
+      "num_sides": 2,
+      "type2": "99",
+      "type": "cityboard",
+      "icon": "format",
+      "typeObj": "99",
+      "typeSize": "91",
+      "typeSurface": [
+        "94",
+        "95"
+      ],
+      "code": "HAB-005",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10765,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.47383,
+        135.06861
+      ]
+    },
+    "properties": {
+      "angle": "310",
+      "id": "point_10765",
+      "angles": "{\"26298\":310}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "95"
+      ],
+      "code": "HAB-006",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10766,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.48786,
+        135.06809
+      ]
+    },
+    "properties": {
+      "angle": "310",
+      "id": "point_10766",
+      "angles": "{\"26299\":150,\"26346\":310}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "95",
+        "94"
+      ],
+      "code": "HAB-007",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10767,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.473096,
+        135.064449
+      ]
+    },
+    "properties": {
+      "angle": "100",
+      "id": "point_10767",
+      "angles": "{\"26300\":100}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "95"
+      ],
+      "code": "HAB-008",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10769,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.41665,
+        135.0978
+      ]
+    },
+    "properties": {
+      "angle": "70",
+      "id": "point_10769",
+      "angles": "{\"26304\":250,\"26303\":70}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-010",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10770,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.46253,
+        135.08385
+      ]
+    },
+    "properties": {
+      "angle": "150",
+      "id": "point_10770",
+      "angles": "{\"26306\":230,\"26305\":150}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-011",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10771,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.45226,
+        135.09647
+      ]
+    },
+    "properties": {
+      "angle": "290",
+      "id": "point_10771",
+      "angles": "{\"26308\":110,\"26307\":290}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-012",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10772,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.45924,
+        135.08948
+      ]
+    },
+    "properties": {
+      "angle": "130",
+      "id": "point_10772",
+      "angles": "{\"26310\":310,\"26309\":130}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-013",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10773,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.43456,
+        135.10878
+      ]
+    },
+    "properties": {
+      "angle": "200",
+      "id": "point_10773",
+      "angles": "{\"26312\":20,\"26311\":200}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-014",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10774,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.43376,
+        135.11244
+      ]
+    },
+    "properties": {
+      "angle": "260",
+      "id": "point_10774",
+      "angles": "{\"26314\":80,\"26313\":260}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-015",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10775,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.43432,
+        135.11252
+      ]
+    },
+    "properties": {
+      "angle": "260",
+      "id": "point_10775",
+      "angles": "{\"26315\":260}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-016",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10776,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.46417,
+        135.11934
+      ]
+    },
+    "properties": {
+      "angle": "280",
+      "id": "point_10776",
+      "angles": "{\"26317\":100,\"26316\":280}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-017",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10777,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.45028,
+        135.12531
+      ]
+    },
+    "properties": {
+      "angle": "280",
+      "id": "point_10777",
+      "angles": "{\"26319\":100,\"26318\":280}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-018",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10778,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.44858,
+        135.12606
+      ]
+    },
+    "properties": {
+      "angle": "280",
+      "id": "point_10778",
+      "angles": "{\"26321\":100,\"26320\":280}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-019",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10779,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.47211,
+        135.11803
+      ]
+    },
+    "properties": {
+      "angle": "280",
+      "id": "point_10779",
+      "angles": "{\"26322\":280}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-020",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10780,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.47288,
+        135.11783
+      ]
+    },
+    "properties": {
+      "angle": "270",
+      "id": "point_10780",
+      "angles": "{\"26324\":90,\"26323\":270}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-021",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10781,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.46998,
+        135.11833
+      ]
+    },
+    "properties": {
+      "angle": "270",
+      "id": "point_10781",
+      "angles": "{\"26326\":90,\"26325\":270}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-022",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10782,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.48854,
+        135.10299
+      ]
+    },
+    "properties": {
+      "angle": "120",
+      "id": "point_10782",
+      "angles": "{\"26328\":300,\"26327\":120}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-023",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10783,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.50552,
+        135.11824
+      ]
+    },
+    "properties": {
+      "angle": "10",
+      "id": "point_10783",
+      "angles": "{\"26330\":190,\"26329\":10}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-024",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10784,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.50466,
+        135.11021
+      ]
+    },
+    "properties": {
+      "angle": "10",
+      "id": "point_10784",
+      "angles": "{\"26332\":190,\"26331\":10}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-025",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10785,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.54375,
+        135.04239
+      ]
+    },
+    "properties": {
+      "angle": "270",
+      "id": "point_10785",
+      "angles": "{\"26334\":90,\"26333\":270}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-026",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10786,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.54421,
+        135.0424
+      ]
+    },
+    "properties": {
+      "angle": "270",
+      "id": "point_10786",
+      "angles": "{\"26336\":90,\"26335\":270}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-027",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10787,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.48289,
+        135.09477
+      ]
+    },
+    "properties": {
+      "angle": "40",
+      "id": "point_10787",
+      "angles": "{\"26337\":220,\"26338\":40}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-028",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10788,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.5121,
+        135.07199
+      ]
+    },
+    "properties": {
+      "angle": "240",
+      "id": "point_10788",
+      "angles": "{\"26340\":60,\"26339\":240}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-029",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10789,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.52146,
+        135.07143
+      ]
+    },
+    "properties": {
+      "angle": "280",
+      "id": "point_10789",
+      "angles": "{\"26342\":100,\"26341\":280}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-030",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10790,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.52055,
+        135.07125
+      ]
+    },
+    "properties": {
+      "angle": "100",
+      "id": "point_10790",
+      "angles": "{\"26344\":280,\"26343\":100}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-031",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10791,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.49368,
+        135.06445
+      ]
+    },
+    "properties": {
+      "angle": "250",
+      "id": "point_10791",
+      "angles": "{\"26348\":70,\"26347\":250}",
+      "num_sides": 2,
+      "type2": "99",
+      "type": "cityboard",
+      "icon": "format",
+      "typeObj": "99",
+      "typeSize": "91",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-032",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10793,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.47724,
+        135.13444
+      ]
+    },
+    "properties": {
+      "angle": "10",
+      "id": "point_10793",
+      "angles": "{\"26352\":190,\"26351\":10}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-034",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10794,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.47709,
+        135.13228
+      ]
+    },
+    "properties": {
+      "angle": "0",
+      "id": "point_10794",
+      "angles": "{\"26354\":180,\"26353\":0}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-035",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10795,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.48976,
+        135.068217
+      ]
+    },
+    "properties": {
+      "angle": "240",
+      "id": "point_10795",
+      "angles": "{\"26356\":60,\"26355\":240}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "91",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-036",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10798,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.466905,
+        135.071681
+      ]
+    },
+    "properties": {
+      "angle": "120",
+      "id": "point_10798",
+      "angles": "{\"26362\":300,\"45796\":120}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-039",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10799,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.49128,
+        135.07096
+      ]
+    },
+    "properties": {
+      "angle": "230",
+      "id": "point_10799",
+      "angles": "{\"26364\":50,\"26363\":230}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-040",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10800,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.50923,
+        135.14384
+      ]
+    },
+    "properties": {
+      "angle": "200",
+      "id": "point_10800",
+      "angles": "{\"26366\":20,\"26365\":200}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-041",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10801,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.52535,
+        135.16655
+      ]
+    },
+    "properties": {
+      "angle": "230",
+      "id": "point_10801",
+      "angles": "{\"26368\":50,\"26367\":230}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-042",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10802,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.43887,
+        135.12758
+      ]
+    },
+    "properties": {
+      "angle": "110",
+      "id": "point_10802",
+      "angles": "{\"26370\":290,\"26369\":110}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-043",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10803,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.42536,
+        135.13155
+      ]
+    },
+    "properties": {
+      "angle": "100",
+      "id": "point_10803",
+      "angles": "{\"26372\":280,\"26371\":100}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-044",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10804,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.39702,
+        135.10051
+      ]
+    },
+    "properties": {
+      "angle": "320",
+      "id": "point_10804",
+      "angles": "{\"26374\":140,\"26373\":320}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-045",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10805,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.39226,
+        135.11011
+      ]
+    },
+    "properties": {
+      "angle": "170",
+      "id": "point_10805",
+      "angles": "{\"26376\":350,\"26375\":170}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-046",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10806,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.39215,
+        135.11488
+      ]
+    },
+    "properties": {
+      "angle": "200",
+      "id": "point_10806",
+      "angles": "{\"26378\":20,\"26377\":200}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-047",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10807,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.39657,
+        135.13885
+      ]
+    },
+    "properties": {
+      "angle": "100",
+      "id": "point_10807",
+      "angles": "{\"26380\":280,\"26379\":100}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-048",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10808,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.39576,
+        135.139
+      ]
+    },
+    "properties": {
+      "angle": "100",
+      "id": "point_10808",
+      "angles": "{\"26382\":280,\"26381\":100}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-049",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10809,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.48497,
+        135.04448
+      ]
+    },
+    "properties": {
+      "angle": "310",
+      "id": "point_10809",
+      "angles": "{\"26384\":130,\"26383\":310}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-050",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10810,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.52183,
+        135.16204
+      ]
+    },
+    "properties": {
+      "angle": "230",
+      "id": "point_10810",
+      "angles": "{\"26386\":50,\"26385\":230}",
+      "num_sides": 2,
+      "type2": "99",
+      "type": "cityboard",
+      "icon": "format",
+      "typeObj": "99",
+      "typeSize": "91",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-051",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 10811,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.452980000019,
+        135.09611682209
+      ]
+    },
+    "properties": {
+      "angle": "280",
+      "id": "point_10811",
+      "angles": "{\"26388\":100,\"26387\":280}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94"
+      ],
+      "code": "HAB-052",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23494,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.496012,
+        135.071003
+      ]
+    },
+    "properties": {
+      "angle": "340",
+      "id": "point_23494",
+      "angles": "{\"53316\":340}",
+      "num_sides": 1,
+      "type2": "122",
+      "type": "mediafasad",
+      "icon": "format",
+      "typeObj": "122",
+      "typeSize": "312",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "HAB-053",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23567,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.50005,
+        135.09407
+      ]
+    },
+    "properties": {
+      "angle": "100",
+      "id": "point_23567",
+      "angles": "{\"54426\":280,\"54425\":100}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-153",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23569,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.421746,
+        135.099941
+      ]
+    },
+    "properties": {
+      "angle": "80",
+      "id": "point_23569",
+      "angles": "{\"54430\":260,\"54429\":80}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-322",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23570,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.500643,
+        135.066766
+      ]
+    },
+    "properties": {
+      "angle": "260",
+      "id": "point_23570",
+      "angles": "{\"54432\":80,\"54431\":260}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-61",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23571,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.466851,
+        135.084249
+      ]
+    },
+    "properties": {
+      "angle": "170",
+      "id": "point_23571",
+      "angles": "{\"54434\":350,\"54433\":170}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-96",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23572,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.512696,
+        135.072387
+      ]
+    },
+    "properties": {
+      "angle": "260",
+      "id": "point_23572",
+      "angles": "{\"54436\":80,\"54435\":260}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-68",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23573,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.484694,
+        135.048637
+      ]
+    },
+    "properties": {
+      "angle": "130",
+      "id": "point_23573",
+      "angles": "{\"54437\":130}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-126",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23574,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.441635,
+        135.111969
+      ]
+    },
+    "properties": {
+      "angle": "90",
+      "id": "point_23574",
+      "angles": "{\"54440\":270,\"54439\":90}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-097",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23576,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.50120131567,
+        135.09390588591
+      ]
+    },
+    "properties": {
+      "angle": "70",
+      "id": "point_23576",
+      "angles": "{\"54444\":250,\"54443\":70}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-75",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23577,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.533894,
+        135.038437
+      ]
+    },
+    "properties": {
+      "angle": "70",
+      "id": "point_23577",
+      "angles": "{\"54446\":250,\"54445\":70}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-58",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23578,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.479349,
+        135.056296
+      ]
+    },
+    "properties": {
+      "angle": "130",
+      "id": "point_23578",
+      "angles": "{\"54447\":130}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-308",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23579,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.517667,
+        135.072122
+      ]
+    },
+    "properties": {
+      "angle": "100",
+      "id": "point_23579",
+      "angles": "{\"54449\":280,\"54448\":100}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-314",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23580,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.428962,
+        135.110893
+      ]
+    },
+    "properties": {
+      "angle": "80",
+      "id": "point_23580",
+      "angles": "{\"54451\":260,\"54450\":80}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-319",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23581,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.506114,
+        135.129804
+      ]
+    },
+    "properties": {
+      "angle": "0",
+      "id": "point_23581",
+      "angles": "{\"54453\":180,\"54452\":0}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-316",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23583,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.469743,
+        135.095302
+      ]
+    },
+    "properties": {
+      "angle": "280",
+      "id": "point_23583",
+      "angles": "{\"54457\":100,\"54456\":280}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-391",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23587,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.462869,
+        135.083823
+      ]
+    },
+    "properties": {
+      "angle": "350",
+      "id": "point_23587",
+      "angles": "{\"54465\":170,\"54464\":350}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-11",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23588,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.519872,
+        135.051711
+      ]
+    },
+    "properties": {
+      "angle": "110",
+      "id": "point_23588",
+      "angles": "{\"54466\":110}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-015",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23590,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.545204,
+        135.036672
+      ]
+    },
+    "properties": {
+      "angle": "240",
+      "id": "point_23590",
+      "angles": "{\"54470\":60,\"54469\":240}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-89",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23591,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.446863,
+        135.111225
+      ]
+    },
+    "properties": {
+      "angle": "290",
+      "id": "point_23591",
+      "angles": "{\"54472\":110,\"54471\":290}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-50",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23592,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.541104,
+        135.043607
+      ]
+    },
+    "properties": {
+      "angle": "140",
+      "id": "point_23592",
+      "angles": "{\"54474\":320,\"54473\":140}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-93",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23593,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.4543,
+        135.095087
+      ]
+    },
+    "properties": {
+      "angle": "100",
+      "id": "point_23593",
+      "angles": "{\"54476\":280,\"54475\":100}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-106",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23594,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.488228,
+        135.103392
+      ]
+    },
+    "properties": {
+      "angle": "110",
+      "id": "point_23594",
+      "angles": "{\"54478\":290,\"54477\":110}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-129",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23598,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.509671,
+        135.071865
+      ]
+    },
+    "properties": {
+      "angle": "170",
+      "id": "point_23598",
+      "angles": "{\"54486\":350,\"54485\":170}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-156",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23599,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.529657,
+        135.069384
+      ]
+    },
+    "properties": {
+      "angle": "280",
+      "id": "point_23599",
+      "angles": "{\"54488\":100,\"54487\":280}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-143",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23601,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.505712,
+        135.120028
+      ]
+    },
+    "properties": {
+      "angle": "0",
+      "id": "point_23601",
+      "angles": "{\"54492\":180,\"54491\":0}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-196",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23602,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.505599,
+        135.121046
+      ]
+    },
+    "properties": {
+      "angle": "180",
+      "id": "point_23602",
+      "angles": "{\"54494\":0,\"54493\":180}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-124",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23603,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.467725,
+        135.070775
+      ]
+    },
+    "properties": {
+      "angle": "130",
+      "id": "point_23603",
+      "angles": "{\"54495\":130}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-189",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23604,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.470873,
+        135.067842
+      ]
+    },
+    "properties": {
+      "angle": "130",
+      "id": "point_23604",
+      "angles": "{\"54496\":130}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-399",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23605,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.475091,
+        135.072835
+      ]
+    },
+    "properties": {
+      "angle": "210",
+      "id": "point_23605",
+      "angles": "{\"54497\":210}",
+      "num_sides": 1,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-400",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23606,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.50975,
+        135.144552
+      ]
+    },
+    "properties": {
+      "angle": "210",
+      "id": "point_23606",
+      "angles": "{\"54499\":30,\"54498\":210}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "94",
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-125",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  },
+  {
+    "type": "Feature",
+    "id": 23637,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        48.497419,
+        135.099452
+      ]
+    },
+    "properties": {
+      "angle": "30",
+      "id": "point_23637",
+      "angles": "{\"54670\":210,\"54669\":30}",
+      "num_sides": 2,
+      "type2": "59",
+      "type": "billboard",
+      "icon": "format",
+      "typeObj": "59",
+      "typeSize": "90",
+      "typeSurface": [
+        "96"
+      ],
+      "class": "d",
+      "code": "khv-112",
+      "brand_value": "r"
+    },
+    "options": {
+      "zIndex": 652
+    }
+  }
+]
+}

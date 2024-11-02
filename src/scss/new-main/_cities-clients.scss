@@ -1,0 +1,89 @@
+.cities-clients {
+    position: relative;
+    z-index: 20;
+
+    @include breakpoint(portrait-tablet) {
+        padding-top: 18vh;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3.7rem;
+    }
+
+    &__text {
+        position: relative;
+
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        text-align: center;
+
+        @include breakpoint(portrait-tablet) {
+            font-size: 1.6rem;
+        }
+
+        strong {
+            font-weight: 800;
+        }
+
+        &::before {
+            position: absolute;
+            left: 50%;
+            bottom: calc(100% + 4rem);
+
+            width: 89.822px;
+            height: 120.094px;
+            transform: translateX(-50%);
+
+            background-image: url('./../img/cities/crown.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            content: "";
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 3.4rem;
+
+        padding: 4.6rem 4rem;
+
+        border-radius: 5rem;
+        border: 0.967px solid #FFF;
+        background: rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(48.35568618774414px);
+
+        @include breakpoint(portrait-tablet) {
+            row-gap: 1.8rem;
+            padding: 1.5rem;
+
+            border-radius: 18.635px;
+            border: 0.36px solid #FFF;
+            background: rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(18.02185821533203px);
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 1 calc(100% / 5 - 2rem);
+
+        @include breakpoint(portrait-tablet) {
+            flex: 0 1 calc(100% / 4 - 2rem);
+        }
+
+        &:nth-child(6) {}
+
+        &:nth-child(10) {}
+    }
+}
