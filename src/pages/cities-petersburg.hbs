@@ -1,0 +1,574 @@
+{{#extend "new-main"}}
+{{#content "main"}}
+<section class="cities-intro cities-intro--lower">
+    <div class="cities-intro__picture">
+        <picture>
+            <source type="image/webp" media="(min-aspect-ratio: 4/3)" srcset="./img/cities/intro-1.webp">
+            <source type="image/webp" media="(max-aspect-ratio: 4/3)" srcset="./img/cities/intro-1m.webp">
+            <source media="(max-aspect-ratio: 4/3)" srcset="img/cities/intro-1m.png">
+            <img class="cities-intro__image" src="img/cities/intro-1.png" alt="">
+        </picture>
+    </div>
+
+    <div class="cities-intro__container container">
+        <div class="cities-intro__headings">
+            <h1 class="cities-intro__title">
+                Наружная реклама<br> <span class="cities-callback__red">в&nbsp;Санкт-Петербурге</span>
+            </h1>
+            <ul class="cities-intro__list">
+                <li>Коммуникация с целевой аудиторией</li>
+                <li>Получение максимальных охватов</li>
+                <li>Повышение узнаваемости бренда</li>
+            </ul>
+            <a href="#" class="cities-intro__link new-guarantee__link">
+                Оставить заявку
+            </a>
+        </div>
+    </div>
+
+    <div class="cities-intro__scroll"></div>
+</section>
+
+<section class="cities-map mapBillboard">
+    <script>
+        var locationCenter = [48.480229, 135.071917],
+            locationZoom = 12,
+            mainCoords = [48.480229, 135.071917];
+
+        var blackLocations = [
+            {
+                coords: [48.504601, 135.106511],
+                address: 'asdad',
+                title: `asdasda`
+            },
+        ];
+
+        var blueLocations = [
+            {
+                coords: [48.485098, 135.106210],
+                address: 'asdasd',
+                title: `asdasd`
+            },
+        ];
+
+        var greyLocations = [
+            {
+                coords: [48.505901, 135.084541],
+                address: 'asdasd',
+                title: `asdasdasd`
+            },
+        ];
+    </script>
+
+    <div class="cities-map__container container">
+        <h2 class="cities-map__title">
+            Привлекайте клиентов по всему городу
+        </h2>
+
+        <div class="cities-map__col">
+            <div class="cities-map__map-wrapper">
+                <div class="js-location-map"></div>
+            </div>
+            <div class="cities-map__row">
+                <ul class="cities-map__row-item cities-map__row-item--blue">
+                    <li>
+                        <p class="cities-map__number">801</p>
+                        <p class="cities-map__text">рекламных поверхностей</p>
+                    </li>
+                    <li>
+                        <p class="cities-map__number">702</p>
+                        <p class="cities-map__text">digital-поверхности</p>
+                    </li>
+                </ul>
+                <ul class="cities-map__row-item cities-map__row-item--dark">
+                    <li>
+                        <div class="cities-map__icon cities-map__icon--billboard"></div>
+                        <p class="cities-map__number">929</p>
+                        <p class="cities-map__text">билбордов</p>
+                    </li>
+                    <li>
+                        <div class="cities-map__icon cities-map__icon--cityboard"></div>
+                        <p class="cities-map__number">72</p>
+                        <p class="cities-map__text">ситиборда</p>
+                    </li>
+                </ul>
+                <ul class="cities-map__row-item cities-map__row-item--dark cities-map__row-item--full">
+                    <li>
+                        <div class="cities-map__icon cities-map__icon--facade"></div>
+                        <p class="cities-map__number">1</p>
+                        <p class="cities-map__text">медиафасад</p>
+                    </li>
+                    <li>
+                        <div class="cities-map__icon cities-map__icon--format"></div>
+                        <p class="cities-map__number">167</p>
+                        <p class="cities-map__text">ситиформатов</p>
+                    </li>
+                    <li>
+                        <div class="cities-map__icon cities-map__icon--site"></div>
+                        <p class="cities-map__number">53</p>
+                        <p class="cities-map__text">суперсайта</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cities-double">
+    <div class="cities-double__container container">
+        <h2 class="cities-double__title cities-double__title--mb">
+            У каждого формата — свои преимущества
+        </h2>
+
+        <div class="cities-double__body">
+            <div class="cities-double__body-item cities-double__body-item--left">
+                <div class="cities-double__image">
+                    <div class="cities-double__picture">
+                        <picture>
+                            <source type="image/webp" media="(min-aspect-ratio: 4/3)"
+                                srcset="./img/cities/double-3.webp">
+                            <source type="image/webp" media="(max-aspect-ratio: 4/3)"
+                                srcset="./img/cities/double-3m.webp">
+                            <source media="(max-aspect-ratio: 4/3)" srcset="img/cities/double-3m.png">
+                            <img src="img/cities/double-3.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="cities-double__tooltip cities-double__tooltip--no-arrows">
+                    <p class="cities-double__subtitle">Экраны</p>
+                    <ul class="cities-double__list">
+                        <li class="cities-double__list-item">
+                            Можно запускать анимированную рекламу, которая еще эффективнее привлекает всеобщее внимание
+                        </li>
+                        <li class="cities-double__list-item">
+                            Гибкое управление контентом 
+                        </li>
+                        <li class="cities-double__list-item">
+                            Любой срок размещения
+                        </li>
+                    </ul>
+                    <div class="gradient-border"></div>
+                    <div class="cities-double__back"></div>
+                </div>
+            </div>
+            <div class="cities-double__body-item cities-double__body-item--right">
+                <div class="cities-double__image">
+                    <div class="cities-double__picture">
+                        <picture>
+                            <source type="image/webp" media="(min-aspect-ratio: 4/3)"
+                                srcset="./img/cities/double-4.webp">
+                            <source type="image/webp" media="(max-aspect-ratio: 4/3)"
+                                srcset="./img/cities/double-4m.webp">
+                            <source media="(max-aspect-ratio: 4/3)" srcset="img/cities/double-4m.png">
+                            <img src="img/cities/double-4.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="cities-double__tooltip cities-double__tooltip--no-arrows">
+                    <p class="cities-double__subtitle">Баннеры</p>
+                    <ul class="cities-double__list">
+                        <li class="cities-double__list-item">
+                            Не нужно делить рекламное место с другими брендами — баннер только для вас!
+                        </li>
+                        <li class="cities-double__list-item">
+                            Ваша реклама всегда на виду — 24 часа в сутки на протяжении целого месяца или даже больше
+                        </li>
+                    </ul>
+                    <div class="gradient-border"></div>
+                    <div class="cities-double__back"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cities-callback">
+    <div class="cities-callback__container container">
+        <form action="" class="cities-callback__body cities-callback__body--no-images">
+            <h2 class="cities-callback__title cities-callback__title--hide-on-mobile cities-callback__title--max-w">
+                Ваша реклама <span class="cities-callback__red">будет притягивать взгляды</span>, как белые ночи
+            </h2>
+            <h2 class="cities-callback__title cities-callback__title--show-on-mobile cities-callback__title--max-w">
+                На медиафасаде <span class="cities-callback__red">ваша&nbsp;реклама</span> заметнее тигра на снегу!
+            </h2>
+            <p class="cities-callback__text">
+                Оставьте заявку, мы свяжемся с вами в ближайшее время и соберем индивидуальную адресную программу.
+            </p>
+
+            <div class="cities-callback__row">
+                <div class="cities-callback__inputs">
+                    <div class="cities-callback__input cities-request__input">
+                        <input type="text" name="cities-callback-name" id="cities-callback-name" placeholder="Имя"
+                            required>
+                        <div class="cities-request__input-gradient-border gradient-border"></div>
+                    </div>
+                    <div class="cities-callback__input cities-request__input">
+                        <input type="tel" name="cities-callback-phone" id="cities-callback-phone"
+                            placeholder="+7 999 999-99-99" required>
+                        <div class="cities-request__input-gradient-border gradient-border"></div>
+                    </div>
+                    <div class="cities-callback__input cities-request__input">
+                        <input type="email" name="cities-callback-phone" id="cities-callback-phone" placeholder="E-mail"
+                            required>
+                        <div class="cities-request__input-gradient-border gradient-border"></div>
+                    </div>
+                </div>
+
+                <button type="button" class="cities-callback__button new-guarantee__link">
+                    Оставить заявку
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="new-geography">
+    <div class="container">
+        <div class="new-geography__content">
+            <h2 class="new-geography__heading">
+                Мы — второй оператор наружной рекламы в России
+                и крупный рекламный холдинг
+            </h2>
+            <div class="new-geography__wrapper">
+
+
+                <div class="new-geography__map-wrapper">
+                    <img src="img/new-geography-map.webp" alt="" class="new-geography__map">
+                </div>
+                <div class="new-geography__text-content">
+                    <ul class="new-geography__stats">
+                        <li class="new-geography__stat">
+                            <p class="new-geography__stat-number">
+                                30 241
+                            </p>
+
+                            <p class="new-geography__stat-text">
+                                рекламная поверхность
+                            </p>
+                        </li>
+                        <li class="new-geography__stat">
+                            <p class="new-geography__stat-number">
+                                7 973
+                            </p>
+
+                            <p class="new-geography__stat-text">
+                                конструкции
+                            </p>
+                        </li>
+                        <li class="new-geography__stat">
+                            <p class="new-geography__stat-number">
+                                136
+                            </p>
+
+                            <p class="new-geography__stat-text">
+                                городов
+                            </p>
+                        </li>
+                        <li class="new-geography__stat">
+                            <p class="new-geography__stat-number">
+                                11 лет
+                            </p>
+
+                            <p class="new-geography__stat-text">
+                                развиваем рекламный рынок
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cities-clients">
+    <div class="cities-clients__container container">
+        <p class="cities-clients__text">
+            <strong>Наши клиенты — это крупнейшие российские бренды, а также малый и средний бизнес.</strong><br>
+            Уже много лет мы предоставляем им качественный сервис, который решает маркетинговые и бизнес-задачи.
+        </p>
+
+        <ul class="cities-clients__list">
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-1.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-2.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-3.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-4.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-5.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-6.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-7.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-8.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-9.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-10.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-11.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-12.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-13.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-14.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-15.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-16.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-17.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-18.png" alt="">
+            </li>
+            <li class="cities-clients__item">
+                <img src="./img/cities/client-19.png" alt="">
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="cities-fractions">
+    <div class="cities-fractions__container container">
+        <h2 class="cities-fractions__title cities-fractions__title--mbM">
+            Предоставляем <span class="cities-callback__red">полный цикл</span> услуг для запуска рекламы
+        </h2>
+
+        <ul class="cities-fractions__list cities-fractions__list--grid">
+            <li
+                class="cities-fractions__fraction cities-fractions__fraction--address cities-fractions__fraction--address-v2">
+                <p class="cities-fractions__subtitle">
+                    <i>Охватная</i> адресная&nbsp;программа
+                </p>
+                <p class="cities-fractions__text">
+                    Подберем рекламные конструкции в местах<br> с вашей целевой аудиторией
+                </p>
+            </li>
+            <li
+                class="cities-fractions__fraction cities-fractions__fraction--design cities-fractions__fraction--design-v2">
+                <p class="cities-fractions__subtitle">
+                    Креатив и <i>дизайн</i>
+                </p>
+                <p class="cities-fractions__text">
+                    Разработаем креативную концепцию, придумаем<br> слоганы и создадим яркий запоминающийся макет
+                </p>
+            </li>
+            <li
+                class="cities-fractions__fraction cities-fractions__fraction--print cities-fractions__fraction--print-v2">
+                <p class="cities-fractions__subtitle">
+                    <i>Печать и монтаж</i>
+                </p>
+                <p class="cities-fractions__text">
+                    Качественная печать и профессиональный монтаж от проверенных подрядчиков
+                </p>
+            </li>
+            <li
+                class="cities-fractions__fraction cities-fractions__fraction--photo cities-fractions__fraction--photo-v2">
+                <p class="cities-fractions__subtitle">
+                    <i>Фотоотчеты</i>
+                </p>
+                <p class="cities-fractions__text">
+                    Предоставим фотоотчеты ваших<br> размещений на конструкциях
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="cities-simple cities-simple--no-pb">
+    <div class="cities-simple__container container">
+        <div class="cities-simple__image">
+            <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/cities/simple-1.webp">
+                <source type="image/webp" media="(max-width: 768px)" srcset="./img/cities/simple-1m.webp">
+                <source media="(max-width: 768px)" srcset="img/cities/simple-1m.png">
+                <img src="img/cities/simple-1.png" alt="">
+            </picture>
+        </div>
+        <div class="cities-simple__info cities-simple__info--left">
+            <h2 class="cities-simple__title">
+                Наружная реклама нужна вашему бизнесу,
+                как&nbsp;солнце Питеру
+            </h2>
+
+            <p class="cities-simple__text">
+                Оставьте заявку и расскажите менеджеру,<br> какие конструкции вам нужны, — он рассчитает стоимость.
+            </p>
+
+            <a href="" class="cities-simple__link new-guarantee__link">
+                Оставить заявку
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="cities-advantages cities-fractions">
+    <div class="cities-advantages__container container">
+        <div class="cities-advantages__body">
+            <h2 class="cities-simple__title cities-advantages__title">
+                <span class="cities-callback__red">Преимущества</span> наружной рекламы<br> для малого и среднего
+                бизнеса
+            </h2>
+
+            <div class="cities-advantages__image">
+                <picture>
+                    <source type="image/webp" media="(min-width: 992px)" srcset="./img/cities/adv.webp">
+                    <source type="image/webp" media="(max-width: 992px)" srcset="./img/cities/adv-m.webp">
+                    <source media="(max-width: 992px)" srcset="./img/cities/adv-m.png">
+                    <img src="./img/cities/adv.png" alt="">
+                </picture>
+            </div>
+
+            <div class="cities-advantages__item cities-advantages__item--mass">
+                <p class="cities-advantages__subtitle">
+                    Массовый&nbsp;охват
+                </p>
+                <p class="cities-advantages__text">
+                    Реклама на улицах собирает большое количество просмотров — о вас узнают тысячи людей в Петербурге
+                </p>
+            </div>
+
+            <div class="cities-advantages__item cities-advantages__item--view">
+                <p class="cities-advantages__subtitle">
+                    Всегда&nbsp;на&nbsp;виду
+                </p>
+                <p class="cities-advantages__text">
+                    Реклама работает круглосуточно, оставаясь доступной для просмотра независимо от&nbsp;времени суток
+                </p>
+            </div>
+
+            <div class="cities-advantages__item cities-advantages__item--local">
+                <p class="cities-advantages__subtitle">
+                    Локальная<br>ориентированность
+                </p>
+                <p class="cities-advantages__text">
+                    Можно разместить рекламу только в тех локациях, где есть ваша целевая аудитория
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cities-bottom">
+
+    <div class="cities-bottom__cards cities-cards">
+        <div class="cities-cards__container container">
+            <h2 class="cities-cards__title">
+                <span class="cities-callback__red">Размещайте</span> рекламу<br> в&nbsp;любых локациях Петербурга
+            </h2>
+            <ul class="cities-cards__list">
+                <li class="cities-cards__item">
+                    <div class="cities-cards__image">
+                        <img src="./img/cities/card-1.png" alt="">
+                    </div>
+                    <p class="cities-cards__text">Остановки</p>
+                </li>
+                <li class="cities-cards__item">
+                    <div class="cities-cards__image">
+                        <img src="./img/cities/card-2.png" alt="">
+                    </div>
+                    <p class="cities-cards__text">Центральные улицы</p>
+                </li>
+                <li class="cities-cards__item">
+                    <div class="cities-cards__image">
+                        <img src="./img/cities/card-3.png" alt="">
+                    </div>
+                    <p class="cities-cards__text">Фасады зданий</p>
+                </li>
+                <li class="cities-cards__item">
+                    <div class="cities-cards__image">
+                        <img src="./img/cities/card-4.png" alt="">
+                    </div>
+                    <p class="cities-cards__text">Транспортные развязки и&nbsp;перекрестки</p>
+                </li>
+                <li class="cities-cards__item">
+                    <div class="cities-cards__image">
+                        <img src="./img/cities/card-5.png" alt="">
+                    </div>
+                    <p class="cities-cards__text">Автомобильные трассы</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cities-bottom__request cities-request">
+        <div class="cities-request__container container">
+            <div class="cities-request__info">
+                <div class="cities-request__top">
+                    <div class="cities-request__texts">
+                        <p class="cities-request__heading">Можете чиллить</p>
+                        <p class="cities-request__subheading">
+                            на&nbsp;Шантарских островах, пока реклама на билбордах приводит клиентов
+                        </p>
+                    </div>
+                    <p class="cities-request__text">
+                        Оставьте заявку, мы свяжемся с вами в ближайшее время.
+                    </p>
+                </div>
+                <div class="cities-request__inputs">
+                    <div class="cities-request__input">
+                        <input type="tel" name="cities-request-tel" id="cities-request-id"
+                            placeholder="+7 999 999-99-99">
+                        <div class="cities-request__input-gradient-border gradient-border">
+
+                        </div>
+                    </div>
+                    <button class="cities-request__submit new-guarantee__link" type="submit">
+                        Оставить заявку
+                    </button>
+                </div>
+            </div>
+
+            <div class="cities-request__tooltip">
+                <p class="cities-request__subheading">
+                    Не хотите ждать обратного звонка?
+                </p>
+
+                <div class="cities-request__phone">
+                    <p class="cities-request__text">
+                        Звоните на горячую линию, мы ответим на ваши вопросы и разместим рекламу.
+                    </p>
+                    <a href="tel:+78888888888" class="cities-request__number">
+                        8 (888) 888 88 88
+                    </a>
+                </div>
+
+                <div class="gradient-border"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cities-bottom__picture">
+        <div class="cities-bottom__image-contianer">
+
+            <source srcset="./img/cities/bottom.webp" type="image/webp">
+
+            <img src="img/cities/bottom.png" alt="">
+
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

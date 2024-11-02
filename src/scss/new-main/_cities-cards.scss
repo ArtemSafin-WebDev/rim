@@ -1,0 +1,75 @@
+.cities-cards {
+    &__title {
+        margin-bottom: 4rem;
+
+        font-style: normal;
+        font-weight: 800;
+        font-size: 5.2rem;
+        line-height: 110%;
+        text-align: center;
+
+        @include breakpoint(mobile) {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 3.2rem;
+            line-height: 110%;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        overflow: hidden;
+        flex: 0 5 22.4rem;
+
+        border-radius: 25px;
+        border: 1px solid var(--Primary-Metallic-Gradient, #5229A1);
+        background: rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(25px);
+
+        @include breakpoint(laptop) {
+            flex: 0 5 16.7rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        aspect-ratio: 1.04 / 1;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__text {
+        width: min-content;
+        padding: 2rem 2.8rem;
+        color: #FFF;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100%;
+
+        @include breakpoint(laptop) {
+            padding: 1.2rem 2 rem;
+
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -139,4 +139,90 @@
             margin-bottom: 2rem;
         }
     }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        margin-bottom: 6rem;
+
+        @include aspectRatio(portrait) {
+            margin-right: auto;
+        }
+
+        li {
+            position: relative;
+
+            padding-left: 3.4rem;
+
+            font-size: 2.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+
+            &::before {
+                position: absolute;
+                top: 0.25rem;
+                left: 0;
+
+                flex-shrink: 0;
+                width: 2.4rem;
+                height: 2.4rem;
+                border-radius: 100%;
+
+                background-color: #FF5129;
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2213%22%20viewBox%3D%220%200%2012%2013%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M10%204L5%209L2.5%206.5%22%20stroke%3D%22white%22%20stroke-width%3D%221.25%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E');
+                background-size: 1.2rem 1.2rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                content: "";
+
+                @include aspectRatio(portrait) {
+                    top: 0.15rem;
+
+                    width: 1.6rem;
+                    height: 1.6rem;
+
+                    background-size: 0.8rem 0.8rem;
+                }
+            }
+
+            @include aspectRatio(portrait) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &.cities-intro--lower {
+        .cities-intro__title {
+
+            @include aspectRatio(portrait) {
+                margin-inline: calc(var(--content-padding) * -1);
+            }
+        }
+
+        .cities-intro__container {
+            padding-block: 33.6rem 27.8rem;
+
+            @include aspectRatio(portrait) {
+                padding-block: 5rem 0;
+            }
+
+            @include breakpoint(small-tablet) {
+                padding-block: 0;
+            }
+        }
+
+        .cities-intro__headings {
+            margin-right: auto;
+            margin-left: unset;
+
+            @include aspectRatio(portrait) {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
 }

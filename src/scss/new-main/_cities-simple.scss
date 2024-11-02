@@ -3,6 +3,9 @@
     padding-top: 12.8rem;
     padding-bottom: 8.8rem;
 
+    &.cities-simple--no-pb {
+        padding-bottom: 0;
+    }
 
     &::before {
         position: absolute;
@@ -19,10 +22,6 @@
         background-repeat: no-repeat;
         background-position: center;
         content: "";
-    }
-
-    @include breakpoint(small-tablet) {
-        padding-top: 0;
     }
 
     &__container {
@@ -48,7 +47,7 @@
 
             @include breakpoint(small-tablet) {
                 min-height: 100%;
-                transform: translate(-50%, -70%);
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -81,7 +80,30 @@
             background: #08122C;
             filter: blur(125px);
             content: "";
+        }
 
+        &.cities-simple__info--left {
+            align-items: flex-start;
+            max-width: 65rem;
+            padding-top: 2rem;
+            padding-bottom: 20rem;
+
+            @include breakpoint(mobile) {
+                align-items: center;
+
+                padding-top: 50vh;
+
+                padding-bottom: 10rem;
+            }
+
+            .cities-simple__text,
+            .cities-simple__title {
+                text-align: left;
+
+                @include breakpoint(mobile) {
+                    text-align: center;
+                }
+            }
         }
     }
 

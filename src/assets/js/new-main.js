@@ -585,11 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ymaps.ready(initContactsMap);
 
         function initContactsMap() {
-            const locationMiddleSchools = window.blackLocations ?? null,
-                locationMeds = window.blueLocations ?? null,
-                locationMarkets = window.greyLocations ?? null,
-
-                zoom = window.locationZoom ?? 15,
+            const zoom = window.locationZoom ?? 15,
                 center = window.locationCenter,
                 mainCoords = window.mainCoords,
                 mediaQuery = window.matchMedia('(max-width: 640px)').matches,
@@ -598,28 +594,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     center: center,
                     zoom: zoom,
                     controls: []
+                }),
+
+                objectManager = new ymaps.ObjectManager({
+                    clusterize: false,
+                    clusterDisableClickZoom: true
                 });
 
             const MainMarkerLayout = ymaps.templateLayoutFactory.createClass([
-                '<div class="ya-main-placemark">',
-                    '<span></span>',
-                '</div>'
+                '<span class="mapItem $[properties.type] sides-$[properties.num_sides] $[properties.class] $[properties.brand_value]" data-id="$[id]" data-angle="$[properties.angle]" data-angles=\'$[properties.angles]\' title="$[properties.code]"></span>'
             ].join(''));
-
-            const getPointData = function (index) {
-                return {
-                    balloonContentHeader: '<font size=3><b><a target="_blank" href="https://yandex.ru">Здесь может быть ваша ссылка</a></b></font>',
-                    balloonContentBody: '<p>Ваше имя: <input name="login"></p><p>Телефон в формате 2xxx-xxx:  <input></p><p><input type="submit" value="Отправить"></p>',
-                    balloonContentFooter: '<font size=1>Информация предоставлена: </font> балуном <strong>метки ' + index + '</strong>',
-                    clusterCaption: 'метка <strong>' + index + '</strong>'
-                }
-            };
-
-            const getPointOptions = function () {
-                return {
-                    iconLayout: MainMarkerLayout,
-                };
-            };
 
             // zoom controls start: ==========================================>
             const  ZoomLayout = ymaps.templateLayoutFactory.createClass(
@@ -675,57 +659,37 @@ document.addEventListener('DOMContentLoaded', () => {
             mapInstance.controls.add(zoomControl);
             // <================================================= zoom end start
 
-            let mainPLacemark = new ymaps.Placemark(mainCoords, getPointData(1), getPointOptions());
-            mapInstance.geoObjects.add(mainPLacemark);
-
             if (mediaQuery) {
                 mapInstance.behaviors.disable('drag');
                 mapInstance.behaviors.enable('MultiTouch');
             }
 
+            objectManager.objects.options.set('iconLayout', MainMarkerLayout);
+            mapInstance.geoObjects.add(objectManager);
 
-            locationMiddleSchools.forEach(function(item) {
-                var msp = new ymaps.Placemark(item.coords, {
-                    address: item.title,
-                    object: item.address
-                },{
-                    iconLayout: 'default#image',
-                });
-
-                mapInstance.geoObjects.add(msp);
-            });
-
-            locationMeds.forEach(function(item) {
-                var msp = new ymaps.Placemark(item.coords, {
-                    address: item.title,
-                    object: item.address
-                },{
-                    iconLayout: 'default#image',
-                    iconShape: {
-                        type: 'Circle',
-                        coordinates: [0, 0],
-                        radius: 25
-                    }
-                });
-
-                mapInstance.geoObjects.add(msp);
-            });
-
-            locationMarkets.forEach(function(item) {
-                var msp = new ymaps.Placemark(item.coords, {
-                    address: item.title,
-                    object: item.address
-                },{
-                    iconLayout: 'default#image',
-                    iconShape: {
-                        type: 'Circle',
-                        coordinates: [0, 0],
-                        radius: 25
-                    }
-                });
-
-                mapInstance.geoObjects.add(msp);
+            $.ajax({
+                url: "./assets/data.json"
+            }).done(function(data) {
+                objectManager.add(data);
             });
         }
+    })
+
+    document.querySelectorAll('.location-bar').forEach((location) => {
+        location.addEventListener('click', (e) => {
+            if(e.target.closest('.js-close-location-popup')) {
+                e.target.closest('.location-bar').classList.add('location-bar--close-all');
+                e.target.closest('.location-bar').classList.remove('location-bar--modal-open');
+            }
+
+            if(e.target.closest('.js-open-location-modal')) {
+                e.target.closest('.location-bar').classList.add('location-bar--modal-open');
+            }
+
+            if(e.target.closest('.location-bar__button')) {
+                e.target.closest('.location-bar').classList.remove('location-bar--close-all');
+                e.target.closest('.location-bar').classList.add('location-bar--modal-open');
+            }
+        })
     })
 });

@@ -1,0 +1,556 @@
+.mapBillboard .mediafasad {
+    width: 40px;
+    height: 40px;
+    background-image: url('./../img/geography/map/icons/billboard.svg');
+    background-size: cover;
+}
+
+.mapBillboard .mediafasad.d {
+    width: 40px;
+    height: 40px;
+    background-image: url(./../img/geography/map/icons/billboard_digital.svg);
+    background-size: cover;
+}
+
+.mapBillboard .billboard {
+    width: 25px;
+    height: 25px;
+    background-image: url(./../img//geography/map/icons/billboard.svg);
+    background-size: cover;
+}
+
+.mapBillboard .billboard.d {
+    width: 25px;
+    height: 25px;
+    background-image: url(./../img//geography/map/icons/billboard_digital.svg);
+    background-size: cover;
+}
+
+.mapBillboard .cityboard {
+    width: 20px;
+    height: 20px;
+    background-image: url(./../img//geography/map/icons/cityboard.svg);
+    background-size: cover;
+}
+
+.mapBillboard .cityboard.d {
+    width: 20px;
+    height: 20px;
+    background-image: url(./../img//geography/map/icons/cityboard_digital.svg);
+    background-size: cover;
+}
+
+.mapBillboard .cityformat {
+    width: 15px;
+    height: 15px;
+    background-image: url(./../img//geography/map/icons/cityformat.svg);
+    background-size: cover;
+}
+
+.mapBillboard .cityformat.d {
+    width: 15px;
+    height: 15px;
+    background-image: url(./../img//geography/map/icons/cityformat_digital.svg);
+    background-size: cover;
+}
+
+.mapBillboard .superboard {
+    width: 30px;
+    height: 30px;
+    background-image: url(./../img//geography/map/icons/superboard.svg);
+    background-size: cover;
+}
+
+.mapBillboard .superboard.d {
+    width: 30px;
+    height: 30px;
+    background-image: url(./../img//geography/map/icons/superboard_digital.svg);
+    background-size: cover;
+}
+
+.mapBillboard .superboard.sides-3 {
+    width: 30px;
+    height: 30px;
+    background-image: url(./../img//geography/map/icons/superboard_3sides.svg);
+    background-size: cover;
+}
+
+.mapBillboard .superboard.sides-3.d {
+    width: 30px;
+    height: 30px;
+    background-image: url(./../img//geography/map/icons/superboard_3sides_digital.svg);
+    background-size: cover;
+}
+
+.mapBillboard .pillar {
+    width: 15px;
+    height: 15px;
+    background-image: url(./../img//geography/map/icons/pillar.svg);
+    background-size: cover;
+}
+
+.mapBillboard .pillar.d {
+    width: 15px;
+    height: 15px;
+    background-image: url(./../img//geography/map/icons/pillar_digital.svg);
+    background-size: cover;
+}
+
+.mapBillboard .supersite {
+    width: 35px;
+    height: 35px;
+    background-image: url(./../img//geography/map/icons/superboard.svg);
+    background-size: cover;
+}
+
+.mapBillboard .supersite.d {
+    width: 35px;
+    height: 35px;
+    background-image: url(./../img//geography/map/icons/superboard_digital.svg);
+    background-size: cover;
+}
+
+.mapBillboard .supersite.sides-3 {
+    width: 35px;
+    height: 35px;
+    background-image: url(./../img//geography/map/icons/supersite_3sides.svg);
+    background-size: cover;
+}
+
+.mapBillboard .supersite.sides-3.d {
+    width: 35px;
+    height: 35px;
+    background-image: url(./../img//geography/map/icons/supersite_3sides_digital.svg);
+    background-size: cover;
+}
+
+.mapBillboard .pillars {
+    width: 15px;
+    height: 15px;
+    background-image: url(./../img//geography/map/icons/pillar.svg);
+    background-size: cover;
+}
+
+.mapBillboard .pillars.d {
+    width: 15px;
+    height: 15px;
+    background-image: url(./../img//geography/map/icons/pillar_digital.svg);
+    background-size: cover;
+}
+
+.mapItem {
+    position: absolute;
+    transform-origin: center;
+}
+
+.mapItem.hidden {
+    display: none;
+}
+
+.mapItem.r.active.mediafasad {
+    background-image: url(/geography/map/icons/billboard_active_rim.svg);
+}
+
+.mapItem.r.active.billboard {
+    background-image: url(/geography/map/icons/billboard_active_rim.svg);
+}
+
+.mapItem.r.active.cityboard {
+    background-image: url(/geography/map/icons/cityboard_active_rim.svg);
+}
+
+.mapItem.r.active.cityformat {
+    background-image: url(/geography/map/icons/cityformat_active_rim.svg);
+}
+
+.mapItem.r.active.superboard {
+    background-image: url(/geography/map/icons/superboard_active_rim.svg);
+}
+
+.mapItem.r.active.superboard.sides-3 {
+    background-image: url(/geography/map/icons/pillar_active_rim.svg);
+}
+
+.mapItem.r.active.pillar {
+    background-image: url(/geography/map/icons/pillar_active_rim.svg);
+}
+
+.mapItem.r.active.supersite {
+    background-image: url(/geography/map/icons/superboard_active_rim.svg);
+}
+
+.mapItem.r.active.supersite.sides-3 {
+    background-image: url(/geography/map/icons/pillar_active_rim.svg);
+}
+
+.mapItem.r.active.pillars {
+    background-image: url(/geography/map/icons/pillar_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.mediafasad {
+    background-image: url(/geography/map/icons/billboard_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.billboard {
+    background-image: url(/geography/map/icons/billboard_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.cityboard:not(.d) {
+    background-image: url(/geography/map/icons/cityboard_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.cityformat {
+    background-image: url(/geography/map/icons/cityformat_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.superboard {
+    background-image: url(/geography/map/icons/superboard_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.superboard.sides-3 {
+    background-image: url(/geography/map/icons/pillar_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.pillar {
+    background-image: url(/geography/map/icons/pillar_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.supersite {
+    background-image: url(/geography/map/icons/superboard_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.supersite.sides-3 {
+    background-image: url(/geography/map/icons/pillar_active_rim.svg);
+}
+
+.mapItem.r.balloonOpened.pillars {
+    background-image: url(/geography/map/icons/pillar_active_rim.svg);
+}
+
+.mapItem.l.active.mediafasad {
+    background-image: url(/geography/map/icons/billboard_active_larisa.svg);
+}
+
+.mapItem.l.active.billboard {
+    background-image: url(/geography/map/icons/billboard_active_larisa.svg);
+}
+
+.mapItem.l.active.cityboard {
+    background-image: url(/geography/map/icons/cityboard_active_larisa.svg);
+}
+
+.mapItem.l.active.cityformat {
+    background-image: url(/geography/map/icons/cityformat_active_larisa.svg);
+}
+
+.mapItem.l.active.superboard {
+    background-image: url(/geography/map/icons/superboard_active_larisa.svg);
+}
+
+.mapItem.l.active.superboard.sides-3 {
+    background-image: url(/geography/map/icons/pillar_active_larisa.svg);
+}
+
+.mapItem.l.active.pillar {
+    background-image: url(/geography/map/icons/pillar_active_larisa.svg);
+}
+
+.mapItem.l.active.supersite {
+    background-image: url(/geography/map/icons/superboard_active_larisa.svg);
+}
+
+.mapItem.l.active.supersite.sides-3 {
+    background-image: url(/geography/map/icons/pillar_active_larisa.svg);
+}
+
+.mapItem.l.active.pillars {
+    background-image: url(/geography/map/icons/pillar_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.mediafasad {
+    background-image: url(/geography/map/icons/billboard_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.billboard {
+    background-image: url(/geography/map/icons/billboard_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.cityboard {
+    background-image: url(/geography/map/icons/cityboard_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.cityformat {
+    background-image: url(/geography/map/icons/cityformat_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.superboard {
+    background-image: url(/geography/map/icons/superboard_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.superboard.sides-3 {
+    background-image: url(/geography/map/icons/pillar_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.pillar {
+    background-image: url(/geography/map/icons/pillar_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.supersite {
+    background-image: url(/geography/map/icons/superboard_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.supersite.sides-3 {
+    background-image: url(/geography/map/icons/pillar_active_larisa.svg);
+}
+
+.mapItem.l.balloonOpened.pillars {
+    background-image: url(/geography/map/icons/pillar_active_larisa.svg);
+}
+
+.mapItem.d.active.mediafasad {
+    background-image: url(/geography/map/icons/billboard_digital_active.svg);
+}
+
+.mapItem.d.active.billboard {
+    background-image: url(/geography/map/icons/billboard_digital_active.svg);
+}
+
+.mapItem.d.active.superboard {
+    background-image: url(/geography/map/icons/superboard_digital_active.svg);
+}
+
+.mapItem.d.active.superboard.sides-3 {
+    background-image: url(/geography/map/icons/superboard_digital_active.svg);
+}
+
+.mapItem.d.balloonOpened.mediafasad {
+    background-image: url(/geography/map/icons/billboard_digital_active.svg);
+}
+
+.mapItem.d.balloonOpened.billboard {
+    background-image: url(/geography/map/icons/billboard_digital_active.svg);
+}
+
+.mapItem.d.balloonOpened.superboard {
+    background-image: url(/geography/map/icons/superboard_digital_active.svg);
+}
+
+.mapItem[data-angle="0"] {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.mapItem[data-angle="10"] {
+    transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.mapItem[data-angle="20"] {
+    transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+.mapItem[data-angle="30"] {
+    transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+.mapItem[data-angle="40"] {
+    transform: translate(-50%, -50%) rotate(-40deg);
+}
+
+.mapItem[data-angle="50"] {
+    transform: translate(-50%, -50%) rotate(-50deg);
+}
+
+.mapItem[data-angle="60"] {
+    transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.mapItem[data-angle="70"] {
+    transform: translate(-50%, -50%) rotate(-70deg);
+}
+
+.mapItem[data-angle="80"] {
+    transform: translate(-50%, -50%) rotate(-80deg);
+}
+
+.mapItem[data-angle="90"] {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.mapItem[data-angle="100"] {
+    transform: translate(-50%, -50%) rotate(-100deg);
+}
+
+.mapItem[data-angle="110"] {
+    transform: translate(-50%, -50%) rotate(-110deg);
+}
+
+.mapItem[data-angle="120"] {
+    transform: translate(-50%, -50%) rotate(-120deg);
+}
+
+.mapItem[data-angle="130"] {
+    transform: translate(-50%, -50%) rotate(-130deg);
+}
+
+.mapItem[data-angle="140"] {
+    transform: translate(-50%, -50%) rotate(-140deg);
+}
+
+.mapItem[data-angle="150"] {
+    transform: translate(-50%, -50%) rotate(-150deg);
+}
+
+.mapItem[data-angle="160"] {
+    transform: translate(-50%, -50%) rotate(-160deg);
+}
+
+.mapItem[data-angle="170"] {
+    transform: translate(-50%, -50%) rotate(-170deg);
+}
+
+.mapItem[data-angle="180"] {
+    transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+.mapItem[data-angle="190"] {
+    transform: translate(-50%, -50%) rotate(-190deg);
+}
+
+.mapItem[data-angle="200"] {
+    transform: translate(-50%, -50%) rotate(-200deg);
+}
+
+.mapItem[data-angle="210"] {
+    transform: translate(-50%, -50%) rotate(-210deg);
+}
+
+.mapItem[data-angle="220"] {
+    transform: translate(-50%, -50%) rotate(-220deg);
+}
+
+.mapItem[data-angle="230"] {
+    transform: translate(-50%, -50%) rotate(-230deg);
+}
+
+.mapItem[data-angle="240"] {
+    transform: translate(-50%, -50%) rotate(-240deg);
+}
+
+.mapItem[data-angle="250"] {
+    transform: translate(-50%, -50%) rotate(-250deg);
+}
+
+.mapItem[data-angle="260"] {
+    transform: translate(-50%, -50%) rotate(-260deg);
+}
+
+.mapItem[data-angle="270"] {
+    transform: translate(-50%, -50%) rotate(-270deg);
+}
+
+.mapItem[data-angle="280"] {
+    transform: translate(-50%, -50%) rotate(-280deg);
+}
+
+.mapItem[data-angle="290"] {
+    transform: translate(-50%, -50%) rotate(-290deg);
+}
+
+.mapItem[data-angle="300"] {
+    transform: translate(-50%, -50%) rotate(-300deg);
+}
+
+.mapItem[data-angle="310"] {
+    transform: translate(-50%, -50%) rotate(-310deg);
+}
+
+.mapItem[data-angle="320"] {
+    transform: translate(-50%, -50%) rotate(-320deg);
+}
+
+.mapItem[data-angle="330"] {
+    transform: translate(-50%, -50%) rotate(-330deg);
+}
+
+.mapItem[data-angle="340"] {
+    transform: translate(-50%, -50%) rotate(-340deg);
+}
+
+.mapItem[data-angle="350"] {
+    transform: translate(-50%, -50%) rotate(-350deg);
+}
+
+.mapItem[data-id="4825"] {
+    background-image: url(/geography/map/icons/samara_13.svg) !important;
+}
+
+.mapItem.superboard[data-angle="180"] {
+    transform: translate(-50%, -50%) rotate(0deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="190"] {
+    transform: translate(-50%, -50%) rotate(-10deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="200"] {
+    transform: translate(-50%, -50%) rotate(-20deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="210"] {
+    transform: translate(-50%, -50%) rotate(-30deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="220"] {
+    transform: translate(-50%, -50%) rotate(-40deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="230"] {
+    transform: translate(-50%, -50%) rotate(-50deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="240"] {
+    transform: translate(-50%, -50%) rotate(-60deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="250"] {
+    transform: translate(-50%, -50%) rotate(-70deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="260"] {
+    transform: translate(-50%, -50%) rotate(-80deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="270"] {
+    transform: translate(-50%, -50%) rotate(-90deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="280"] {
+    transform: translate(-50%, -50%) rotate(-100deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="290"] {
+    transform: translate(-50%, -50%) rotate(-110deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="300"] {
+    transform: translate(-50%, -50%) rotate(-120deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="310"] {
+    transform: translate(-50%, -50%) rotate(-130deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="320"] {
+    transform: translate(-50%, -50%) rotate(-140deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="330"] {
+    transform: translate(-50%, -50%) rotate(-150deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="340"] {
+    transform: translate(-50%, -50%) rotate(-160deg) scaleX(-1);
+}
+
+.mapItem.superboard[data-angle="350"] {
+    transform: translate(-50%, -50%) rotate(-170deg) scaleX(-1);
+}
