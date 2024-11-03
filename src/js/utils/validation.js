@@ -83,6 +83,7 @@ export default function validation() {
     const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
 
     formsToValidate.forEach((form) => {
+        console.log($(form));
         $(form).parsley();
     });
 }
