@@ -1381,10 +1381,10 @@
         </div>
     </div>
 
-    <div class="cities-intro__scroll"></div>
+    <a href="#to-cities-map" class="cities-intro__scroll"></a>
 </section>
 
-<section class="cities-map mapBillboard">
+<section id="cities-map" class="cities-map mapBillboard">
     <script>
         var locationCenter = [48.480229, 135.071917],
             locationZoom = 12,
@@ -1416,9 +1416,13 @@
     </script>
 
     <div class="cities-map__container container">
-        <h2 class="cities-map__title">
+        <h2 class="cities-map__title cities-map__title--decore">
             Привлекайте клиентов по всему городу
         </h2>
+
+        <p class="cities-map__subttitle">
+            Широкий выбор конструкций для запуска вашей рекламы
+        </p>
 
         <div class="cities-map__col">
             <div class="cities-map__map-wrapper">
@@ -1539,7 +1543,7 @@
 
 <section class="cities-callback">
     <div class="cities-callback__container container">
-        <form action="" class="cities-callback__body cities-callback__body--no-images">
+        <form action="" class="cities-callback__body cities-callback__body--no-images" data-need-validation>
             <h2 class="cities-callback__title cities-callback__title--hide-on-mobile cities-callback__title--max-w">
                 Ваша реклама <span class="cities-callback__red">будет притягивать взгляды</span>, как белые ночи
             </h2>
@@ -1554,22 +1558,22 @@
                 <div class="cities-callback__inputs">
                     <div class="cities-callback__input cities-request__input">
                         <input type="text" name="cities-callback-name" id="cities-callback-name" placeholder="Имя"
-                            required>
+                            required data-parsley-reqtext>
                         <div class="cities-request__input-gradient-border gradient-border"></div>
                     </div>
                     <div class="cities-callback__input cities-request__input">
-                        <input type="tel" name="cities-callback-phone" id="cities-callback-phone"
-                            placeholder="+7 999 999-99-99" required>
+                        <input type="tel" name="cities-callback-phone" id="cities-callback-phone" class="js-phone-input"
+                            placeholder="+7 999 999-99-99" required required data-parsley-phone>
                         <div class="cities-request__input-gradient-border gradient-border"></div>
                     </div>
                     <div class="cities-callback__input cities-request__input">
                         <input type="email" name="cities-callback-phone" id="cities-callback-phone" placeholder="E-mail"
-                            required>
+                            required data-parsley-validate-if-empty data-parsley-email>
                         <div class="cities-request__input-gradient-border gradient-border"></div>
                     </div>
                 </div>
 
-                <button type="button" class="cities-callback__button new-guarantee__link">
+                <button type="submit" class="cities-callback__button new-guarantee__link">
                     Оставить заявку
                 </button>
             </div>
@@ -1869,22 +1873,22 @@
 
     <div class="cities-bottom__request cities-request">
         <div class="cities-request__container container">
-            <div class="cities-request__info">
-                <div class="cities-request__top">
+            <form action="" class="cities-request__info" data-need-validation>
+                <div class="cities-request__top cities-request__top--bigger">
                     <div class="cities-request__texts">
-                        <p class="cities-request__heading">Можете чиллить</p>
-                        <p class="cities-request__subheading">
-                            на&nbsp;Шантарских островах, пока реклама на билбордах приводит клиентов
+                        <p class="cities-request__heading cities-request__heading--bigger">Приведем клиентов</p>
+                        <p class="cities-request__subheading cities-request__subheading--bigger">
+                            прямо к вашей парадной
                         </p>
                     </div>
                     <p class="cities-request__text">
-                        Оставьте заявку, мы свяжемся с вами в ближайшее время.
+                        Просто оставьте заявку, и мы свяжемся<br> с&nbsp;вами в ближайшее время
                     </p>
                 </div>
                 <div class="cities-request__inputs">
                     <div class="cities-request__input">
-                        <input type="tel" name="cities-request-tel" id="cities-request-id"
-                            placeholder="+7 999 999-99-99">
+                        <input type="tel" name="cities-request-tel" id="cities-request-id" class="js-phone-input"
+                            placeholder="+7 999 999-99-99" required data-parsley-phone>
                         <div class="cities-request__input-gradient-border gradient-border">
 
                         </div>
@@ -1893,7 +1897,7 @@
                         Оставить заявку
                     </button>
                 </div>
-            </div>
+            </form>
 
             <div class="cities-request__tooltip">
                 <p class="cities-request__subheading">
@@ -1912,17 +1916,16 @@
                 <div class="gradient-border"></div>
             </div>
         </div>
-    </div>
 
-    <div class="cities-bottom__picture">
-        <div class="cities-bottom__image-contianer">
-
-            <source srcset="./img/cities/bottom.webp" type="image/webp">
-
-            <img src="img/cities/bottom.png" alt="">
-
+        <div class="cities-bottom__picture cities-bottom__picture--bigger">
+            <div class="cities-bottom__image-contianer">
+                <source srcset="./img/cities/bottom-2.webp" type="image/webp">
+                <img src="img/cities/bottom-2.png" alt="">
+            </div>
         </div>
     </div>
+
+
 </section>
 
         </main>
@@ -2021,6 +2024,10 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="assets/js/backend.js"></script>
         <script src="assets/js/new-main.js"></script>
+
+        <script src="assets/js/inputmask.min.js"></script>
+        <script src="assets/js/parsley.min.js"></script>
+        <script src="assets/js/cities.js" type="module"></script>
 
     </div>
     <script type="module" src="assets/js/new-header.js">

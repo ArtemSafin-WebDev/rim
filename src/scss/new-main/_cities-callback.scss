@@ -1,4 +1,7 @@
 .cities-callback {
+    position: relative;
+    z-index: 90;
+
     padding-top: 8.6rem;
     padding-bottom: 8.6rem;
 
@@ -137,6 +140,16 @@
         @include aspectRatio(portrait) {
             flex-direction: column;
             gap: 1.5rem;
+        }
+    }
+
+    &__input {
+        position: relative;
+
+        .parsley-errors-list {
+            position: absolute;
+            top: calc(100% + 2px);
+            left: 0;
         }
     }
 

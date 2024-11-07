@@ -48,4 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         document.body.classList.toggle('menu-open');
     });
+
+    document.querySelectorAll('.location-bar').forEach((location) => {
+        location.addEventListener('click', (e) => {
+            if(e.target.closest('.js-close-location-popup')) {
+                e.target.closest('.location-bar').classList.add('location-bar--close-all');
+                e.target.closest('.location-bar').classList.remove('location-bar--modal-open');
+            }
+
+            if(e.target.closest('.js-open-location-modal')) {
+                e.target.closest('.location-bar').classList.add('location-bar--modal-open');
+            }
+
+            if(e.target.closest('.location-bar__button')) {
+                e.target.closest('.location-bar').classList.remove('location-bar--close-all');
+                e.target.closest('.location-bar').classList.add('location-bar--modal-open');
+            }
+        })
+    })
 });

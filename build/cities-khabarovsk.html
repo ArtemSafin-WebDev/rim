@@ -1379,10 +1379,10 @@
         </div>
     </div>
 
-    <div class="cities-intro__scroll"></div>
+    <a href="#to-cities-map" class="cities-intro__scroll"></a>
 </section>
 
-<section class="cities-map mapBillboard">
+<section id="cities-map" class="cities-map mapBillboard">
     <script>
         var locationCenter = [48.480229, 135.071917],
             locationZoom = 12,
@@ -1470,10 +1470,10 @@
 
 <section class="cities-callback">
     <div class="cities-callback__container container">
-        <form action="" class="cities-callback__body cities-callback__body--no-images">
+        <form action="" class="cities-callback__body cities-callback__body--no-images" data-need-validation>
             <h2 class="cities-callback__title cities-callback__title--hide-on-mobile cities-callback__title--max-w">
                 Повышайте продажи даже с небольшим
-                бюджетом — <span class="cities-callback__red">&nbsp;размещайте наружну юрекламу в&nbsp;местах
+                бюджетом — <span class="cities-callback__red">&nbsp;размещайте наружную рекламу в&nbsp;местах
                     с&nbsp;ЦА</span>
             </h2>
             <h2 class="cities-callback__title cities-callback__title--show-on-mobile cities-callback__title--max-w">
@@ -1487,22 +1487,22 @@
                 <div class="cities-callback__inputs">
                     <div class="cities-callback__input cities-request__input">
                         <input type="text" name="cities-callback-name" id="cities-callback-name" placeholder="Имя"
-                            required>
+                            required data-parsley-reqtext>
                         <div class="cities-request__input-gradient-border gradient-border"></div>
                     </div>
                     <div class="cities-callback__input cities-request__input">
-                        <input type="tel" name="cities-callback-phone" id="cities-callback-phone"
-                            placeholder="+7 999 999-99-99" required>
+                        <input type="tel" name="cities-callback-phone" id="cities-callback-phone" class="js-phone-input"
+                            placeholder="+7 999 999-99-99" required data-parsley-phone>
                         <div class="cities-request__input-gradient-border gradient-border"></div>
                     </div>
                     <div class="cities-callback__input cities-request__input">
                         <input type="email" name="cities-callback-phone" id="cities-callback-phone" placeholder="E-mail"
-                            required>
+                            required data-parsley-validate-if-empty data-parsley-email>
                         <div class="cities-request__input-gradient-border gradient-border"></div>
                     </div>
                 </div>
 
-                <button type="button" class="cities-callback__button new-guarantee__link">
+                <button type="submit" class="cities-callback__button new-guarantee__link">
                     Оставить заявку
                 </button>
             </div>
@@ -1651,7 +1651,7 @@
 <section class="cities-bottom__fraction cities-fractions">
     <div class="cities-fractions__container container">
         <h2 class="cities-fractions__title cities-fractions__title--mbM">
-            Оцените преимущества наружной рекламы для малого и среднего бизнеса
+            Оцените преимущества наружной рекламы для малого и&nbsp;среднего бизнеса
         </h2>
 
         <ul class="cities-fractions__list">
@@ -1687,7 +1687,7 @@
 
 <section class="cities-callback">
     <div class="cities-callback__container container">
-        <form action="" class="cities-callback__body">
+        <form action="" class="cities-callback__body" data-need-validation>
             <h2 class="cities-callback__title">
                 Мы подскажем, где <span class="cities-callback__red">ваша реклама</span> будет наиболее эффективна!
             </h2>
@@ -1699,22 +1699,22 @@
                 <div class="cities-callback__inputs">
                     <div class="cities-callback__input cities-request__input">
                         <input type="text" name="cities-callback-name" id="cities-callback-name" placeholder="Имя"
-                            required>
+                            required data-parsley-reqtext>
                         <div class="cities-request__input-gradient-border gradient-border"></div>
                     </div>
                     <div class="cities-callback__input cities-request__input">
-                        <input type="tel" name="cities-callback-phone" id="cities-callback-phone"
-                            placeholder="+7 999 999-99-99" required>
-                        <div class="cities-request__input-gradient-border gradient-border"></div>
+                        <input type="tel" name="cities-callback-phone" id="cities-callback-phone" class="js-phone-input"
+                            placeholder="+7 999 999-99-99" required data-parsley-phone>
+                        <div class="cities-request__input-gradient-border gradient-border data-parsley-phone"></div>
                     </div>
                     <div class="cities-callback__input cities-request__input">
-                        <input type="email" name="cities-callback-phone" id="cities-callback-phone" placeholder="E-mail"
-                            required>
+                        <input type="email" name="cities-callback-mail" id="cities-callback-phone" placeholder="E-mail"
+                            required data-parsley-validate-if-empty data-parsley-email>
                         <div class="cities-request__input-gradient-border gradient-border"></div>
                     </div>
                 </div>
 
-                <button type="button" class="cities-callback__button new-guarantee__link">
+                <button type="submit" class="cities-callback__button new-guarantee__link">
                     Оставить заявку
                 </button>
             </div>
@@ -1797,7 +1797,7 @@
 
     <div class="cities-fractions">
         <div class="cities-fractions__container container">
-            <h2 class="cities-fractions__title">
+            <h2 class="cities-fractions__title cities-fractions__title--mbS">
                 Предоставляем сервис, в который легко влюбиться
             </h2>
 
@@ -1832,7 +1832,7 @@
 
     <div class="cities-bottom__request cities-request">
         <div class="cities-request__container container">
-            <div class="cities-request__info">
+            <form action="" class="cities-request__info" data-need-validation>
                 <div class="cities-request__top">
                     <div class="cities-request__texts">
                         <p class="cities-request__heading">Можете чиллить</p>
@@ -1846,8 +1846,8 @@
                 </div>
                 <div class="cities-request__inputs">
                     <div class="cities-request__input">
-                        <input type="tel" name="cities-request-tel" id="cities-request-id"
-                            placeholder="+7 999 999-99-99">
+                        <input type="tel" name="cities-request-tel" id="cities-request-id" class="js-phone-input"
+                            placeholder="+7 999 999-99-99" required data-parsley-phone>
                         <div class="cities-request__input-gradient-border gradient-border">
 
                         </div>
@@ -1856,7 +1856,7 @@
                         Оставить заявку
                     </button>
                 </div>
-            </div>
+            </form>
 
             <div class="cities-request__tooltip">
                 <p class="cities-request__subheading">
@@ -1879,11 +1879,8 @@
 
     <div class="cities-bottom__picture">
         <div class="cities-bottom__image-contianer">
-
             <source srcset="./img/cities/bottom.webp" type="image/webp">
-
             <img src="img/cities/bottom.png" alt="">
-
         </div>
     </div>
 </section>
@@ -1984,6 +1981,10 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="assets/js/backend.js"></script>
         <script src="assets/js/new-main.js"></script>
+
+        <script src="assets/js/inputmask.min.js"></script>
+        <script src="assets/js/parsley.min.js"></script>
+        <script src="assets/js/cities.js" type="module"></script>
 
     </div>
     <script type="module" src="assets/js/new-header.js">

@@ -24,8 +24,13 @@
 
     }
 
+    &__container {
+        position: relative;
+        z-index: 10;
+    }
+
     &__title {
-        margin-bottom: 3.5rem;
+        margin-bottom: 4.5rem;
 
         font-style: normal;
         font-weight: 800;
@@ -44,13 +49,18 @@
         }
 
         &.cities-fractions__title--mbM {
-            max-width: 25ch;
+            max-width: 35ch;
             margin-bottom: 10.2rem;
             margin-inline: auto;
 
             @include breakpoint(mobile) {
                 margin-bottom: 6rem;
             }
+        }
+
+        &.cities-fractions__title--mbS {
+            margin-inline: auto;
+            max-width: 29ch;
         }
     }
 
@@ -212,7 +222,7 @@
 
         &.cities-fractions__fraction--tiger {
             margin-block: -1rem 0;
-            padding: 2.8rem 10.6rem 2rem 8.9rem;
+            padding: 2.8rem 8.6rem 2rem 12rem;
 
             @include aspectRatio(portrait) {
                 margin-bottom: unset;
@@ -249,7 +259,7 @@
         }
 
         &.cities-fractions__fraction--tea {
-            margin-inline: -8rem -9.5rem;
+            margin-inline: -8.5rem -9.5rem;
             margin-block: -2.5rem 0;
             padding: 3.6rem 1.65rem 4.2rem 4.2rem;
 

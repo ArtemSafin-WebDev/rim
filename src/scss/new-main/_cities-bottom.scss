@@ -9,8 +9,15 @@
         z-index: -2;
 
         width: 100%;
-        aspect-ratio: 2.96 / 1;
+        aspect-ratio: 2.3 / 1;
 
+        &.cities-bottom__picture--bigger {
+            top: -20%;
+            bottom: unset;
+
+            height: 100%;
+            aspect-ratio: unset;
+        }
     }
 
     &__image-contianer {
@@ -72,6 +79,14 @@
             background-repeat: no-repeat;
             background-position: center;
             content: "";
+        }
+    }
+
+    &__cards {
+        padding-block: 8rem 10rem;
+
+        @include aspectRatio(portrait) {
+            padding-block: 5rem;
         }
     }
 }
