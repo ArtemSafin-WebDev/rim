@@ -665,3 +665,11 @@
 .mapBillboard.type-item {
     height: 500px;
 }
+
+.balloonTab {
+    display: none
+}
+
+.balloonTab:first-child {
+    display: block
+}

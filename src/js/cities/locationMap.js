@@ -117,6 +117,24 @@ export default () => {
         }
     });
 
+    $(document).on("click", ".mapInfo__tabs a", function(){
+        var sideId = $(this).data("id");
+        var TypeSurface = parseInt( $(this).data("type-surface"));
+        var objectId = $(this).parents(".mapInfo").data("id");
+        var angle = $(this).data("angle");
+        if(TypeSurface == 96){
+            $(".mapItem[data-id='"+objectId+"']").addClass("d");
+        } else {
+            $(".mapItem[data-id='"+objectId+"']").removeClass("d");
+        }
+
+        $(".mapItem[data-id='"+objectId+"']").attr("data-angle",angle);
+
+
+        showBalloonTab(objectId, sideId);
+        // setOpened(objectId, sideId);
+    });
+
     // Функция, осуществляющая запрос за данными балуна на сервер.
     function getBalloonData(objectId) {
         var dataDeferred = ymaps.vow.defer();
@@ -150,5 +168,22 @@ export default () => {
         });
 
         return dataDeferred.promise();
+    }
+
+    function showBalloonTab(objectId, sideId) {
+        if(sideId != undefined) {
+            setTimeout(function() {
+                var angles = $(".mapItem[data-id='" + objectId + "']").data("angles");
+                $(".mapItem[data-id='" + objectId + "']").attr("data-angle", angles[sideId]);
+
+                $(".mapInfo__content.mapInfo-" + objectId).find(".balloonTab").hide();
+                $(".mapInfo__content.mapInfo-" + objectId).find(".balloonTab-" + sideId).show();
+
+                $(".mapInfo__content.mapInfo-" + objectId).find(".mapInfo__tabs a").removeClass("active");
+                $(".mapInfo__content.mapInfo-" + objectId).find(".mapInfo__tabs a[data-id='" + sideId + "']").addClass("active");
+
+                $(".mapInfo__content.mapInfo-" + objectId).parents(".mapInfo").parent().parent().css("height", "auto");
+            }, 500);
+        }
     }
 }
