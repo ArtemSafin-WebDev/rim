@@ -554,3 +554,114 @@
 .mapItem.superboard[data-angle="350"] {
     transform: translate(-50%, -50%) rotate(-170deg) scaleX(-1);
 }
+
+.mapInfo {
+    padding: 10px;
+    width: 370px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.mapInfo--title {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.mapInfo__content {
+    font-size: 0;
+}
+
+.mapInfo__left {
+    display: inline-block;
+    vertical-align: top;
+    width: 135px;
+    font-size: 14px;
+}
+
+.mapInfo__right {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    width: calc(100% - 155px);
+    font-size: 14px;
+}
+
+.mapInfo__right img {
+    max-width: 100%;
+}
+
+.mapInfo__info {
+    margin-bottom: 12px;
+}
+
+.mapInfo__info img {
+    height: 25px;
+}
+
+.mapInfo__info span {
+    color: #999;
+}
+
+.mapInfo__tabs {
+    font-size: 0;
+    border: 1px solid #db4949;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.mapInfo__tabs>a {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: 29px;
+    padding: 0 10px;
+    text-align: center;
+    line-height: 29px;
+    color: #222 !important;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.mapInfo__tabs>a.active {
+    background-color: #db4949;
+    color: #fff !important;
+}
+
+.mapInfo--button {
+    padding: 5px 14px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #db4949;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    color: #fff;
+    transition: all ease-in-out 0.3s;
+    display: inline-block;
+}
+
+.mapInfo--button:hover, .mapInfo--button:focus {
+    background-color: #c23a3a;
+    color: #fff;
+}
+
+.mapInfo.rim .mapInfo__tabs {
+    border-color: #ff9823;
+}
+
+.mapInfo.rim .mapInfo__tabs>a.active {
+    background-color: #ff9823;
+}
+
+.mapInfo.rim .mapInfo--button {
+    background-color: #ff9823;
+}
+
+.mapInfo.rim .mapInfo--button:hover, .mapInfo.rim .mapInfo--button:focus {
+    background-color: #ef7f00;
+}
+
+.mapBillboard.type-item {
+    height: 500px;
+}
