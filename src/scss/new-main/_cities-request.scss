@@ -46,6 +46,10 @@
         max-width: 42.5rem;
         padding-top: 1.3rem;
 
+        &.cities-request__top--bigger {
+            max-width: 61rem;
+        }
+
     }
 
     &__heading,
@@ -63,6 +67,25 @@
     &__heading {
         color: #FF5129;
         font-style: italic;
+
+        &.cities-request__heading--bigger {
+            font-size: 5.2rem;
+
+            @include aspectRatio(portrait) {
+                font-size: 3.2rem;
+            }
+        }
+    }
+
+    &__subheading {
+
+        &.cities-request__subheading--bigger {
+            font-size: 5.2rem;
+
+            @include aspectRatio(portrait) {
+                font-size: 3.2rem;
+            }
+        }
     }
 
     &__text {
@@ -152,6 +175,12 @@
                 line-height: 110%;
                 opacity: 0.5;
             }
+        }
+
+        .parsley-errors-list {
+            position: absolute;
+            top: calc(100% + 2px);
+            left: 0;
         }
     }
 

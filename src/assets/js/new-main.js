@@ -675,21 +675,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    document.querySelectorAll('.location-bar').forEach((location) => {
-        location.addEventListener('click', (e) => {
-            if(e.target.closest('.js-close-location-popup')) {
-                e.target.closest('.location-bar').classList.add('location-bar--close-all');
-                e.target.closest('.location-bar').classList.remove('location-bar--modal-open');
-            }
+    document.addEventListener('click', event => {
+        if (event.target.matches('a') || event.target.closest('a')) {
+            const link = event.target.matches('a') ? event.target : event.target.closest('a');
+            const hash = link.hash;
 
-            if(e.target.closest('.js-open-location-modal')) {
-                e.target.closest('.location-bar').classList.add('location-bar--modal-open');
-            }
+            if (hash && hash.startsWith('#to-')) {
+                event.preventDefault();
 
-            if(e.target.closest('.location-bar__button')) {
-                e.target.closest('.location-bar').classList.remove('location-bar--close-all');
-                e.target.closest('.location-bar').classList.add('location-bar--modal-open');
+                const elementToScroll = document.getElementById(hash.replace(/^#to\-/, ''));
+                if (elementToScroll) {
+                    if (window.menuOpen) {
+                        window.closeMenu();
+                    } else {
+                        console.log('menu not open');
+                    }
+
+                    const yCoord = elementToScroll.getBoundingClientRect().top;
+
+                    window.scrollTo({
+                        top: yCoord,
+                        left: 0,
+                        behavior: 'smooth'
+                      })
+                }
             }
-        })
-    })
+        }
+    });
+
 });
