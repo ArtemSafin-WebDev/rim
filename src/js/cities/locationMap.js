@@ -110,9 +110,14 @@ export default () => {
             });
 
             $.ajax({
-                url: "/map_data/khabarovskiy_kray/khabarovsk.json"
+                url: pointUrl
             }).done(function(data) {
                 objectManager.add(data.map);
+
+                mapInstance.setBounds([[data.centerMap.max_lat, data.centerMap.min_lon], [data.centerMap.min_lat, data.centerMap.max_lon]], {
+                    checkZoomRange: true,
+                    zoomMargin: [0, 0, 0, 700]
+                });
             });
         }
     });
