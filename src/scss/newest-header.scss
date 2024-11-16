@@ -1517,6 +1517,11 @@ body.menu-open {
             font-style: normal;
             font-weight: 500;
             line-height: 120%;
+
+            &:link,
+            &:visited {
+                color: white;
+            }
         }
     }
 
