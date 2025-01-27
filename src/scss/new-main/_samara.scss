@@ -1,0 +1,3254 @@
+.location-bar__popup {
+    display: none;
+}
+
+.samara-intro {
+    position: relative;
+    z-index: 1;
+    background-color: #08122c;
+    padding-bottom: 34rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 12rem;
+    }
+}
+
+.samara-intro__bg-image {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #08122c;
+
+    @include breakpointMF(small-tablet) {
+        margin-top: -10rem;
+    }
+}
+
+.samara-intro__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 12rem;
+    }
+}
+
+.samara-intro__heading {
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    position: relative;
+    z-index: 5;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100%;
+    }
+}
+
+.samara-intro__text-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.samara-intro__arrow {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin-left: 20rem;
+    width: 49.1rem;
+    height: 11.9128rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.samara-intro__samara-name {
+    width: 60rem;
+    height: auto;
+    overflow: visible;
+    margin: -3rem 0;
+
+    @include breakpoint(mobile) {
+        width: 33rem;
+        margin: -2rem 0;
+    }
+}
+
+.samara-intro__text {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    max-width: 60rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 5;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: 33rem;
+    }
+}
+
+.samara-intro__link {
+    align-self: flex-start;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    color: white;
+    padding: 1.2rem 3.8rem;
+    border-radius: 5.1rem;
+    background: #fc3f1d;
+
+    justify-content: center;
+    text-align: center;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    transition: box-shadow 0.2s, color 0.2s;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            box-shadow: 0rem 0rem 0.3618rem 0rem #ff5129, 0rem 0rem 2.1707rem 0rem #ff5129;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        padding: 1.2rem 3.85rem;
+        border-radius: 513.075px;
+        background: #fc3f1d;
+        box-shadow: 0rem 0rem 0.3618rem 0rem #ff5129, 0rem 0rem 2.1708rem 0rem #ff5129;
+        align-self: stretch;
+        width: 100%;
+    }
+}
+
+.samara-places {
+    margin-bottom: 18rem;
+    position: relative;
+    z-index: 3;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 12rem;
+    }
+}
+
+.samara-places__blur {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    width: 192rem;
+    min-width: 100%;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        top: 0;
+        transform: translateX(-50%);
+        margin-top: -26rem;
+    }
+}
+
+.samara-places__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.samara-places__heading {
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 4rem;
+    b {
+        font-weight: inherit;
+        color: #ff5129;
+    }
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 3rem;
+    }
+}
+
+.samara-places__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    grid-gap: 2rem;
+    grid-auto-rows: minmax(23rem, 1fr);
+    max-width: 110rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: minmax(12.5rem, 1fr);
+    }
+}
+
+.samara-places__card {
+    border-radius: 2rem;
+
+    box-shadow: 0rem 0rem 5rem 0rem rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    isolation: isolate;
+    overflow: hidden;
+    overflow: clip;
+    position: relative;
+
+    background: #414141;
+    padding-top: 2rem;
+
+    @include breakpoint(mobile) {
+        border-radius: 1.25rem;
+        padding: 1rem;
+    }
+    &--large {
+        grid-row: span 2;
+        border: 0.1rem solid #41485c;
+    }
+}
+
+.samara-places__card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        aspect-ratio: 350 / 123;
+        background: linear-gradient(0deg, #040916 0%, rgba(4, 9, 22, 0) 100%);
+        z-index: 2;
+
+        @include breakpoint(mobile) {
+            aspect-ratio: 350 / 200;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        aspect-ratio: 35 / 12;
+        margin-top: -5.5rem;
+        background: linear-gradient(to bottom, #040916 0%, rgba(4, 9, 22, 0) 100%);
+        z-index: 2;
+
+        @include breakpoint(mobile) {
+            margin-top: -2rem;
+        }
+    }
+
+    .samara-places__card--large & {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            aspect-ratio: 35 / 20;
+            background: linear-gradient(0deg, #040916 0%, rgba(4, 9, 22, 0) 100%);
+            z-index: 2;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            aspect-ratio: 35 / 14;
+            margin-top: -3.4rem;
+            background: linear-gradient(to bottom, #040916 0%, rgba(4, 9, 22, 0) 100%);
+            z-index: 2;
+        }
+    }
+}
+
+.samara-places__card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.01);
+}
+
+.samara-places__card-city {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    text-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
+    margin-bottom: auto;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
+        text-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.1);
+    }
+}
+
+.samara-places__card-amount {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px white;
+    text-shadow: none;
+    filter: drop-shadow(0rem 0rem 0.28rem #fff);
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 0.3rem;
+    }
+    .samara-places__card--large & {
+        font-size: 5.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 0.5rem;
+        @include breakpoint(mobile) {
+            font-size: 2.4rem;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 110%;
+            margin-bottom: 0.3rem;
+        }
+    }
+}
+
+.samara-places__card-title {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 0.3rem;
+    }
+    .samara-places__card--large & {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
+        margin-bottom: 1rem;
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 120%;
+            margin-bottom: 0.3rem;
+        }
+    }
+}
+
+.samara-places__card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include breakpoint(mobile) {
+        gap: 0.4rem;
+    }
+}
+
+.samara-places__card-list-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}
+
+.samara-places__card-list-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+
+    @include breakpoint(mobile) {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+.samara-places__bottom {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+        gap: 3rem;
+    }
+}
+
+.samara-places__link {
+    flex-shrink: 0;
+    padding: 1.2rem 3rem;
+    border-radius: 51.3075rem;
+    background: #fc3f1d;
+
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    color: white;
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+    transition: box-shadow 0.2s, color 0.2s;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            box-shadow: 0rem 0rem 0.3618rem 0rem #ff5129, 0rem 0rem 2.1707rem 0rem #ff5129;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.2rem 2rem;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        border-radius: 513.075px;
+        background: #fc3f1d;
+        box-shadow: 0rem 0rem 0.3618rem 0rem #ff5129, 0rem 0rem 2.1708rem 0rem #ff5129;
+    }
+}
+
+.samara-places__text {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-wrap: balance;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        order: -5;
+        text-align: center;
+    }
+}
+
+.samara-spread {
+    margin-bottom: 27rem;
+    position: relative;
+    isolation: isolate;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 12rem;
+        position: relative;
+        z-index: 6;
+    }
+}
+
+.samara-spread__text-content {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+
+    picture {
+        display: contents;
+    }
+}
+
+.samara-spread__image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    width: 100%;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        top: auto;
+        transform: translateX(-50%);
+        height: auto;
+        margin-top: -30rem;
+        margin-bottom: -20rem;
+    }
+}
+
+.samara-spread__heading {
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    max-width: 55rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    b {
+        font-weight: inherit;
+        color: #ff5129;
+    }
+}
+
+.samara-spread__text {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 5rem;
+    max-width: 52rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        text-align: center;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+    b {
+        font-weight: 800;
+
+        color: #ff5129;
+    }
+}
+
+.samara-spread__small-text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    max-width: 70rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+
+.samara-spread__link {
+    align-self: flex-start;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    padding: 1.2rem 6rem;
+    border-radius: 51.3075rem;
+    background: #fc3f1d;
+
+    color: white;
+    transition: box-shadow 0.2s, color 0.2s;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            box-shadow: 0rem 0rem 0.3618rem 0rem #ff5129, 0rem 0rem 2.1707rem 0rem #ff5129;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        align-self: center;
+        padding: 1.2rem 6rem;
+        margin-top: 3rem;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.samara-spread__blur {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: -1;
+    pointer-events: none;
+    width: 120rem;
+    height: auto;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.samara-districts {
+    margin-bottom: 30rem;
+    position: relative;
+    z-index: 7;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
+}
+
+.samara-districts__heading {
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    b {
+        color: #ff5129;
+        font-weight: inherit;
+    }
+}
+
+.samara-districts__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    grid-gap: 2rem;
+    grid-row-gap: 3.8rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+.samara-districts__numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include breakpoint(mobile) {
+        order: 10;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        grid-gap: 0.8rem;
+    }
+}
+
+.samara-districts__numbers-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+        gap: 1rem;
+    }
+}
+
+.samara-districts__numbers-card-title {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    color: #fc3f1d;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        white-space: nowrap;
+    }
+}
+
+.samara-districts__numbers-card-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 1rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+.samara-districts__numbers-card-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    @include breakpoint(mobile) {
+        width: 40%;
+        flex-grow: 1;
+        gap: 0.5rem;
+    }
+}
+
+.samara-districts__numbers-card-item-amount {
+    font-size: 6.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 116%;
+
+    @include breakpoint(mobile) {
+        font-size: 3.6rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 116%;
+    }
+}
+
+.samara-districts__numbers-card-item-text {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}
+
+.samara-districts__map-wrapper {
+    width: 100%;
+    aspect-ratio: 650 / 400;
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    overflow: clip;
+
+    @include breakpoint(mobile) {
+        order: -10;
+        aspect-ratio: 360 / 180;
+        border-radius: 0.5rem;
+    }
+}
+
+.samara-districsts__blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        margin-top: -38rem;
+    }
+}
+
+.samara-districts__cards {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1.5rem;
+    }
+}
+
+.samara-districts__card {
+    aspect-ratio: 224 / 140;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    overflow: clip;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0rem 0rem 5rem 0rem rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    justify-content: flex-end;
+    position: relative;
+    isolation: isolate;
+    background-image: linear-gradient(to right bottom, #5229a1 0%, #ffedd4 50%, #624f86 100%);
+    width: 100%;
+    @include breakpoint(mobile) {
+        padding: 1rem;
+        aspect-ratio: 172 / 107;
+        border-radius: 1.1rem;
+
+        &:nth-child(4) {
+            grid-column: 1 / -1;
+            aspect-ratio: 360 / 108;
+            order: 10;
+        }
+    }
+}
+
+.samara-districts__card-image-wrapper {
+    position: absolute;
+    inset: 1px;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    overflow: clip;
+
+    @include breakpoint(mobile) {
+        border-radius: 1rem;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        aspect-ratio: 224 / 54;
+        background: linear-gradient(0deg, #040916 0%, rgba(4, 9, 22, 0) 100%);
+        z-index: 2;
+
+        @include breakpoint(mobile) {
+            aspect-ratio: 172 / 43;
+        }
+    }
+}
+
+.samara-districts__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.samara-districts__card-title {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    color: white;
+    position: relative;
+    z-index: 4;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+    }
+}
+
+.samara-worry {
+    margin-bottom: 15rem;
+    position: relative;
+
+    picture {
+        display: contents;
+    }
+
+    @include breakpoint(mobile) {
+        z-index: 1;
+        margin-bottom: 10rem;
+    }
+}
+
+.samara-worry__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.samara-worry__image {
+    @include breakpointMF(small-tablet) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        pointer-events: none;
+        width: 192rem;
+        min-width: 100%;
+        height: auto;
+        max-width: none;
+        margin-top: -5rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        height: auto;
+        z-index: 12;
+    }
+}
+
+.samara-worry__overlay-image {
+    @include breakpointMF(small-tablet) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        pointer-events: none;
+        width: 192rem;
+        min-width: 100%;
+        height: auto;
+        mix-blend-mode: overlay;
+        max-width: none;
+        opacity: 1;
+        margin-top: -8rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        height: auto;
+        margin-top: 8rem;
+        mix-blend-mode: overlay;
+        z-index: 14;
+    }
+}
+
+.samara-worry__heading {
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 0.9rem;
+    position: relative;
+    z-index: 12;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.samara-worry__text {
+    font-size: 3.2rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 3rem;
+    max-width: 66rem;
+    position: relative;
+    z-index: 12;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 110%;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    b {
+        color: #ff5129;
+        font-weight: inherit;
+    }
+}
+
+.samara-worry__small-text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    max-width: 56rem;
+    position: relative;
+    z-index: 12;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        margin-bottom: 3rem;
+        text-align: center;
+        max-width: none;
+    }
+}
+
+.samara-worry__mobile-blur {
+    display: none;
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        z-index: 13;
+        pointer-events: none;
+        display: block;
+        margin-top: -30rem;
+    }
+}
+
+.samara-worry__image-wrapper {
+    display: contents;
+    @include breakpoint(mobile) {
+        display: grid;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: -41rem;
+        * {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+            height: auto;
+        }
+    }
+}
+
+.samara-worry__link {
+    align-self: flex-start;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    padding: 1.2rem 6rem;
+    border-radius: 51.3075rem;
+    background: #fc3f1d;
+    box-shadow: 0rem 0rem 0.3618rem 0rem #ff5129, 0rem 0rem 2.1708rem 0rem #ff5129;
+    color: white;
+    display: none;
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        align-self: center;
+        padding: 1.2rem 6rem;
+        margin-top: 3rem;
+        display: block;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        z-index: 15;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.samara-geography {
+    margin-bottom: 15rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 12rem;
+    }
+}
+
+.samara-geography__map {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 192rem;
+    height: auto;
+    z-index: -1;
+    min-width: 100%;
+    max-width: none;
+    pointer-events: none;
+    mask-image: linear-gradient(to bottom, transparent, black 12rem, black calc(100% - 12rem), transparent 100%);
+    @include breakpoint(mobile) {
+        width: 100%;
+        mask-image: linear-gradient(to bottom, transparent, black 7rem, black calc(100% - 7rem), transparent 100%);
+    }
+}
+
+.samara-geography__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.samara-geography__heading {
+    max-width: 120rem;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 30rem;
+        position: relative;
+        z-index: 25;
+    }
+    b {
+        font-weight: inherit;
+        color: #ff5129;
+    }
+}
+
+.samara-geography__numbers {
+    margin: 15rem 0;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        text-align: center;
+        order: 30;
+        margin-top: 5rem;
+        position: relative;
+        z-index: 25;
+    }
+}
+
+.samara-geography__numbers-content {
+    width: 50%;
+    margin-left: auto;
+    max-width: 100%;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        width: auto;
+    }
+}
+
+.samara-geography__numbers-total {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        align-items: center;
+        gap: 0.1rem;
+    }
+}
+
+.samara-geography__total-amount {
+    font-size: 10rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80%;
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
+    color: #ff5129;
+
+    @include breakpoint(mobile) {
+        font-size: 6.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%; /* 6.82rem */
+        letter-spacing: -0.062rem;
+        text-transform: uppercase;
+    }
+}
+
+.samara-geography__total-text {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}
+
+.samara-geography__numbers-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+.samara-geography__numbers-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    @include breakpoint(mobile) {
+        align-items: center;
+    }
+}
+
+.samara-geography__numbers-card-amount {
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80%;
+    letter-spacing: -0.052rem;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-size: 3.6rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 80%;
+        letter-spacing: -0.036rem;
+        text-transform: uppercase;
+    }
+}
+
+.samara-geography__numbers-card-text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}
+
+.samara-geography__legend {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+}
+
+.samara-geography__legend-card {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4rem;
+    gap: 1.7rem;
+
+    @include breakpoint(mobile) {
+        padding: 0.8rem 1.6rem;
+        border-radius: 0.8196rem;
+        gap: 1rem;
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 0.765rem;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        z-index: -2;
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(50px);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 1.5rem;
+        border: 1px solid transparent;
+        background: linear-gradient(to right top, #624f86, #ffedd4, #5229a1) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+
+        @include breakpoint(mobile) {
+            border-radius: 0.8196rem;
+        }
+    }
+}
+
+.samara-geography__legend-card-circle {
+    flex-shrink: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background-color: #ff5129;
+
+    @include breakpoint(mobile) {
+        width: 1.7486rem;
+        height: 1.7486rem;
+    }
+    &--blue {
+        background-color: #3c78d8;
+    }
+}
+
+.samara-brands {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 12rem;
+        z-index: 3;
+    }
+}
+
+.samara-brands__blur {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.samara-brands__content {
+    display: flex;
+    flex-direction: column;
+}
+.samara-brands__heading {
+    display: block;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 5rem;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+    }
+}
+
+.samara-brands__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4.7rem;
+    justify-content: center;
+    margin-bottom: 5rem;
+    align-self: center;
+    max-width: 100rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        gap: 2rem;
+        row-gap: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.samara-brands__card-image {
+    height: 6rem;
+    width: auto;
+    display: block;
+
+    @include breakpoint(mobile) {
+        height: 2.4rem;
+    }
+}
+
+.samara-brands__text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    align-self: center;
+    max-width: 43rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        margin-bottom: 3rem;
+    }
+}
+
+.samara-brands__link {
+    align-self: center;
+    padding: 1.2rem 6rem;
+    color: white;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    border-radius: 50rem;
+    background: #fc3f1d;
+
+    align-self: center;
+
+    transition: box-shadow 0.2s, color 0.2s;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            box-shadow: 0rem 0rem 0.3618rem 0rem #ff5129, 0rem 0rem 2.1707rem 0rem #ff5129;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        padding: 1.2rem 6rem;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.cities-intro__scroll--samara {
+    margin-bottom: 18rem;
+}
+
+.cities-fractions--samara {
+    padding-top: 0;
+    margin-bottom: 22rem;
+    &::after {
+        display: none;
+    }
+}
+
+.samara-features {
+    margin-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
+}
+
+.samara-features__heading {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 3rem;
+        position: relative;
+        z-index: 30;
+    }
+
+    b {
+        font-weight: inherit;
+        color: #ff5129;
+    }
+}
+
+.samara-features__cards {
+    display: flex;
+    gap: 0rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+}
+
+.samara-features__cards-blur {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.4);
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        transform: translate(-50%, -50%) scale(1);
+        width: 100vw;
+        max-width: none;
+    }
+}
+
+.samara-features__card {
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:nth-child(1) {
+        @include breakpointMF(small-tablet) {
+            width: 55.5rem;
+
+            padding-left: 5.35rem;
+            padding-top: 3.83rem;
+            padding-bottom: 3.4rem;
+            padding-right: 4.15rem;
+            aspect-ratio: 55.5 / 14.43;
+            &::before {
+                background-color: #ff5129;
+                clip-path: polygon(
+                    0.102% 56.194%,
+                    3.267% 8.239%,
+                    3.267% 8.239%,
+                    3.302% 7.82%,
+                    3.35% 7.427%,
+                    3.409% 7.063%,
+                    3.479% 6.733%,
+                    3.559% 6.439%,
+                    3.647% 6.185%,
+                    3.743% 5.973%,
+                    3.846% 5.807%,
+                    3.954% 5.689%,
+                    4.067% 5.625%,
+                    13.544% 2.529%,
+                    13.544% 2.529%,
+                    13.57% 2.522%,
+                    13.595% 2.518%,
+                    13.621% 2.517%,
+                    13.647% 2.518%,
+                    13.673% 2.523%,
+                    13.698% 2.53%,
+                    13.724% 2.54%,
+                    13.749% 2.553%,
+                    13.775% 2.568%,
+                    13.8% 2.587%,
+                    29.95% 15.224%,
+                    29.95% 15.224%,
+                    29.973% 15.242%,
+                    29.997% 15.257%,
+                    30.021% 15.269%,
+                    30.045% 15.279%,
+                    30.069% 15.286%,
+                    30.093% 15.291%,
+                    30.117% 15.294%,
+                    30.142% 15.294%,
+                    30.166% 15.291%,
+                    30.19% 15.286%,
+                    55.864% 8.666%,
+                    55.864% 8.666%,
+                    55.897% 8.66%,
+                    55.929% 8.658%,
+                    55.962% 8.661%,
+                    55.994% 8.668%,
+                    56.027% 8.68%,
+                    56.059% 8.696%,
+                    56.091% 8.717%,
+                    56.123% 8.742%,
+                    56.154% 8.772%,
+                    56.186% 8.806%,
+                    68.348% 22.923%,
+                    68.348% 22.923%,
+                    68.397% 22.974%,
+                    68.447% 23.015%,
+                    68.497% 23.044%,
+                    68.548% 23.063%,
+                    68.599% 23.07%,
+                    68.649% 23.067%,
+                    68.7% 23.053%,
+                    68.751% 23.027%,
+                    68.801% 22.991%,
+                    68.85% 22.944%,
+                    89.834% 0.513%,
+                    89.834% 0.513%,
+                    89.965% 0.412%,
+                    90.096% 0.386%,
+                    90.224% 0.433%,
+                    90.349% 0.549%,
+                    90.467% 0.73%,
+                    90.578% 0.973%,
+                    90.679% 1.275%,
+                    90.769% 1.632%,
+                    90.845% 2.042%,
+                    90.907% 2.5%,
+                    100% 84.349%,
+                    100% 84.349%,
+                    100.05% 84.941%,
+                    100.072% 85.539%,
+                    100.067% 86.13%,
+                    100.037% 86.702%,
+                    99.982% 87.245%,
+                    99.905% 87.745%,
+                    99.807% 88.192%,
+                    99.69% 88.573%,
+                    99.554% 88.876%,
+                    99.403% 89.089%,
+                    88.835% 100%,
+                    88.835% 100%,
+                    88.774% 100.054%,
+                    88.713% 100.092%,
+                    88.652% 100.113%,
+                    88.59% 100.118%,
+                    88.529% 100.107%,
+                    88.467% 100.081%,
+                    88.407% 100.038%,
+                    88.347% 99.979%,
+                    88.288% 99.904%,
+                    88.231% 99.814%,
+                    81.617% 88.389%,
+                    81.617% 88.389%,
+                    81.578% 88.325%,
+                    81.538% 88.269%,
+                    81.497% 88.22%,
+                    81.456% 88.178%,
+                    81.415% 88.144%,
+                    81.373% 88.118%,
+                    81.331% 88.099%,
+                    81.288% 88.087%,
+                    81.246% 88.084%,
+                    81.203% 88.088%,
+                    50.737% 93.748%,
+                    50.737% 93.748%,
+                    50.72% 93.75%,
+                    50.703% 93.752%,
+                    50.686% 93.752%,
+                    50.669% 93.751%,
+                    50.652% 93.748%,
+                    50.635% 93.745%,
+                    50.618% 93.74%,
+                    50.601% 93.734%,
+                    50.584% 93.727%,
+                    50.567% 93.718%,
+                    40.241% 88.093%,
+                    40.241% 88.093%,
+                    40.224% 88.085%,
+                    40.207% 88.078%,
+                    40.191% 88.072%,
+                    40.174% 88.067%,
+                    40.157% 88.063%,
+                    40.14% 88.061%,
+                    40.123% 88.059%,
+                    40.106% 88.059%,
+                    40.09% 88.06%,
+                    40.073% 88.063%,
+                    8.223% 93.685%,
+                    8.223% 93.685%,
+                    8.139% 93.685%,
+                    8.056% 93.655%,
+                    7.974% 93.596%,
+                    7.895% 93.509%,
+                    7.818% 93.394%,
+                    7.744% 93.253%,
+                    7.674% 93.086%,
+                    7.607% 92.895%,
+                    7.545% 92.679%,
+                    7.488% 92.44%,
+                    0.285% 59.292%,
+                    0.285% 59.292%,
+                    0.233% 59.026%,
+                    0.188% 58.744%,
+                    0.15% 58.449%,
+                    0.119% 58.143%,
+                    0.097% 57.828%,
+                    0.082% 57.507%,
+                    0.075% 57.18%,
+                    0.076% 56.851%,
+                    0.085% 56.522%,
+                    0.102% 56.194%
+                );
+            }
+
+            .samara-features__card-icon {
+                left: 1.8rem;
+                top: 1rem;
+                transform: translate(-50%, -50%) rotate(10.684deg);
+            }
+        }
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            padding-left: 2.45rem;
+            padding-top: 2.45rem;
+            padding-right: 2.3rem;
+            padding-bottom: 2rem;
+            aspect-ratio: 33.2 / 15.4;
+            width: 33.2rem;
+            &::before {
+                background-color: #ff5129;
+                clip-path: polygon(
+                    24.882% 100%,
+                    24.882% 100%,
+                    25.985% 99.866%,
+                    28.351% 99.5%,
+                    31.669% 98.958%,
+                    35.633% 98.294%,
+                    39.933% 97.563%,
+                    44.26% 96.822%,
+                    48.307% 96.124%,
+                    51.763% 95.526%,
+                    54.322% 95.081%,
+                    55.674% 94.845%,
+                    55.674% 94.845%,
+                    55.703% 94.841%,
+                    55.732% 94.837%,
+                    55.76% 94.835%,
+                    55.787% 94.834%,
+                    55.815% 94.835%,
+                    55.842% 94.836%,
+                    55.87% 94.839%,
+                    55.898% 94.842%,
+                    55.927% 94.846%,
+                    55.956% 94.852%,
+                    79.394% 99.586%,
+                    79.394% 99.586%,
+                    79.482% 99.599%,
+                    79.57% 99.602%,
+                    79.658% 99.595%,
+                    79.745% 99.579%,
+                    79.832% 99.553%,
+                    79.918% 99.517%,
+                    80.002% 99.472%,
+                    80.086% 99.418%,
+                    80.168% 99.354%,
+                    80.249% 99.281%,
+                    96.681% 83.294%,
+                    96.681% 83.294%,
+                    96.824% 83.137%,
+                    96.957% 82.952%,
+                    97.079% 82.743%,
+                    97.19% 82.512%,
+                    97.289% 82.26%,
+                    97.375% 81.989%,
+                    97.447% 81.702%,
+                    97.506% 81.401%,
+                    97.549% 81.087%,
+                    97.576% 80.762%,
+                    100% 39.706%,
+                    100% 39.706%,
+                    100.006% 39.597%,
+                    100.009% 39.488%,
+                    100.011% 39.379%,
+                    100.011% 39.27%,
+                    100.009% 39.161%,
+                    100.006% 39.052%,
+                    100% 38.944%,
+                    99.993% 38.835%,
+                    99.984% 38.728%,
+                    99.973% 38.621%,
+                    96.5% 7.059%,
+                    96.5% 7.059%,
+                    96.43% 6.59%,
+                    96.328% 6.157%,
+                    96.198% 5.766%,
+                    96.042% 5.419%,
+                    95.864% 5.123%,
+                    95.667% 4.881%,
+                    95.454% 4.698%,
+                    95.228% 4.579%,
+                    94.992% 4.527%,
+                    94.75% 4.547%,
+                    78.565% 8.376%,
+                    78.565% 8.376%,
+                    78.533% 8.383%,
+                    78.501% 8.389%,
+                    78.47% 8.393%,
+                    78.439% 8.397%,
+                    78.408% 8.399%,
+                    78.377% 8.399%,
+                    78.346% 8.398%,
+                    78.314% 8.396%,
+                    78.283% 8.393%,
+                    78.251% 8.388%,
+                    78.251% 8.388%,
+                    76.209% 8.04%,
+                    72.189% 7.357%,
+                    66.698% 6.425%,
+                    60.243% 5.332%,
+                    53.332% 4.168%,
+                    46.472% 3.018%,
+                    40.171% 1.971%,
+                    34.936% 1.114%,
+                    31.274% 0.536%,
+                    29.693% 0.324%,
+                    29.693% 0.324%,
+                    29.023% 0.39%,
+                    27.801% 0.582%,
+                    26.1% 0.888%,
+                    23.992% 1.295%,
+                    21.549% 1.791%,
+                    18.845% 2.364%,
+                    15.951% 3.002%,
+                    12.94% 3.693%,
+                    9.886% 4.426%,
+                    6.859% 5.187%,
+                    6.859% 5.187%,
+                    6.65% 5.27%,
+                    6.452% 5.405%,
+                    6.266% 5.59%,
+                    6.095% 5.819%,
+                    5.941% 6.09%,
+                    5.805% 6.399%,
+                    5.689% 6.741%,
+                    5.595% 7.114%,
+                    5.526% 7.513%,
+                    5.482% 7.934%,
+                    0.316% 80.966%,
+                    0.316% 80.966%,
+                    0.302% 81.261%,
+                    0.301% 81.556%,
+                    0.313% 81.847%,
+                    0.339% 82.133%,
+                    0.376% 82.414%,
+                    0.427% 82.686%,
+                    0.489% 82.949%,
+                    0.562% 83.2%,
+                    0.648% 83.438%,
+                    0.744% 83.661%,
+                    6.83% 96.511%,
+                    6.83% 96.511%,
+                    6.915% 96.678%,
+                    7.005% 96.831%,
+                    7.101% 96.969%,
+                    7.201% 97.093%,
+                    7.305% 97.202%,
+                    7.413% 97.294%,
+                    7.524% 97.371%,
+                    7.637% 97.432%,
+                    7.753% 97.475%,
+                    7.871% 97.502%,
+                    24.882% 100%
+                );
+            }
+
+            .samara-features__card-icon {
+                right: -3rem;
+                bottom: 1rem;
+                transform: rotate(22.483deg);
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        @include breakpointMF(small-tablet) {
+            padding-top: 2.8rem;
+            padding-left: 6.35rem;
+            padding-right: 3.15rem;
+            padding-bottom: 3.35rem;
+            width: 49.2rem;
+            aspect-ratio: 49.2 / 13.35;
+            margin-left: -3rem;
+            &::before {
+                background-color: #3322b8;
+                clip-path: polygon(
+                    10.112% 90.015%,
+                    0.226% 10.531%,
+                    0.226% 10.531%,
+                    0.158% 9.795%,
+                    0.134% 9.056%,
+                    0.15% 8.334%,
+                    0.204% 7.647%,
+                    0.292% 7.012%,
+                    0.411% 6.448%,
+                    0.558% 5.973%,
+                    0.73% 5.606%,
+                    0.924% 5.364%,
+                    1.136% 5.265%,
+                    50.857% 0.583%,
+                    50.857% 0.583%,
+                    50.907% 0.583%,
+                    50.956% 0.592%,
+                    51.006% 0.609%,
+                    51.055% 0.634%,
+                    51.103% 0.668%,
+                    51.151% 0.711%,
+                    51.199% 0.761%,
+                    51.245% 0.82%,
+                    51.291% 0.888%,
+                    51.336% 0.963%,
+                    64.321% 24.086%,
+                    64.321% 24.086%,
+                    64.361% 24.153%,
+                    64.401% 24.213%,
+                    64.442% 24.268%,
+                    64.484% 24.316%,
+                    64.526% 24.357%,
+                    64.569% 24.392%,
+                    64.612% 24.42%,
+                    64.655% 24.442%,
+                    64.699% 24.457%,
+                    64.743% 24.465%,
+                    91.43% 27.369%,
+                    91.43% 27.369%,
+                    91.528% 27.397%,
+                    91.624% 27.457%,
+                    91.716% 27.549%,
+                    91.806% 27.672%,
+                    91.892% 27.824%,
+                    91.974% 28.005%,
+                    92.051% 28.213%,
+                    92.123% 28.447%,
+                    92.188% 28.706%,
+                    92.247% 28.989%,
+                    100% 70.066%,
+                    100% 70.066%,
+                    100.091% 70.655%,
+                    100.15% 71.273%,
+                    100.178% 71.906%,
+                    100.175% 72.539%,
+                    100.144% 73.159%,
+                    100.084% 73.75%,
+                    99.998% 74.3%,
+                    99.885% 74.794%,
+                    99.748% 75.218%,
+                    99.587% 75.557%,
+                    96.346% 81.05%,
+                    96.346% 81.05%,
+                    96.291% 81.15%,
+                    96.238% 81.261%,
+                    96.188% 81.383%,
+                    96.139% 81.515%,
+                    96.093% 81.658%,
+                    96.049% 81.81%,
+                    96.008% 81.971%,
+                    95.969% 82.141%,
+                    95.933% 82.32%,
+                    95.9% 82.507%,
+                    93.298% 98.205%,
+                    93.298% 98.205%,
+                    93.233% 98.554%,
+                    93.158% 98.869%,
+                    93.075% 99.151%,
+                    92.984% 99.395%,
+                    92.887% 99.602%,
+                    92.784% 99.768%,
+                    92.676% 99.893%,
+                    92.565% 99.974%,
+                    92.45% 100.011%,
+                    92.334% 100%,
+                    66.161% 92.21%,
+                    11.049% 92.21%,
+                    11.049% 92.21%,
+                    10.929% 92.184%,
+                    10.812% 92.11%,
+                    10.7% 91.988%,
+                    10.593% 91.822%,
+                    10.492% 91.613%,
+                    10.398% 91.365%,
+                    10.312% 91.078%,
+                    10.235% 90.756%,
+                    10.168% 90.401%,
+                    10.112% 90.015%
+                );
+            }
+            .samara-features__card-icon {
+                top: -3rem;
+                right: 10rem;
+                transform: rotate(-53.73deg);
+            }
+        }
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            padding-left: 5.3rem;
+            padding-top: 4.1rem;
+            padding-right: 3.4rem;
+            padding-bottom: 2.1rem;
+            width: 30.5rem;
+            margin-left: auto;
+            aspect-ratio: 30.5 / 17.2;
+            position: relative;
+            right: -2.4rem;
+            margin-top: -1.4rem;
+            &::before {
+                background-color: #3322b8;
+                clip-path: polygon(
+                    14.304% 16.841%,
+                    46.623% 10.394%,
+                    46.623% 10.394%,
+                    46.66% 10.387%,
+                    46.697% 10.382%,
+                    46.735% 10.378%,
+                    46.772% 10.376%,
+                    46.809% 10.376%,
+                    46.846% 10.377%,
+                    46.884% 10.379%,
+                    46.921% 10.383%,
+                    46.958% 10.388%,
+                    46.995% 10.395%,
+                    71.885% 15.584%,
+                    71.885% 15.584%,
+                    71.978% 15.599%,
+                    72.071% 15.604%,
+                    72.164% 15.6%,
+                    72.256% 15.586%,
+                    72.348% 15.563%,
+                    72.438% 15.531%,
+                    72.528% 15.49%,
+                    72.616% 15.44%,
+                    72.703% 15.381%,
+                    72.788% 15.313%,
+                    90.024% 0.467%,
+                    90.024% 0.467%,
+                    90.372% 0.246%,
+                    90.721% 0.171%,
+                    91.06% 0.23%,
+                    91.381% 0.41%,
+                    91.674% 0.7%,
+                    91.928% 1.089%,
+                    92.136% 1.564%,
+                    92.286% 2.114%,
+                    92.37% 2.726%,
+                    92.378% 3.389%,
+                    91.305% 25.744%,
+                    89.781% 39.721%,
+                    89.781% 39.721%,
+                    89.762% 39.937%,
+                    89.752% 40.153%,
+                    89.751% 40.37%,
+                    89.759% 40.585%,
+                    89.775% 40.799%,
+                    89.8% 41.009%,
+                    89.834% 41.217%,
+                    89.876% 41.419%,
+                    89.926% 41.617%,
+                    89.985% 41.808%,
+                    99.837% 71.372%,
+                    99.837% 71.372%,
+                    99.903% 71.591%,
+                    99.959% 71.818%,
+                    100.003% 72.05%,
+                    100.037% 72.288%,
+                    100.059% 72.53%,
+                    100.07% 72.774%,
+                    100.07% 73.02%,
+                    100.058% 73.265%,
+                    100.035% 73.509%,
+                    100% 73.75%,
+                    97.101% 90.909%,
+                    97.101% 90.909%,
+                    97.06% 91.121%,
+                    97.011% 91.326%,
+                    96.953% 91.522%,
+                    96.888% 91.71%,
+                    96.815% 91.888%,
+                    96.735% 92.056%,
+                    96.648% 92.213%,
+                    96.554% 92.358%,
+                    96.455% 92.491%,
+                    96.349% 92.611%,
+                    94.134% 94.913%,
+                    94.134% 94.913%,
+                    94.064% 94.983%,
+                    93.992% 95.045%,
+                    93.918% 95.102%,
+                    93.843% 95.152%,
+                    93.767% 95.195%,
+                    93.689% 95.231%,
+                    93.611% 95.261%,
+                    93.532% 95.284%,
+                    93.452% 95.3%,
+                    93.372% 95.309%,
+                    25.607% 100%,
+                    25.607% 100%,
+                    25.562% 100.002%,
+                    25.518% 100.002%,
+                    25.474% 99.999%,
+                    25.429% 99.995%,
+                    25.385% 99.988%,
+                    25.341% 99.98%,
+                    25.297% 99.969%,
+                    25.253% 99.956%,
+                    25.209% 99.941%,
+                    25.166% 99.924%,
+                    14.899% 95.586%,
+                    14.899% 95.586%,
+                    14.763% 95.518%,
+                    14.632% 95.43%,
+                    14.507% 95.322%,
+                    14.387% 95.197%,
+                    14.273% 95.054%,
+                    14.167% 94.894%,
+                    14.069% 94.719%,
+                    13.978% 94.528%,
+                    13.897% 94.324%,
+                    13.825% 94.106%,
+                    8.338% 75.771%,
+                    8.338% 75.771%,
+                    8.319% 75.708%,
+                    8.302% 75.644%,
+                    8.285% 75.579%,
+                    8.269% 75.514%,
+                    8.254% 75.447%,
+                    8.24% 75.381%,
+                    8.227% 75.313%,
+                    8.215% 75.245%,
+                    8.204% 75.177%,
+                    8.193% 75.108%,
+                    0.232% 19.558%,
+                    0.232% 19.558%,
+                    0.182% 18.984%,
+                    0.194% 18.425%,
+                    0.262% 17.894%,
+                    0.382% 17.4%,
+                    0.549% 16.955%,
+                    0.757% 16.571%,
+                    1.002% 16.258%,
+                    1.278% 16.029%,
+                    1.58% 15.894%,
+                    1.903% 15.865%,
+                    14.047% 16.856%,
+                    14.047% 16.856%,
+                    14.073% 16.858%,
+                    14.099% 16.859%,
+                    14.125% 16.859%,
+                    14.15% 16.859%,
+                    14.176% 16.857%,
+                    14.202% 16.856%,
+                    14.227% 16.853%,
+                    14.253% 16.85%,
+                    14.279% 16.846%,
+                    14.304% 16.841%
+                );
+            }
+
+            .samara-features__card-icon {
+                right: 100%;
+                transform: translateX(50%) rotate(135deg);
+                top: 4.15rem;
+            }
+        }
+    }
+    &:nth-child(3) {
+        @include breakpointMF(small-tablet) {
+            padding-top: 2.44rem;
+            padding-left: 3.7rem;
+            padding-right: 2.55rem;
+            padding-bottom: 2.32rem;
+            width: 42.9rem;
+            aspect-ratio: 42.9 / 11.9;
+            margin-top: -1rem;
+            margin-left: -1rem;
+            &::before {
+                background-color: #522aa1;
+                clip-path: polygon(
+                    54.995% 0.511%,
+                    14.605% 7.745%,
+                    14.605% 7.745%,
+                    14.587% 7.748%,
+                    14.569% 7.749%,
+                    14.55% 7.75%,
+                    14.532% 7.75%,
+                    14.513% 7.748%,
+                    14.495% 7.746%,
+                    14.476% 7.743%,
+                    14.458% 7.738%,
+                    14.439% 7.733%,
+                    14.421% 7.726%,
+                    6.212% 4.571%,
+                    6.212% 4.571%,
+                    6.033% 4.551%,
+                    5.86% 4.625%,
+                    5.694% 4.787%,
+                    5.538% 5.032%,
+                    5.394% 5.353%,
+                    5.265% 5.744%,
+                    5.152% 6.2%,
+                    5.059% 6.714%,
+                    4.987% 7.28%,
+                    4.939% 7.892%,
+                    0.038% 95.021%,
+                    0.038% 95.021%,
+                    0.015% 95.79%,
+                    0.031% 96.535%,
+                    0.083% 97.242%,
+                    0.168% 97.897%,
+                    0.283% 98.488%,
+                    0.425% 99.001%,
+                    0.59% 99.422%,
+                    0.775% 99.738%,
+                    0.977% 99.935%,
+                    1.194% 100%,
+                    63.892% 98.348%,
+                    98.852% 98.348%,
+                    98.852% 98.348%,
+                    99.067% 98.279%,
+                    99.267% 98.079%,
+                    99.451% 97.763%,
+                    99.615% 97.342%,
+                    99.755% 96.832%,
+                    99.869% 96.244%,
+                    99.953% 95.592%,
+                    100.006% 94.89%,
+                    100.022% 94.151%,
+                    100% 93.387%,
+                    95.282% 7.655%,
+                    95.282% 7.655%,
+                    95.237% 7.07%,
+                    95.171% 6.526%,
+                    95.085% 6.028%,
+                    94.98% 5.582%,
+                    94.86% 5.192%,
+                    94.726% 4.866%,
+                    94.58% 4.607%,
+                    94.424% 4.422%,
+                    94.26% 4.317%,
+                    94.09% 4.296%,
+                    68.218% 7.746%,
+                    68.218% 7.746%,
+                    68.196% 7.749%,
+                    68.173% 7.749%,
+                    68.15% 7.748%,
+                    68.128% 7.746%,
+                    68.105% 7.742%,
+                    68.082% 7.736%,
+                    68.06% 7.729%,
+                    68.037% 7.721%,
+                    68.015% 7.71%,
+                    67.992% 7.699%,
+                    55.236% 0.557%,
+                    55.236% 0.557%,
+                    55.212% 0.544%,
+                    55.188% 0.534%,
+                    55.164% 0.525%,
+                    55.14% 0.517%,
+                    55.116% 0.512%,
+                    55.092% 0.508%,
+                    55.068% 0.506%,
+                    55.044% 0.506%,
+                    55.02% 0.508%,
+                    54.995% 0.511%
+                );
+            }
+            .samara-features__card-icon {
+                top: -3rem;
+                right: 6.46rem;
+                transform: rotate(-11.888deg);
+            }
+        }
+
+        @include breakpoint(mobile) {
+            width: 29.65rem;
+            aspect-ratio: 29.65 / 17.15;
+            padding-top: 5rem;
+            padding-left: 2.8rem;
+            padding-bottom: 3.05rem;
+            padding-right: 5.45rem;
+            position: relative;
+            left: 0.6rem;
+            margin-top: -2rem;
+            &::before {
+                background-color: #522aa1;
+                clip-path: polygon(
+                    38.423% 19.716%,
+                    38.423% 19.716%,
+                    44.854% 19.647%,
+                    51.572% 19.462%,
+                    58.416% 19.185%,
+                    65.222% 18.839%,
+                    71.828% 18.449%,
+                    78.071% 18.039%,
+                    83.788% 17.631%,
+                    88.816% 17.252%,
+                    92.993% 16.923%,
+                    96.156% 16.67%,
+                    96.156% 16.67%,
+                    96.514% 16.703%,
+                    96.84% 16.853%,
+                    97.131% 17.107%,
+                    97.38% 17.449%,
+                    97.583% 17.867%,
+                    97.734% 18.346%,
+                    97.828% 18.872%,
+                    97.859% 19.431%,
+                    97.823% 20.011%,
+                    97.713% 20.596%,
+                    89.338% 53.574%,
+                    89.338% 53.574%,
+                    89.277% 53.85%,
+                    89.233% 54.132%,
+                    89.206% 54.418%,
+                    89.195% 54.706%,
+                    89.201% 54.994%,
+                    89.223% 55.28%,
+                    89.262% 55.56%,
+                    89.316% 55.835%,
+                    89.387% 56.1%,
+                    89.474% 56.355%,
+                    100% 84.024%,
+                    100% 84.024%,
+                    100.168% 84.588%,
+                    100.26% 85.171%,
+                    100.279% 85.758%,
+                    100.23% 86.332%,
+                    100.118% 86.875%,
+                    99.947% 87.372%,
+                    99.722% 87.804%,
+                    99.447% 88.157%,
+                    99.127% 88.412%,
+                    98.767% 88.553%,
+                    43.523% 100%,
+                    43.523% 100%,
+                    43.475% 100.009%,
+                    43.427% 100.015%,
+                    43.379% 100.019%,
+                    43.331% 100.021%,
+                    43.282% 100.021%,
+                    43.234% 100.018%,
+                    43.186% 100.013%,
+                    43.138% 100.006%,
+                    43.09% 99.996%,
+                    43.043% 99.984%,
+                    1.494% 88.493%,
+                    1.494% 88.493%,
+                    1.208% 88.371%,
+                    0.946% 88.173%,
+                    0.711% 87.909%,
+                    0.506% 87.586%,
+                    0.336% 87.214%,
+                    0.202% 86.799%,
+                    0.108% 86.351%,
+                    0.058% 85.878%,
+                    0.054% 85.387%,
+                    0.099% 84.888%,
+                    3.717% 59.579%,
+                    3.717% 59.579%,
+                    3.728% 59.493%,
+                    3.738% 59.406%,
+                    3.747% 59.319%,
+                    3.754% 59.232%,
+                    3.759% 59.144%,
+                    3.763% 59.056%,
+                    3.765% 58.968%,
+                    3.766% 58.88%,
+                    3.765% 58.792%,
+                    3.763% 58.704%,
+                    2.461% 21.321%,
+                    2.461% 21.321%,
+                    2.459% 21.023%,
+                    2.475% 20.728%,
+                    2.508% 20.44%,
+                    2.557% 20.161%,
+                    2.622% 19.891%,
+                    2.702% 19.634%,
+                    2.796% 19.391%,
+                    2.905% 19.164%,
+                    3.028% 18.956%,
+                    3.163% 18.768%,
+                    17.408% 0.977%,
+                    17.408% 0.977%,
+                    17.659% 0.716%,
+                    17.923% 0.537%,
+                    18.196% 0.436%,
+                    18.472% 0.413%,
+                    18.745% 0.465%,
+                    19.01% 0.591%,
+                    19.261% 0.788%,
+                    19.493% 1.055%,
+                    19.699% 1.391%,
+                    19.875% 1.792%,
+                    24.826% 15.324%,
+                    24.826% 15.324%,
+                    24.911% 15.537%,
+                    25.006% 15.734%,
+                    25.111% 15.915%,
+                    25.223% 16.08%,
+                    25.343% 16.227%,
+                    25.471% 16.356%,
+                    25.604% 16.466%,
+                    25.743% 16.556%,
+                    25.887% 16.626%,
+                    26.035% 16.674%,
+                    38.179% 19.685%,
+                    38.179% 19.685%,
+                    38.203% 19.691%,
+                    38.228% 19.696%,
+                    38.252% 19.701%,
+                    38.276% 19.705%,
+                    38.301% 19.708%,
+                    38.325% 19.711%,
+                    38.35% 19.713%,
+                    38.374% 19.715%,
+                    38.399% 19.715%,
+                    38.423% 19.716%
+                );
+            }
+
+            .samara-features__card-icon {
+                left: 100%;
+                margin-left: -6rem;
+                top: 50%;
+                transform: translateY(-50%) rotate(-21.733deg);
+            }
+        }
+    }
+    &:nth-child(4) {
+        @include breakpointMF(small-tablet) {
+            padding-top: 3.45rem;
+            padding-left: 3.35rem;
+            padding-right: 2.25rem;
+            padding-bottom: 2.9rem;
+            width: 41.1043rem;
+            aspect-ratio: 41.1 / 13.55;
+            margin-left: -1.2rem;
+            margin-top: -1rem;
+            &::before {
+                background-color: rgba(0, 0, 0, 0.15);
+                backdrop-filter: blur(3px);
+                background-image: url('../img/samara/features/4-bg.svg');
+                background-size: 100% 100%;
+                clip-path: polygon(
+                    5.092% 83.466%,
+                    0.136% 11.553%,
+                    0.136% 11.553%,
+                    0.106% 10.787%,
+                    0.118% 10.039%,
+                    0.171% 9.322%,
+                    0.261% 8.648%,
+                    0.386% 8.031%,
+                    0.541% 7.482%,
+                    0.724% 7.015%,
+                    0.933% 6.642%,
+                    1.164% 6.375%,
+                    1.414% 6.228%,
+                    9.716% 3.533%,
+                    9.716% 3.533%,
+                    9.785% 3.515%,
+                    9.854% 3.508%,
+                    9.924% 3.51%,
+                    9.993% 3.523%,
+                    10.061% 3.545%,
+                    10.13% 3.577%,
+                    10.198% 3.619%,
+                    10.265% 3.67%,
+                    10.331% 3.732%,
+                    10.397% 3.803%,
+                    20.086% 15.091%,
+                    20.086% 15.091%,
+                    20.177% 15.187%,
+                    20.27% 15.265%,
+                    20.364% 15.323%,
+                    20.459% 15.363%,
+                    20.555% 15.383%,
+                    20.65% 15.385%,
+                    20.746% 15.367%,
+                    20.842% 15.331%,
+                    20.936% 15.275%,
+                    21.03% 15.201%,
+                    37.067% 0.675%,
+                    37.067% 0.675%,
+                    37.256% 0.544%,
+                    37.446% 0.49%,
+                    37.634% 0.511%,
+                    37.818% 0.604%,
+                    37.996% 0.767%,
+                    38.166% 0.997%,
+                    38.326% 1.291%,
+                    38.473% 1.648%,
+                    38.605% 2.064%,
+                    38.72% 2.537%,
+                    39.639% 6.893%,
+                    39.639% 6.893%,
+                    39.727% 7.264%,
+                    39.825% 7.604%,
+                    39.934% 7.908%,
+                    40.052% 8.177%,
+                    40.177% 8.408%,
+                    40.31% 8.6%,
+                    40.449% 8.75%,
+                    40.593% 8.858%,
+                    40.74% 8.922%,
+                    40.891% 8.94%,
+                    96.442% 6.802%,
+                    96.442% 6.802%,
+                    96.668% 6.846%,
+                    96.883% 6.99%,
+                    97.086% 7.227%,
+                    97.274% 7.55%,
+                    97.443% 7.95%,
+                    97.591% 8.42%,
+                    97.716% 8.954%,
+                    97.814% 9.543%,
+                    97.883% 10.179%,
+                    97.92% 10.856%,
+                    100% 82.939%,
+                    100% 82.939%,
+                    100.001% 83.671%,
+                    99.965% 84.374%,
+                    99.893% 85.039%,
+                    99.788% 85.655%,
+                    99.654% 86.212%,
+                    99.494% 86.7%,
+                    99.31% 87.109%,
+                    99.104% 87.428%,
+                    98.881% 87.648%,
+                    98.642% 87.758%,
+                    40.475% 100%,
+                    40.475% 100%,
+                    40.447% 100.005%,
+                    40.418% 100.009%,
+                    40.389% 100.01%,
+                    40.361% 100.01%,
+                    40.332% 100.009%,
+                    40.304% 100.006%,
+                    40.275% 100.001%,
+                    40.247% 99.994%,
+                    40.218% 99.986%,
+                    40.19% 99.976%,
+                    6.342% 86.964%,
+                    6.342% 86.964%,
+                    6.159% 86.858%,
+                    5.986% 86.687%,
+                    5.823% 86.454%,
+                    5.671% 86.164%,
+                    5.532% 85.821%,
+                    5.409% 85.43%,
+                    5.301% 84.994%,
+                    5.212% 84.519%,
+                    5.142% 84.008%,
+                    5.092% 83.466%
+                );
+            }
+            .samara-features__card-icon {
+                top: -1.65rem;
+                right: 1.18rem;
+                transform: rotate(14.008deg);
+            }
+        }
+
+        @include breakpoint(mobile) {
+            padding-top: 3.3rem;
+            padding-left: 9.75rem;
+            padding-right: 3.05rem;
+            padding-bottom: 2.4rem;
+            width: 33.5rem;
+            margin-left: auto;
+            aspect-ratio: 33.5 / 19.3;
+            margin-top: -1rem;
+            position: relative;
+            left: 1rem;
+            &::before {
+                background-color: rgba(0, 0, 0, 0.15);
+                backdrop-filter: blur(3px);
+                background-image: url('../img/samara/features/4-bg-mobile.svg');
+                background-size: 100% 100%;
+                clip-path: polygon(
+                    59.548% 6.047%,
+                    35.631% 10.16%,
+                    35.631% 10.16%,
+                    35.585% 10.167%,
+                    35.538% 10.172%,
+                    35.492% 10.175%,
+                    35.445% 10.176%,
+                    35.398% 10.174%,
+                    35.352% 10.171%,
+                    35.305% 10.165%,
+                    35.259% 10.158%,
+                    35.212% 10.148%,
+                    35.166% 10.137%,
+                    7.567% 2.57%,
+                    7.567% 2.57%,
+                    7.146% 2.537%,
+                    6.753% 2.661%,
+                    6.397% 2.923%,
+                    6.087% 3.304%,
+                    5.83% 3.784%,
+                    5.636% 4.344%,
+                    5.512% 4.965%,
+                    5.467% 5.626%,
+                    5.51% 6.309%,
+                    5.649% 6.994%,
+                    12.877% 32.891%,
+                    12.877% 32.891%,
+                    12.935% 33.123%,
+                    12.982% 33.36%,
+                    13.017% 33.602%,
+                    13.041% 33.847%,
+                    13.054% 34.095%,
+                    13.055% 34.343%,
+                    13.044% 34.591%,
+                    13.022% 34.837%,
+                    12.988% 35.081%,
+                    12.943% 35.321%,
+                    0.362% 93.783%,
+                    0.362% 93.783%,
+                    0.258% 94.521%,
+                    0.258% 95.237%,
+                    0.351% 95.91%,
+                    0.526% 96.521%,
+                    0.771% 97.051%,
+                    1.076% 97.48%,
+                    1.428% 97.79%,
+                    1.818% 97.959%,
+                    2.234% 97.97%,
+                    2.665% 97.802%,
+                    15.965% 89.717%,
+                    15.965% 89.717%,
+                    16.076% 89.657%,
+                    16.188% 89.609%,
+                    16.302% 89.573%,
+                    16.417% 89.55%,
+                    16.532% 89.54%,
+                    16.648% 89.542%,
+                    16.763% 89.557%,
+                    16.877% 89.585%,
+                    16.991% 89.625%,
+                    17.103% 89.678%,
+                    30.952% 97.044%,
+                    30.952% 97.044%,
+                    30.996% 97.067%,
+                    31.04% 97.087%,
+                    31.084% 97.105%,
+                    31.129% 97.122%,
+                    31.174% 97.136%,
+                    31.219% 97.149%,
+                    31.264% 97.16%,
+                    31.31% 97.168%,
+                    31.355% 97.175%,
+                    31.401% 97.18%,
+                    65.842% 100%,
+                    65.842% 100%,
+                    65.881% 100.003%,
+                    65.92% 100.004%,
+                    65.959% 100.003%,
+                    65.999% 100.001%,
+                    66.038% 99.998%,
+                    66.077% 99.993%,
+                    66.116% 99.987%,
+                    66.155% 99.979%,
+                    66.194% 99.97%,
+                    66.233% 99.96%,
+                    95.718% 91.302%,
+                    95.718% 91.302%,
+                    95.94% 91.212%,
+                    96.15% 91.077%,
+                    96.347% 90.901%,
+                    96.529% 90.686%,
+                    96.693% 90.435%,
+                    96.839% 90.153%,
+                    96.964% 89.841%,
+                    97.067% 89.502%,
+                    97.146% 89.141%,
+                    97.199% 88.76%,
+                    100% 60.769%,
+                    100% 60.769%,
+                    100.021% 60.484%,
+                    100.026% 60.198%,
+                    100.016% 59.915%,
+                    99.992% 59.636%,
+                    99.953% 59.362%,
+                    99.899% 59.095%,
+                    99.832% 58.838%,
+                    99.751% 58.59%,
+                    99.657% 58.356%,
+                    99.55% 58.135%,
+                    87.226% 35.036%,
+                    87.226% 35.036%,
+                    87.133% 34.847%,
+                    87.05% 34.647%,
+                    86.976% 34.438%,
+                    86.912% 34.22%,
+                    86.859% 33.994%,
+                    86.815% 33.762%,
+                    86.783% 33.524%,
+                    86.761% 33.282%,
+                    86.751% 33.036%,
+                    86.751% 32.789%,
+                    87.525% 3.523%,
+                    87.525% 3.523%,
+                    87.51% 2.955%,
+                    87.439% 2.42%,
+                    87.318% 1.925%,
+                    87.15% 1.479%,
+                    86.942% 1.089%,
+                    86.699% 0.765%,
+                    86.427% 0.515%,
+                    86.13% 0.347%,
+                    85.814% 0.27%,
+                    85.484% 0.292%,
+                    59.548% 6.047%
+                );
+            }
+
+            .samara-features__card-icon {
+                top: 3.75rem;
+                right: 100%;
+                margin-right: -10rem;
+
+                transform: rotate(14.008deg);
+            }
+        }
+    }
+    &:nth-child(5) {
+        @include breakpointMF(small-tablet) {
+            padding-top: 3.3rem;
+            padding-left: 3.35rem;
+            padding-right: 1.2rem;
+            padding-bottom: 1.4rem;
+            width: 34.1457rem;
+            aspect-ratio: 34.1 / 13.8;
+            margin-top: -1rem;
+            &::before {
+                background-color: #ff5129;
+                clip-path: polygon(
+                    3.018% 90.573%,
+                    0.224% 10.27%,
+                    0.224% 10.27%,
+                    0.224% 9.607%,
+                    0.27% 8.975%,
+                    0.356% 8.384%,
+                    0.48% 7.846%,
+                    0.638% 7.37%,
+                    0.824% 6.966%,
+                    1.036% 6.645%,
+                    1.27% 6.417%,
+                    1.52% 6.291%,
+                    1.784% 6.279%,
+                    47.295% 14.305%,
+                    47.295% 14.305%,
+                    47.44% 14.313%,
+                    47.582% 14.285%,
+                    47.722% 14.223%,
+                    47.858% 14.128%,
+                    47.989% 14%,
+                    48.115% 13.842%,
+                    48.235% 13.653%,
+                    48.347% 13.435%,
+                    48.451% 13.19%,
+                    48.546% 12.917%,
+                    52.009% 1.904%,
+                    52.009% 1.904%,
+                    52.187% 1.43%,
+                    52.389% 1.052%,
+                    52.609% 0.773%,
+                    52.841% 0.593%,
+                    53.081% 0.511%,
+                    53.324% 0.53%,
+                    53.563% 0.649%,
+                    53.793% 0.87%,
+                    54.009% 1.193%,
+                    54.205% 1.618%,
+                    63.677% 26.06%,
+                    63.677% 26.06%,
+                    63.773% 26.287%,
+                    63.877% 26.49%,
+                    63.986% 26.668%,
+                    64.101% 26.82%,
+                    64.22% 26.946%,
+                    64.344% 27.044%,
+                    64.471% 27.115%,
+                    64.6% 27.158%,
+                    64.731% 27.171%,
+                    64.863% 27.155%,
+                    77.889% 24.065%,
+                    77.889% 24.065%,
+                    78.161% 24.064%,
+                    78.419% 24.182%,
+                    78.659% 24.41%,
+                    78.878% 24.736%,
+                    79.07% 25.149%,
+                    79.231% 25.638%,
+                    79.357% 26.192%,
+                    79.443% 26.801%,
+                    79.486% 27.452%,
+                    79.481% 28.135%,
+                    79.128% 36.114%,
+                    79.128% 36.114%,
+                    79.122% 36.758%,
+                    79.159% 37.376%,
+                    79.235% 37.958%,
+                    79.347% 38.494%,
+                    79.492% 38.975%,
+                    79.666% 39.39%,
+                    79.866% 39.73%,
+                    80.087% 39.984%,
+                    80.328% 40.145%,
+                    80.583% 40.2%,
+                    97.576% 40.2%,
+                    97.576% 40.2%,
+                    97.792% 40.24%,
+                    97.998% 40.356%,
+                    98.193% 40.542%,
+                    98.374% 40.794%,
+                    98.538% 41.106%,
+                    98.683% 41.472%,
+                    98.807% 41.888%,
+                    98.907% 42.348%,
+                    98.981% 42.846%,
+                    99.026% 43.377%,
+                    99.997% 61.071%,
+                    99.997% 61.071%,
+                    100.001% 61.165%,
+                    100.005% 61.26%,
+                    100.008% 61.354%,
+                    100.01% 61.449%,
+                    100.011% 61.544%,
+                    100.01% 61.638%,
+                    100.009% 61.733%,
+                    100.007% 61.828%,
+                    100.004% 61.922%,
+                    100% 62.017%,
+                    99.003% 82.695%,
+                    99.003% 82.695%,
+                    98.962% 83.222%,
+                    98.893% 83.719%,
+                    98.797% 84.178%,
+                    98.678% 84.597%,
+                    98.538% 84.968%,
+                    98.378% 85.286%,
+                    98.202% 85.547%,
+                    98.012% 85.745%,
+                    97.809% 85.875%,
+                    97.596% 85.93%,
+                    66.516% 88.394%,
+                    66.516% 88.394%,
+                    66.485% 88.398%,
+                    66.454% 88.403%,
+                    66.424% 88.409%,
+                    66.393% 88.417%,
+                    66.362% 88.427%,
+                    66.332% 88.438%,
+                    66.301% 88.451%,
+                    66.271% 88.466%,
+                    66.24% 88.482%,
+                    66.21% 88.5%,
+                    47.812% 99.976%,
+                    47.812% 99.976%,
+                    47.746% 100.013%,
+                    47.68% 100.042%,
+                    47.614% 100.064%,
+                    47.547% 100.078%,
+                    47.48% 100.084%,
+                    47.414% 100.082%,
+                    47.347% 100.073%,
+                    47.28% 100.057%,
+                    47.214% 100.032%,
+                    47.148% 100%,
+                    26.195% 88.531%,
+                    26.195% 88.531%,
+                    26.149% 88.508%,
+                    26.104% 88.489%,
+                    26.058% 88.473%,
+                    26.012% 88.461%,
+                    25.966% 88.453%,
+                    25.919% 88.448%,
+                    25.873% 88.447%,
+                    25.827% 88.45%,
+                    25.78% 88.456%,
+                    25.734% 88.467%,
+                    4.626% 93.913%,
+                    4.626% 93.913%,
+                    4.385% 93.925%,
+                    4.153% 93.842%,
+                    3.933% 93.671%,
+                    3.729% 93.417%,
+                    3.544% 93.089%,
+                    3.381% 92.693%,
+                    3.243% 92.237%,
+                    3.135% 91.726%,
+                    3.059% 91.169%,
+                    3.018% 90.573%
+                );
+            }
+            .samara-features__card-icon {
+                top: -2rem;
+                right: 6.52rem;
+                transform: rotate(8.285deg);
+            }
+        }
+
+        @include breakpoint(mobile) {
+            padding-top: 3.35rem;
+            padding-left: 3.25rem;
+            padding-right: 2.75rem;
+            padding-bottom: 1.05rem;
+            width: 31rem;
+            aspect-ratio: 31 / 15.4;
+            margin-top: -1.4rem;
+            &::before {
+                background-color: #ff5129;
+                clip-path: polygon(
+                    35.983% 9.003%,
+                    22.065% 0.404%,
+                    22.065% 0.404%,
+                    21.943% 0.338%,
+                    21.82% 0.293%,
+                    21.695% 0.267%,
+                    21.57% 0.26%,
+                    21.446% 0.272%,
+                    21.322% 0.304%,
+                    21.2% 0.355%,
+                    21.08% 0.425%,
+                    20.962% 0.513%,
+                    20.847% 0.621%,
+                    1.172% 20.97%,
+                    1.172% 20.97%,
+                    0.984% 21.197%,
+                    0.817% 21.468%,
+                    0.67% 21.776%,
+                    0.546% 22.118%,
+                    0.445% 22.488%,
+                    0.369% 22.881%,
+                    0.319% 23.292%,
+                    0.295% 23.716%,
+                    0.3% 24.148%,
+                    0.334% 24.582%,
+                    3.737% 54.609%,
+                    3.737% 54.609%,
+                    3.744% 54.68%,
+                    3.751% 54.752%,
+                    3.757% 54.823%,
+                    3.762% 54.895%,
+                    3.767% 54.967%,
+                    3.77% 55.04%,
+                    3.773% 55.112%,
+                    3.775% 55.185%,
+                    3.776% 55.258%,
+                    3.777% 55.33%,
+                    3.777% 96.752%,
+                    3.777% 96.752%,
+                    3.799% 97.297%,
+                    3.865% 97.812%,
+                    3.969% 98.289%,
+                    4.108% 98.723%,
+                    4.279% 99.106%,
+                    4.477% 99.43%,
+                    4.7% 99.688%,
+                    4.942% 99.874%,
+                    5.201% 99.981%,
+                    5.473% 100%,
+                    99.333% 91.058%,
+                    99.333% 91.058%,
+                    99.487% 91.026%,
+                    99.628% 90.935%,
+                    99.754% 90.792%,
+                    99.862% 90.606%,
+                    99.949% 90.383%,
+                    100.014% 90.131%,
+                    100.054% 89.857%,
+                    100.066% 89.569%,
+                    100.049% 89.273%,
+                    100% 88.978%,
+                    93.419% 59.926%,
+                    93.419% 59.926%,
+                    93.376% 59.718%,
+                    93.34% 59.506%,
+                    93.313% 59.29%,
+                    93.292% 59.071%,
+                    93.279% 58.85%,
+                    93.274% 58.628%,
+                    93.276% 58.406%,
+                    93.286% 58.183%,
+                    93.303% 57.962%,
+                    93.328% 57.743%,
+                    99.811% 8.893%,
+                    99.811% 8.893%,
+                    99.864% 8.207%,
+                    99.847% 7.544%,
+                    99.765% 6.92%,
+                    99.625% 6.349%,
+                    99.433% 5.846%,
+                    99.198% 5.425%,
+                    98.925% 5.101%,
+                    98.621% 4.889%,
+                    98.293% 4.803%,
+                    97.949% 4.859%,
+                    74.59% 13.597%,
+                    74.59% 13.597%,
+                    74.551% 13.611%,
+                    74.512% 13.623%,
+                    74.473% 13.632%,
+                    74.434% 13.64%,
+                    74.395% 13.646%,
+                    74.355% 13.65%,
+                    74.316% 13.652%,
+                    74.276% 13.652%,
+                    74.237% 13.65%,
+                    74.197% 13.647%,
+                    36.363% 9.141%,
+                    36.363% 9.141%,
+                    36.325% 9.136%,
+                    36.286% 9.128%,
+                    36.247% 9.119%,
+                    36.209% 9.108%,
+                    36.171% 9.095%,
+                    36.133% 9.08%,
+                    36.095% 9.064%,
+                    36.057% 9.045%,
+                    36.02% 9.025%,
+                    35.983% 9.003%
+                );
+            }
+            .samara-features__card-icon {
+                top: 0.1rem;
+                left: 100%;
+                margin-left: -7rem;
+                transform: rotate(-12.356deg);
+            }
+        }
+    }
+}
+
+.samara-features__cards-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.samara-features__card-icon {
+    position: absolute;
+
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+    @include breakpoint(mobile) {
+        width: 9rem;
+        height: 9rem;
+    }
+}
+.samara-features__card-title {
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 110%;
+}
+
+.samara-features__card-text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.samara-wait {
+    padding-top: 9rem;
+    position: relative;
+    z-index: 6;
+    margin-bottom: 28.6rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+        margin-bottom: 8rem;
+        padding-top: 39rem;
+    }
+}
+
+.samara-wait__image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 100%;
+    width: 192rem;
+    min-width: 100%;
+    max-width: none;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.samara-wait__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.samara-wait__card {
+    align-self: flex-start;
+    width: 68.6rem;
+    position: relative;
+    z-index: 2;
+    padding: 3.8rem;
+    padding-left: 4.3rem;
+    padding-right: 4.3rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    overflow: clip;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        padding: 2.4rem;
+        padding-top: 1.6rem;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        z-index: -2;
+        background: rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(25px);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 2.5rem;
+        border: 1px solid transparent;
+        background: linear-gradient(to right top, #624f86, #ffedd4, #5229a1) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+.samara-wait__card-heading {
+    font-size: 5.2rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 110%;
+    color: #ff5129;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+        font-size: 3.2rem;
+        font-style: italic;
+        font-weight: 850;
+        line-height: 110%;
+    }
+}
+
+.samara-wait__card-text {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.samara-wait__card-phone {
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    align-self: flex-start;
+
+    @include breakpoint(mobile) {
+        font-size: 3.6rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        white-space: nowrap;
+    }
+}
