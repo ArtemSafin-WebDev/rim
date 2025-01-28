@@ -911,3 +911,238 @@
         align-self: center;
     }
 }
+
+.chelyaba-meteor {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25rem;
+    margin-top: 20rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+        padding-top: 17rem;
+        margin-bottom: 27rem;
+        z-index: 5;
+    }
+}
+
+.chelyaba-meteor__image {
+    bottom: -10rem;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+    position: absolute;
+    mask-image: linear-gradient(to top, transparent 0%, black 20%, black 100%);
+
+    @include breakpoint(mobile) {
+        bottom: auto;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+        margin-top: -40rem;
+    }
+}
+
+.chelyaba-meteor__text-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 56rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
+}
+
+.chelyaba-meteor__heading {
+    margin-bottom: 2rem;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 2rem;
+    }
+    b {
+        font-weight: inherit;
+        color: #ff5129;
+    }
+}
+
+.chelyaba-meteor__text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    max-width: 42rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}
+
+.chelyaba-meteor__link {
+    align-self: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 1.2rem 6rem;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    color: white;
+    border-radius: 5rem;
+    background: #fc3f1d;
+    transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            box-shadow: 0rem 0rem 0.3618rem 0rem #ff5129, 0rem 0rem 2.1708rem 0rem #ff5129;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        align-self: center;
+        font-size: 1.6897rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        padding: 0.8rem 4.26rem;
+    }
+}
+
+.chelyaba-key {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+        z-index: 16;
+    }
+}
+
+.chelyaba-key__image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.chelyaba-key__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.chelyaba-key__heading {
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    max-width: 54rem;
+    margin-bottom: 6.8rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+}
+
+.chelyaba-key__list {
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+    flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 3rem;
+        max-width: 28rem;
+        width: 100%;
+        align-self: center;
+    }
+}
+
+.chelyaba-key__list-item {
+    @include breakpointMF(small-tablet) {
+        width: 22rem;
+        &:nth-child(2) {
+            width: 28rem;
+        }
+
+        &:nth-child(3) {
+            width: 25rem;
+        }
+    }
+}
+
+.chelyaba-key__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+    }
+}
+
+.chelyaba-key__card-title {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        br {
+            display: none;
+        }
+    }
+    b {
+        font-weight: inherit;
+        font-style: italic;
+        color: #ff5129;
+    }
+}
+
+.chelyaba-key__card-text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}

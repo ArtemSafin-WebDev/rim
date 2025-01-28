@@ -1565,6 +1565,10 @@
         transform: translate(-50%, -50%) scale(1);
         width: 100vw;
         max-width: none;
+
+        .samara-features--chelyaba & {
+            margin-top: -25rem;
+        }
     }
 }
 
