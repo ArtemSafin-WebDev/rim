@@ -17,8 +17,29 @@
 @font-face {
     font-family: 'Uni Neue';
     src: url('../assets/fonts/UniNeueHeavy.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Uni Neue';
+    src: url('../assets/fonts/UniNeue-HeavyItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Uni Neue';
+    src: url('../assets/fonts/UniNeueHeavy.woff') format('woff');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Uni Neue';
+    src: url('../assets/fonts/UniNeue-HeavyItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -85,4 +106,3 @@
     font-style: normal;
     font-display: swap;
 }
-
