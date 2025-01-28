@@ -1374,11 +1374,12 @@
                         <a href="#" class="chelyaba-intro__link">
                             Оставить заявку
                         </a>
+                        <a href="#to-clients" class="cities-intro__scroll cities-intro__scroll--chelyaba"></a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="chelyaba-clients">
+        <section class="chelyaba-clients" id="clients">
             <picture>
                 <source srcset="img/chelyaba/clients-mobile.webp" media="(max-width: 640px)" />
                 <img src="img/chelyaba/clients.webp" alt="MDN" class="chelyaba-clients__image" />
@@ -1902,6 +1903,51 @@
                             <div class="chelyaba-service__card-text">
                                 Вы всегда знаете, на каком этапе находится ваш проект и что будет дальше..
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="chelyaba-callback">
+            <picture>
+                <source srcset="img/chelyaba/callback-mobile.webp" media="(max-width: 640px)" />
+                <img src="img/chelyaba/callback.webp" alt="MDN" class="chelyaba-callback__image" />
+            </picture>
+            <div class="container">
+                <div class="chelyaba-callback__content">
+                    <div class="chelyaba-callback__text-content">
+                        <h2 class="chelyaba-callback__heading">
+                            Начните привлекать клиентов <b>уже сегодня</b>
+                        </h2>
+                        <div class="chelyaba-callback__text">
+                            Просто оставьте заявку, и мы свяжемся вами в ближайшее время.
+                        </div>
+                        <form action="/" method="POST" class="chelyaba-callback__form" data-need-validation="">
+                            <div class="chelyaba-callback__form-field" id="callback-phone">
+                                <label class="chelyaba-callback__form-label">
+                                    <input type="tel" class="chelyaba-callback__form-input js-phone-input" name="name"
+                                        placeholder="+7 999 999-99-99" required="" data-parsley-phone=""
+                                        data-parsley-errors-container="#callback-phone">
+                                    <span class="chelyaba-callback__form-field-border">
+
+                                    </span>
+                                </label>
+                            </div>
+                            <button class="chelyaba-callback__submit" type="submit">
+                                Оставить заявку
+                            </button>
+                        </form>
+                    </div>
+                    <div class="chelyaba-callback__contacts">
+                        <h3 class="chelyaba-callback__contacts-title">
+                            Не хотите ждать обратного звонка?
+                        </h3>
+                        <div class="chelyaba-callback__contacts-wrapper">
+                            <div class="chelyaba-callback__contacts-text">
+                                Звоните на горячую линию, мы ответим на ваши вопросы и разместим рекламу.
+
+                            </div>
+                            <a href="tel:+78888888888" class="chelyaba-callback__contacts-phone">8 (888) 888 88 88</a>
                         </div>
                     </div>
                 </div>

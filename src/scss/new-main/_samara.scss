@@ -1207,6 +1207,8 @@
     letter-spacing: -0.1rem;
     text-transform: uppercase;
     color: #ff5129;
+    position: relative;
+    z-index: 10;
 
     @include breakpoint(mobile) {
         font-size: 6.2rem;
