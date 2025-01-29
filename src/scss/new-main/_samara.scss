@@ -922,6 +922,9 @@
         z-index: 1;
         margin-bottom: 10rem;
     }
+    @include breakpointMF(super-large) {
+        margin-bottom: 30rem;
+    }
 }
 
 .samara-worry__content {
@@ -1164,6 +1167,9 @@
     display: flex;
     flex-direction: column;
 
+    @include breakpointMF(super-large) {
+        margin: 25rem 0;
+    }
     @include breakpoint(mobile) {
         margin: 0;
         text-align: center;
