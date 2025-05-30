@@ -1,0 +1,325 @@
+@import 'vendor';
+@import 'fontface';
+@import 'mixins';
+
+.collaboration-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(0, 0, 0, 0.56);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+
+    .parsley-errors-list.filled {
+        display: block;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        color: #ff5129;
+        margin-top: 0.5rem;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
+
+body:has(.collaboration-modal.active) {
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+.collaboration-modal__content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    max-width: 45rem;
+    padding: 4.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    position: relative;
+    border-radius: 4rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5rem);
+    color: white;
+    background-origin: border-box;
+
+    @include breakpoint(mobile) {
+        flex-grow: 1;
+        padding: 3.5rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        border-radius: 0;
+        border: none;
+    }
+}
+
+.collaboration-modal__close {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    width: 2rem;
+    height: 2rem;
+
+    @include breakpoint(mobile) {
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 3.5rem;
+        right: 3.5rem;
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: white;
+        fill-opacity: 0.7;
+        transition: fill-opacity 0.3s ease-in-out;
+    }
+
+    &:hover {
+        svg {
+            fill-opacity: 1;
+        }
+    }
+}
+
+.collaboration-modal__heading {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 3rem;
+    }
+}
+
+.collaboration-modal__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.collaboration-modal__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+        gap: 1rem;
+    }
+}
+
+.collaboration-modal__field {
+    position: relative;
+}
+.collaboration-modal__field-input-wrapper {
+    position: relative;
+}
+
+.collaboration-modal__field-label {
+    display: block;
+    position: relative;
+}
+
+.collaboration-modal__field-label-text {
+    position: absolute;
+    left: 1.6rem;
+    top: 2.4rem;
+    transform: translateY(-50%);
+    transform-origin: left center;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transition: font-size 0.2s, top 0.2s;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        top: 2.4rem;
+    }
+
+    .collaboration-modal__filed-input:focus ~ &,
+    .collaboration-modal__filed-input:not(:placeholder-shown) ~ & {
+        top: 1.6rem;
+        font-size: 1.2rem;
+        @include breakpoint(mobile) {
+            font-size: 1rem;
+            top: 1.4rem;
+        }
+    }
+}
+
+.collaboration-modal__filed-input {
+    display: block;
+    width: 100%;
+    height: 4.8rem;
+    padding: 0 1.6rem;
+    border-radius: 1.5rem;
+    background: rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(5rem);
+    border: 1px solid transparent;
+    color: white;
+    padding-top: 1.8rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+
+    &.parsley-error {
+        border-color: #ff5129;
+    }
+    &::placeholder {
+        opacity: 0;
+    }
+
+    &:not(.parsley-error) {
+        &:focus {
+            border-color: #fff;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        padding-top: 1.7rem;
+    }
+}
+
+textarea.collaboration-modal__filed-input {
+    height: 9.6rem;
+    display: block;
+    padding-top: 2.4rem;
+
+    @include breakpoint(mobile) {
+        height: 9rem;
+        padding-top: 2.4rem;
+    }
+}
+
+.collaboration-modal__field-label-text {
+}
+
+.collaboration-modal__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+        gap: 1rem;
+    }
+}
+
+.collaboration-modal__checkbox {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    user-select: none;
+    gap: 0.5rem;
+}
+
+.collaboration-modal__checkbox-input {
+    display: none;
+}
+
+.collaboration-modal__checkbox-mark {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.3rem;
+    background: #fff;
+    box-shadow: 0rem 0rem 0.3rem 0rem rgba(0, 0, 0, 0.09) inset;
+    margin-top: 0.15rem;
+    border: 1px solid transparent;
+
+    .parsley-error & {
+        border-color: #ff5129;
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: black;
+        transition: opacity 0.2s;
+        opacity: 0;
+    }
+
+    .collaboration-modal__checkbox-input:checked + & {
+        svg {
+            opacity: 1;
+        }
+    }
+}
+
+.collaboration-modal__checkbox-text {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.collaboration-modal__button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    padding: 1.2rem 2.4rem;
+    border-radius: 10rem;
+    background: #fc3f1d;
+    color: white;
+    margin-top: 3.5rem;
+    justify-content: center;
+    cursor: pointer;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        padding: 1rem 3rem;
+    }
+}

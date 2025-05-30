@@ -11,6 +11,7 @@
 
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="css/new-header.css" />
+        <link rel="stylesheet" href="css/collaboration-modal.css" />
         <title>
             RIM
         </title>
@@ -4199,6 +4200,99 @@
             <div class="ie-placeholder">
                 <div class="ie-placeholder__message">
                     Извините, ваш браузер не поддерживается
+                </div>
+            </div>            <div class="collaboration-modal js-modal" id="collaboration-modal">
+                <div class="collaboration-modal__content">
+                    <button class="collaboration-modal__close js-close-modal" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                            <path
+                                d="M18.3542 0.613252C18.8379 0.129567 19.6215 0.129567 20.1052 0.613252C20.5889 1.09694 20.5889 1.88055 20.1052 2.36423L12.2195 10.25L20.0984 18.1289C20.5817 18.6126 20.5819 19.3973 20.0984 19.8808C19.6148 20.3644 18.8301 20.3642 18.3464 19.8808L10.4675 12.0019L2.58957 19.8808C2.10587 20.3642 1.3212 20.3644 0.837617 19.8808C0.354041 19.3973 0.354258 18.6126 0.837617 18.1289L8.71555 10.25L0.830781 2.36423C0.347096 1.88054 0.347096 1.09694 0.830781 0.613252C1.31447 0.129567 2.09807 0.129567 2.58176 0.613252L10.4675 8.49899L18.3542 0.613252Z" />
+                        </svg>
+                    </button>
+                    <h3 class="collaboration-modal__heading">
+                        Запрос на сотрудничество
+                    </h3>
+                    <form action="/" method="POST" class="collaboration-modal__form" data-need-validation="">
+                        <div class="collaboration-modal__fields">
+                            <div class="collaboration-modal__field">
+                                <div class="collaboration-modal__field-input-wrapper">
+                                    <label class="collaboration-modal__field-label">
+                                        <input type="text" class="collaboration-modal__filed-input" placeholder="Имя*"
+                                            name="your-name" required="">
+                                        <span class="collaboration-modal__field-label-text">
+                                            Имя*
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="collaboration-modal__field">
+                                <div class="collaboration-modal__field-input-wrapper">
+                                    <label class="collaboration-modal__field-label">
+                                        <input type="tel" class="collaboration-modal__filed-input js-phone-input"
+                                            placeholder="Телефон*" name="your-phone" required="" data-parsley-phone="">
+                                        <span class="collaboration-modal__field-label-text">
+                                            Телефон*
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="collaboration-modal__field">
+                                <div class="collaboration-modal__field-input-wrapper">
+                                    <label class="collaboration-modal__field-label">
+                                        <input type="email" class="collaboration-modal__filed-input" placeholder="Email"
+                                            name="your-email">
+                                        <span class="collaboration-modal__field-label-text">
+                                            E-mail
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="collaboration-modal__field">
+                                <div class="collaboration-modal__field-input-wrapper">
+                                    <label class="collaboration-modal__field-label">
+                                        <textarea class="collaboration-modal__filed-input" placeholder="Комментарий"
+                                            name="your-comment"></textarea>
+                                        <span class="collaboration-modal__field-label-text">
+                                            Комментарий
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collaboration-modal__checkboxes">
+                            <label class="collaboration-modal__checkbox">
+                                <input type="checkbox" class="collaboration-modal__checkbox-input" required="" name="policy">
+                                <span class="collaboration-modal__checkbox-mark">
+                                    <svg width="10" height="11" viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.41837 2.92801C7.68501 2.66137 8.11754 2.66137 8.38419 2.92801L8.47305 3.01688C8.73962 3.28352 8.73967 3.71608 8.47305 3.9827L4.70157 7.75418C4.55244 7.90331 4.35145 7.96522 4.15665 7.94754C3.96217 7.96489 3.76156 7.90304 3.6127 7.75418L1.52579 5.66727C1.25915 5.40062 1.25915 4.96809 1.52579 4.70145L1.61465 4.61258C1.8813 4.34594 2.31383 4.34594 2.58047 4.61258L4.15665 6.18875L7.41837 2.92801Z" />
+                                    </svg>
+                                </span>
+            
+                                <span class="collaboration-modal__checkbox-text">
+                                    Нажимая кнопку «Оставить заявку», я даю свое согласие на обработку моих персональных данных,в
+                                    соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на
+                                    условиях и для целей, определенных в Согласии на обработку персональных данных.*
+                                </span>
+                            </label>
+                            <label class="collaboration-modal__checkbox">
+                                <input type="checkbox" class="collaboration-modal__checkbox-input" name="newsletter">
+                                <span class="collaboration-modal__checkbox-mark">
+                                    <svg width="10" height="11" viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.41837 2.92801C7.68501 2.66137 8.11754 2.66137 8.38419 2.92801L8.47305 3.01688C8.73962 3.28352 8.73967 3.71608 8.47305 3.9827L4.70157 7.75418C4.55244 7.90331 4.35145 7.96522 4.15665 7.94754C3.96217 7.96489 3.76156 7.90304 3.6127 7.75418L1.52579 5.66727C1.25915 5.40062 1.25915 4.96809 1.52579 4.70145L1.61465 4.61258C1.8813 4.34594 2.31383 4.34594 2.58047 4.61258L4.15665 6.18875L7.41837 2.92801Z" />
+                                    </svg>
+                                </span>
+            
+                                <span class="collaboration-modal__checkbox-text">
+                                    Согласен получать информацию о скидках и акциях.*
+                                </span>
+                            </label>
+                        </div>
+                        <button class="collaboration-modal__button" type="submit">
+                            Оставить заявку
+                        </button>
+                    </form>
                 </div>
             </div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="js/app.js"></script>
