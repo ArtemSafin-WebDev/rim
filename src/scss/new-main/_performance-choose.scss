@@ -1,5 +1,7 @@
 .performance-choose {
     margin-bottom: 16rem;
+    position: relative;
+    z-index: 6;
 
     @include breakpoint(mobile) {
         margin-bottom: 7rem;

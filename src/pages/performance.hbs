@@ -1,7 +1,13 @@
 {{#extend "new-main"}}
     {{#content "main"}}
         <section class="performance-intro">
-            <img src="img/performance/intro-blur.webp" alt="" class="performance-intro__blur">
+            <picture>
+                <source srcset="img/performance/mega-bg-mobile.avif" type="image/avif" media="(max-width: 640px)" />
+                <source srcset="img/performance/mega-bg.avif" type="image/avif" />
+                <source srcset="img/performance/mega-bg-mobile.webp" type="image/webp" media="(max-width: 640px)" />
+                <source srcset="img/performance/mega-bg.webp" type="image/webp" />
+                <img src="img/performance/mega-bg.webp" alt="" class="performance-intro__blur">
+            </picture>
             <div class="container">
                 <div class="performance-intro__content">
                     <picture>
@@ -11,6 +17,7 @@
                     <ul class="performance-intro__list">
                         <li class="performance-intro__list-item">
                             <div class="performance-intro__card performance-intro__card--orange">
+                                <img src="img/performance/intro-star.svg" alt="" class="performance-intro__card-star">
                                 <ul>
                                     <li>
                                         Фокус на продажах
@@ -78,7 +85,7 @@
             </div>
         </section>
         <section class="performance-advantages">
-            <img src="img/performance/advantages-blur.webp" alt="" class="performance-advantages__blur">
+            {{!-- <img src="img/performance/advantages-blur.webp" alt="" class="performance-advantages__blur"> --}}
             <div class="container">
                 <div class="performance-advantages__content">
                     <h2 class="performance-advantages__heading">
@@ -403,7 +410,7 @@
                     </h2>
                     <ul class="performance-cases__list performance-cases__list--first">
                         <li class="performance-cases__list-item">
-                            <a href="#" class="performance-cases__card">
+                            <a href="#case-haval" class="performance-cases__card js-open-modal">
                                 <picture>
                                     <source srcset="img/performance/cases/1-mobile.webp" media="(max-width: 640px)" />
                                     <img src="img/performance/cases/1.webp" alt=""
@@ -434,7 +441,7 @@
                             </a>
                         </li>
                         <li class="performance-cases__list-item">
-                            <a href="#" class="performance-cases__card">
+                            <a href="#case-spar" class="performance-cases__card js-open-modal">
                                 <picture>
                                     <source srcset="img/performance/cases/2-mobile.webp" media="(max-width: 640px)" />
                                     <img src="img/performance/cases/2.webp" alt=""
@@ -479,7 +486,7 @@
                             </a>
                         </li>
                         <li class="performance-cases__list-item">
-                            <a href="#" class="performance-cases__card">
+                            <a href="#case-richflavors" class="performance-cases__card js-open-modal">
                                 <picture>
                                     <source srcset="img/performance/cases/3-mobile.webp" media="(max-width: 640px)" />
                                     <img src="img/performance/cases/3.webp" alt=""
@@ -522,7 +529,7 @@
                             </a>
                         </li>
                         <li class="performance-cases__list-item">
-                            <a href="#" class="performance-cases__card">
+                            <a href="#case-dodo" class="performance-cases__card js-open-modal">
                                 <picture>
                                     <source srcset="img/performance/cases/4-mobile.webp" media="(max-width: 640px)" />
                                     <img src="img/performance/cases/4.webp" alt=""
@@ -563,7 +570,7 @@
                     </div>
                     <ul class="performance-cases__list performance-cases__list--second">
                         <li class="performance-cases__list-item">
-                            <a href="#" class="performance-cases__card">
+                            <a href="#case-filarmony" class="performance-cases__card js-open-modal">
                                 <picture>
                                     <source srcset="img/performance/cases/5-mobile.webp" media="(max-width: 640px)" />
                                     <img src="img/performance/cases/5.webp" alt=""
@@ -606,7 +613,7 @@
                             </a>
                         </li>
                         <li class="performance-cases__list-item">
-                            <a href="#" class="performance-cases__card">
+                            <a href="#case-changan" class="performance-cases__card js-open-modal">
                                 <picture>
                                     <source srcset="img/performance/cases/6-mobile.webp" media="(max-width: 640px)" />
                                     <img src="img/performance/cases/6.webp" alt=""
@@ -640,7 +647,7 @@
                             </a>
                         </li>
                         <li class="performance-cases__list-item">
-                            <a href="#" class="performance-cases__card">
+                            <a href="#case-legenda" class="performance-cases__card js-open-modal">
                                 <picture>
                                     <source srcset="img/performance/cases/7-mobile.webp" media="(max-width: 640px)" />
                                     <img src="img/performance/cases/7.webp" alt=""
@@ -673,7 +680,7 @@
                             </a>
                         </li>
                         <li class="performance-cases__list-item">
-                            <a href="#" class="performance-cases__card">
+                            <a href="#case-intel-invest" class="performance-cases__card js-open-modal">
                                 <picture>
                                     <source srcset="img/performance/cases/8-mobile.webp" media="(max-width: 640px)" />
                                     <img src="img/performance/cases/8.webp" alt=""
@@ -721,6 +728,676 @@
                 </div>
             </div>
         </section>
+        <div class="performance-cases__modal js-modal" id="case-haval">
+            <div class="performance-cases__modal-inner">
+                <button class="performance-cases__modal-close js-close-modal" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12">
+                        <path
+                            d="M0.792969 1.04224C1.18349 0.651819 1.81654 0.651768 2.20703 1.04224L5.75 4.58521L9.29297 1.04321L9.36914 0.973877C9.76191 0.653419 10.3409 0.677078 10.707 1.04321C11.0732 1.40937 11.0968 1.98833 10.7764 2.3811L10.707 2.45728L7.16406 5.99927L10.707 9.54321L10.7764 9.61841C11.0968 10.0112 11.0732 10.5911 10.707 10.9573C10.3409 11.3231 9.76178 11.346 9.36914 11.0256L9.29297 10.9573L5.75 7.41333L2.20703 10.9573C1.81651 11.3478 1.18349 11.3478 0.792969 10.9573C0.402468 10.5667 0.402452 9.93373 0.792969 9.54321L4.33594 5.99927L0.792969 2.4563C0.402468 2.06577 0.402452 1.43275 0.792969 1.04224Z" />
+                    </svg>
+                </button>
+                <div class="performance-cases__modal-top">
+                    <div class="performance-cases__modal-image-wrapper">
+                        <picture>
+                            <source srcset="img/performance/cases/1-modal-mobile.webp" media="(max-width: 640px)" />
+                            <img src="img/performance/cases/1-modal.webp" alt="" class="performance-cases__modal-image">
+                        </picture>
+
+                    </div>
+                    <div class="performance-cases__modal-tags">
+                        <div class="performance-cases__modal-tag">
+                            #B2C
+                        </div>
+
+                    </div>
+                    <img src="img/performance/cases/haval.svg" alt="" class="performance-cases__modal-logo">
+                    <div class="performance-cases__modal-title">
+                        Помогли получить заявки и продать более 50 автомобилей Haval с помощью таргетированной
+                        рекламы ВКонтакте
+                    </div>
+                </div>
+                <div class="performance-cases__modal-bottom">
+                    <div class="performance-cases__modal-text-content">
+                        <p>
+                            <b>
+                                Цель:
+                            </b>
+                            получить заявки на тест-драйв и консультацию.
+                        </p>
+                        <p>
+                            <b>Проблема:</b> сайт имел низкую конверсию, а клиент сомневался в эффективности
+                            интернет-продвижения из-за негативного опыта.
+                        </p>
+                        <h3>
+                            Решение:
+                        </h3>
+                        <ul>
+                            <li>
+                                Создали лендинг с подробным описанием автомобиля и условиями тест-драйва.
+                            </li>
+                            <li>
+                                Определили целевую аудиторию.
+                            </li>
+                            <li>
+                                Настроили простую лид-форму в VK Рекламе, чтобы минимизировать дополнительные клики и
+                                упростить процесс оставления заявки.
+                            </li>
+                            <li>
+                                <p>
+                                    Создали рекламные объявления с ярким визуалом, привлекательным текстом и четким
+                                    призывом
+                                    к действию.
+                                </p>
+
+                                <p>
+                                    Ежедневно отслеживали результаты рекламной кампании, корректировали таргетинг и
+                                    текст
+                                    объявлений.
+                                </p>
+
+                            </li>
+                        </ul>
+                        <h3>
+                            Результаты:
+                        </h3>
+                        <ul>
+                            <li>
+                                Получили более 605 заявок.
+                            </li>
+                            <li>
+                                За время кампании было продано около 50 автомобилей Haval, выдачи проводились
+                                ежемесячно.
+                            </li>
+                        </ul>
+                        <h3>
+                            Клиент остался доволен. Он продолжает сотрудничество и регулярно увеличивает бюджет.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="performance-cases__modal js-modal" id="case-spar">
+            <div class="performance-cases__modal-inner">
+                <button class="performance-cases__modal-close js-close-modal" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12">
+                        <path
+                            d="M0.792969 1.04224C1.18349 0.651819 1.81654 0.651768 2.20703 1.04224L5.75 4.58521L9.29297 1.04321L9.36914 0.973877C9.76191 0.653419 10.3409 0.677078 10.707 1.04321C11.0732 1.40937 11.0968 1.98833 10.7764 2.3811L10.707 2.45728L7.16406 5.99927L10.707 9.54321L10.7764 9.61841C11.0968 10.0112 11.0732 10.5911 10.707 10.9573C10.3409 11.3231 9.76178 11.346 9.36914 11.0256L9.29297 10.9573L5.75 7.41333L2.20703 10.9573C1.81651 11.3478 1.18349 11.3478 0.792969 10.9573C0.402468 10.5667 0.402452 9.93373 0.792969 9.54321L4.33594 5.99927L0.792969 2.4563C0.402468 2.06577 0.402452 1.43275 0.792969 1.04224Z" />
+                    </svg>
+                </button>
+                <div class="performance-cases__modal-top">
+                    <div class="performance-cases__modal-image-wrapper">
+                        <picture>
+                            <source srcset="img/performance/cases/2-modal-mobile.webp" media="(max-width: 640px)" />
+                            <img src="img/performance/cases/2-modal.webp" alt="" class="performance-cases__modal-image">
+                        </picture>
+
+                    </div>
+                    <div class="performance-cases__modal-tags">
+                        <div class="performance-cases__modal-tag">
+                            #HR
+                        </div>
+
+                    </div>
+                    <img src="img/performance/cases/spar.svg" alt="" class="performance-cases__modal-logo">
+                    <div class="performance-cases__modal-title">
+                        Запустили сайт с вакансиями rabota-spar.ru и увеличили количество заявок в 5 раз с помощью VK
+                        Рекламы и Яндекс Директа
+                    </div>
+                </div>
+                <div class="performance-cases__modal-bottom">
+                    <div class="performance-cases__modal-text-content">
+                        <p>
+                            <b>Цель:</b> получить отклики на вакансии и закрыть набор персонала.
+                        </p>
+                        <p>
+                            <b>Проблема:</b> старая страница с вакансиями не была адаптирована под разные города, форма
+                            заявки была слишком сложной, клиент сомневался в эффективности рекламы в Яндексе и
+                            ВКонтакте.
+                        </p>
+                        <h3>
+                            Решение:
+                        </h3>
+                        <ul>
+                            <li>
+                                Создали посадочную страницу с понятным разделением по городам, а также простую и
+                                интуитивно понятную форму оставления заявки.
+                            </li>
+                            <li> Разработали стратегию продвижения и настроили рекламу на новый сайт. Разбили трафик по
+                                городам и вакансиям, разработали персонализированные фото- и видеокреативы,
+                                скорректировали текст объявлений.
+                            </li>
+                        </ul>
+                        <h3>
+                            Результаты:
+                        </h3>
+                        <ul>
+                            <li>
+                                В Казани количество заявок выросло в 5 раз, а стоимость одной заявки снизилась в 2 раза.
+                            </li>
+                            <li>
+                                В других городах количество заявок увеличилось в 5 раз, а их стоимость уменьшилась в 5
+                                раз. 
+                            </li>
+                            <li>
+                                Снизили стоимость лида в 2-5 раз.
+                            </li>
+                            <li>
+                                Повысили кликабельность на 25%.
+                            </li>
+                        </ul>
+                        <h3>
+                            Клиент остался доволен результатами и продолжает работать с нами более года.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="performance-cases__modal js-modal" id="case-richflavors">
+            <div class="performance-cases__modal-inner">
+                <button class="performance-cases__modal-close js-close-modal" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12">
+                        <path
+                            d="M0.792969 1.04224C1.18349 0.651819 1.81654 0.651768 2.20703 1.04224L5.75 4.58521L9.29297 1.04321L9.36914 0.973877C9.76191 0.653419 10.3409 0.677078 10.707 1.04321C11.0732 1.40937 11.0968 1.98833 10.7764 2.3811L10.707 2.45728L7.16406 5.99927L10.707 9.54321L10.7764 9.61841C11.0968 10.0112 11.0732 10.5911 10.707 10.9573C10.3409 11.3231 9.76178 11.346 9.36914 11.0256L9.29297 10.9573L5.75 7.41333L2.20703 10.9573C1.81651 11.3478 1.18349 11.3478 0.792969 10.9573C0.402468 10.5667 0.402452 9.93373 0.792969 9.54321L4.33594 5.99927L0.792969 2.4563C0.402468 2.06577 0.402452 1.43275 0.792969 1.04224Z" />
+                    </svg>
+                </button>
+                <div class="performance-cases__modal-top">
+                    <div class="performance-cases__modal-image-wrapper">
+                        <picture>
+                            <source srcset="img/performance/cases/3-modal-mobile.webp" media="(max-width: 640px)" />
+                            <img src="img/performance/cases/3-modal.webp" alt="" class="performance-cases__modal-image">
+                        </picture>
+
+                    </div>
+                    <div class="performance-cases__modal-tags">
+                        <div class="performance-cases__modal-tag">
+                            #B2B
+                        </div>
+
+                    </div>
+                    <img src="img/performance/cases/richflavors.svg" alt="" class="performance-cases__modal-logo">
+                    <div class="performance-cases__modal-title">
+                        Увеличили оптовые продажи для производителя пищевых ароматизаторов RICHFLAVORS с помощью
+                        контекстной рекламы
+                    </div>
+                </div>
+                <div class="performance-cases__modal-bottom">
+                    <div class="performance-cases__modal-text-content">
+                        <p>
+                            <b>Цель:</b> привлечь B2B-лиды — заявки на оптовые заказы.
+                        </p>
+                        <p>
+                            <b>Проблема:</b> низкая конверсия сайта и скептическое отношение клиента к контекстной
+                            рекламе.
+                        </p>
+                        <p>
+                            <b>Бюджет на старте:</b> 25–30 тыс. рублей в месяц.
+                        </p>
+                        <h3>
+                            Решение:
+                        </h3>
+                        <ul>
+                            <li>
+                                Проверили сайт на юзабилити и конверсионность.
+                            </li>
+                            <li> Изменили структуру сайта и контент, сделали формы обратной связи проще и адаптировали
+                                их для B2B-сегмента.
+                            </li>
+                            <li>
+                                <p>
+                                    Запустили рекламу в Яндекс Директе, ориентированную на привлечение B2B-клиентов.
+                                    Разработали объявления, показывающие, что производитель поставляет только
+                                    качественную натуральную продукцию и ориентирован на долгосрочное сотрудничество с
+                                    юрлицами.
+                                </p>
+                                <p>
+                                    Регулярно корректировали рекламные кампании, ставки, объявления и минус-слова.
+                                </p>
+                            </li>
+                        </ul>
+                        <h3>
+                            Результаты:
+                        </h3>
+                        <ul>
+                            <li>
+                                Конверсия сайта выросла в 9 раз.
+                            </li>
+                            <li>
+                                Количество лидов увеличилось в 5 раз: клиент стал стабильно получать 50-60 заявок каждый
+                                месяц.
+                            </li>
+                            <li>
+                                За год привлекли более 500 заявок на оптовые заказы.
+                            </li>
+                            <li>
+                                Стоимость лида снизилась на 50%.
+                            </li>
+                        </ul>
+                        <p>
+                            <b>Разделение B2B- и B2C-трафика:</b> после оптимизации формы на сайте заявки поступают
+                            только от юридических лиц, физические лица переходят на OZON и заказывают там.
+                        </p>
+                        <h3>
+                            Клиент доволен результатами и продолжает сотрудничество с нами уже более 3 лет.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="performance-cases__modal js-modal" id="case-legenda">
+            <div class="performance-cases__modal-inner">
+                <button class="performance-cases__modal-close js-close-modal" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12">
+                        <path
+                            d="M0.792969 1.04224C1.18349 0.651819 1.81654 0.651768 2.20703 1.04224L5.75 4.58521L9.29297 1.04321L9.36914 0.973877C9.76191 0.653419 10.3409 0.677078 10.707 1.04321C11.0732 1.40937 11.0968 1.98833 10.7764 2.3811L10.707 2.45728L7.16406 5.99927L10.707 9.54321L10.7764 9.61841C11.0968 10.0112 11.0732 10.5911 10.707 10.9573C10.3409 11.3231 9.76178 11.346 9.36914 11.0256L9.29297 10.9573L5.75 7.41333L2.20703 10.9573C1.81651 11.3478 1.18349 11.3478 0.792969 10.9573C0.402468 10.5667 0.402452 9.93373 0.792969 9.54321L4.33594 5.99927L0.792969 2.4563C0.402468 2.06577 0.402452 1.43275 0.792969 1.04224Z" />
+                    </svg>
+                </button>
+                <div class="performance-cases__modal-top">
+                    <div class="performance-cases__modal-image-wrapper">
+                        <picture>
+                            <source srcset="img/performance/cases/7-modal-mobile.webp" media="(max-width: 640px)" />
+                            <img src="img/performance/cases/7-modal.webp" alt="" class="performance-cases__modal-image">
+                        </picture>
+
+                    </div>
+                    <div class="performance-cases__modal-tags">
+                        <div class="performance-cases__modal-tag">
+                            #B2C
+                        </div>
+
+                    </div>
+                    <img src="img/performance/cases/legenda.svg" alt="" class="performance-cases__modal-logo">
+                    <div class="performance-cases__modal-title">
+                        Увеличили количество лидов для питомника «Легенда Волги» с помощью контекстной рекламы
+                    </div>
+                </div>
+                <div class="performance-cases__modal-bottom">
+                    <div class="performance-cases__modal-text-content">
+                        <p>
+                            <b>Цель:</b> привлечь потенциальных клиентов на сайт и снизить стоимость привлечения одного
+                            лида (CPL).
+                        </p>
+                        <p>
+                            <b>Проблема:</b> сайт не привлекал посетителей и имел низкую конверсию. Заявок не поступало.
+                        </p>
+
+                        <h3>
+                            Решение:
+                        </h3>
+                        <ul>
+                            <li>
+                                Усилили первый экран с УТП, добавили на сайт новые информационные блоки, экран с путем
+                                клиента, удобные формы для заявок и контактные данные для быстрого отклика.
+                            </li>
+                            <li>
+                                <p>
+                                    Настроили контекстную рекламу в Яндекс Директе с учетом особенностей целевой
+                                    аудитории, интересующейся породными щенками и дрессировкой.
+                                </p>
+                                <p>
+                                    Создали рекламные объявления с яркой визуализацией, призывом к действию и
+                                    преимуществами «Легенды Волги».
+                                </p>
+                            </li>
+                            <li>
+                                Ежедневно мониторили результаты рекламной кампании, корректировали таргетинг и
+                                объявления для повышения эффективности.
+                            </li>
+                        </ul>
+                        <h3>
+                            Результаты:
+                        </h3>
+                        <ul>
+                            <li>
+                                За месяц привлекли более 370 потенциальных клиентов, хотя в плане было 50.
+                            </li>
+                            <li>
+                                Снизили цену заявки на 40%.
+                            </li>
+                            <li>
+                                Увеличили конверсию сайта с 1,47% до 16%. Итоговая стоимость конверсии оказалась на 43%
+                                ниже запланированной.
+                            </li>
+                            <li>
+                                Стоимость лида снизилась на 50%.
+                            </li>
+                        </ul>
+                        <h3>
+                            По сей день продолжаем сотрудничество с клиентом: рекламная кампания стабильно показывает
+                            хорошие результаты.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="performance-cases__modal js-modal" id="case-intel-invest">
+            <div class="performance-cases__modal-inner">
+                <button class="performance-cases__modal-close js-close-modal" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12">
+                        <path
+                            d="M0.792969 1.04224C1.18349 0.651819 1.81654 0.651768 2.20703 1.04224L5.75 4.58521L9.29297 1.04321L9.36914 0.973877C9.76191 0.653419 10.3409 0.677078 10.707 1.04321C11.0732 1.40937 11.0968 1.98833 10.7764 2.3811L10.707 2.45728L7.16406 5.99927L10.707 9.54321L10.7764 9.61841C11.0968 10.0112 11.0732 10.5911 10.707 10.9573C10.3409 11.3231 9.76178 11.346 9.36914 11.0256L9.29297 10.9573L5.75 7.41333L2.20703 10.9573C1.81651 11.3478 1.18349 11.3478 0.792969 10.9573C0.402468 10.5667 0.402452 9.93373 0.792969 9.54321L4.33594 5.99927L0.792969 2.4563C0.402468 2.06577 0.402452 1.43275 0.792969 1.04224Z" />
+                    </svg>
+                </button>
+                <div class="performance-cases__modal-top">
+                    <div class="performance-cases__modal-image-wrapper">
+                        <picture>
+                            <source srcset="img/performance/cases/8-modal-mobile.webp" media="(max-width: 640px)" />
+                            <img src="img/performance/cases/8-modal.webp" alt="" class="performance-cases__modal-image">
+                        </picture>
+
+                    </div>
+                    <div class="performance-cases__modal-tags">
+                        <div class="performance-cases__modal-tag">
+                            #B2C
+                        </div>
+
+                    </div>
+                    <img src="img/performance/cases/intel-invest.webp" alt="" class="performance-cases__modal-logo">
+                    <div class="performance-cases__modal-title">
+                        Помогли инвестиционной компании, специализирующейся на покупке внебиржевых акций, получить за
+                        месяц более 100 заявок
+                    </div>
+                </div>
+                <div class="performance-cases__modal-bottom">
+                    <div class="performance-cases__modal-text-content">
+                        <p>
+                            <b>Цель:</b> привлечь лиды.
+                        </p>
+                        <p>
+                            <b>Проблема:</b> у клиента не было доступа к старому рекламному кабинету. Сайт был
+                            устаревшим и неконверсионным, без интеграции с CRM-кабинетом. Клиент не верил в контекстную
+                            рекламу из-за негативного опыта с подрядчиком, который безрезультатно потратил весь бюджет.
+                        </p>
+
+                        <h3>
+                            Мы нашли решение:
+                        </h3>
+                        <ul>
+                            <li>
+                                Изучили конкурентов и составили портрет целевой аудитории.
+                            </li>
+                            <li>
+                                Запустили новый лендинг.
+                            </li>
+                            <li>
+                                Настроили рекламу в Яндекс Директе: собрали семантическое ядро на 2500 ключей, написали
+                                тексты и заголовки, подготовили фото- и видеокреативы.
+                            </li>
+                            <li>
+                                Внедрили на сайт аналитический сервис CallTouch.
+                            </li>
+                            <li>
+                                Настроили интеграцию с AmoCRM.
+                            </li>
+                        </ul>
+                        <h3>
+                            Результаты:
+                        </h3>
+                        <ul>
+                            <li>
+                                В первый месяц мы перевыполнили план по заявкам на 20%. Далее показатели только росли.
+                            </li>
+                            <li>
+                                Цена заявки получилась на 18% ниже планируемой — 350 рублей вместо 550.
+                            </li>
+                            <li>
+                                Новый лендинг показал конверсию более 11%.
+                            </li>
+                        </ul>
+                        <h3>
+                            Клиент доволен! Мы продолжаем сотрудничать, постепенно увеличивая рекламный бюджет и улучшая
+                            показатели.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="performance-cases__modal js-modal" id="case-changan">
+            <div class="performance-cases__modal-inner">
+                <button class="performance-cases__modal-close js-close-modal" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12">
+                        <path
+                            d="M0.792969 1.04224C1.18349 0.651819 1.81654 0.651768 2.20703 1.04224L5.75 4.58521L9.29297 1.04321L9.36914 0.973877C9.76191 0.653419 10.3409 0.677078 10.707 1.04321C11.0732 1.40937 11.0968 1.98833 10.7764 2.3811L10.707 2.45728L7.16406 5.99927L10.707 9.54321L10.7764 9.61841C11.0968 10.0112 11.0732 10.5911 10.707 10.9573C10.3409 11.3231 9.76178 11.346 9.36914 11.0256L9.29297 10.9573L5.75 7.41333L2.20703 10.9573C1.81651 11.3478 1.18349 11.3478 0.792969 10.9573C0.402468 10.5667 0.402452 9.93373 0.792969 9.54321L4.33594 5.99927L0.792969 2.4563C0.402468 2.06577 0.402452 1.43275 0.792969 1.04224Z" />
+                    </svg>
+                </button>
+                <div class="performance-cases__modal-top">
+                    <div class="performance-cases__modal-image-wrapper">
+                        <picture>
+                            <source srcset="img/performance/cases/6-modal-mobile.webp" media="(max-width: 640px)" />
+                            <img src="img/performance/cases/6-modal.webp" alt="" class="performance-cases__modal-image">
+                        </picture>
+
+                    </div>
+                    <div class="performance-cases__modal-tags">
+                        <div class="performance-cases__modal-tag">
+                            #B2C
+                        </div>
+
+                    </div>
+                    <img src="img/performance/cases/changan.svg" alt="" class="performance-cases__modal-logo">
+                    <div class="performance-cases__modal-title">
+                        Помогли получить более 400 заявок и запустить ежемесячные выдачи автомобилей Changan с помощью
+                        таргетированной рекламы ВКонтакте
+                    </div>
+                </div>
+                <div class="performance-cases__modal-bottom">
+                    <div class="performance-cases__modal-text-content">
+                        <p>
+                            <b>Цель:</b> увеличить количество лидов и повысить узнаваемость Changan в Казани.
+                        </p>
+                        <p>
+                            <b>Проблема:</b> спрос на автомобили Changan в Казани был крайне низким — всего 150
+                            поисковых
+                            запросов в месяц. Целевая аудитория почти не знала данную марку.
+                        </p>
+
+                        <h3>
+                            Решение
+                        </h3>
+                        <ul>
+                            <li>
+                                Для точного таргетинга выбрали платформу ВКонтакте.
+                            </li>
+                            <li>
+                                Настроили простую лид-форму в VK Рекламе, чтобы минимизировать дополнительные клики и
+                                упростить процесс оставления заявки.
+                            </li>
+                            <li>
+                                Создали рекламные объявления с ярким визуалом, привлекательным текстом и четким призывом
+                                к действию.
+                            </li>
+                            <li>
+                                Ежедневно мониторили результаты рекламной кампании, корректировали таргетинг и
+                                объявления.
+                            </li>
+
+                        </ul>
+                        <h3>
+                            Результаты:
+                        </h3>
+                        <ul>
+                            <li>
+                                За время рекламной кампании через лид-форму было привлечено более 400 лидов. Выдачи
+                                автомобилей осуществлялись ежемесячно.
+                            </li>
+                            <li>
+                                Анализ поисковых запросов показал рост интереса к Changan в Казани.
+                            </li>
+                            <li>
+                                Стоимость заявки снизилась на 45%.
+                            </li>
+                        </ul>
+                        <h3>
+                            Клиент остался доволен результатами и увеличил рекламный бюджет. Сейчас мы регулярно
+                            приводим около 70 лидов каждый месяц — это в 2,5 раза больше, чем на старте.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="performance-cases__modal js-modal" id="case-dodo">
+            <div class="performance-cases__modal-inner">
+                <button class="performance-cases__modal-close js-close-modal" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12">
+                        <path
+                            d="M0.792969 1.04224C1.18349 0.651819 1.81654 0.651768 2.20703 1.04224L5.75 4.58521L9.29297 1.04321L9.36914 0.973877C9.76191 0.653419 10.3409 0.677078 10.707 1.04321C11.0732 1.40937 11.0968 1.98833 10.7764 2.3811L10.707 2.45728L7.16406 5.99927L10.707 9.54321L10.7764 9.61841C11.0968 10.0112 11.0732 10.5911 10.707 10.9573C10.3409 11.3231 9.76178 11.346 9.36914 11.0256L9.29297 10.9573L5.75 7.41333L2.20703 10.9573C1.81651 11.3478 1.18349 11.3478 0.792969 10.9573C0.402468 10.5667 0.402452 9.93373 0.792969 9.54321L4.33594 5.99927L0.792969 2.4563C0.402468 2.06577 0.402452 1.43275 0.792969 1.04224Z" />
+                    </svg>
+                </button>
+                <div class="performance-cases__modal-top">
+                    <div class="performance-cases__modal-image-wrapper">
+                        <picture>
+                            <source srcset="img/performance/cases/4-modal-mobile.webp" media="(max-width: 640px)" />
+                            <img src="img/performance/cases/4-modal.webp" alt="" class="performance-cases__modal-image">
+                        </picture>
+
+                    </div>
+                    <div class="performance-cases__modal-tags">
+                        <div class="performance-cases__modal-tag">
+                            #HR
+                        </div>
+
+                    </div>
+                    <img src="img/performance/cases/dodo.svg" alt="" class="performance-cases__modal-logo">
+                    <div class="performance-cases__modal-title">
+                        Увеличили количество лидов от соискателей и повысили узнаваемость HR-бренда Додо Пиццы с помощью
+                        таргетированной и имиджевой рекламы ВКонтакте
+                    </div>
+                </div>
+                <div class="performance-cases__modal-bottom">
+                    <div class="performance-cases__modal-text-content">
+                        <p>
+                            <b>Цель:</b> привлечь кандидатов на вакансии авто- и велокурьеров, пиццамейкеров, кассиров.
+                        </p>
+                        <p>
+                            <b>Проблема:</b> это была задача со звездочкой, ведь в сфере общепита и доставки высокая
+                            конкуренция за квалифицированных специалистов.
+                        </p>
+
+                        <h3>
+                            Решение
+                        </h3>
+                        <ul>
+                            <li>
+                                Настроили таргетированную рекламу ВКонтакте по гео,возрасту, полу, интересам и
+                                сообществам, связанным с работой и поиском вакансий.
+                            </li>
+                            <li>
+                                Создали объявления с яркой визуализацией, призывом к действию и преимуществами работы в
+                                Додо Пицце.
+                            </li>
+                            <li>
+                                Разработали удобные лид-формы для каждой вакансии.
+                            </li>
+                            <li>
+                                Запустили брендовую рекламу, чтобы повысить узнаваемость Додо Пиццы как привлекательного
+                                работодателя.
+                            </li>
+                            <li>
+                                Ежедневно мониторили результаты рекламной кампании, корректировали таргетинг и
+                                объявления, чтобы повысить их эффективность.
+                            </li>
+
+                        </ul>
+                        <h3>
+                            Результаты:
+                        </h3>
+                        <ul>
+                            <li>
+                                Со второго месяца кампании увеличили количество лидов на 63% благодаря корректировкам.
+                            </li>
+                            <li>
+                                Рекламная кампания стартовала в сентябре 2024 года с тестового бюджета 50 тыс. рублей и
+                                продолжается до сих пор.
+                            </li>
+
+                        </ul>
+                        <h3>
+                            Клиент доволен результатами и продолжает сотрудничество, увеличивая бюджет.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="performance-cases__modal js-modal" id="case-filarmony">
+            <div class="performance-cases__modal-inner">
+                <button class="performance-cases__modal-close js-close-modal" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12">
+                        <path
+                            d="M0.792969 1.04224C1.18349 0.651819 1.81654 0.651768 2.20703 1.04224L5.75 4.58521L9.29297 1.04321L9.36914 0.973877C9.76191 0.653419 10.3409 0.677078 10.707 1.04321C11.0732 1.40937 11.0968 1.98833 10.7764 2.3811L10.707 2.45728L7.16406 5.99927L10.707 9.54321L10.7764 9.61841C11.0968 10.0112 11.0732 10.5911 10.707 10.9573C10.3409 11.3231 9.76178 11.346 9.36914 11.0256L9.29297 10.9573L5.75 7.41333L2.20703 10.9573C1.81651 11.3478 1.18349 11.3478 0.792969 10.9573C0.402468 10.5667 0.402452 9.93373 0.792969 9.54321L4.33594 5.99927L0.792969 2.4563C0.402468 2.06577 0.402452 1.43275 0.792969 1.04224Z" />
+                    </svg>
+                </button>
+                <div class="performance-cases__modal-top">
+                    <div class="performance-cases__modal-image-wrapper">
+                        <picture>
+                            <source srcset="img/performance/cases/5-modal-mobile.webp" media="(max-width: 640px)" />
+                            <img src="img/performance/cases/5-modal.webp" alt="" class="performance-cases__modal-image">
+                        </picture>
+
+                    </div>
+                    <div class="performance-cases__modal-tags">
+                        <div class="performance-cases__modal-tag">
+                            #B2C
+                        </div>
+
+                    </div>
+                    <img src="img/performance/cases/filarmony.svg" alt="" class="performance-cases__modal-logo">
+                    <div class="performance-cases__modal-title">
+                        Увеличили продажи билетов Казанской филармонии на 80% с помощью комплексной стратегии и VK
+                        Рекламы
+                    </div>
+                </div>
+                <div class="performance-cases__modal-bottom">
+                    <div class="performance-cases__modal-text-content">
+                        <p>
+                            <b>Период:</b> февраль 2023 — сейчас.
+                        </p>
+                        <p>
+                            <b>Бюджет:</b> 30–40 тыс. рублей в месяц.
+                        </p>
+                        <p>
+                            <b>Цель:</b> повысить продажи билетов, особенно на татарские спектакли.
+                        </p>
+                        <p>
+                            <b>Проблема:</b> филармония — малоизвестное в регионе муниципальное учреждение культуры.
+                            Конкурентов много, включая агрегаторы билетов.
+                        </p>
+
+                        <h3>
+                            Решение
+                        </h3>
+                        <ul>
+                            <li>
+                                Разработали стратегию продвижения.
+                            </li>
+                            <li>
+                                Создали новый сайт.
+                            </li>
+                            <li>
+                                Запустили рекламу во ВКонтакте: разбили трафик по мероприятиям, собрали семантическое
+                                ядро и целевую аудиторию для каждого события, настроили геотаргетинг, разработали
+                                рекламные объявления.
+                            </li>
+
+                        </ul>
+                        <h3>
+                            Результаты:
+                        </h3>
+                        <ul>
+                            <li>
+                                Продажи билетов на каждое мероприятие выросли до 80%.
+                            </li>
+                            <li>
+                                Кликабельность увеличилась на 145%, CTR — на 12%.
+                            </li>
+                            <li>
+                                Количество показов составило 210-240 тыс., мы получили около 2–2,5 тыс.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="performance-choose">
             <div class="container">
                 <div class="performance-choose__content">
