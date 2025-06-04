@@ -1,0 +1,138 @@
+.performance-channel {
+    margin-bottom: 16rem;
+    background-color: #010101;
+    color: white;
+    position: relative;
+    z-index: 5;
+    background-image: url('../img/performance/performance-channel.webp');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+        background-image: url('../img/performance/performance-channel-mobile.webp');
+        background-position: center top;
+
+        &--second {
+            background-image: url('../img/performance/performance-channel-mobile-second.webp');
+        }
+    }
+}
+
+.performance-channel__content {
+    padding: 6rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        gap: 2.5rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.performance-channel__star {
+    position: absolute;
+    right: 100%;
+    top: 1rem;
+    margin-top: 0.7rem;
+    margin-right: 3.7rem;
+    width: 7.8842rem;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        right: auto;
+        left: 0;
+        top: 0;
+        width: 2.766rem;
+        height: auto;
+        margin: 0;
+    }
+}
+
+.performance-channel__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+        gap: 1rem;
+    }
+}
+
+.performance-channel__title {
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    max-width: 77rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+    }
+}
+
+.performance-channel__text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}
+
+.performance-channel__link {
+    margin-left: auto;
+    margin-right: 10rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 2.5rem;
+    border-radius: 7.2rem;
+    background: #211e26;
+    box-shadow: 0rem 0rem 2.1571rem 0rem #fff, 0rem 0rem 1.2326rem 0rem #fff, 0rem 0rem 0.719rem 0rem #fff, 0rem 0rem 0.3595rem 0rem #fff,
+        0rem 0rem 0.1027rem 0rem #fff, 0rem 0rem 0.0514rem 0rem #fff;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    color: white;
+    margin-top: 1rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 700;
+        padding: 0.4rem 2.2rem;
+        line-height: 110%;
+        border-radius: 7.2rem;
+        background: #211e26;
+        box-shadow: 0rem 0rem 2.1571rem 0rem #fff, 0rem 0rem 1.2326rem 0rem #fff, 0rem 0rem 0.719rem 0rem #fff, 0rem 0rem 0.3595rem 0rem #fff,
+            0rem 0rem 0.1027rem 0rem #fff, 0rem 0rem 0.0514rem 0rem #fff;
+    }
+}

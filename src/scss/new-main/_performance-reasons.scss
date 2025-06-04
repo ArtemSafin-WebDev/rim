@@ -1,0 +1,86 @@
+.performance-reasons {
+    margin-bottom: 16rem;
+    position: relative;
+    z-index: 10;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
+}
+
+.performance-reasons__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.performance-reasons__heading {
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 6rem;
+    text-align: center;
+    text-wrap: balance;
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 4rem;
+    }
+}
+
+.performance-reasons__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18rem;
+    row-gap: 8rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
+
+.performance-reasons__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    @include breakpoint(mobile) {
+        gap: 0;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.performance-reasons__card-amount {
+    font-size: 14.1rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    color: #ff5129;
+    @include breakpoint(mobile) {
+        font-size: 7.923rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+    }
+}
+
+.performance-reasons__card-text {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}
