@@ -111,6 +111,10 @@
         display: block;
         padding-bottom: 100%;
         grid-area: stack;
+
+        @include breakpoint(mobile) {
+            background: rgba(0, 0, 0, .4);
+        }
     }
 }
 
