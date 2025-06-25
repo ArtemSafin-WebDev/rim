@@ -49,6 +49,7 @@
     font-size: 6.8rem;
     line-height: 116%;
     padding-right: 1.5rem;
+    text-transform: uppercase;
 
     @include breakpoint(mobile) {
         padding: 0;

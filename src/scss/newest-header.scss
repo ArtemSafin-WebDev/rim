@@ -1290,13 +1290,6 @@ body.menu-open {
 }
 
 
-.new-header__location {
-    @include breakpoint(laptop) {
-        display: none;
-    }
-}
-
-
 .location-bar {
     &__button {
         display: flex;
@@ -1418,6 +1411,11 @@ body.menu-open {
         border-radius: 1.5rem;
         background: rgba(255, 255, 255, 0.10);
         backdrop-filter: blur(50px);
+        @media (max-width: 900px) {
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 1.7rem;
+        }
     }
 
     &__modal-header {
@@ -1459,6 +1457,9 @@ body.menu-open {
         justify-content: space-between;
         gap: 8rem;
         overflow: hidden;
+        @media (max-width: 900px) {
+            gap: 4rem;
+        }
     }
 
     &__modal-col {
@@ -1521,6 +1522,10 @@ body.menu-open {
             &:link,
             &:visited {
                 color: white;
+            }
+
+            &:hover {
+                color: var(--primary-color);
             }
         }
     }

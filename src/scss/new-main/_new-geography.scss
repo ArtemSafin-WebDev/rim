@@ -95,15 +95,30 @@
         margin-top: -10rem;
     }
 
+    &::before {
+        content: '';
+        width: 168rem;
+        height: 152rem;
+        background: #5857FF;
+        filter: blur(301.622px);
+        position: absolute;
+        left: -46rem;
+        pointer-events: none;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
     &::after {
         content: '';
-        height: 150rem;
-        width: 117rem;
+        height: 120rem;
+        width: 100rem;
         background: #1c08b0;
         filter: blur(311.6px);
         left: 0;
         position: absolute;
-        top: -25rem;
+        top: -35rem;
         margin-left: 110rem;
         pointer-events: none;
         z-index: 5;
