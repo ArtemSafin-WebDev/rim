@@ -1,0 +1,104 @@
+.management-intro {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 45rem;
+}
+
+.management-intro__bg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+    width: 100%;
+    min-width: 192rem;
+}
+
+.management-intro__bg-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.management-intro__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 17.4rem;
+}
+
+.management-intro__heading {
+    font-size: 6.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 4.7rem;
+}
+
+.management-intro__quote {
+    width: 64rem;
+    padding: 4.5rem 8rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5rem;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(50px);
+    gap: 1.5rem;
+    transform: rotate(-2deg);
+}
+
+.management__quote-text {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        width: 3.8195rem;
+        height: 2.4105rem;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../img/management-quote.svg');
+        pointer-events: none;
+    }
+
+    &::before {
+        right: 100%;
+        top: 0;
+        margin-right: 0.8rem;
+        margin-top: -0.8rem;
+    }
+
+    &::after {
+        bottom: 0;
+        left: 100%;
+        margin-left: 0.8rem;
+        margin-bottom: -0.8rem;
+    }
+}
+
+.management-intro__quote-author {
+    font-size: 2.2852rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & > * {
+        padding-right: 1rem;
+        border-right: 1px solid white;
+        &:last-child {
+            padding-right: 0;
+            border: none;
+        }
+    }
+}

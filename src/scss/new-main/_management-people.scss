@@ -1,0 +1,66 @@
+.management-people {
+    margin-bottom: 19rem;
+    position: relative;
+    z-index: 5;
+}
+
+.management-people__bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    width: 100%;
+    min-width: 192rem;
+}
+
+.management-people__bg-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.management-people__content {
+    position: relative;
+    z-index: 1;
+}
+
+.management-people__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 5rem;
+}
+
+.management-people__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.management-people__card-image-container {
+    position: relative;
+    aspect-ratio: 350 / 464;
+}
+
+.management-people__card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: -10rem;
+    position: relative;
+    z-index: 4;
+}
+
+.management-people__card-name {
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 110%;
+}
+
+.management-people__card-position {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+}
