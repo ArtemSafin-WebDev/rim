@@ -2,6 +2,10 @@
     margin-bottom: 19rem;
     position: relative;
     z-index: 5;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 13.6rem;
+    }
 }
 
 .management-people__bg {
@@ -13,6 +17,11 @@
     pointer-events: none;
     width: 100%;
     min-width: 192rem;
+
+    @include breakpoint(mobile) {
+        min-width: auto;
+        display: none;
+    }
 }
 
 .management-people__bg-image {
@@ -30,6 +39,21 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 5rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+        row-gap: 2rem;
+        justify-content: center;
+    }
+}
+
+.management-people__list-item {
+    @include breakpoint(mobile) {
+        width: calc(50% - 1rem / 2);
+    }
 }
 
 .management-people__card {
@@ -49,6 +73,13 @@
     margin-top: -10rem;
     position: relative;
     z-index: 4;
+
+    @include breakpoint(mobile) {
+        align-items: center;
+        text-align: center;
+        gap: 0.2rem;
+        margin-top: -6rem;
+    }
 }
 
 .management-people__card-name {
@@ -56,6 +87,13 @@
     font-style: italic;
     font-weight: 800;
     line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 850;
+        line-height: 110%;
+    }
 }
 
 .management-people__card-position {
@@ -63,4 +101,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 110%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+    }
 }

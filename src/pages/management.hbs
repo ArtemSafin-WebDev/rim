@@ -1,11 +1,12 @@
 {{#extend "new-main"}}
     {{#content "main"}}
 
-
-
         <section class="management-intro">
             <div class="management-intro__bg">
-                <img src="img/management-intro.webp" alt="" class="management-intro__bg-image">
+                <picture>
+                    <source srcset="img/management-intro-mobile.webp" media="(max-width: 640px)" />
+                    <img src="img/management-intro.webp" alt="" class="management-intro__bg-image">
+                </picture>
             </div>
             <div class="container">
                 <div class="management-intro__content">
@@ -91,7 +92,10 @@
         </section>
         <section class="management-work">
             <div class="management-work__bg">
-                <img src="img/management-work.webp" alt="" class="management-work__bg-image">
+                <picture>
+                    <source srcset="img/management-work-mobile.webp" media="(max-width: 640px)" />
+                    <img src="img/management-work.webp" alt="" class="management-work__bg-image">
+                </picture>
             </div>
             <div class="container">
                 <div class="management-work__content">

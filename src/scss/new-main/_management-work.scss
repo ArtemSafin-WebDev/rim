@@ -2,6 +2,10 @@
     padding-bottom: 15rem;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 37rem;
+    }
 }
 
 .management-work__bg {
@@ -13,6 +17,9 @@
     pointer-events: none;
     width: 100%;
     min-width: 192rem;
+    @include breakpoint(mobile) {
+        min-width: auto;
+    }
 }
 
 .management-work__bg-image {
@@ -34,6 +41,13 @@
     font-weight: 800;
     line-height: 105%;
     max-width: 78rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%;
+    }
 }
 
 .management-work__text {
@@ -43,6 +57,14 @@
     line-height: 110%;
     max-width: 50rem;
     margin-top: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        margin-top: 1rem;
+    }
 }
 
 .management-work__link {
@@ -67,5 +89,14 @@
         &:hover {
             box-shadow: 0 0 0.3618rem #ff5129, 0 0 2.1708rem #ff5129;
         }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        padding: 1rem 5.7rem;
+        margin-top: 3rem;
     }
 }
