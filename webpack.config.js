@@ -11,7 +11,8 @@ module.exports = {
     chiyoChunk: './src/js/chiyo.js',
     drimsChunk: './src/js/drims.js',
     citybookChunk: './src/js/citybook.js',
-    citiesChunk: './src/js/cities.js'
+    citiesChunk: './src/js/cities.js',
+    modalChunk: './src/js/collaboration-modal.js',
   },
   output: {
     path: path.resolve(__dirname, './build/js'),
