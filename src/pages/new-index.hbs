@@ -701,11 +701,14 @@
             <div class="new-geography__wrapper">
 
 
-                <div class="new-geography__map-wrapper" style="-webkit-mask-image: url('img/new-map-2-mask.svg'); mask-size: 100% auto;
-                 mask-repeat: none; mask-position: center;">
-                    <img src="img/new-map-2.svg" alt="" class="new-geography__map">
+                <div class="new-geography__map-wrapper"
+                    style="--desktop-map-mask: url('../img/new-map-2-mask.svg'); --mobile-map-mask: url('../img/new-map-2-mask-mobile.svg');">
+                    <picture>
+                        <source srcset="img/new-map-2-mobile.svg" media="(max-width: 640px)" />
+                        <img src="img/new-map-2.svg" alt="" class="new-geography__map">
+                    </picture>
                 </div>
-               
+
                 <div class="new-geography__text-content">
                     {{!-- <div class="new-geography__text">
                         У нас самая широкая география присутствияв России и огромное количество конструкцийкак в
@@ -718,7 +721,7 @@
                                     15,95%
                                 </div>
                                 <div class="new-geography__card-text">
-                                    наша доля OOH-рынка в РФпо данным Admetrix
+                                    наша доля OOH-рынка в РФ по данным Admetrix
                                 </div>
                             </div>
                         </li>

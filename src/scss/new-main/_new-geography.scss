@@ -16,7 +16,7 @@
         padding-top: 10rem;
         margin-bottom: 0;
         position: relative;
-        z-index: 10;
+        z-index: 1;
 
         &::before {
             content: '';
@@ -41,6 +41,10 @@
     flex-direction: column;
     position: relative;
     min-height: 108rem;
+
+    @include breakpoint(mobile) {
+        min-height: 60rem;
+    }
 }
 
 .new-geography__heading {
@@ -68,16 +72,16 @@
 }
 
 .franchise-geography .new-geography__map-wrapper {
-    margin-left: -55rem;
+    // margin-left: -55rem;
 
     &::after {
         content: none;
         top: 0;
     }
 
-    @include breakpoint(mobile) {
-        margin-left: -21.5rem;
-    }
+    // @include breakpoint(mobile) {
+    //     margin-left: -21.5rem;
+    // }
 }
 
 .new-geography__map-wrapper {
@@ -89,13 +93,16 @@
     pointer-events: none;
     min-width: 192rem;
     margin-top: -10rem;
+    mask-size: 100% auto;
+    mask-repeat: none;
+    mask-position: center;
+    -webkit-mask-image: var(--desktop-map-mask);
 
     @include breakpoint(mobile) {
-        width: 97.5rem;
-        height: 52.3rem;
-        margin: 0;
-        margin-left: -4rem;
-        margin-top: -10rem;
+        -webkit-mask-image: var(--mobile-map-mask);
+        min-width: 39rem;
+        margin-top: 0;
+        -webkit-mask-image: none;
     }
 }
 
@@ -116,7 +123,9 @@
     margin-top: 15rem;
 
     @include breakpoint(mobile) {
-        display: contents;
+        margin-top: auto;
+        margin-left: 0;
+        max-width: none;
     }
 }
 
@@ -126,11 +135,13 @@
     grid-gap: 2.2rem;
 
     @include breakpoint(mobile) {
+        flex-direction: column;
         display: flex;
         align-items: center;
         gap: 1rem;
         flex-wrap: nowrap;
-        margin-top: -9rem;
+        max-width: 18rem;
+        align-self: center;
     }
 }
 
