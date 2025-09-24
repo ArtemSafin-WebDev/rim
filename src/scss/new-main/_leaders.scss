@@ -1,5 +1,7 @@
 .leaders {
     padding-top: 5rem;
+    position: relative;
+    z-index: 2;
 
     @include breakpoint(mobile) {
         padding-top: 8.6rem;

@@ -1,6 +1,7 @@
 .new-companies {
     padding-top: 24rem;
-
+    position: relative;
+    z-index: 2;
     @include breakpoint(mobile) {
         padding-top: 14rem;
         position: relative;
