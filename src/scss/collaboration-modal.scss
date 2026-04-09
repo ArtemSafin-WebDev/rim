@@ -44,13 +44,6 @@
     }
 }
 
-body:has(.collaboration-modal.active) {
-    touch-action: none;
-    -webkit-overflow-scrolling: none;
-    overflow: hidden;
-    overscroll-behavior: none;
-}
-
 .collaboration-modal__content {
     display: flex;
     flex-direction: column;

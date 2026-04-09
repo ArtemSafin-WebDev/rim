@@ -243,16 +243,19 @@ th {
 }
 
 .no-scroll {
-    overflow-y: scroll;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    scrollbar-gutter: stable;
 
     body {
         height: auto;
         overflow: hidden;
+    }
+}
+
+@supports (overflow: clip) {
+    .no-scroll {
+        overflow: clip;
     }
 }
 
