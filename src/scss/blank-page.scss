@@ -5,3 +5,13 @@
 @import 'layout';
 
 @import 'modal';
+
+.page-main--header-preview {
+    min-height: 100vh;
+    padding-top: 8.8rem;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+.header-preview-empty {
+    min-height: calc(100vh - 8.8rem);
+}
