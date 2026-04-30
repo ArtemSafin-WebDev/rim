@@ -13,8 +13,8 @@ export default function anchorNavigation() {
   function slide(element, yPos) {
     window.scrollTo({top: yPos, behavior: 'smooth'});
   }
-  
-  menu?.forEach((anchor) => {
+
+  Array.from(menu)?.forEach((anchor) => {
     anchor.addEventListener("click", (event) => {
       const anchorAttr = event.currentTarget?.dataset?.anchor
       let yPos = null
